@@ -1,0 +1,1324 @@
+item	price	kind	npc	zone	x	y	z	note
+24	93600	nation	Justi	231	-97.1	-2.3	39.1	3
+32	164160	nation	Justi	231	-97.1	-2.3	39.1	1
+49	25560	nation	Justi	231	-97.1	-2.3	39.1	2
+55	67200	nation	Justi	231	-97.1	-2.3	39.1	1
+59	55128	nation	Justi	231	-97.1	-2.3	39.1	1
+92	984	nation	Ensasa	238	18.3	-2.9	67.4	3
+104	3843	nation	Ensasa	238	18.3	-2.9	67.4	1
+217	1000	nation	Boytz	234	-28.2	0	-7.2	3
+605	200	nation	Boytz	234	-28.2	0	-7.2	3
+605	200	nation	Numa	236	-135	-1.7	-17.1	3
+605	200	nation	Ostalie	230	-143.4	-6	-11.8	3
+605	200	nation	Upih Khachla	238	18	-2.2	68.9	3
+605	200	shop	Champalpieu	244	-37.1	-1.2	134.1	
+610	60	shop	Komalata	26	-72.9	-20.2	63.8	
+610	61	nation	Benaige	230	-141.4	-6	49.7	2
+610	62	regional	Corua	230	-64.2	2	-8.7	Ronfaure|San d'Oria
+610	62	regional	Faustin	234	62	0	-96	Ronfaure|Bastok
+610	62	regional	Jourille	238	110.9	-2.2	47.6	Ronfaure|Windurst
+610	63	regional	Bin Stejihna	241	-56.7	-3.9	46.9	Zulkheim|Windurst
+610	63	regional	Phamelise	230	64	2	-8.2	Zulkheim|San d'Oria
+610	63	regional	Rosswald	236	49.3	-2.1	-3.1	Zulkheim|Bastok
+611	40	nation	Benaige	230	-141.4	-6	49.7	3
+611	40	shop	Dohdjuma	248	-59	-2.6	-28.6	
+611	40	shop	Komalata	26	-72.9	-20.2	63.8	
+611	42	regional	Apairemant	230	72.7	2	-0.2	Gustaberg|San d'Oria
+611	42	regional	Bin Stejihna	241	-56.7	-3.9	46.9	Zulkheim|Windurst
+611	42	regional	Evelyn	236	57.5	-2.1	-10.3	Gustaberg|Bastok
+611	42	regional	Nya Labiccio	241	-6.4	3	-87	Gustaberg|Windurst
+611	42	regional	Phamelise	230	64	2	-8.2	Zulkheim|San d'Oria
+611	42	regional	Rosswald	236	49.3	-2.1	-3.1	Zulkheim|Bastok
+612	60	shop	Ghemi Sinterilo	250	-21.3	-4	-2.3	
+612	62	regional	Fomina	238	-206.5	-2.2	-176.4	Elshimo Lowlands|Windurst
+612	62	regional	Nimia	232	-46.4	-4	-62.8	Elshimo Lowlands|San d'Oria
+612	62	regional	Zoby Quhyo	236	60.8	-2.1	-17.1	Elshimo Lowlands|Bastok
+614	84	regional	Ahyeekih	238	5.7	-1	18.6	Kolshushu|Windurst
+614	84	regional	Fiva	232	-51.9	-8	19.6	Kolshushu|San d'Oria
+614	84	regional	Yafafa	235	-186.9	-4	53.4	Kolshushu|Bastok
+617	161	regional	Belka	236	-128.9	-1.7	-14.1	Derfland|Bastok
+617	161	regional	Pourette	230	33.3	2	-12.9	Derfland|San d'Oria
+617	161	regional	Taraihi-Perunhi	241	99.6	-5	-60	Derfland|Windurst
+618	29	regional	Machielle	230	-73.1	2	-1.1	Norvallen|San d'Oria
+618	29	regional	Mille	234	-57.7	0	39.5	Norvallen|Bastok
+618	29	regional	Posso Ruhbini	240	-133.9	-3	109.4	Norvallen|Windurst
+619	49	regional	Baehu-Faehu	238	-30.8	-5.3	215.8	Sarutabaruta|Windurst
+619	49	regional	Milva	232	-27.2	-8	-1.9	Sarutabaruta|San d'Oria
+619	49	regional	Somn-Paemn	235	-192.7	-6	-112.6	Sarutabaruta|Bastok
+619	50	regional	Apairemant	230	72.7	2	-0.2	Gustaberg|San d'Oria
+619	50	regional	Evelyn	236	57.5	-2.1	-10.3	Gustaberg|Bastok
+619	50	regional	Nya Labiccio	241	-6.4	3	-87	Gustaberg|Windurst
+621	28	nation	Benaige	230	-141.4	-6	49.7	3
+621	29	regional	Machielle	230	-73.1	2	-1.1	Norvallen|San d'Oria
+621	29	regional	Mille	234	-57.7	0	39.5	Norvallen|Bastok
+621	29	regional	Posso Ruhbini	240	-133.9	-3	109.4	Norvallen|Windurst
+622	48	nation	Benaige	230	-141.4	-6	49.7	2
+622	48	nation	Upih Khachla	238	18	-2.2	68.9	3
+622	50	regional	Bin Stejihna	241	-56.7	-3.9	46.9	Zulkheim|Windurst
+622	50	regional	Phamelise	230	64	2	-8.2	Zulkheim|San d'Oria
+622	50	regional	Rosswald	236	49.3	-2.1	-3.1	Zulkheim|Bastok
+623	130	nation	Aveline	230	-138.9	-6	49.1	1
+623	135	regional	Attarena	231	122.4	-0.2	3.4	Litelor|San d'Oria
+623	135	regional	Galdeo	234	-138	-11.9	28.6	Litelor|Bastok
+623	135	regional	Otete	238	38.8	-4	-185.7	Litelor|Windurst
+625	88	nation	Aveline	230	-138.9	-6	49.1	1
+625	88	shop	Komalata	26	-72.9	-20.2	63.8	
+626	265	regional	Fomina	238	-206.5	-2.2	-176.4	Elshimo Lowlands|Windurst
+626	265	regional	Nimia	232	-46.4	-4	-62.8	Elshimo Lowlands|San d'Oria
+626	265	regional	Zoby Quhyo	236	60.8	-2.1	-17.1	Elshimo Lowlands|Bastok
+627	40	nation	Benaige	230	-141.4	-6	49.7	2
+628	260	nation	Benaige	230	-141.4	-6	49.7	1
+628	260	shop	Ghemi Sinterilo	250	-21.3	-4	-2.3	
+628	273	regional	Bonmaurieut	232	-22	-8	-121.1	Elshimo Uplands|San d'Oria
+628	273	regional	Dhen Tevryukoh	236	35.7	-2.1	2.4	Elshimo Uplands|Bastok
+628	273	regional	Sattsuh Ahkanpari	240	207.5	-12	215.4	Elshimo Uplands|Windurst
+629	48	nation	Benaige	230	-141.4	-6	49.7	1
+629	48	shop	Komalata	26	-72.9	-20.2	63.8	
+629	49	regional	Antonian	231	4.1	0.5	48.7	Aragoneu|San d'Oria
+629	49	regional	Maqu Molpih	238	-48	-1.4	-182.8	Aragoneu|Windurst
+629	49	regional	Oggodett	235	-186.7	-6.1	-108.7	Aragoneu|Bastok
+630	96	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+630	99	regional	Fomina	238	-206.5	-2.2	-176.4	Elshimo Lowlands|Windurst
+630	99	regional	Nimia	232	-46.4	-4	-62.8	Elshimo Lowlands|San d'Oria
+630	99	regional	Zoby Quhyo	236	60.8	-2.1	-17.1	Elshimo Lowlands|Bastok
+631	40	shop	Pawkrix	245	-27	4.1	-144.1	
+631	41	regional	Antonian	231	4.1	0.5	48.7	Aragoneu|San d'Oria
+631	41	regional	Maqu Molpih	238	-48	-1.4	-182.8	Aragoneu|Windurst
+631	41	regional	Oggodett	235	-186.7	-6.1	-108.7	Aragoneu|Bastok
+632	120	shop	Ghemi Sinterilo	250	-21.3	-4	-2.3	
+632	124	regional	Fomina	238	-206.5	-2.2	-176.4	Elshimo Lowlands|Windurst
+632	124	regional	Nimia	232	-46.4	-4	-62.8	Elshimo Lowlands|San d'Oria
+632	124	regional	Zoby Quhyo	236	60.8	-2.1	-17.1	Elshimo Lowlands|Bastok
+633	15	nation	Aveline	230	-138.9	-6	49.1	3
+633	16	regional	Belka	236	-128.9	-1.7	-14.1	Derfland|Bastok
+633	16	regional	Pourette	230	33.3	2	-12.9	Derfland|San d'Oria
+633	16	regional	Taraihi-Perunhi	241	99.6	-5	-60	Derfland|Windurst
+635	20	regional	Baehu-Faehu	238	-30.8	-5.3	215.8	Sarutabaruta|Windurst
+635	20	regional	Milva	232	-27.2	-8	-1.9	Sarutabaruta|San d'Oria
+635	20	regional	Somn-Paemn	235	-192.7	-6	-112.6	Sarutabaruta|Bastok
+636	130	nation	Upih Khachla	238	18	-2.2	68.9	2
+636	130	shop	Areebah	244	-39.4	-1.2	137.9	
+636	130	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+636	135	regional	Aulavia	234	-49.5	0	-38.3	Vollbow|Bastok
+636	135	regional	Lebondur	240	-79.8	-5	145.2	Vollbow|Windurst
+636	135	regional	Millechuca	231	79.7	-0.2	29.5	Vollbow|San d'Oria
+638	185	nation	Aveline	230	-138.9	-6	49.1	3
+638	192	regional	Palguevion	231	-138.3	12	154.6	Valdeaunia|San d'Oria
+638	192	regional	Tibelda	234	-126.2	-11.6	25.3	Valdeaunia|Bastok
+638	192	regional	Zoreen	240	202.3	-5.6	114.6	Valdeaunia|Windurst
+639	124	regional	Corua	230	-64.2	2	-8.7	Ronfaure|San d'Oria
+639	124	regional	Faustin	234	62	0	-96	Ronfaure|Bastok
+639	124	regional	Jourille	238	110.9	-2.2	47.6	Ronfaure|Windurst
+640	12	nation	Albinie	232	-12.1	-8.3	22.2	2
+640	12	nation	Denvihr	236	-49	2.3	-10.5	3
+640	12	nation	Uli Pehkowa	240	236.3	-6	104.7	2
+640	12	regional	Bagnobrok	236	16	4.9	22.2	Movalpolos|Bastok
+640	12	regional	Prestapiq	238	-12.5	-5	126.5	Movalpolos|Windurst
+640	12	regional	Vendavoq	232	-11	-4	-100.9	Movalpolos|San d'Oria
+643	900	nation	Albinie	232	-12.1	-8.3	22.2	2
+643	900	nation	Denvihr	236	-49	2.3	-10.5	2
+643	900	nation	Uli Pehkowa	240	236.3	-6	104.7	2
+644	1981	nation	Denvihr	236	-49	2.3	-10.5	1
+644	2000	nation	Albinie	232	-12.1	-8.3	22.2	1
+644	2000	nation	Uli Pehkowa	240	236.3	-6	104.7	1
+688	20	regional	Machielle	230	-73.1	2	-1.1	Norvallen|San d'Oria
+688	20	regional	Mille	234	-57.7	0	39.5	Norvallen|Bastok
+688	20	regional	Posso Ruhbini	240	-133.9	-3	109.4	Norvallen|Windurst
+688	20	shop	Mazuro-Oozuro	26	-89.3	-12.8	9.3	
+688	20	shop	Nilerouche	26	-83.4	-20	72.4	
+689	37	regional	Baehu-Faehu	238	-30.8	-5.3	215.8	Sarutabaruta|Windurst
+689	37	regional	Milva	232	-27.2	-8	-1.9	Sarutabaruta|San d'Oria
+689	37	regional	Somn-Paemn	235	-192.7	-6	-112.6	Sarutabaruta|Bastok
+690	7800	shop	Mazuro-Oozuro	26	-89.3	-12.8	9.3	
+690	7800	shop	Nilerouche	26	-83.4	-20	72.4	
+691	63	regional	Rodellieux	234	-18.6	0	-0.6	Fauregandi|Bastok
+691	63	regional	Sheia Pohrichamaha	240	-223.9	-8.3	223.8	Fauregandi|Windurst
+691	63	regional	Vichuel	231	-141.8	12	220.2	Fauregandi|San d'Oria
+694	2826	nation	Albinie	232	-12.1	-8.3	22.2	2
+694	2826	nation	Denvihr	236	-49	2.3	-10.5	2
+694	2826	nation	Uli Pehkowa	240	236.3	-6	104.7	2
+698	96	nation	Albinie	232	-12.1	-8.3	22.2	3
+698	96	nation	Denvihr	236	-49	2.3	-10.5	2
+698	96	nation	Uli Pehkowa	240	236.3	-6	104.7	2
+698	99	regional	Machielle	230	-73.1	2	-1.1	Norvallen|San d'Oria
+698	99	regional	Mille	234	-57.7	0	39.5	Norvallen|Bastok
+698	99	regional	Posso Ruhbini	240	-133.9	-3	109.4	Norvallen|Windurst
+699	6260	nation	Denvihr	236	-49	2.3	-10.5	1
+699	6320	nation	Albinie	232	-12.1	-8.3	22.2	1
+699	6320	nation	Uli Pehkowa	240	236.3	-6	104.7	1
+704	144	nation	Coullave	232	-95.3	-8	-127.3	2
+704	144	nation	Numa	236	-135	-1.7	-17.1	2
+721	168	regional	Bonmaurieut	232	-22	-8	-121.1	Elshimo Uplands|San d'Oria
+721	168	regional	Dhen Tevryukoh	236	35.7	-2.1	2.4	Elshimo Uplands|Bastok
+721	168	regional	Sattsuh Ahkanpari	240	207.5	-12	215.4	Elshimo Uplands|Windurst
+795	1863	nation	Carmelide	235	-151.7	-4.8	-69.6	2
+795	1863	shop	Adelflete	245	-35.9	-6.1	-119.7	
+796	1863	nation	Carmelide	235	-151.7	-4.8	-69.6	2
+796	1863	shop	Adelflete	245	-35.9	-6.1	-119.7	
+799	1863	nation	Carmelide	235	-151.7	-4.8	-69.6	2
+799	1863	shop	Adelflete	245	-35.9	-6.1	-119.7	
+800	1863	nation	Carmelide	235	-151.7	-4.8	-69.6	2
+800	1863	shop	Adelflete	245	-35.9	-6.1	-119.7	
+806	1863	nation	Carmelide	235	-151.7	-4.8	-69.6	2
+806	1863	shop	Adelflete	245	-35.9	-6.1	-119.7	
+807	1863	nation	Carmelide	235	-151.7	-4.8	-69.6	2
+807	1863	shop	Adelflete	245	-35.9	-6.1	-119.7	
+809	1863	nation	Carmelide	235	-151.7	-4.8	-69.6	2
+809	1863	shop	Adelflete	245	-35.9	-6.1	-119.7	
+814	1863	nation	Carmelide	235	-151.7	-4.8	-69.6	2
+814	1863	shop	Adelflete	245	-35.9	-6.1	-119.7	
+833	20	nation	Albinie	232	-12.1	-8.3	22.2	2
+833	20	nation	Denvihr	236	-49	2.3	-10.5	2
+833	20	nation	Uli Pehkowa	240	236.3	-6	104.7	3
+835	248	nation	Denvihr	236	-49	2.3	-10.5	1
+835	250	nation	Albinie	232	-12.1	-8.3	22.2	1
+835	250	nation	Uli Pehkowa	240	236.3	-6	104.7	1
+840	8	nation	Ferdoulemiont	230	11.2	2.2	-95.8	3
+840	8	nation	Neigepance	234	46.7	0.9	-102.3	3
+840	8	nation	Quesse	241	132.1	-5.2	-133	3
+840	8	shop	Challoux	246	-17.6	8	1.5	
+840	8	shop	Generoit	247	-14.8	8	81.5	
+840	8	shop	Mamerie	250	-55.4	-10	-94.6	
+840	8	shop	Mejuone	244	-57	8	105.1	
+840	8	shop	Rhimonne	245	-83.6	-0.1	-194.6	
+841	41	regional	Antonian	231	4.1	0.5	48.7	Aragoneu|San d'Oria
+841	41	regional	Maqu Molpih	238	-48	-1.4	-182.8	Aragoneu|Windurst
+841	41	regional	Oggodett	235	-186.7	-6.1	-108.7	Aragoneu|Bastok
+845	1239	nation	Neigepance	234	46.7	0.9	-102.3	1
+845	1250	nation	Ferdoulemiont	230	11.2	2.2	-95.8	1
+845	1250	nation	Quesse	241	132.1	-5.2	-133	1
+864	99	regional	Aulavia	234	-49.5	0	-38.3	Vollbow|Bastok
+864	99	regional	Lebondur	240	-79.8	-5	145.2	Vollbow|Windurst
+864	99	regional	Millechuca	231	79.7	-0.2	29.5	Vollbow|San d'Oria
+924	605	shop	Pahya Lolohoiv	250	57	-12.1	-51.6	
+928	515	nation	Olaf	237	-22.1	-10	30.8	3
+928	515	shop	Pipiroon	53	2.8	0	47.9	
+936	15	nation	Benaige	230	-141.4	-6	49.7	3
+936	16	regional	Aulavia	234	-49.5	0	-38.3	Vollbow|Bastok
+936	16	regional	Lebondur	240	-79.8	-5	145.2	Vollbow|Windurst
+936	16	regional	Millechuca	231	79.7	-0.2	29.5	Vollbow|San d'Oria
+936	16	shop	Komalata	26	-72.9	-20.2	63.8	
+941	80	shop	Areebah	244	-39.4	-1.2	137.9	
+941	80	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+943	320	shop	Pahya Lolohoiv	250	57	-12.1	-51.6	
+943	320	shop	Stinknix	245	-51.1	5.1	-116.7	
+944	1035	shop	Stinknix	245	-51.1	5.1	-116.7	
+945	2000	shop	Stinknix	245	-51.1	5.1	-116.7	
+949	96	shop	Areebah	244	-39.4	-1.2	137.9	
+949	96	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+951	120	nation	Upih Khachla	238	18	-2.2	68.9	1
+951	120	shop	Areebah	244	-39.4	-1.2	137.9	
+951	120	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+951	124	regional	Belka	236	-128.9	-1.7	-14.1	Derfland|Bastok
+951	124	regional	Pourette	230	33.3	2	-12.9	Derfland|San d'Oria
+951	124	regional	Taraihi-Perunhi	241	99.6	-5	-60	Derfland|Windurst
+952	515	shop	Pawkrix	245	-27	4.1	-144.1	
+954	4704	regional	Eugballion	231	-62	-0.2	53.8	Qufim Island|San d'Oria
+954	4704	regional	Millerovieunet	241	65.3	-7.5	-105.4	Qufim Island|Windurst
+954	4704	regional	Takiyah	237	48.5	-14	19.1	Qufim Island|Bastok
+956	120	shop	Areebah	244	-39.4	-1.2	137.9	
+956	120	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+957	120	shop	Areebah	244	-39.4	-1.2	137.9	
+957	120	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+1020	300	nation	Upih Khachla	238	18	-2.2	68.9	3
+1021	500	nation	Ostalie	230	-143.4	-6	-11.8	3
+1021	500	shop	Pikini-Mikini	249	-47.2	-4.1	35.3	
+1021	500	shop	Toji Mumosulah	250	51.5	-11.5	-50.6	
+1022	3960	nation	Boytz	234	-28.2	0	-7.2	3
+1022	3999	nation	Ostalie	230	-143.4	-6	-11.8	3
+1022	3999	nation	Upih Khachla	238	18	-2.2	68.9	3
+1023	5308	nation	Upih Khachla	238	18	-2.2	68.9	3
+1023	5870	nation	Boytz	234	-28.2	0	-7.2	3
+1023	6467	nation	Ostalie	230	-143.4	-6	-11.8	3
+1108	803	regional	Apairemant	230	72.7	2	-0.2	Gustaberg|San d'Oria
+1108	803	regional	Evelyn	236	57.5	-2.1	-10.3	Gustaberg|Bastok
+1108	803	regional	Nya Labiccio	241	-6.4	3	-87	Gustaberg|Windurst
+1120	1890	regional	Ahyeekih	238	5.7	-1	18.6	Kolshushu|Windurst
+1120	1890	regional	Fiva	232	-51.9	-8	19.6	Kolshushu|San d'Oria
+1120	1890	regional	Yafafa	235	-186.9	-4	53.4	Kolshushu|Bastok
+1230	105	shop	Bartabaq	11	-261.9	8	-49.1	
+1239	490	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+1239	500	shop	Bartabaq	11	-261.9	8	-49.1	
+1239	500	shop	Pawkrix	245	-27	4.1	-144.1	
+1240	210	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+1241	375	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+1241	385	nation	Upih Khachla	238	18	-2.2	68.9	3
+1410	1872	regional	Aulavia	234	-49.5	0	-38.3	Vollbow|Bastok
+1410	1872	regional	Lebondur	240	-79.8	-5	145.2	Vollbow|Windurst
+1410	1872	regional	Millechuca	231	79.7	-0.2	29.5	Vollbow|San d'Oria
+1411	1872	regional	Fomina	238	-206.5	-2.2	-176.4	Elshimo Lowlands|Windurst
+1411	1872	regional	Nimia	232	-46.4	-4	-62.8	Elshimo Lowlands|San d'Oria
+1411	1872	regional	Zoby Quhyo	236	60.8	-2.1	-17.1	Elshimo Lowlands|Bastok
+1412	1872	regional	Belka	236	-128.9	-1.7	-14.1	Derfland|Bastok
+1412	1872	regional	Pourette	230	33.3	2	-12.9	Derfland|San d'Oria
+1412	1872	regional	Taraihi-Perunhi	241	99.6	-5	-60	Derfland|Windurst
+1413	1890	regional	Bonmaurieut	232	-22	-8	-121.1	Elshimo Uplands|San d'Oria
+1413	1890	regional	Dhen Tevryukoh	236	35.7	-2.1	2.4	Elshimo Uplands|Bastok
+1413	1890	regional	Sattsuh Ahkanpari	240	207.5	-12	215.4	Elshimo Uplands|Windurst
+1446	50000	shop	Dabih Jajalioh	243	-64.7	12	-34.7	
+1523	316	shop	Komalata	26	-72.9	-20.2	63.8	
+1523	331	regional	Alizabe	240	-153.1	-4	138.3	Tavnazian Archipelago|Windurst
+1523	331	regional	Deguerendars	232	-63.3	-4.5	-42.9	Tavnazian Archipelago|San d'Oria
+1523	331	regional	Emaliveulaux	234	-64.3	0	39.5	Tavnazian Archipelago|Bastok
+1650	800	shop	Bartabaq	11	-261.9	8	-49.1	
+1650	840	regional	Bagnobrok	236	16	4.9	22.2	Movalpolos|Bastok
+1650	840	regional	Prestapiq	238	-12.5	-5	126.5	Movalpolos|Windurst
+1650	840	regional	Vendavoq	232	-11	-4	-100.9	Movalpolos|San d'Oria
+1657	100	nation	Justi	231	-97.1	-2.3	39.1	3
+1774	2205	nation	Pirvidiauce	231	-218.4	8	60.6	3
+1817	800	shop	Scamplix	247	-39.3	8	71	
+1840	2000	nation	Benaige	230	-141.4	-6	49.7	2
+1840	2100	regional	Bin Stejihna	241	-56.7	-3.9	46.9	Zulkheim|Windurst
+1840	2100	regional	Phamelise	230	64	2	-8.2	Zulkheim|San d'Oria
+1840	2100	regional	Rosswald	236	49.3	-2.1	-3.1	Zulkheim|Bastok
+1890	640	nation	Ensasa	238	18.3	-2.9	67.4	3
+1891	640	nation	Ensasa	238	18.3	-2.9	67.4	3
+1892	4400	nation	Upih Khachla	238	18	-2.2	68.9	3
+1893	4400	nation	Upih Khachla	238	18	-2.2	68.9	3
+2176	48	shop	Jajaroon	53	-13.6	0	29.1	
+2177	48	shop	Jajaroon	53	-13.6	0	29.1	
+2178	48	shop	Jajaroon	53	-13.6	0	29.1	
+2179	48	shop	Jajaroon	53	-13.6	0	29.1	
+2180	48	shop	Jajaroon	53	-13.6	0	29.1	
+2181	48	shop	Jajaroon	53	-13.6	0	29.1	
+2182	48	shop	Jajaroon	53	-13.6	0	29.1	
+2183	48	shop	Jajaroon	53	-13.6	0	29.1	
+2239	4940	shop	Yoyoroon	53	-17	-6	71.6	
+2240	9925	shop	Yoyoroon	53	-17	-6	71.6	
+2242	9925	shop	Yoyoroon	53	-17	-6	71.6	
+2243	4940	shop	Yoyoroon	53	-17	-6	71.6	
+2246	4940	shop	Yoyoroon	53	-17	-6	71.6	
+2247	9925	shop	Yoyoroon	53	-17	-6	71.6	
+2250	9925	shop	Yoyoroon	53	-17	-6	71.6	
+2251	4940	shop	Yoyoroon	53	-17	-6	71.6	
+2254	4940	shop	Yoyoroon	53	-17	-6	71.6	
+2255	9925	shop	Yoyoroon	53	-17	-6	71.6	
+2258	4940	shop	Yoyoroon	53	-17	-6	71.6	
+2260	9925	shop	Yoyoroon	53	-17	-6	71.6	
+2262	4940	shop	Yoyoroon	53	-17	-6	71.6	
+2264	9925	shop	Yoyoroon	53	-17	-6	71.6	
+2266	4940	shop	Yoyoroon	53	-17	-6	71.6	
+2268	9925	shop	Yoyoroon	53	-17	-6	71.6	
+2343	2205	nation	Ferdoulemiont	230	11.2	2.2	-95.8	3
+2389	750	shop	Palson	70	-372.8	4	-536.9	
+2389	750	shop	Reinwald	70	-266.4	4	-536.7	
+2390	750	shop	Palson	70	-372.8	4	-536.9	
+2390	750	shop	Reinwald	70	-266.4	4	-536.7	
+2391	750	shop	Palson	70	-372.8	4	-536.9	
+2391	750	shop	Reinwald	70	-266.4	4	-536.7	
+2392	750	shop	Palson	70	-372.8	4	-536.9	
+2392	750	shop	Reinwald	70	-266.4	4	-536.7	
+2393	750	shop	Palson	70	-372.8	4	-536.9	
+2393	750	shop	Reinwald	70	-266.4	4	-536.7	
+2501	29950	shop	Mamaroon	53	31.7	-6	24.8	
+2502	29950	shop	Mamaroon	53	31.7	-6	24.8	
+4112	910	nation	Boytz	234	-28.2	0	-7.2	2
+4112	910	nation	Coullave	232	-95.3	-8	-127.3	1
+4112	910	nation	Galvin	236	-142.6	-1.7	-20.9	2
+4112	910	nation	Olwyn	235	-322.1	-10.3	-169.4	2
+4112	910	nation	Ostalie	230	-143.4	-6	-11.8	1
+4112	910	nation	Pirvidiauce	231	-218.4	8	60.6	1
+4112	910	nation	Upih Khachla	238	18	-2.2	68.9	1
+4112	910	shop	Chhaya	221	-1.1	-2.1	-9	
+4112	910	shop	Chhaya	228	-1.1	-2.1	-9	
+4112	910	shop	Dohdjuma	248	-59	-2.6	-28.6	
+4112	910	shop	Gavrie	50	-115.2	0	15.2	
+4112	910	shop	Gekko	246	-66.8	8	-5.4	
+4112	910	shop	Leillaine	244	-51.6	-0.5	7	
+4112	910	shop	Maera	220	-1.1	-2.1	-9	
+4112	910	shop	Maera	227	-1.1	-2.1	-9	
+4112	910	shop	Pahya Lolohoiv	250	57	-12.1	-51.6	
+4112	910	shop	Pikini-Mikini	249	-47.2	-4.1	35.3	
+4112	910	shop	Scamplix	247	-39.3	8	71	
+4112	910	shop	Wije Tiren	241	51.8	-3.7	52.3	
+4128	4786	nation	Boytz	234	-28.2	0	-7.2	1
+4128	4786	nation	Galvin	236	-142.6	-1.7	-20.9	1
+4128	4786	nation	Olwyn	235	-322.1	-10.3	-169.4	1
+4128	4832	nation	Coullave	232	-95.3	-8	-127.3	1
+4128	4832	nation	Ostalie	230	-143.4	-6	-11.8	1
+4128	4832	nation	Pirvidiauce	231	-218.4	8	60.6	1
+4128	4832	nation	Upih Khachla	238	18	-2.2	68.9	2
+4128	4832	shop	Chhaya	221	-1.1	-2.1	-9	
+4128	4832	shop	Chhaya	228	-1.1	-2.1	-9	
+4128	4832	shop	Gavrie	50	-115.2	0	15.2	
+4128	4832	shop	Gekko	246	-66.8	8	-5.4	
+4128	4832	shop	Leillaine	244	-51.6	-0.5	7	
+4128	4832	shop	Maera	220	-1.1	-2.1	-9	
+4128	4832	shop	Maera	227	-1.1	-2.1	-9	
+4128	4832	shop	Pahya Lolohoiv	250	57	-12.1	-51.6	
+4128	4832	shop	Scamplix	247	-39.3	8	71	
+4128	4832	shop	Wije Tiren	241	51.8	-3.7	52.3	
+4148	290	nation	Pohka Chichiyowahl	4	-416.4	-2.2	-430.1	3
+4148	316	nation	Boytz	234	-28.2	0	-7.2	3
+4148	316	nation	Coullave	232	-95.3	-8	-127.3	3
+4148	316	nation	Galvin	236	-142.6	-1.7	-20.9	3
+4148	316	nation	Olwyn	235	-322.1	-10.3	-169.4	3
+4148	316	nation	Ostalie	230	-143.4	-6	-11.8	3
+4148	316	nation	Pirvidiauce	231	-218.4	8	60.6	3
+4148	316	nation	Upih Khachla	238	18	-2.2	68.9	3
+4148	316	shop	Chhaya	221	-1.1	-2.1	-9	
+4148	316	shop	Chhaya	228	-1.1	-2.1	-9	
+4148	316	shop	Dohdjuma	248	-59	-2.6	-28.6	
+4148	316	shop	Gavrie	50	-115.2	0	15.2	
+4148	316	shop	Gekko	246	-66.8	8	-5.4	
+4148	316	shop	Leillaine	244	-51.6	-0.5	7	
+4148	316	shop	Maera	220	-1.1	-2.1	-9	
+4148	316	shop	Maera	227	-1.1	-2.1	-9	
+4148	316	shop	Pahya Lolohoiv	250	57	-12.1	-51.6	
+4148	316	shop	Pikini-Mikini	249	-47.2	-4.1	35.3	
+4148	316	shop	Scamplix	247	-39.3	8	71	
+4148	316	shop	Wije Tiren	241	51.8	-3.7	52.3	
+4150	2595	nation	Boytz	234	-28.2	0	-7.2	3
+4150	2595	nation	Coullave	232	-95.3	-8	-127.3	3
+4150	2595	nation	Galvin	236	-142.6	-1.7	-20.9	3
+4150	2595	nation	Olwyn	235	-322.1	-10.3	-169.4	3
+4150	2595	nation	Ostalie	230	-143.4	-6	-11.8	3
+4150	2595	nation	Pirvidiauce	231	-218.4	8	60.6	3
+4150	2595	nation	Upih Khachla	238	18	-2.2	68.9	3
+4150	2595	shop	Chhaya	221	-1.1	-2.1	-9	
+4150	2595	shop	Chhaya	228	-1.1	-2.1	-9	
+4150	2595	shop	Dohdjuma	248	-59	-2.6	-28.6	
+4150	2595	shop	Gavrie	50	-115.2	0	15.2	
+4150	2595	shop	Gekko	246	-66.8	8	-5.4	
+4150	2595	shop	Leillaine	244	-51.6	-0.5	7	
+4150	2595	shop	Maera	220	-1.1	-2.1	-9	
+4150	2595	shop	Maera	227	-1.1	-2.1	-9	
+4150	2595	shop	Pahya Lolohoiv	250	57	-12.1	-51.6	
+4150	2595	shop	Pikini-Mikini	249	-47.2	-4.1	35.3	
+4150	2595	shop	Wije Tiren	241	51.8	-3.7	52.3	
+4151	800	nation	Boytz	234	-28.2	0	-7.2	2
+4151	800	nation	Coullave	232	-95.3	-8	-127.3	2
+4151	800	nation	Galvin	236	-142.6	-1.7	-20.9	2
+4151	800	nation	Olwyn	235	-322.1	-10.3	-169.4	2
+4151	800	nation	Ostalie	230	-143.4	-6	-11.8	2
+4151	800	nation	Pirvidiauce	231	-218.4	8	60.6	2
+4151	800	nation	Upih Khachla	238	18	-2.2	68.9	2
+4151	800	shop	Chhaya	221	-1.1	-2.1	-9	
+4151	800	shop	Chhaya	228	-1.1	-2.1	-9	
+4151	800	shop	Gavrie	50	-115.2	0	15.2	
+4151	800	shop	Gekko	246	-66.8	8	-5.4	
+4151	800	shop	Leillaine	244	-51.6	-0.5	7	
+4151	800	shop	Maera	220	-1.1	-2.1	-9	
+4151	800	shop	Maera	227	-1.1	-2.1	-9	
+4151	800	shop	Pahya Lolohoiv	250	57	-12.1	-51.6	
+4151	800	shop	Pikini-Mikini	249	-47.2	-4.1	35.3	
+4151	800	shop	Wije Tiren	241	51.8	-3.7	52.3	
+4154	3016	regional	Attarena	231	122.4	-0.2	3.4	Litelor|San d'Oria
+4154	3016	regional	Galdeo	234	-138	-11.9	28.6	Litelor|Bastok
+4154	3016	regional	Otete	238	38.8	-4	-185.7	Litelor|Windurst
+4155	3360	shop	Leillaine	244	-51.6	-0.5	7	
+4155	22400	shop	Gavrie	50	-115.2	0	15.2	
+4163	1200	shop	Scamplix	247	-39.3	8	71	
+4352	145	regional	Belka	236	-128.9	-1.7	-14.1	Derfland|Bastok
+4352	145	regional	Pourette	230	33.3	2	-12.9	Derfland|San d'Oria
+4352	145	regional	Taraihi-Perunhi	241	99.6	-5	-60	Derfland|Windurst
+4356	200	nation	Boncort	231	-156.2	-5.2	49.2	2
+4356	200	nation	Croumangue	232	-64.8	-5.5	-32	2
+4356	200	nation	Shilah	230	93.3	0	117.2	2
+4356	200	shop	Glyke	244	-102.9	-0.2	93.6	
+4359	252	regional	Ahyeekih	238	5.7	-1	18.6	Kolshushu|Windurst
+4359	252	regional	Fiva	232	-51.9	-8	19.6	Kolshushu|San d'Oria
+4359	252	regional	Yafafa	235	-186.9	-4	53.4	Kolshushu|Bastok
+4363	43	nation	Aveline	230	-138.9	-6	49.1	2
+4363	46	regional	Rodellieux	234	-18.6	0	-0.6	Fauregandi|Bastok
+4363	46	regional	Sheia Pohrichamaha	240	-223.9	-8.3	223.8	Fauregandi|Windurst
+4363	46	regional	Vichuel	231	-141.8	12	220.2	Fauregandi|San d'Oria
+4364	120	nation	Boncort	231	-156.2	-5.2	49.2	3
+4364	120	nation	Croumangue	232	-64.8	-5.5	-32	3
+4364	120	nation	Shilah	230	93.3	0	117.2	3
+4364	120	shop	Komalata	26	-72.9	-20.2	63.8	
+4365	120	shop	Champalpieu	244	-37.1	-1.2	134.1	
+4365	120	shop	Gekko	246	-66.8	8	-5.4	
+4366	24	nation	Aveline	230	-138.9	-6	49.1	2
+4366	25	regional	Bin Stejihna	241	-56.7	-3.9	46.9	Zulkheim|Windurst
+4366	25	regional	Phamelise	230	64	2	-8.2	Zulkheim|San d'Oria
+4366	25	regional	Rosswald	236	49.3	-2.1	-3.1	Zulkheim|Bastok
+4372	50	regional	Bin Stejihna	241	-56.7	-3.9	46.9	Zulkheim|Windurst
+4372	50	regional	Phamelise	230	64	2	-8.2	Zulkheim|San d'Oria
+4372	50	regional	Rosswald	236	49.3	-2.1	-3.1	Zulkheim|Bastok
+4375	4704	regional	Bagnobrok	236	16	4.9	22.2	Movalpolos|Bastok
+4375	4704	regional	Prestapiq	238	-12.5	-5	126.5	Movalpolos|Windurst
+4375	4704	regional	Vendavoq	232	-11	-4	-100.9	Movalpolos|San d'Oria
+4376	120	nation	Boncort	231	-156.2	-5.2	49.2	3
+4376	120	nation	Griselda	234	-25.7	0	52.4	3
+4376	120	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	3
+4376	120	shop	Komalata	26	-72.9	-20.2	63.8	
+4376	120	shop	Pikini-Mikini	249	-47.2	-4.1	35.3	
+4376	120	shop	Scamplix	247	-39.3	8	71	
+4378	61	shop	Dohdjuma	248	-59	-2.6	-28.6	
+4378	63	regional	Bin Stejihna	241	-56.7	-3.9	46.9	Zulkheim|Windurst
+4378	63	regional	Phamelise	230	64	2	-8.2	Zulkheim|San d'Oria
+4378	63	regional	Rosswald	236	49.3	-2.1	-3.1	Zulkheim|Bastok
+4380	220	nation	Boncort	231	-156.2	-5.2	49.2	2
+4382	33	nation	Aveline	230	-138.9	-6	49.1	1
+4382	33	regional	Palguevion	231	-138.3	12	154.6	Valdeaunia|San d'Oria
+4382	33	regional	Tibelda	234	-126.2	-11.6	25.3	Valdeaunia|Bastok
+4382	33	regional	Zoreen	240	202.3	-5.6	114.6	Valdeaunia|Windurst
+4388	46	regional	Apairemant	230	72.7	2	-0.2	Gustaberg|San d'Oria
+4388	46	regional	Evelyn	236	57.5	-2.1	-10.3	Gustaberg|Bastok
+4388	46	regional	Nya Labiccio	241	-6.4	3	-87	Gustaberg|Windurst
+4389	32	shop	Komalata	26	-72.9	-20.2	63.8	
+4389	33	nation	Aveline	230	-138.9	-6	49.1	3
+4389	33	regional	Corua	230	-64.2	2	-8.7	Ronfaure|San d'Oria
+4389	33	regional	Faustin	234	62	0	-96	Ronfaure|Bastok
+4389	33	regional	Jourille	238	110.9	-2.2	47.6	Ronfaure|Windurst
+4390	40	shop	Ghemi Sinterilo	250	-21.3	-4	-2.3	
+4390	41	regional	Fomina	238	-206.5	-2.2	-176.4	Elshimo Lowlands|Windurst
+4390	41	regional	Nimia	232	-46.4	-4	-62.8	Elshimo Lowlands|San d'Oria
+4390	41	regional	Zoby Quhyo	236	60.8	-2.1	-17.1	Elshimo Lowlands|Bastok
+4391	24	nation	Melloa	236	-167.6	-7.5	3.9	2
+4391	25	nation	Griselda	234	-25.7	0	52.4	2
+4391	25	nation	Sawyer	236	-160.2	-7.5	15.8	2
+4391	25	nation	Tomasa	237	-12.8	-10	-26.4	2
+4392	33	nation	Aveline	230	-138.9	-6	49.1	1
+4392	33	regional	Baehu-Faehu	238	-30.8	-5.3	215.8	Sarutabaruta|Windurst
+4392	33	regional	Milva	232	-27.2	-8	-1.9	Sarutabaruta|San d'Oria
+4392	33	regional	Somn-Paemn	235	-192.7	-6	-112.6	Sarutabaruta|Bastok
+4393	975	nation	Taajiji	238	-67.3	-3.8	27.7	1
+4394	12	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	1
+4394	12	valeriano	Valeriano	230	-22.1	2	-12	
+4394	12	valeriano	Valeriano	236	96	8.5	-61.6	
+4394	12	valeriano	Valeriano	241	14.8	2	-50.3	
+4396	278	nation	Tomasa	237	-12.8	-10	-26.4	1
+4397	15	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	2
+4398	1080	shop	Nuh Celodehki	250	51.5	-11.5	-32.4	
+4404	600	nation	Croumangue	232	-64.8	-5.5	-32	1
+4405	160	shop	Ghebi Damomohe	245	15.5	-0.1	-7.6	
+4406	440	shop	Glyke	244	-102.9	-0.2	93.6	
+4407	720	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	1
+4408	140	nation	Taajiji	238	-67.3	-3.8	27.7	3
+4408	140	shop	Glyke	244	-102.9	-0.2	93.6	
+4409	80	nation	Tomasa	237	-12.8	-10	-26.4	1
+4410	344	shop	Nuh Celodehki	250	51.5	-11.5	-32.4	
+4411	840	nation	Taajiji	238	-67.3	-3.8	27.7	1
+4412	325	shop	Scamplix	247	-39.3	8	71	
+4412	341	regional	Nhobi Zalkia	241	-31.3	-4.2	51.7	Kuzotz|Windurst
+4412	341	regional	Patolle	232	-57.8	-4	-84	Kuzotz|San d'Oria
+4412	341	regional	Vattian	236	-81.8	4.6	25.5	Kuzotz|Bastok
+4415	128	regional	Antonian	231	4.1	0.5	48.7	Aragoneu|San d'Oria
+4415	128	regional	Maqu Molpih	238	-48	-1.4	-182.8	Aragoneu|Windurst
+4415	128	regional	Oggodett	235	-186.7	-6.1	-108.7	Aragoneu|Bastok
+4416	1400	shop	Glyke	244	-102.9	-0.2	93.6	
+4417	3269	nation	Sawyer	236	-160.2	-7.5	15.8	1
+4417	3269	nation	Tomasa	237	-12.8	-10	-26.4	1
+4417	3300	nation	Melloa	236	-167.6	-7.5	3.9	1
+4419	7000	nation	Croumangue	232	-64.8	-5.5	-32	1
+4419	7000	nation	Shilah	230	93.3	0	117.2	1
+4422	200	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	2
+4422	200	nation	Taajiji	238	-67.3	-3.8	27.7	2
+4422	200	shop	Glyke	244	-102.9	-0.2	93.6	
+4422	200	shop	Yoskolo	245	-21	-0.1	-56.1	
+4423	300	nation	Boncort	231	-156.2	-5.2	49.2	2
+4423	300	nation	Croumangue	232	-64.8	-5.5	-32	2
+4423	300	shop	Glyke	244	-102.9	-0.2	93.6	
+4423	300	shop	Yoskolo	245	-21	-0.1	-56.1	
+4424	1100	nation	Griselda	234	-25.7	0	52.4	2
+4424	1100	nation	Melloa	236	-167.6	-7.5	3.9	2
+4424	1100	nation	Sawyer	236	-160.2	-7.5	15.8	2
+4424	1100	nation	Tomasa	237	-12.8	-10	-26.4	2
+4424	1100	shop	Glyke	244	-102.9	-0.2	93.6	
+4424	1100	shop	Yoskolo	245	-21	-0.1	-56.1	
+4425	320	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	1
+4431	76	nation	Aveline	230	-138.9	-6	49.1	3
+4431	79	regional	Corua	230	-64.2	2	-8.7	Ronfaure|San d'Oria
+4431	79	regional	Faustin	234	62	0	-96	Ronfaure|Bastok
+4431	79	regional	Jourille	238	110.9	-2.2	47.6	Ronfaure|Windurst
+4432	60	shop	Ghemi Sinterilo	250	-21.3	-4	-2.3	
+4432	62	regional	Fomina	238	-206.5	-2.2	-176.4	Elshimo Lowlands|Windurst
+4432	62	regional	Nimia	232	-46.4	-4	-62.8	Elshimo Lowlands|San d'Oria
+4432	62	regional	Zoby Quhyo	236	60.8	-2.1	-17.1	Elshimo Lowlands|Bastok
+4433	2595	nation	Taajiji	238	-67.3	-3.8	27.7	3
+4434	5000	nation	Shilah	230	93.3	0	117.2	1
+4434	5000	nation	Taajiji	238	-67.3	-3.8	27.7	1
+4436	320	nation	Melloa	236	-167.6	-7.5	3.9	3
+4436	320	nation	Sawyer	236	-160.2	-7.5	15.8	3
+4436	320	nation	Tomasa	237	-12.8	-10	-26.4	3
+4437	720	nation	Melloa	236	-167.6	-7.5	3.9	2
+4437	720	nation	Sawyer	236	-160.2	-7.5	15.8	2
+4437	720	shop	Glyke	244	-102.9	-0.2	93.6	
+4438	1440	nation	Taajiji	238	-67.3	-3.8	27.7	2
+4440	6592	nation	Taajiji	238	-67.3	-3.8	27.7	2
+4441	930	nation	Boncort	231	-156.2	-5.2	49.2	1
+4441	930	nation	Croumangue	232	-64.8	-5.5	-32	1
+4441	930	nation	Shilah	230	93.3	0	117.2	2
+4441	930	shop	Glyke	244	-102.9	-0.2	93.6	
+4441	930	shop	Yoskolo	245	-21	-0.1	-56.1	
+4442	397	nation	Griselda	234	-25.7	0	52.4	1
+4442	397	nation	Sawyer	236	-160.2	-7.5	15.8	1
+4442	397	nation	Tomasa	237	-12.8	-10	-26.4	1
+4442	400	nation	Melloa	236	-167.6	-7.5	3.9	1
+4442	400	shop	Glyke	244	-102.9	-0.2	93.6	
+4442	400	shop	Yoskolo	245	-21	-0.1	-56.1	
+4444	24	regional	Baehu-Faehu	238	-30.8	-5.3	215.8	Sarutabaruta|Windurst
+4444	24	regional	Milva	232	-27.2	-8	-1.9	Sarutabaruta|San d'Oria
+4444	24	regional	Somn-Paemn	235	-192.7	-6	-112.6	Sarutabaruta|Bastok
+4445	46	regional	Ahyeekih	238	5.7	-1	18.6	Kolshushu|Windurst
+4445	46	regional	Fiva	232	-51.9	-8	19.6	Kolshushu|San d'Oria
+4445	46	regional	Yafafa	235	-186.9	-4	53.4	Kolshushu|Bastok
+4450	755	shop	Bartabaq	11	-261.9	8	-49.1	
+4450	792	regional	Bagnobrok	236	16	4.9	22.2	Movalpolos|Bastok
+4450	792	regional	Prestapiq	238	-12.5	-5	126.5	Movalpolos|Windurst
+4450	792	regional	Vendavoq	232	-11	-4	-100.9	Movalpolos|San d'Oria
+4455	200	nation	Croumangue	232	-64.8	-5.5	-32	3
+4455	200	nation	Melloa	236	-167.6	-7.5	3.9	3
+4455	200	nation	Sawyer	236	-160.2	-7.5	15.8	3
+4455	200	nation	Shilah	230	93.3	0	117.2	3
+4455	200	nation	Tomasa	237	-12.8	-10	-26.4	3
+4456	2250	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	2
+4456	2250	shop	Glyke	244	-102.9	-0.2	93.6	
+4457	3000	shop	Ghebi Damomohe	245	15.5	-0.1	-7.6	
+4457	3000	shop	Nuh Celodehki	250	51.5	-11.5	-32.4	
+4458	300	shop	Pawkrix	245	-27	4.1	-144.1	
+4458	300	shop	Scamplix	247	-39.3	8	71	
+4459	1800	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	1
+4467	4	shop	Ghebi Damomohe	245	15.5	-0.1	-7.6	
+4468	80	shop	Ghemi Sinterilo	250	-21.3	-4	-2.3	
+4468	84	regional	Bonmaurieut	232	-22	-8	-121.1	Elshimo Uplands|San d'Oria
+4468	84	regional	Dhen Tevryukoh	236	35.7	-2.1	2.4	Elshimo Uplands|Bastok
+4468	84	regional	Sattsuh Ahkanpari	240	207.5	-12	215.4	Elshimo Uplands|Windurst
+4490	480	nation	Griselda	234	-25.7	0	52.4	2
+4490	480	shop	Dohdjuma	248	-59	-2.6	-28.6	
+4491	200	shop	Scamplix	247	-39.3	8	71	
+4491	210	regional	Nhobi Zalkia	241	-31.3	-4.2	51.7	Kuzotz|Windurst
+4491	210	regional	Patolle	232	-57.8	-4	-84	Kuzotz|San d'Oria
+4491	210	regional	Vattian	236	-81.8	4.6	25.5	Kuzotz|Bastok
+4492	600	nation	Shilah	230	93.3	0	117.2	3
+4492	600	nation	Taajiji	238	-67.3	-3.8	27.7	3
+4494	2772	nation	Shilah	230	93.3	0	117.2	1
+4495	35	shop	Pawkrix	245	-27	4.1	-144.1	
+4499	100	nation	Griselda	234	-25.7	0	52.4	3
+4499	100	nation	Melloa	236	-167.6	-7.5	3.9	3
+4499	100	nation	Sawyer	236	-160.2	-7.5	15.8	3
+4499	100	nation	Tomasa	237	-12.8	-10	-26.4	3
+4499	100	shop	Glyke	244	-102.9	-0.2	93.6	
+4503	210	regional	Ahyeekih	238	5.7	-1	18.6	Kolshushu|Windurst
+4503	210	regional	Fiva	232	-51.9	-8	19.6	Kolshushu|San d'Oria
+4503	210	regional	Yafafa	235	-186.9	-4	53.4	Kolshushu|Bastok
+4505	104	regional	Antonian	231	4.1	0.5	48.7	Aragoneu|San d'Oria
+4505	104	regional	Maqu Molpih	238	-48	-1.4	-182.8	Aragoneu|Windurst
+4505	104	regional	Oggodett	235	-186.7	-6.1	-108.7	Aragoneu|Bastok
+4506	5670	nation	Taajiji	238	-67.3	-3.8	27.7	2
+4509	12	nation	Benaige	230	-141.4	-6	49.7	3
+4509	12	nation	Boncort	231	-156.2	-5.2	49.2	3
+4509	12	nation	Croumangue	232	-64.8	-5.5	-32	3
+4509	12	nation	Griselda	234	-25.7	0	52.4	3
+4509	12	nation	Melloa	236	-167.6	-7.5	3.9	3
+4509	12	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	3
+4509	12	nation	Sawyer	236	-160.2	-7.5	15.8	3
+4509	12	nation	Shilah	230	93.3	0	117.2	3
+4509	12	nation	Taajiji	238	-67.3	-3.8	27.7	3
+4509	12	nation	Tomasa	237	-12.8	-10	-26.4	3
+4509	12	shop	Dohdjuma	248	-59	-2.6	-28.6	
+4509	12	shop	Gavrie	50	-115.2	0	15.2	
+4509	12	shop	Komalata	26	-72.9	-20.2	63.8	
+4509	12	shop	Leillaine	244	-51.6	-0.5	7	
+4509	12	shop	Leyla	246	-67	8	-0.6	
+4509	12	shop	Pahya Lolohoiv	250	57	-12.1	-51.6	
+4509	12	shop	Pikini-Mikini	249	-47.2	-4.1	35.3	
+4509	12	shop	Scamplix	247	-39.3	8	71	
+4509	12	shop	Wije Tiren	241	51.8	-3.7	52.3	
+4509	12	shop	Yoskolo	245	-21	-0.1	-56.1	
+4510	24	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	3
+4533	1200	nation	Shilah	230	93.3	0	117.2	2
+4535	400	nation	Croumangue	232	-64.8	-5.5	-32	3
+4536	3406	shop	Nuh Celodehki	250	51.5	-11.5	-32.4	
+4537	520	nation	Croumangue	232	-64.8	-5.5	-32	2
+4538	920	nation	Ness Rugetomal	238	-75.9	-3.8	-6.8	3
+4539	650	shop	Pawkrix	245	-27	4.1	-144.1	
+4543	1140	shop	Pawkrix	245	-27	4.1	-144.1	
+4545	67	nation	Ferdoulemiont	230	11.2	2.2	-95.8	3
+4545	67	nation	Quesse	241	132.1	-5.2	-133	3
+4545	67	shop	Generoit	247	-14.8	8	81.5	
+4545	68	nation	Neigepance	234	46.7	0.9	-102.3	3
+4545	68	shop	Challoux	246	-17.6	8	1.5	
+4545	68	shop	Mamerie	250	-55.4	-10	-94.6	
+4545	68	shop	Mejuone	244	-57	8	105.1	
+4545	68	shop	Rhimonne	245	-83.6	-0.1	-194.6	
+4545	70	regional	Belka	236	-128.9	-1.7	-14.1	Derfland|Bastok
+4545	70	regional	Pourette	230	33.3	2	-12.9	Derfland|San d'Oria
+4545	70	regional	Taraihi-Perunhi	241	99.6	-5	-60	Derfland|Windurst
+4554	12636	nation	Taajiji	238	-67.3	-3.8	27.7	1
+4555	1860	nation	Taajiji	238	-67.3	-3.8	27.7	3
+4555	1860	shop	Glyke	244	-102.9	-0.2	93.6	
+4556	5544	shop	Yoskolo	245	-21	-0.1	-56.1	
+4559	4984	shop	Dohdjuma	248	-59	-2.6	-28.6	
+4559	4984	shop	Glyke	244	-102.9	-0.2	93.6	
+4560	1506	nation	Croumangue	232	-64.8	-5.5	-32	2
+4560	1506	nation	Shilah	230	93.3	0	117.2	2
+4570	55	nation	Denvihr	236	-49	2.3	-10.5	2
+4570	56	nation	Albinie	232	-12.1	-8.3	22.2	2
+4570	56	nation	Uli Pehkowa	240	236.3	-6	104.7	2
+4571	105	regional	Rodellieux	234	-18.6	0	-0.6	Fauregandi|Bastok
+4571	105	regional	Sheia Pohrichamaha	240	-223.9	-8.3	223.8	Fauregandi|Windurst
+4571	105	regional	Vichuel	231	-141.8	12	220.2	Fauregandi|San d'Oria
+4572	1815	nation	Shilah	230	93.3	0	117.2	2
+4572	1815	nation	Taajiji	238	-67.3	-3.8	27.7	2
+4578	156	nation	Melloa	236	-167.6	-7.5	3.9	2
+4578	156	nation	Sawyer	236	-160.2	-7.5	15.8	2
+4578	156	nation	Tomasa	237	-12.8	-10	-26.4	2
+4591	159	nation	Sawyer	236	-160.2	-7.5	15.8	1
+4591	160	nation	Melloa	236	-167.6	-7.5	3.9	1
+5164	2724	regional	Alizabe	240	-153.1	-4	138.3	Tavnazian Archipelago|Windurst
+5164	2724	regional	Deguerendars	232	-63.3	-4.5	-42.9	Tavnazian Archipelago|San d'Oria
+5164	2724	regional	Emaliveulaux	234	-64.3	0	39.5	Tavnazian Archipelago|Bastok
+5165	800	shop	Bartabaq	11	-261.9	8	-49.1	
+5165	840	regional	Bagnobrok	236	16	4.9	22.2	Movalpolos|Bastok
+5165	840	regional	Prestapiq	238	-12.5	-5	126.5	Movalpolos|Windurst
+5165	840	regional	Vendavoq	232	-11	-4	-100.9	Movalpolos|San d'Oria
+5187	172	shop	Ghemi Sinterilo	250	-21.3	-4	-2.3	
+5195	331	regional	Alizabe	240	-153.1	-4	138.3	Tavnazian Archipelago|Windurst
+5195	331	regional	Deguerendars	232	-63.3	-4.5	-42.9	Tavnazian Archipelago|San d'Oria
+5195	331	regional	Emaliveulaux	234	-64.3	0	39.5	Tavnazian Archipelago|Bastok
+5234	220	nation	Benaige	230	-141.4	-6	49.7	3
+5299	148	shop	Pikini-Mikini	249	-47.2	-4.1	35.3	
+5541	1400	nation	Shilah	230	93.3	0	117.2	3
+5567	200	shop	Khaf Jhifanm	50	-21.8	0	-116.7	
+5570	68	shop	Fayeewah	50	81.3	-6	-140.2	
+5572	2075	shop	Fayeewah	50	81.3	-6	-140.2	
+5576	800	shop	Khaf Jhifanm	50	-21.8	0	-116.7	
+5577	1500	shop	Yafaaf	50	76.9	-6	-140.4	
+5590	3750	shop	Khaf Jhifanm	50	-21.8	0	-116.7	
+5592	450	shop	Yafaaf	50	76.9	-6	-140.4	
+12289	120	nation	Kumama	240	19.4	-3.3	3.6	3
+12289	120	nation	Zemedars	234	-25.1	0	3.5	3
+12289	120	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12290	605	nation	Carautia	230	68.4	0	39.4	3
+12290	605	nation	Kumama	240	19.4	-3.3	3.6	2
+12290	605	nation	Zemedars	234	-25.1	0	3.5	3
+12292	4980	nation	Carautia	230	68.4	0	39.4	2
+12292	4980	nation	Kumama	240	19.4	-3.3	3.6	1
+12292	4980	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12295	64791	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12300	12040	nation	Zemedars	234	-25.1	0	3.5	2
+12301	33960	nation	Zemedars	234	-25.1	0	3.5	1
+12301	34287	shop	Brave Wolf	247	-10	8	81.8	
+12302	66220	shop	Brave Wolf	247	-10	8	81.8	
+12306	11424	nation	Carautia	230	68.4	0	39.4	1
+12416	31860	nation	Brunhilde	235	-305.8	-10.3	-152.2	2
+12416	31860	shop	Khe Chalahko	244	-4.1	1.3	34.4	
+12417	56295	nation	Brunhilde	235	-305.8	-10.3	-152.2	1
+12424	10162	nation	Deegis	234	-25.4	0	12.8	1
+12424	10260	nation	Miogique	230	68.4	0	37	1
+12424	10260	shop	Bajahb	50	77.4	0	-88	
+12425	22800	shop	Deadly Minnow	244	-1.5	1.3	36	
+12426	47025	shop	Deadly Minnow	244	-1.5	1.3	36	
+12432	1450	nation	Brunhilde	235	-305.8	-10.3	-152.2	3
+12433	12800	nation	Brunhilde	235	-305.8	-10.3	-152.2	2
+12440	439	shop	Graine	249	17.2	-8	69.1	
+12440	440	nation	Deegis	234	-25.4	0	12.8	2
+12440	440	nation	Miogique	230	68.4	0	37	3
+12440	440	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	2
+12440	440	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12442	14326	nation	Miogique	230	68.4	0	37	2
+12442	14326	shop	Deadly Minnow	244	-1.5	1.3	36	
+12448	168	nation	Brunhilde	235	-305.8	-10.3	-152.2	3
+12448	168	nation	Deegis	234	-25.4	0	12.8	3
+12448	168	nation	Miogique	230	68.4	0	37	3
+12448	168	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	3
+12448	168	shop	Graine	249	17.2	-8	69.1	
+12449	1635	nation	Deegis	234	-25.4	0	12.8	2
+12449	1635	nation	Miogique	230	68.4	0	37	3
+12449	1635	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	3
+12449	1635	shop	Graine	249	17.2	-8	69.1	
+12450	20206	nation	Deegis	234	-25.4	0	12.8	1
+12454	3912	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	2
+12455	7638	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	1
+12455	7638	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12456	825	nation	Coullave	232	-95.3	-8	-127.3	1
+12456	825	nation	Numa	236	-135	-1.7	-17.1	2
+12456	825	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	3
+12456	825	shop	Herminia	248	56.2	-15.3	8.6	
+12457	4838	nation	Numa	236	-135	-1.7	-17.1	1
+12457	4884	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	2
+12458	13392	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	1
+12464	1936	nation	Gelzerio	234	-15.3	0	-6.8	3
+12464	1936	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	3
+12465	8918	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	2
+12466	20000	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	1
+12466	20000	shop	Allard	48	75	0	55.4	
+12466	20000	shop	Chetak	245	-20.1	-6.1	-91.8	
+12467	45760	shop	Chetak	245	-20.1	-6.1	-91.8	
+12472	160	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	2
+12472	160	nation	Ostalie	230	-143.4	-6	-11.8	3
+12473	2070	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	2
+12474	12138	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	2
+12474	12138	shop	Chetak	245	-20.1	-6.1	-91.8	
+12498	2000	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	3
+12499	16000	nation	Orez-Ebrez	238	-67.7	-2.9	-145.7	2
+12544	48672	nation	Brunhilde	235	-305.8	-10.3	-152.2	1
+12544	49140	shop	Khe Chalahko	244	-4.1	1.3	34.4	
+12552	15840	nation	Deegis	234	-25.4	0	12.8	3
+12552	15840	nation	Miogique	230	68.4	0	37	1
+12552	15840	shop	Bajahb	50	77.4	0	-88	
+12553	35200	shop	Deadly Minnow	244	-1.5	1.3	36	
+12554	72600	shop	Brave Wolf	247	-10	8	81.8	
+12554	72600	shop	Deadly Minnow	244	-1.5	1.3	36	
+12560	2230	nation	Brunhilde	235	-305.8	-10.3	-152.2	3
+12561	19488	nation	Brunhilde	235	-305.8	-10.3	-152.2	2
+12568	671	shop	Graine	249	17.2	-8	69.1	
+12568	672	nation	Deegis	234	-25.4	0	12.8	2
+12568	672	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	3
+12568	672	nation	Miogique	230	68.4	0	37	3
+12568	672	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12570	22800	nation	Miogique	230	68.4	0	37	2
+12570	22800	shop	Deadly Minnow	244	-1.5	1.3	36	
+12576	256	nation	Brunhilde	235	-305.8	-10.3	-152.2	3
+12576	256	nation	Deegis	234	-25.4	0	12.8	3
+12576	256	nation	Miogique	230	68.4	0	37	3
+12576	256	shop	Graine	249	17.2	-8	69.1	
+12576	256	shop	Ryan	240	9.1	-4	107	
+12577	2485	nation	Deegis	234	-25.4	0	12.8	2
+12577	2485	nation	Miogique	230	68.4	0	37	3
+12577	2485	shop	Graine	249	17.2	-8	69.1	
+12577	2485	shop	Migran	26	29.1	-22.2	13.6	
+12577	2485	shop	Misseulieu	26	31.8	-22.2	-2.9	
+12577	2485	shop	Ryan	240	9.1	-4	107	
+12578	31188	nation	Deegis	234	-25.4	0	12.8	1
+12578	31488	shop	Brave Wolf	247	-10	8	81.8	
+12583	11775	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12584	1245	nation	Coullave	232	-95.3	-8	-127.3	1
+12584	1245	nation	Numa	236	-135	-1.7	-17.1	2
+12584	1245	shop	Herminia	248	56.2	-15.3	8.6	
+12584	1245	shop	Ryan	240	9.1	-4	107	
+12585	7290	nation	Numa	236	-135	-1.7	-17.1	1
+12592	2745	nation	Gelzerio	234	-15.3	0	-6.8	3
+12592	2745	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	3
+12593	13728	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	2
+12594	32500	shop	Allard	48	75	0	55.4	
+12594	32500	shop	Chetak	245	-20.1	-6.1	-91.8	
+12595	68640	shop	Chetak	245	-20.1	-6.1	-91.8	
+12600	240	nation	Gelzerio	234	-15.3	0	-6.8	3
+12600	240	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	3
+12600	240	nation	Ostalie	230	-143.4	-6	-11.8	3
+12601	3085	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	1
+12602	18088	shop	Chetak	245	-20.1	-6.1	-91.8	
+12608	1400	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	2
+12608	1400	shop	Herminia	248	56.2	-15.3	8.6	
+12609	10356	shop	Brave Wolf	247	-10	8	81.8	
+12609	10356	shop	Chetak	245	-20.1	-6.1	-91.8	
+12610	33212	shop	Chetak	245	-20.1	-6.1	-91.8	
+12672	25673	nation	Brunhilde	235	-305.8	-10.3	-152.2	1
+12672	25920	nation	Miogique	230	68.4	0	37	1
+12672	25920	shop	Deadly Minnow	244	-1.5	1.3	36	
+12680	8460	nation	Deegis	234	-25.4	0	12.8	3
+12680	8460	nation	Miogique	230	68.4	0	37	1
+12680	8460	shop	Bajahb	50	77.4	0	-88	
+12681	18800	shop	Deadly Minnow	244	-1.5	1.3	36	
+12682	38775	shop	Brave Wolf	247	-10	8	81.8	
+12682	38775	shop	Deadly Minnow	244	-1.5	1.3	36	
+12688	1190	nation	Brunhilde	235	-305.8	-10.3	-152.2	3
+12689	10368	nation	Brunhilde	235	-305.8	-10.3	-152.2	2
+12696	360	nation	Deegis	234	-25.4	0	12.8	2
+12696	360	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	2
+12696	360	nation	Miogique	230	68.4	0	37	3
+12696	360	shop	Graine	249	17.2	-8	69.1	
+12696	360	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12698	11970	nation	Miogique	230	68.4	0	37	2
+12698	11970	shop	Deadly Minnow	244	-1.5	1.3	36	
+12704	140	nation	Brunhilde	235	-305.8	-10.3	-152.2	3
+12704	140	nation	Deegis	234	-25.4	0	12.8	3
+12704	140	nation	Miogique	230	68.4	0	37	3
+12704	140	shop	Graine	249	17.2	-8	69.1	
+12704	140	shop	Ryan	240	9.1	-4	107	
+12705	1365	nation	Deegis	234	-25.4	0	12.8	2
+12705	1365	nation	Miogique	230	68.4	0	37	3
+12705	1365	shop	Graine	249	17.2	-8	69.1	
+12705	1365	shop	Ryan	240	9.1	-4	107	
+12706	17116	nation	Deegis	234	-25.4	0	12.8	1
+12706	17280	shop	Brave Wolf	247	-10	8	81.8	
+12711	6204	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12712	685	nation	Coullave	232	-95.3	-8	-127.3	1
+12712	685	nation	Numa	236	-135	-1.7	-17.1	2
+12712	685	shop	Herminia	248	56.2	-15.3	8.6	
+12712	685	shop	Ryan	240	9.1	-4	107	
+12713	4012	nation	Numa	236	-135	-1.7	-17.1	1
+12720	1515	nation	Gelzerio	234	-15.3	0	-6.8	3
+12720	1515	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	3
+12721	7440	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	2
+12722	16900	shop	Allard	48	75	0	55.4	
+12722	16900	shop	Chetak	245	-20.1	-6.1	-91.8	
+12728	132	nation	Gelzerio	234	-15.3	0	-6.8	3
+12728	132	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	3
+12728	132	nation	Ostalie	230	-143.4	-6	-11.8	3
+12729	1745	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	1
+12730	10234	shop	Chetak	245	-20.1	-6.1	-91.8	
+12736	655	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	2
+12736	655	shop	Herminia	248	56.2	-15.3	8.6	
+12737	4830	shop	Brave Wolf	247	-10	8	81.8	
+12737	4830	shop	Chetak	245	-20.1	-6.1	-91.8	
+12738	15732	shop	Chetak	245	-20.1	-6.1	-91.8	
+12800	37800	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	2
+12800	37800	shop	Khe Chalahko	244	-4.1	1.3	34.4	
+12801	63238	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	1
+12808	12600	nation	Carautia	230	68.4	0	39.4	1
+12808	12600	nation	Zemedars	234	-25.1	0	3.5	3
+12808	12600	shop	Bajahb	50	77.4	0	-88	
+12810	57750	shop	Brave Wolf	247	-10	8	81.8	
+12810	57750	shop	Khe Chalahko	244	-4.1	1.3	34.4	
+12816	1790	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	3
+12817	15456	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	2
+12824	536	nation	Carautia	230	68.4	0	39.4	3
+12824	536	nation	Kumama	240	19.4	-3.3	3.6	2
+12824	536	nation	Zemedars	234	-25.1	0	3.5	2
+12824	536	shop	Graine	249	17.2	-8	69.1	
+12825	5387	nation	Zemedars	234	-25.1	0	3.5	1
+12826	18392	nation	Carautia	230	68.4	0	39.4	2
+12832	208	nation	Carautia	230	68.4	0	39.4	3
+12832	208	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	3
+12832	208	nation	Zemedars	234	-25.1	0	3.5	3
+12832	208	shop	Graine	249	17.2	-8	69.1	
+12832	208	shop	Ryan	240	9.1	-4	107	
+12833	2000	nation	Carautia	230	68.4	0	39.4	3
+12833	2000	nation	Zemedars	234	-25.1	0	3.5	2
+12833	2000	shop	Graine	249	17.2	-8	69.1	
+12833	2000	shop	Ryan	240	9.1	-4	107	
+12835	9420	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12836	25102	nation	Zemedars	234	-25.1	0	3.5	1
+12836	25344	shop	Brave Wolf	247	-10	8	81.8	
+12840	995	nation	Coullave	232	-95.3	-8	-127.3	1
+12840	995	nation	Numa	236	-135	-1.7	-17.1	2
+12840	995	shop	Herminia	248	56.2	-15.3	8.6	
+12840	995	shop	Ryan	240	9.1	-4	107	
+12841	5841	nation	Numa	236	-135	-1.7	-17.1	1
+12848	2110	nation	Gelzerio	234	-15.3	0	-6.8	3
+12848	2110	nation	Kumama	240	19.4	-3.3	3.6	3
+12849	10800	nation	Kumama	240	19.4	-3.3	3.6	2
+12850	24500	shop	Allard	48	75	0	55.4	
+12850	24500	shop	Chenokih	245	-22.8	-6.1	-96.2	
+12851	57600	shop	Chenokih	245	-22.8	-6.1	-96.2	
+12856	192	nation	Gelzerio	234	-15.3	0	-6.8	3
+12856	192	nation	Kumama	240	19.4	-3.3	3.6	3
+12856	192	nation	Ostalie	230	-143.4	-6	-11.8	3
+12857	2520	nation	Kumama	240	19.4	-3.3	3.6	1
+12858	14756	shop	Chenokih	245	-22.8	-6.1	-96.2	
+12865	6900	shop	Brave Wolf	247	-10	8	81.8	
+12865	6900	shop	Chenokih	245	-22.8	-6.1	-96.2	
+12866	22632	shop	Chenokih	245	-22.8	-6.1	-96.2	
+12928	23760	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	2
+12928	23760	shop	Khe Chalahko	244	-4.1	1.3	34.4	
+12929	39550	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	1
+12936	7740	nation	Carautia	230	68.4	0	39.4	1
+12936	7740	nation	Zemedars	234	-25.1	0	3.5	3
+12936	7740	shop	Bajahb	50	77.4	0	-88	
+12938	35475	shop	Brave Wolf	247	-10	8	81.8	
+12938	35475	shop	Khe Chalahko	244	-4.1	1.3	34.4	
+12944	1085	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	3
+12945	9152	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	2
+12952	336	nation	Carautia	230	68.4	0	39.4	3
+12952	336	nation	Kumama	240	19.4	-3.3	3.6	2
+12952	336	nation	Zemedars	234	-25.1	0	3.5	2
+12952	336	shop	Graine	249	17.2	-8	69.1	
+12952	336	shop	Poporoon	53	-2.7	0	34.5	
+12952	336	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12953	3405	nation	Zemedars	234	-25.1	0	3.5	1
+12953	3438	shop	Poporoon	53	-2.7	0	34.5	
+12954	11172	nation	Carautia	230	68.4	0	39.4	2
+12954	11172	shop	Poporoon	53	-2.7	0	34.5	
+12955	20832	shop	Poporoon	53	-2.7	0	34.5	
+12960	128	nation	Carautia	230	68.4	0	39.4	3
+12960	128	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	3
+12960	128	nation	Zemedars	234	-25.1	0	3.5	3
+12960	128	shop	Graine	249	17.2	-8	69.1	
+12960	128	shop	Ryan	240	9.1	-4	107	
+12961	1240	nation	Carautia	230	68.4	0	39.4	3
+12961	1240	nation	Zemedars	234	-25.1	0	3.5	2
+12961	1240	shop	Graine	249	17.2	-8	69.1	
+12961	1240	shop	Ryan	240	9.1	-4	107	
+12962	15594	nation	Zemedars	234	-25.1	0	3.5	1
+12962	15744	shop	Brave Wolf	247	-10	8	81.8	
+12967	5796	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+12968	635	nation	Coullave	232	-95.3	-8	-127.3	1
+12968	635	nation	Numa	236	-135	-1.7	-17.1	2
+12968	635	shop	Herminia	248	56.2	-15.3	8.6	
+12968	635	shop	Ryan	240	9.1	-4	107	
+12969	3738	nation	Numa	236	-135	-1.7	-17.1	1
+12976	1410	nation	Gelzerio	234	-15.3	0	-6.8	3
+12976	1410	nation	Kumama	240	19.4	-3.3	3.6	3
+12977	7208	nation	Kumama	240	19.4	-3.3	3.6	2
+12978	16000	shop	Allard	48	75	0	55.4	
+12978	16000	shop	Chenokih	245	-22.8	-6.1	-96.2	
+12979	35200	shop	Chenokih	245	-22.8	-6.1	-96.2	
+12984	124	nation	Gelzerio	234	-15.3	0	-6.8	3
+12984	124	nation	Kumama	240	19.4	-3.3	3.6	3
+12984	124	nation	Pirvidiauce	231	-218.4	8	60.6	3
+12985	1625	nation	Kumama	240	19.4	-3.3	3.6	1
+12985	1625	nation	Pirvidiauce	231	-218.4	8	60.6	2
+12985	1625	shop	Migran	26	29.1	-22.2	13.6	
+12985	1625	shop	Misseulieu	26	31.8	-22.2	-2.9	
+12986	9180	nation	Pirvidiauce	231	-218.4	8	60.6	1
+12986	9180	shop	Chenokih	245	-22.8	-6.1	-96.2	
+12992	605	nation	Kumama	240	19.4	-3.3	3.6	2
+12992	605	shop	Herminia	248	56.2	-15.3	8.6	
+12993	4488	shop	Brave Wolf	247	-10	8	81.8	
+12993	4488	shop	Chenokih	245	-22.8	-6.1	-96.2	
+12994	14352	shop	Chenokih	245	-22.8	-6.1	-96.2	
+13076	3816	shop	Toji Mumosulah	250	51.5	-11.5	-50.6	
+13080	18360	nation	Charging Chocobo	235	-301.5	-10.3	-157.2	2
+13085	1080	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	3
+13090	4668	nation	Guruna-Maguruna	240	17.8	-3.3	3.7	1
+13092	31280	shop	Tahn Posbei	250	4.9	-8.5	-103.8	
+13192	425	nation	Ostalie	230	-143.4	-6	-11.8	3
+13193	2700	nation	Ostalie	230	-143.4	-6	-11.8	3
+13196	11171	nation	Gelzerio	234	-15.3	0	-6.8	1
+13196	11172	nation	Ostalie	230	-143.4	-6	-11.8	1
+13198	21780	nation	Gelzerio	234	-15.3	0	-6.8	1
+13199	104	shop	Toji Mumosulah	250	51.5	-11.5	-50.6	
+13205	3643	nation	Numa	236	-135	-1.7	-17.1	1
+13321	1812	shop	Toji Mumosulah	250	51.5	-11.5	-50.6	
+13327	1250	nation	Raghd	235	-149.2	-4.8	-74.9	2
+13327	1250	shop	Adelflete	245	-35.9	-6.1	-119.7	
+13327	1250	shop	Matoaka	245	-37.2	-6.1	-121.9	
+13327	1250	shop	Morefie	245	-38.2	-6.1	-123.9	
+13328	4500	shop	Matoaka	245	-37.2	-6.1	-121.9	
+13328	4500	shop	Morefie	245	-38.2	-6.1	-123.9	
+13328	4500	shop	Scamplix	247	-39.3	8	71	
+13454	76	nation	Carmelide	235	-151.7	-4.8	-69.6	3
+13454	76	nation	Raghd	235	-149.2	-4.8	-74.9	3
+13456	1250	nation	Raghd	235	-149.2	-4.8	-74.9	2
+13456	1250	shop	Adelflete	245	-35.9	-6.1	-119.7	
+13456	1250	shop	Matoaka	245	-37.2	-6.1	-121.9	
+13456	1250	shop	Morefie	245	-38.2	-6.1	-123.9	
+13465	200	nation	Raghd	235	-149.2	-4.8	-74.9	2
+13469	1250	nation	Coullave	232	-95.3	-8	-127.3	3
+13568	1250	shop	Chenokih	245	-22.8	-6.1	-96.2	
+13577	11088	shop	Chenokih	245	-22.8	-6.1	-96.2	
+13979	26784	shop	Brave Wolf	247	-10	8	81.8	
+14317	101055	shop	Migran	26	29.1	-22.2	13.6	
+14317	101055	shop	Misseulieu	26	31.8	-22.2	-2.9	
+14858	181905	shop	Migran	26	29.1	-22.2	13.6	
+14858	181905	shop	Misseulieu	26	31.8	-22.2	-2.9	
+15305	630255	shop	Migran	26	29.1	-22.2	13.6	
+15305	630255	shop	Misseulieu	26	31.8	-22.2	-2.9	
+16385	144	nation	Ashene	230	68.7	0	61.9	3
+16385	144	nation	Taniko-Maniko	240	18.4	-3.3	36.4	2
+16390	244	nation	Ciqala	235	-283.1	-10.3	-143.7	3
+16391	900	nation	Ciqala	235	-283.1	-10.3	-143.7	2
+16392	5188	nation	Ciqala	235	-283.1	-10.3	-143.7	1
+16399	15488	shop	Coumuna	244	-36.6	-0.7	74.6	
+16401	114070	shop	Shiny Teeth	247	-33.5	8	103.2	
+16405	116	nation	Sugandhi	236	-50.1	2.3	2.2	3
+16405	116	nation	Taniko-Maniko	240	18.4	-3.3	36.4	2
+16405	116	nation	Zhikkom	235	-288.7	-10.3	-135.1	3
+16405	116	shop	Runito-Monito	249	14.4	-16.6	88.6	
+16407	1690	shop	Runito-Monito	249	14.4	-16.6	88.6	
+16411	12768	shop	Torapiont	248	64.3	-15.3	13.4	
+16412	29760	shop	Coumuna	244	-36.6	-0.7	74.6	
+16448	156	nation	Ashene	230	68.7	0	61.9	3
+16448	156	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	3
+16449	930	nation	Ashene	230	68.7	0	61.9	3
+16449	930	shop	Runito-Monito	249	14.4	-16.6	88.6	
+16450	2030	nation	Ashene	230	68.7	0	61.9	2
+16450	2030	shop	Caiphimonride	26	-25	-36.2	21	
+16450	2030	shop	Melleupaux	26	-32	-36.2	-0.2	
+16450	2030	shop	Shiny Teeth	247	-33.5	8	103.2	
+16451	8586	shop	Torapiont	248	64.3	-15.3	13.4	
+16455	4788	nation	Ashene	230	68.7	0	61.9	1
+16460	12096	shop	Coumuna	244	-36.6	-0.7	74.6	
+16460	12096	shop	Shiny Teeth	247	-33.5	8	103.2	
+16465	164	nation	Sugandhi	236	-50.1	2.3	2.2	3
+16465	164	nation	Tavourine	231	-185.7	1.7	208.2	2
+16465	164	nation	Zhikkom	235	-288.7	-10.3	-135.1	3
+16466	2425	nation	Sugandhi	236	-50.1	2.3	2.2	2
+16466	2425	nation	Tavourine	231	-185.7	1.7	208.2	1
+16466	2425	nation	Zhikkom	235	-288.7	-10.3	-135.1	2
+16466	2425	shop	Shiny Teeth	247	-33.5	8	103.2	
+16467	14560	shop	Coumuna	244	-36.6	-0.7	74.6	
+16473	6151	nation	Sugandhi	236	-50.1	2.3	2.2	1
+16473	6151	nation	Zhikkom	235	-288.7	-10.3	-135.1	1
+16473	6210	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+16513	12754	nation	Sugandhi	236	-50.1	2.3	2.2	1
+16513	12754	nation	Zhikkom	235	-288.7	-10.3	-135.1	1
+16513	12876	shop	Torapiont	248	64.3	-15.3	13.4	
+16517	10224	nation	Sugandhi	236	-50.1	2.3	2.2	3
+16517	10224	nation	Zhikkom	235	-288.7	-10.3	-135.1	3
+16518	31000	shop	Coumuna	244	-36.6	-0.7	74.6	
+16524	14896	nation	Ashene	230	68.7	0	61.9	1
+16531	3915	nation	Ashene	230	68.7	0	61.9	3
+16531	3915	shop	Runito-Monito	249	14.4	-16.6	88.6	
+16532	18816	nation	Ashene	230	68.7	0	61.9	1
+16535	268	nation	Ashene	230	68.7	0	61.9	3
+16535	268	nation	Sugandhi	236	-50.1	2.3	2.2	3
+16535	268	nation	Zhikkom	235	-288.7	-10.3	-135.1	3
+16535	268	shop	Ryan	240	9.1	-4	107	
+16536	7920	nation	Ashene	230	68.7	0	61.9	2
+16536	7920	nation	Sugandhi	236	-50.1	2.3	2.2	3
+16536	7920	nation	Zhikkom	235	-288.7	-10.3	-135.1	2
+16537	34073	nation	Zhikkom	235	-288.7	-10.3	-135.1	1
+16537	34400	nation	Sugandhi	236	-50.1	2.3	2.2	2
+16545	23185	nation	Sugandhi	236	-50.1	2.3	2.2	1
+16545	23185	nation	Zhikkom	235	-288.7	-10.3	-135.1	1
+16545	27778	nation	Ashene	230	68.7	0	61.9	1
+16551	776	nation	Sugandhi	236	-50.1	2.3	2.2	3
+16551	776	nation	Zhikkom	235	-288.7	-10.3	-135.1	3
+16552	4525	nation	Sugandhi	236	-50.1	2.3	2.2	2
+16552	4525	nation	Zhikkom	235	-288.7	-10.3	-135.1	2
+16552	4525	shop	Shiny Teeth	247	-33.5	8	103.2	
+16553	38800	shop	Shiny Teeth	247	-33.5	8	103.2	
+16558	67353	nation	Sugandhi	236	-50.1	2.3	2.2	1
+16558	67353	nation	Zhikkom	235	-288.7	-10.3	-135.1	1
+16558	68000	shop	Shiny Teeth	247	-33.5	8	103.2	
+16565	1860	nation	Ashene	230	68.7	0	61.9	3
+16566	9216	nation	Ashene	230	68.7	0	61.9	2
+16566	9216	shop	Caiphimonride	26	-25	-36.2	21	
+16566	9216	shop	Melleupaux	26	-32	-36.2	-0.2	
+16567	85250	shop	Coumuna	244	-36.6	-0.7	74.6	
+16576	39744	nation	Ashene	230	68.7	0	61.9	1
+16583	2720	nation	Tavourine	231	-185.7	1.7	208.2	2
+16583	2720	shop	Runito-Monito	249	14.4	-16.6	88.6	
+16584	42000	nation	Tavourine	231	-185.7	1.7	208.2	1
+16584	42000	shop	Torapiont	248	64.3	-15.3	13.4	
+16589	13926	shop	Coumuna	244	-36.6	-0.7	74.6	
+16595	166320	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+16640	316	nation	Tavourine	231	-185.7	1.7	208.2	2
+16640	316	shop	Ryan	240	9.1	-4	107	
+16640	328	nation	Ciqala	235	-283.1	-10.3	-143.7	3
+16641	1622	nation	Ciqala	235	-283.1	-10.3	-143.7	2
+16642	4665	nation	Taniko-Maniko	240	18.4	-3.3	36.4	3
+16643	12150	nation	Ciqala	235	-283.1	-10.3	-143.7	1
+16643	12267	shop	Torapiont	248	64.3	-15.3	13.4	
+16649	6516	nation	Taniko-Maniko	240	18.4	-3.3	36.4	2
+16704	672	shop	Runito-Monito	249	14.4	-16.6	88.6	
+16704	698	nation	Ciqala	235	-283.1	-10.3	-143.7	2
+16705	4550	shop	Coumuna	244	-36.6	-0.7	74.6	
+16705	4550	shop	Torapiont	248	64.3	-15.3	13.4	
+16705	4732	nation	Ciqala	235	-283.1	-10.3	-143.7	1
+16768	344	nation	Arlenne	231	-188.3	1.7	203.9	3
+16768	344	nation	Taniko-Maniko	240	18.4	-3.3	36.4	3
+16769	2825	nation	Arlenne	231	-188.3	1.7	203.9	2
+16769	2825	nation	Taniko-Maniko	240	18.4	-3.3	36.4	1
+16770	12540	nation	Arlenne	231	-188.3	1.7	203.9	1
+16774	10596	shop	Antonia	244	-34.2	-0.7	76	
+16832	108	nation	Taniko-Maniko	240	18.4	-3.3	36.4	3
+16833	880	nation	Arlenne	231	-188.3	1.7	203.9	3
+16833	880	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+16834	5200	nation	Arlenne	231	-188.3	1.7	203.9	2
+16835	17640	nation	Arlenne	231	-188.3	1.7	203.9	1
+16835	17640	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+16836	44550	shop	Antonia	244	-34.2	-0.7	76	
+16839	82110	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+16845	18420	nation	Arlenne	231	-188.3	1.7	203.9	1
+16993	71	shop	Toji Mumosulah	250	51.5	-11.5	-50.6	
+16998	40	shop	Toji Mumosulah	250	51.5	-11.5	-50.6	
+17016	11	nation	Neigepance	234	46.7	0.9	-102.3	3
+17016	11	shop	Mamerie	250	-55.4	-10	-94.6	
+17016	12	nation	Ferdoulemiont	230	11.2	2.2	-95.8	3
+17016	12	nation	Quesse	241	132.1	-5.2	-133	3
+17016	12	shop	Dwago	50	22.2	0	114.2	
+17016	12	shop	Generoit	247	-14.8	8	81.5	
+17017	89	nation	Ferdoulemiont	230	11.2	2.2	-95.8	3
+17017	89	nation	Quesse	241	132.1	-5.2	-133	3
+17017	89	shop	Generoit	247	-14.8	8	81.5	
+17017	90	nation	Neigepance	234	46.7	0.9	-102.3	3
+17017	90	shop	Mamerie	250	-55.4	-10	-94.6	
+17017	93	shop	Dwago	50	22.2	0	114.2	
+17024	72	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	3
+17025	1740	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	3
+17025	1740	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+17026	5376	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	2
+17026	5376	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+17027	11232	shop	Antonia	244	-34.2	-0.7	76	
+17034	188	nation	Tavourine	231	-185.7	1.7	208.2	3
+17035	4848	nation	Tavourine	231	-185.7	1.7	208.2	2
+17036	18048	shop	Antonia	244	-34.2	-0.7	76	
+17042	340	nation	Ciqala	235	-283.1	-10.3	-143.7	3
+17043	2315	nation	Ciqala	235	-283.1	-10.3	-143.7	2
+17044	6496	nation	Ciqala	235	-283.1	-10.3	-143.7	1
+17044	6558	shop	Antonia	244	-34.2	-0.7	76	
+17049	51	nation	Ciqala	235	-283.1	-10.3	-143.7	3
+17049	52	nation	Arlenne	231	-188.3	1.7	203.9	3
+17049	52	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	3
+17050	370	nation	Arlenne	231	-188.3	1.7	203.9	2
+17050	370	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	2
+17050	370	shop	Torapiont	248	64.3	-15.3	13.4	
+17051	1566	nation	Arlenne	231	-188.3	1.7	203.9	1
+17051	1566	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	1
+17051	1566	shop	Torapiont	248	64.3	-15.3	13.4	
+17052	5712	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+17059	100	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	1
+17059	100	nation	Tavourine	231	-185.7	1.7	208.2	3
+17059	100	shop	Runito-Monito	249	14.4	-16.6	88.6	
+17060	2652	nation	Tavourine	231	-185.7	1.7	208.2	1
+17060	2652	shop	Shiny Teeth	247	-33.5	8	103.2	
+17061	6256	shop	Antonia	244	-34.2	-0.7	76	
+17081	690	nation	Tavourine	231	-185.7	1.7	208.2	2
+17081	690	shop	Runito-Monito	249	14.4	-16.6	88.6	
+17088	63	nation	Arlenne	231	-188.3	1.7	203.9	3
+17088	63	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	3
+17088	64	nation	Ciqala	235	-283.1	-10.3	-143.7	3
+17089	635	nation	Arlenne	231	-188.3	1.7	203.9	2
+17089	635	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	2
+17089	635	shop	Torapiont	248	64.3	-15.3	13.4	
+17090	3606	nation	Arlenne	231	-188.3	1.7	203.9	1
+17090	3606	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	1
+17092	32340	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+17095	420	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	3
+17096	5076	nation	Arlenne	231	-188.3	1.7	203.9	2
+17096	5076	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	2
+17097	18240	nation	Arlenne	231	-188.3	1.7	203.9	1
+17097	18240	nation	Hohbiba-Mubiba	240	16.6	-3.3	36.9	1
+17098	37440	shop	Antonia	244	-34.2	-0.7	76	
+17099	107800	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+17152	43	nation	Taniko-Maniko	240	18.4	-3.3	36.4	3
+17152	43	nation	Thadiene	230	68.7	0	64.3	3
+17152	44	shop	Wata Khamazom	53	10.7	0	-66.9	
+17153	536	nation	Taniko-Maniko	240	18.4	-3.3	36.4	2
+17153	536	nation	Thadiene	230	68.7	0	64.3	2
+17153	536	shop	Wata Khamazom	53	10.7	0	-66.9	
+17154	7920	nation	Taniko-Maniko	240	18.4	-3.3	36.4	1
+17154	7920	nation	Thadiene	230	68.7	0	64.3	1
+17154	7920	shop	Wata Khamazom	53	10.7	0	-66.9	
+17155	26250	shop	Shiny Teeth	247	-33.5	8	103.2	
+17160	492	nation	Thadiene	230	68.7	0	64.3	3
+17160	492	shop	Wata Khamazom	53	10.7	0	-66.9	
+17162	21812	nation	Thadiene	230	68.7	0	64.3	1
+17162	21812	shop	Wata Khamazom	53	10.7	0	-66.9	
+17163	43200	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+17216	179	nation	Peritrage	235	-287	-10.3	-142.6	3
+17216	180	nation	Mono Nchaa	241	17.6	-4.5	-155.8	2
+17217	2449	nation	Peritrage	235	-287	-10.3	-142.6	2
+17218	15243	nation	Peritrage	235	-287	-10.3	-142.6	1
+17248	52040	nation	Olaf	237	-22.1	-10	30.8	2
+17280	1750	nation	Taniko-Maniko	240	18.4	-3.3	36.4	2
+17280	1750	nation	Thadiene	230	68.7	0	64.3	1
+17280	1750	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+17284	9996	shop	Shiny Teeth	247	-33.5	8	103.2	
+17298	320	nation	Peritrage	235	-287	-10.3	-142.6	1
+17298	320	shop	Shiny Teeth	247	-33.5	8	103.2	
+17307	10	nation	Ferdoulemiont	230	11.2	2.2	-95.8	2
+17307	10	nation	Neigepance	234	46.7	0.9	-102.3	1
+17307	10	nation	Quesse	241	132.1	-5.2	-133	2
+17307	10	shop	Challoux	246	-17.6	8	1.5	
+17307	10	shop	Chayaya	48	75.7	0	24.1	
+17307	10	shop	Mejuone	244	-57	8	105.1	
+17307	10	shop	Rhimonne	245	-83.6	-0.1	-194.6	
+17307	10	shop	Runito-Monito	249	14.4	-16.6	88.6	
+17307	10	shop	Torapiont	248	64.3	-15.3	13.4	
+17308	60	shop	Chayaya	48	75.7	0	24.1	
+17308	60	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+17308	60	shop	Leyla	246	-67	8	-0.6	
+17308	61	nation	Mono Nchaa	241	17.6	-4.5	-155.8	2
+17308	61	nation	Taniko-Maniko	240	18.4	-3.3	36.4	2
+17313	1204	nation	Coullave	232	-95.3	-8	-127.3	1
+17313	1204	nation	Nogga	237	-28.3	-10	25.6	3
+17313	1204	nation	Upih Khachla	238	18	-2.2	68.9	1
+17313	1204	shop	Chayaya	48	75.7	0	24.1	
+17313	1204	shop	Pipiroon	53	2.8	0	47.9	
+17313	1204	shop	Stinknix	245	-51.1	5.1	-116.7	
+17315	6000	shop	Pipiroon	53	2.8	0	47.9	
+17315	6000	shop	Shiny Teeth	247	-33.5	8	103.2	
+17316	750	nation	Nogga	237	-28.3	-10	25.6	2
+17318	4	nation	Boytz	234	-28.2	0	-7.2	2
+17318	4	nation	Ensasa	238	18.3	-2.9	67.4	2
+17318	4	nation	Galvin	236	-142.6	-1.7	-20.9	2
+17318	4	nation	Mjoll	235	-318.9	-10.3	-178.1	2
+17318	4	nation	Mono Nchaa	241	17.6	-4.5	-155.8	2
+17318	4	nation	Pirvidiauce	231	-218.4	8	60.6	3
+17318	4	nation	Taniko-Maniko	240	18.4	-3.3	36.4	2
+17318	4	nation	Thadiene	230	68.7	0	64.3	3
+17318	4	shop	Khifo Ryuhkowa	250	27.2	-8.5	-103.2	
+17318	4	shop	Runito-Monito	249	14.4	-16.6	88.6	
+17318	4	shop	Torapiont	248	64.3	-15.3	13.4	
+17318	4	shop	Wata Khamazom	53	10.7	0	-66.9	
+17319	5	nation	Ensasa	238	18.3	-2.9	67.4	3
+17319	5	nation	Mono Nchaa	241	17.6	-4.5	-155.8	3
+17319	5	nation	Taniko-Maniko	240	18.4	-3.3	36.4	3
+17319	5	shop	Runito-Monito	249	14.4	-16.6	88.6	
+17320	8	nation	Boytz	234	-28.2	0	-7.2	3
+17320	8	nation	Galvin	236	-142.6	-1.7	-20.9	3
+17320	8	nation	Mjoll	235	-318.9	-10.3	-178.1	3
+17320	8	nation	Thadiene	230	68.7	0	64.3	2
+17320	8	shop	Champalpieu	244	-37.1	-1.2	134.1	
+17320	8	shop	Chayaya	48	75.7	0	24.1	
+17320	8	shop	Leyla	246	-67	8	-0.6	
+17320	8	shop	Shiny Teeth	247	-33.5	8	103.2	
+17320	8	shop	Stinknix	245	-51.1	5.1	-116.7	
+17320	8	shop	Torapiont	248	64.3	-15.3	13.4	
+17320	8	shop	Wata Khamazom	53	10.7	0	-66.9	
+17320	10	shop	Antonia	244	-34.2	-0.7	76	
+17321	17	nation	Mjoll	235	-318.9	-10.3	-178.1	1
+17321	17	nation	Thadiene	230	68.7	0	64.3	1
+17321	18	shop	Wata Khamazom	53	10.7	0	-66.9	
+17322	140	nation	Thadiene	230	68.7	0	64.3	2
+17322	140	shop	Wata Khamazom	53	10.7	0	-66.9	
+17323	140	nation	Taniko-Maniko	240	18.4	-3.3	36.4	1
+17324	140	nation	Taniko-Maniko	240	18.4	-3.3	36.4	1
+17336	6	nation	Boytz	234	-28.2	0	-7.2	3
+17336	6	nation	Ensasa	238	18.3	-2.9	67.4	2
+17336	6	nation	Galvin	236	-142.6	-1.7	-20.9	3
+17336	6	nation	Mono Nchaa	241	17.6	-4.5	-155.8	3
+17336	6	nation	Peritrage	235	-287	-10.3	-142.6	3
+17336	6	nation	Pirvidiauce	231	-218.4	8	60.6	2
+17336	6	nation	Thadiene	230	68.7	0	64.3	2
+17336	6	shop	Champalpieu	244	-37.1	-1.2	134.1	
+17336	6	shop	Leyla	246	-67	8	-0.6	
+17336	6	shop	Runito-Monito	249	14.4	-16.6	88.6	
+17336	6	shop	Ryan	240	9.1	-4	107	
+17336	6	shop	Stinknix	245	-51.1	5.1	-116.7	
+17336	6	shop	Torapiont	248	64.3	-15.3	13.4	
+17336	6	shop	Wata Khamazom	53	10.7	0	-66.9	
+17337	24	nation	Peritrage	235	-287	-10.3	-142.6	2
+17340	100	nation	Olaf	237	-22.1	-10	30.8	3
+17340	100	shop	Shiny Teeth	247	-33.5	8	103.2	
+17344	244	nation	Harmodios	235	-79.9	-4.8	-135.1	2
+17345	49	nation	Harmodios	235	-79.9	-4.8	-135.1	3
+17345	49	valeriano	Valeriano	230	-22.1	2	-12	
+17345	49	valeriano	Valeriano	236	96	8.5	-61.6	
+17345	49	valeriano	Valeriano	241	14.8	2	-50.3	
+17347	1090	nation	Harmodios	235	-79.9	-4.8	-135.1	1
+17347	1144	valeriano	Valeriano	230	-22.1	2	-12	
+17347	1144	valeriano	Valeriano	236	96	8.5	-61.6	
+17347	1144	valeriano	Valeriano	241	14.8	2	-50.3	
+17351	5159	nation	Harmodios	235	-79.9	-4.8	-135.1	3
+17351	5160	shop	Toji Mumosulah	250	51.5	-11.5	-50.6	
+17353	49	nation	Harmodios	235	-79.9	-4.8	-135.1	2
+17382	11845	nation	Pohka Chichiyowahl	4	-416.4	-2.2	-430.1	3
+17383	2640	shop	Mazuro-Oozuro	26	-89.3	-12.8	9.3	
+17383	2640	shop	Nilerouche	26	-83.4	-20	72.4	
+17388	1238	nation	Pohka Chichiyowahl	4	-416.4	-2.2	-430.1	3
+17389	535	nation	Gelzerio	234	-15.3	0	-6.8	1
+17389	540	nation	Lusiane	230	-141	-2	14.7	1
+17390	236	nation	Gelzerio	234	-15.3	0	-6.8	2
+17390	236	nation	Lusiane	230	-141	-2	14.7	2
+17391	71	nation	Gelzerio	234	-15.3	0	-6.8	3
+17391	72	nation	Lusiane	230	-141	-2	14.7	3
+17395	9	shop	Solby-Maholby	252	-30.3	1.1	-34.5	
+17395	12	nation	Ensasa	238	18.3	-2.9	67.4	3
+17395	12	nation	Gelzerio	234	-15.3	0	-6.8	3
+17395	12	nation	Lusiane	230	-141	-2	14.7	2
+17395	12	shop	Dohdjuma	248	-59	-2.6	-28.6	
+17395	12	shop	Dwago	50	22.2	0	114.2	
+17395	12	shop	Pikini-Mikini	249	-47.2	-4.1	35.3	
+17396	4	nation	Ensasa	238	18.3	-2.9	67.4	3
+17396	4	nation	Gelzerio	234	-15.3	0	-6.8	2
+17396	4	nation	Lusiane	230	-141	-2	14.7	3
+17396	4	shop	Dwago	50	22.2	0	114.2	
+17860	90	nation	Ferdoulemiont	230	11.2	2.2	-95.8	3
+17860	90	nation	Neigepance	234	46.7	0.9	-102.3	3
+17860	90	nation	Quesse	241	132.1	-5.2	-133	3
+17860	90	shop	Generoit	247	-14.8	8	81.5	
+17860	90	shop	Mamerie	250	-55.4	-10	-94.6	
+17862	756	nation	Ferdoulemiont	230	11.2	2.2	-95.8	3
+17862	756	nation	Neigepance	234	46.7	0.9	-102.3	3
+17862	756	nation	Quesse	241	132.1	-5.2	-133	3
+17862	756	shop	Generoit	247	-14.8	8	81.5	
+17862	756	shop	Mamerie	250	-55.4	-10	-94.6	
+17862	786	shop	Dwago	50	22.2	0	114.2	
+17864	138	nation	Ferdoulemiont	230	11.2	2.2	-95.8	3
+17864	138	nation	Neigepance	234	46.7	0.9	-102.3	3
+17864	138	nation	Quesse	241	132.1	-5.2	-133	3
+17864	138	shop	Generoit	247	-14.8	8	81.5	
+17864	138	shop	Mamerie	250	-55.4	-10	-94.6	
+17866	756	nation	Ferdoulemiont	230	11.2	2.2	-95.8	3
+17866	756	nation	Neigepance	234	46.7	0.9	-102.3	3
+17866	756	nation	Quesse	241	132.1	-5.2	-133	3
+17866	756	shop	Generoit	247	-14.8	8	81.5	
+17866	756	shop	Mamerie	250	-55.4	-10	-94.6	
+17876	179	shop	Toji Mumosulah	250	51.5	-11.5	-50.6	
+18214	20762	shop	Caiphimonride	26	-25	-36.2	21	
+18214	20762	shop	Melleupaux	26	-32	-36.2	-0.2	
+18258	248	shop	Wata Khamazom	53	10.7	0	-66.9	
+18375	37296	shop	Caiphimonride	26	-25	-36.2	21	
+18375	37296	shop	Melleupaux	26	-32	-36.2	-0.2	
+18731	200	shop	Gavrie	50	-115.2	0	15.2	
+18732	500	shop	Gavrie	50	-115.2	0	15.2	
+18733	1000	shop	Gavrie	50	-115.2	0	15.2	
