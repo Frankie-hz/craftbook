@@ -14,6 +14,18 @@ craftbook only reads. It never sends packets or commands to the server.
 > The data is built from Phoenix XI's server files, so recipes, drop rates and shop prices match Phoenix. On retail
 > or another private server the numbers will be off. See [Updating the data](#updating-the-data).
 
+## Follows your in-game window frame
+
+![craftbook next to the game's Window Type setting](docs/window-type.webp)
+
+The Classic theme draws the book with the game's own window art and changes with Config > Windows > Shared > Window
+Type. See [Themes](#themes).
+
+<p>
+  <img src="docs/frame-1.webp" width="49%" alt="craftbook in a blue window frame">
+  <img src="docs/frame-2.webp" width="49%" alt="craftbook in a grey window frame">
+</p>
+
 ## Install
 
 1. Download `craftbook-vX.Y.zip` from the [latest release](https://github.com/Frankie-hz/craftbook/releases/latest).
