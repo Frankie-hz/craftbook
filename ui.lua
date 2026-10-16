@@ -1817,7 +1817,7 @@ do
         local margin = math.floor(profit / value * 100 + 0.5);
         imgui.TextColored(color, ('%s (%d%%)'):fmt(signed_commas(profit), margin));
         if (imgui.IsItemHovered()) then
-            set_tooltip(('Profit per synth, and the profit margin.\nMargin = (sale price - cost) / sale price = (%s - %s) / %s.'):fmt(commas(value), commas(cost), commas(value)));
+            set_tooltip(('Profit, and the profit margin.\nMargin = (sale price - cost) / sale price = (%s - %s) / %s.'):fmt(commas(value), commas(cost), commas(value)));
         end
     end
 
@@ -1957,6 +1957,101 @@ do
         end
     end
 
+    local MADE_LABELS = { 'NQ', 'HQ1', 'HQ2', 'HQ3' };
+    local MADE_DIGITS = 5;
+    local MAX_MADE    = 99999;
+    local BREAKS      = GRADES + 1;
+
+    -- What you typed under "Made", per recipe, for this session: one InputInt buffer per grade, then breaks.
+    local made_counts = {};
+
+    local function made_buffers(recipe)
+        local buffers = made_counts[recipe.id];
+        if (buffers == nil) then
+            buffers = {};
+            for index = 1, BREAKS do
+                buffers[index] = { 0 };
+            end
+            made_counts[recipe.id] = buffers;
+        end
+
+        return buffers;
+    end
+
+    local function made_input(label, id, buffer)
+        imgui.SameLine();
+        imgui.Text(label);
+        imgui.SameLine();
+        imgui.SetNextItemWidth(zeros_width(MADE_DIGITS) + imgui.GetStyle().FramePadding.x * 2);
+        imgui.InputInt(id, buffer, 0, 0);
+        buffer[1] = math.max(0, math.min(buffer[1], MAX_MADE));
+    end
+
+    -- Totals for the synths you really did: what each result sells for, against what the synths cost.
+    local function draw_made(recipe, cost, missing, crystal_cost, values, my_values)
+        local buffers = made_buffers(recipe);
+
+        imgui.AlignTextToFramePadding();
+        imgui.TextDisabled('Made');
+        if (imgui.IsItemHovered()) then
+            set_tooltip('Type how many of each result you got, and how many synths broke, to see what those synths made you.\nKept until you reload the addon.');
+        end
+        for grade = 1, GRADES do
+            if (values[grade] ~= nil) then
+                made_input(MADE_LABELS[grade], ('##made%d'):fmt(grade), buffers[grade]);
+            end
+        end
+        made_input('Breaks', '##madebreaks', buffers[BREAKS]);
+
+        local breaks   = buffers[BREAKS][1];
+        local synths   = breaks;
+        local sale     = 0;
+        local my_sale  = 0;
+        local custom   = false;
+        local counted  = {};
+        for grade = 1, GRADES do
+            if (values[grade] ~= nil) then
+                local count = buffers[grade][1];
+                if (count > 0) then
+                    counted[#counted + 1] = ('%d %s'):fmt(count, MADE_LABELS[grade]);
+                end
+                local mine  = my_values[grade];
+                if (mine > 0) then
+                    custom = true;
+                else
+                    mine = values[grade];
+                end
+                synths  = synths + count;
+                sale    = sale + count * values[grade];
+                my_sale = my_sale + count * mine;
+            end
+        end
+        if (synths == 0) then
+            return;
+        end
+
+        local break_cost = crystal_cost + BREAK_LOSS * (cost - crystal_cost);
+        local spent      = round((synths - breaks) * cost + breaks * break_cost);
+
+        if (breaks > 0) then
+            counted[#counted + 1] = ('%d broke'):fmt(breaks);
+        end
+        -- Spelling the counts back out makes a number typed in the wrong box easy to spot.
+        imgui.Text(('%d synths (%s) cost about %s.'):fmt(synths, table.concat(counted, ', '), commas(spent)));
+        if (imgui.IsItemHovered()) then
+            set_tooltip('Each synth that worked used every material. Each break counts as losing the crystal and half of the other materials.\nMaterial prices are today\'s, the same ones the table uses.');
+        end
+
+        imgui.TextDisabled(('Sold to NPC %s, profit'):fmt(commas(sale)));
+        imgui.SameLine();
+        draw_profit(sale, spent, missing);
+        if (custom) then
+            imgui.TextDisabled(('At your prices %s, profit'):fmt(commas(round(my_sale))));
+            imgui.SameLine();
+            draw_profit(round(my_sale), spent, missing);
+        end
+    end
+
     local function draw_results(recipe, cost, missing, crystal_cost)
         section('Results');
         if (not recipe.desynth) then
@@ -2030,6 +2125,8 @@ do
 
         draw_average_row(recipe, cost, missing, crystal_cost, values, my_values);
         imgui.EndTable();
+
+        draw_made(recipe, cost, missing, crystal_cost, values, my_values);
         imgui.TextDisabled('Materials use your price when you set one, otherwise the cheapest NPC. Crystals without a price count as free.');
     end
 

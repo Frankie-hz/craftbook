@@ -126,6 +126,8 @@ NPC prices are not always what you pay. Type your own price into any "My price" 
 - The Avg row is the average sale and profit per synth, with HQ results and breaks counted in. "Avg row at" picks
   the HQ tier it assumes: My tier (your own skill) or T0 to T3 at 95% success. A break counts as losing the crystal
   and half of the other materials.
+- Made, under the results, takes how many of each result you got and how many synths broke, and totals what those
+  synths cost and made you, at NPC prices and at your own. It is kept until you reload the addon.
 - The My prices mode lists every price you have set. Clear a box to go back to the NPC price.
 
 Prices are shared by all your characters.
