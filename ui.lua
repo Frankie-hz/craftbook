@@ -989,9 +989,9 @@ local function filter_recipes(words)
         end
         if (keep and #words > 0) then
             if (state.mode == MODE_INGREDIENTS) then
-                keep = contains_all(recipe.search_ingredients, words);
+                keep = contains_all(recipe.match_ingredients, words);
             else
-                keep = contains_all(recipe.search_result, words) or (recipe.desynth and contains_all(recipe.search_source, words));
+                keep = contains_all(recipe.match_result, words) or (recipe.desynth and contains_all(recipe.match_source, words));
             end
         end
         if (keep) then
@@ -1033,7 +1033,7 @@ end
 local function filter_items(words)
     local matches = {};
     for _, id in ipairs(db.item_ids) do
-        if (contains_all(db.items[id].lname, words)) then
+        if (contains_all(db.item_search(id), words)) then
             matches[#matches + 1] = id;
         end
     end
@@ -1044,7 +1044,7 @@ end
 local function filter_priced(words)
     local matches = {};
     for _, id in ipairs(db.item_ids) do
-        if (prices.get(id) ~= nil and contains_all(db.items[id].lname, words)) then
+        if (prices.get(id) ~= nil and contains_all(db.item_search(id), words)) then
             matches[#matches + 1] = id;
         end
     end
@@ -3432,6 +3432,7 @@ do
             end
             draw_scale();
             saved_checkbox('Item icons', state.icons, 'Show item icons in the lists and on item and recipe pages.');
+            saved_checkbox('Full item names', state.full_names, 'Show "Black Tiger Fang" instead of the game\'s "Blk. Tiger Fang".\nSearch finds items by either name either way.');
 
             section('Layout');
             draw_detached();
@@ -3511,6 +3512,9 @@ function ui.render()
 
     link_id = 0;
     if (db.loaded) then
+        if (db.set_full_names(state.full_names[1])) then
+            state.filter_key = nil;
+        end
         db.prepare_names();
         player.refresh(#db.crafts);
     end
@@ -3579,9 +3583,10 @@ local function find_item(text)
     local words = words_of(text);
     local found = nil;
     local count = 0;
+    local exact = ('|%s|'):fmt(lower);
     for _, id in ipairs(db.item_ids) do
-        local name = db.items[id].lname;
-        if (name == lower) then
+        local name = db.item_search(id);
+        if (('|%s|'):fmt(name):find(exact, 1, true) ~= nil) then
             return id;
         end
         if (db.made_by[id] ~= nil and contains_all(name, words)) then

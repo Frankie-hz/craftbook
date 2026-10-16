@@ -151,6 +151,8 @@ Open with the Settings button or `/cb settings`.
 - Theme, and the window type for Classic.
 - UI scale from 75% to 200%.
 - Item icons on or off.
+- Full item names: "Black Tiger Fang" instead of the game's "Blk. Tiger Fang". Search finds items by either name
+  whatever the setting.
 - Recipe or item page in its own window (the same as Pop out and Dock).
 - Mouse over craftbook: Auto draws a mouse over craftbook windows only when the game's own mouse would hide behind
   them. Pick Never if you see two mice, or Always if the mouse disappears over the book.

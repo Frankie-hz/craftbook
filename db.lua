@@ -4,6 +4,7 @@ local MAX_FIELDS = 64;
 local MAX_LINES  = 200000;
 
 local db = {
+    full_names = false,
     loaded    = false,
     error     = nil,
     meta      = {},
@@ -119,13 +120,35 @@ local function append(map, key, value)
     list[#list + 1] = value;
 end
 
+-- Words a name keeps lowercase unless they start it.
+local SMALL_WORDS = { ['a'] = true, ['an'] = true, ['and'] = true, ['for'] = true, ['in'] = true, ['of'] = true, ['on'] = true, ['the'] = true, ['to'] = true, ['with'] = true };
+
 local function title_case(snake)
     local words = {};
     for word in snake:gmatch('[^_]+') do
-        words[#words + 1] = word:sub(1, 1):upper() .. word:sub(2);
+        if (#words > 0 and SMALL_WORDS[word]) then
+            words[#words + 1] = word;
+        else
+            words[#words + 1] = word:sub(1, 1):upper() .. word:sub(2);
+        end
     end
 
     return table.concat(words, ' ');
+end
+
+-- The server's name for an item the game abbreviates: "Blk. Tiger Fang" is black_tiger_fang there. Server names like
+-- square_of_silk_cloth drop the container the game leaves out, unless the game's name has it too.
+local function full_name(item, short)
+    if (item.dbname == '' or short:find('.', 1, true) == nil) then
+        return short;
+    end
+
+    local base = item.dbname;
+    if (short:lower():find(' of ', 1, true) == nil) then
+        base = (base:gsub('^%a+_of_', '', 1));
+    end
+
+    return title_case(base);
 end
 
 local function item_entry(id)
@@ -418,17 +441,48 @@ function db.item_name(id)
         return item.name;
     end
 
+    local short    = nil;
     local resource = AshitaCore:GetResourceManager():GetItemById(id);
     if (resource ~= nil and resource.Name ~= nil and resource.Name[1] ~= nil and resource.Name[1] ~= '') then
-        item.name = resource.Name[1];
+        short = resource.Name[1];
     elseif (item.dbname ~= '') then
-        item.name = title_case(item.dbname);
+        short = title_case(item.dbname);
     else
-        item.name = ('Item #%d'):fmt(id);
+        short = ('Item #%d'):fmt(id);
     end
 
-    item.lname = item.name:lower();
+    local full = full_name(item, short);
+    item.name = short;
+    if (db.full_names) then
+        item.name = full;
+    end
+    item.lname  = item.name:lower();
+    item.search = ('%s|%s'):fmt(short:lower(), full:lower());
     return item.name;
+end
+
+-- Both of an item's names in lowercase, so a search finds "Blk. Tiger Fang" by "black tiger" too.
+function db.item_search(id)
+    local item = item_entry(id);
+    if (item.search == nil) then
+        db.item_name(id);
+    end
+
+    return item.search;
+end
+
+-- Returns true when the setting changed. Names, their order and the search lists rebuild on the next prepare_names.
+function db.set_full_names(on)
+    if (db.full_names == on) then
+        return false;
+    end
+
+    db.full_names = on;
+    for _, item in pairs(db.items) do
+        item.name = nil;
+    end
+    db.names_ready = false;
+    return true;
 end
 
 function db.item_lname(id)
@@ -495,15 +549,16 @@ function db.prepare_names()
 
     for _, recipe in ipairs(db.recipes) do
         recipe.search_result = db.item_lname(recipe.result);
+        recipe.match_result  = db.item_search(recipe.result);
 
         local parts = {};
         for _, ingredient in ipairs(recipe.ingredients) do
-            parts[#parts + 1] = db.item_lname(ingredient.id);
+            parts[#parts + 1] = db.item_search(ingredient.id);
         end
         -- The materials alone, which for a desynthesis is the item being broken down.
-        recipe.search_source = table.concat(parts, '|');
-        parts[#parts + 1] = db.item_lname(recipe.crystal);
-        recipe.search_ingredients = table.concat(parts, '|');
+        recipe.match_source = table.concat(parts, '|');
+        parts[#parts + 1] = db.item_search(recipe.crystal);
+        recipe.match_ingredients = table.concat(parts, '|');
     end
 
     db.names_ready = true;

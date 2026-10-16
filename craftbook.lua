@@ -42,6 +42,7 @@ local default_settings = T{
     tracker_odds  = true,
     show_skillups = true,
     esc_closes    = true,
+    full_names    = false,
     cursor_mode   = 1,
     hq1         = false,
     hq2         = false,
@@ -86,6 +87,7 @@ local state = {
     tracker_odds  = { true },
     show_skillups = { true },
     esc_closes    = { true },
+    full_names    = { false },
     cursor_mode   = 1,
     settings_visible = { false },
 };
@@ -110,6 +112,7 @@ local function apply_config()
     state.tracker_odds[1]  = config.tracker_odds;
     state.show_skillups[1] = config.show_skillups;
     state.esc_closes[1]    = config.esc_closes;
+    state.full_names[1]    = config.full_names;
     state.cursor_mode      = math.max(1, math.min(config.cursor_mode, 3));
     state.hq_filter[1][1] = config.hq1;
     state.hq_filter[2][1] = config.hq2;
@@ -146,6 +149,7 @@ local function store_config()
     config.tracker_odds  = state.tracker_odds[1];
     config.show_skillups = state.show_skillups[1];
     config.esc_closes    = state.esc_closes[1];
+    config.full_names    = state.full_names[1];
     config.cursor_mode   = state.cursor_mode;
     config.hq1         = state.hq_filter[1][1];
     config.hq2         = state.hq_filter[2][1];
