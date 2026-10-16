@@ -123,6 +123,9 @@ NPC prices are not always what you pay. Type your own price into any "My price" 
 - For a result, it is what you sell for, and fills the My profit column.
 - Profit and My profit show the gil and the profit margin, for example `+1,200 (35%)`. Margin is
   (sale price - cost) / sale price.
+- The Avg row is the average sale and profit per synth, with HQ results and breaks counted in. "Avg row at" picks
+  the HQ tier it assumes: My tier (your own skill) or T0 to T3 at 95% success. A break counts as losing the crystal
+  and half of the other materials.
 - The My prices mode lists every price you have set. Clear a box to go back to the NPC price.
 
 Prices are shared by all your characters.

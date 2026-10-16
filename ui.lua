@@ -1744,8 +1744,9 @@ do
 
         local rows = material_rows(recipe);
 
-        local cost    = 0;
-        local missing = {};
+        local cost         = 0;
+        local crystal_cost = 0;
+        local missing      = {};
 
         if (begin_fit_table('##materials', 5)) then
             setup_column('Qty', ImGuiTableColumnFlags_WidthFixed, 30);
@@ -1770,6 +1771,9 @@ do
                 local price = draw_material_cost(row);
                 if (price ~= nil) then
                     cost = cost + price;
+                    if (CRYSTAL_IDS[row.id]) then
+                        crystal_cost = crystal_cost + price;
+                    end
                 elseif (not CRYSTAL_IDS[row.id]) then
                     missing[#missing + 1] = db.item_name(row.id);
                 end
@@ -1789,7 +1793,7 @@ do
             imgui.PopTextWrapPos();
         end
 
-        return cost, #missing;
+        return cost, #missing, crystal_cost;
     end
 
     local function draw_profit(value, cost, missing)
@@ -1817,8 +1821,147 @@ do
         end
     end
 
-    local function draw_results(recipe, cost, missing)
+    -- Share of HQ results that come out as HQ1, HQ2 and HQ3, by HQ tier (synthutils calculateSynthResult).
+    local HQ_SPLIT = {
+        [0] = { 1.00, 0.00, 0.00 },
+        [1] = { 0.75, 0.25, 0.00 },
+        [2] = { 0.75, 0.1875, 0.0625 },
+        [3] = { 0.75, 0.1875, 0.0625 },
+    };
+    local DESYNTH_HQ_SPLIT = { 1 / 2, 1 / 3, 1 / 6 };
+    local NO_HQ            = { 0, 0, 0 };
+    local GRADES           = 4;
+
+    -- A break loses the crystal and, by the server's default, each material half the time.
+    local BREAK_LOSS    = 0.5;
+    local TIER_SUCCESS  = 0.95;
+    local AVERAGE_TIERS = { 0, 1, 2, 3 };
+
+    -- The HQ tier the Avg row assumes. nil follows your own skill.
+    local average_tier = nil;
+
+    local function average_outlook(recipe)
+        if (average_tier == nil or recipe.desynth) then
+            return synth_outlook(recipe);
+        end
+
+        return { success = TIER_SUCCESS, can_hq = true, tier = average_tier, hq = math.min(HQ_CHANCE[average_tier], HQ_CAP) };
+    end
+
+    -- How often one synth ends as NQ (1) or HQ1 to HQ3 (2 to 4). What is left over is the break chance.
+    local function grade_odds(outlook)
+        local hq    = 0;
+        local split = NO_HQ;
+        if (outlook.tier == nil) then
+            hq    = outlook.hq;
+            split = DESYNTH_HQ_SPLIT;
+        elseif (outlook.can_hq) then
+            hq    = outlook.hq;
+            split = HQ_SPLIT[outlook.tier];
+        end
+
+        return { outlook.success * (1 - hq), outlook.success * hq * split[1], outlook.success * hq * split[2], outlook.success * hq * split[3] };
+    end
+
+    local function average_label(recipe, outlook)
+        if (recipe.desynth) then
+            return 'per desynth';
+        end
+        if (average_tier ~= nil) then
+            return ('per synth at T%d'):fmt(average_tier);
+        end
+        if (outlook.can_hq) then
+            return ('per synth at your T%d'):fmt(outlook.tier);
+        end
+
+        return 'per synth, no HQ for you';
+    end
+
+    local function draw_average_picker()
+        imgui.AlignTextToFramePadding();
+        imgui.TextDisabled('Avg row at');
+        if (imgui.IsItemHovered()) then
+            set_tooltip('The Avg row is the average sale and profit per synth, HQ results and breaks included.\nMy tier uses your own skill. T0 to T3 show what it would be at that HQ tier, at 95% success.');
+        end
+
+        imgui.SameLine();
+        if (toggle_button('My tier##average', average_tier == nil)) then
+            average_tier = nil;
+        end
+        for _, tier in ipairs(AVERAGE_TIERS) do
+            imgui.SameLine();
+            if (toggle_button(('T%d##average'):fmt(tier), average_tier == tier)) then
+                average_tier = tier;
+            end
+        end
+    end
+
+    local function round(value)
+        return math.floor(value + 0.5);
+    end
+
+    -- values and my_values hold each grade's sale value (NQ first), with 0 where "My price" is not set.
+    local function draw_average_row(recipe, cost, missing, crystal_cost, values, my_values)
+        local outlook = average_outlook(recipe);
+        if (outlook == nil) then
+            return;
+        end
+
+        local odds    = grade_odds(outlook);
+        local sale    = 0;
+        local my_sale = 0;
+        local custom  = false;
+        for grade = 1, GRADES do
+            -- A grade the recipe has no item for gives the normal result.
+            local value = values[grade] or values[1];
+            local mine  = my_values[grade] or my_values[1];
+            if (mine > 0) then
+                custom = true;
+            else
+                mine = value;
+            end
+            sale    = sale + odds[grade] * value;
+            my_sale = my_sale + odds[grade] * mine;
+        end
+
+        local break_cost   = crystal_cost + BREAK_LOSS * (cost - crystal_cost);
+        local average_cost = outlook.success * cost + (1 - outlook.success) * break_cost;
+
+        imgui.TableNextRow();
+        imgui.TableNextColumn();
+        imgui.TextColored(COLORS.title, 'Avg');
+
+        imgui.TableNextColumn();
+        imgui.TextDisabled(average_label(recipe, outlook));
+        if (imgui.IsItemHovered()) then
+            set_tooltip(('How synths end: %s NQ, %s HQ1, %s HQ2, %s HQ3, %s break.\nA break counts as losing the crystal and half of the other materials.\nResults without a "My price" use the NPC sell price.'):fmt(
+                percent(odds[1]), percent(odds[2]), percent(odds[3]), percent(odds[4]), percent(1 - outlook.success)));
+        end
+
+        imgui.TableNextColumn();
+        if (sale > 0) then
+            imgui.Text(commas(round(sale)));
+        else
+            imgui.TextDisabled('-');
+        end
+
+        imgui.TableNextColumn();
+        draw_profit(round(sale), round(average_cost), missing);
+
+        imgui.TableNextColumn();
+        imgui.TableNextColumn();
+        if (custom) then
+            draw_profit(round(my_sale), round(average_cost), missing);
+        else
+            imgui.TextDisabled('-');
+        end
+    end
+
+    local function draw_results(recipe, cost, missing, crystal_cost)
         section('Results');
+        if (not recipe.desynth) then
+            draw_average_picker();
+        end
 
         if (not begin_fit_table('##results', 6)) then
             return;
@@ -1832,13 +1975,16 @@ do
         setup_column('My profit', ImGuiTableColumnFlags_WidthFixed, 80);
         imgui.TableHeadersRow();
 
-        local tiers = { { label = 'NQ', id = recipe.result, qty = recipe.qty } };
+        local tiers = { { label = 'NQ', id = recipe.result, qty = recipe.qty, grade = 1 } };
         for tier = 1, 3 do
             local hq = recipe.hq[tier];
             if (hq.id ~= 0) then
-                tiers[#tiers + 1] = { label = 'HQ' .. tier, id = hq.id, qty = hq.qty, hq = true };
+                tiers[#tiers + 1] = { label = 'HQ' .. tier, id = hq.id, qty = hq.qty, hq = true, grade = tier + 1 };
             end
         end
+
+        local values    = {};
+        local my_values = {};
 
         for _, tier in ipairs(tiers) do
             imgui.TableNextRow();
@@ -1877,8 +2023,12 @@ do
             imgui.TableNextColumn();
             local my_value = (prices.get(tier.id) or 0) * tier.qty;
             draw_profit(my_value, cost, missing);
+
+            values[tier.grade]    = value;
+            my_values[tier.grade] = my_value;
         end
 
+        draw_average_row(recipe, cost, missing, crystal_cost, values, my_values);
         imgui.EndTable();
         imgui.TextDisabled('Materials use your price when you set one, otherwise the cheapest NPC. Crystals without a price count as free.');
     end
@@ -2010,8 +2160,8 @@ do
             imgui.TextColored(COLORS.keyitem, ('Requires key item: %s'):fmt(db.keyitem_name(recipe.keyitem)));
         end
 
-        local cost, missing = draw_materials(recipe);
-        draw_results(recipe, cost, missing);
+        local cost, missing, crystal_cost = draw_materials(recipe);
+        draw_results(recipe, cost, missing, crystal_cost);
 
         local others = db.made_by[recipe.result];
         if (others ~= nil and #others > 1) then
