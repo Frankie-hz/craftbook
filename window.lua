@@ -14,6 +14,11 @@ ffi.cdef[[
     BOOL ShowWindow(HWND hWnd, int nCmdShow);
 ]];
 
+pcall(ffi.cdef, 'typedef struct { DWORD cbSize; DWORD flags; HCURSOR hCursor; POINT ptScreenPos; } craftbook_cursor_info;');
+pcall(ffi.cdef, 'BOOL GetCursorInfo(craftbook_cursor_info* info);');
+
+local CURSOR_SHOWING = 1;
+
 local SWP_NOMOVE    = 0x0002;
 local SWP_NOZORDER  = 0x0004;
 local SW_RESTORE    = 9;
@@ -78,6 +83,28 @@ function window.fit()
     ashita.tasks.oncef(RESTORE_DELAY, function ()
         resize(hwnd, width, height);
     end);
+end
+
+local cursor_info = nil;
+
+-- True while Windows draws the mouse (the game's hardware mouse), false while it is hidden, nil when it cannot tell.
+function window.system_cursor_visible()
+    local ok, visible = pcall(function ()
+        if (cursor_info == nil) then
+            cursor_info = ffi.new('craftbook_cursor_info');
+            cursor_info.cbSize = ffi.sizeof(cursor_info);
+        end
+        if (C.GetCursorInfo(cursor_info) == 0) then
+            return nil;
+        end
+
+        return cursor_info.flags % 2 == CURSOR_SHOWING;
+    end);
+    if (not ok) then
+        return nil;
+    end
+
+    return visible;
 end
 
 return window;

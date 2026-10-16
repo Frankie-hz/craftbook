@@ -9,6 +9,7 @@ local prices = require('prices');
 local history = require('history');
 local themes  = require('themes');
 local skin    = require('skin');
+local window  = require('window');
 
 -- Ashita's SetTooltip reads its text as a printf format, so a % in it shows garbage or crashes the client.
 -- Text is drawn as written.
@@ -2713,6 +2714,13 @@ local hovered        = false;
 local cursor_claimed = false;
 local cursor_before  = false;
 
+-- Settings > Mouse over craftbook. The game either lets Windows draw the mouse, which shows over every window, or
+-- draws its own, which craftbook windows cover. ImGui's mouse is only needed in the second case.
+local CURSOR = { auto = 1, always = 2, never = 3, names = { 'Auto', 'Always draw it', 'Never draw it' } };
+
+-- Whether Windows was drawing the mouse the last time craftbook was not drawing its own.
+local system_cursor = nil;
+
 local function note_hover()
     if (imgui.IsWindowHovered(ImGuiHoveredFlags_RootAndChildWindows)) then
         hovered = true;
@@ -2745,6 +2753,20 @@ local function release_cursor()
 
     cursor_claimed = false;
     set_draw_cursor(cursor_before);
+end
+
+local function wants_drawn_cursor()
+    if (state.cursor_mode == CURSOR.always) then
+        return true;
+    end
+    if (state.cursor_mode == CURSOR.never) then
+        return false;
+    end
+    if (not cursor_claimed) then
+        system_cursor = window.system_cursor_visible();
+    end
+
+    return system_cursor ~= true;
 end
 
 -- Call right after Begin. The first Esc leaves an active text box and the next one closes the window.
@@ -3366,6 +3388,15 @@ do
         end
     end
 
+    local function draw_cursor_mode()
+        local picked = draw_combo('Mouse over craftbook', CURSOR.names, state.cursor_mode, nil, in_order(CURSOR.names));
+        tooltip('Auto draws the mouse over craftbook windows only when the game\'s own mouse would hide behind them.\nPick Never if you see two mice, or Always if the mouse disappears over the book.');
+        if (picked ~= state.cursor_mode) then
+            state.cursor_mode = picked;
+            state.save_settings();
+        end
+    end
+
     local function draw_detached()
         local value = { state.detached };
         if (imgui.Checkbox('Detail in its own window', value)) then
@@ -3404,6 +3435,7 @@ do
 
             section('Layout');
             draw_detached();
+            draw_cursor_mode();
             saved_checkbox('Esc closes windows', state.esc_closes, 'Pressing Esc closes the craftbook window you are in.');
 
             section('Recipe page');
@@ -3516,7 +3548,7 @@ function ui.render()
         imgui.PopFont();
     end
 
-    if (hovered) then
+    if (hovered and wants_drawn_cursor()) then
         claim_cursor();
     else
         release_cursor();
