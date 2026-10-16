@@ -10,6 +10,14 @@ local history = require('history');
 local themes  = require('themes');
 local skin    = require('skin');
 
+-- Ashita's SetTooltip reads its text as a printf format, so a % in it shows garbage or crashes the client.
+-- Text is drawn as written.
+local function set_tooltip(text)
+    imgui.BeginTooltip();
+    imgui.Text(text);
+    imgui.EndTooltip();
+end
+
 local MAX_RESULTS = 500;
 local MAX_ROWS    = 300;
 local MAX_HISTORY = 64;
@@ -744,7 +752,7 @@ local function have_text(id, needed)
         imgui.TextDisabled(text);
     end
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('In bag / in bag and all storage');
+        set_tooltip('In bag / in bag and all storage');
     end
 end
 
@@ -1161,7 +1169,7 @@ local function draw_support_button(label, level, tooltip)
         end
     end
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip(tooltip);
+        set_tooltip(tooltip);
     end
 end
 
@@ -1199,7 +1207,7 @@ local function draw_what_if()
         imgui.OpenPopup('##whatifpanel');
     end
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('Change your main or sub craft levels to see the tier, HQ and success chances.');
+        set_tooltip('Change your main or sub craft levels to see the tier, HQ and success chances.');
     end
 
     if (imgui.BeginPopup('##whatifpanel')) then
@@ -1214,14 +1222,14 @@ local function draw_buff_label(buff)
     if (buff.power == nil) then
         imgui.TextColored(COLORS.warn, ('%s support (strength unknown)'):fmt(name));
         if (imgui.IsItemHovered()) then
-            imgui.SetTooltip('Could not read the buff timer, so the Standard and Advanced buttons stay in charge.');
+            set_tooltip('Could not read the buff timer, so the Standard and Advanced buttons stay in charge.');
         end
         return;
     end
 
     imgui.TextColored(COLORS.good, ('%s support +%d'):fmt(name, buff.power));
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('Read from your status. Used everywhere instead of the Standard and Advanced buttons.');
+        set_tooltip('Read from your status. Used everywhere instead of the Standard and Advanced buttons.');
     end
 end
 
@@ -1280,7 +1288,7 @@ local function draw_filters()
         reset_filters();
     end
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('Clear the search, craft, level range, sub-crafts, desynthesis, skill-ups and tier filters.');
+        set_tooltip('Clear the search, craft, level range, sub-crafts, desynthesis, skill-ups and tier filters.');
     end
     imgui.SameLine();
     if (imgui.Button('History')) then
@@ -1292,7 +1300,7 @@ local function draw_filters()
         state.settings_visible[1] = not state.settings_visible[1];
     end
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('Theme, UI scale, icons, layout and tracker options. /cb settings opens it too.');
+        set_tooltip('Theme, UI scale, icons, layout and tracker options. /cb settings opens it too.');
     end
 
     imgui.SameLine();
@@ -1313,7 +1321,7 @@ local function draw_filters()
     if (state.quick ~= nil) then
         imgui.TextColored(COLORS.warn, 'Level');
         if (imgui.IsItemHovered()) then
-            imgui.SetTooltip(('Quick look from /cb lvl.\nYour usual filters (level %d to %d) come back when the book closes.'):fmt(state.quick.level_min, state.quick.level_max));
+            set_tooltip(('Quick look from /cb lvl.\nYour usual filters (level %d to %d) come back when the book closes.'):fmt(state.quick.level_min, state.quick.level_max));
         end
     else
         imgui.Text('Level');
@@ -1335,13 +1343,13 @@ local function draw_filters()
     imgui.Checkbox('Skill-ups', state.skillup);
     imgui.EndDisabled();
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip(('Only recipes 1 to %d levels above your raw skill, plus the image support bonus.\nUses the picked craft, or each recipe\'s main craft with All crafts. Replaces the level range.'):fmt(SKILLUP_GAP));
+        set_tooltip(('Only recipes 1 to %d levels above your raw skill, plus the image support bonus.\nUses the picked craft, or each recipe\'s main craft with All crafts. Replaces the level range.'):fmt(SKILLUP_GAP));
     end
 
     imgui.SameLine();
     imgui.Checkbox('Sub-crafts', state.include_sub);
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('With a craft picked, also list recipes where it is only a secondary requirement.');
+        set_tooltip('With a craft picked, also list recipes where it is only a secondary requirement.');
     end
     imgui.SameLine();
     imgui.BeginDisabled(favorites);
@@ -1350,7 +1358,7 @@ local function draw_filters()
         imgui.SameLine();
         imgui.Checkbox(('T%d'):fmt(tier), state.hq_filter[tier]);
         if (imgui.IsItemHovered()) then
-            imgui.SetTooltip(('Recipes you are at T%d for right now, counting image support.'):fmt(tier));
+            set_tooltip(('Recipes you are at T%d for right now, counting image support.'):fmt(tier));
         end
     end
     imgui.EndDisabled();
@@ -1454,7 +1462,7 @@ local function draw_price_input(id)
         prices.save();
     end
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('Your price for one: what you pay for it as a material and what you sell it for.\nOverrides NPC prices. Clear it to go back to the NPC price. Saved for every character.');
+        set_tooltip('Your price for one: what you pay for it as a material and what you sell it for.\nOverrides NPC prices. Clear it to go back to the NPC price. Saved for every character.');
     end
 end
 
@@ -1491,7 +1499,7 @@ local function draw_price_list()
         if (cheapest ~= nil) then
             imgui.TextDisabled(commas(cheapest.price));
             if (imgui.IsItemHovered()) then
-                imgui.SetTooltip(('%s at %s (%s)'):fmt(commas(cheapest.price), cheapest.npc, db.zone_name(cheapest.zone)));
+                set_tooltip(('%s at %s (%s)'):fmt(commas(cheapest.price), cheapest.npc, db.zone_name(cheapest.zone)));
             end
         else
             imgui.TextDisabled('-');
@@ -1502,7 +1510,7 @@ local function draw_price_list()
             clear = id;
         end
         if (imgui.IsItemHovered()) then
-            imgui.SetTooltip('Clear your price and use the NPC price again.');
+            set_tooltip('Clear your price and use the NPC price again.');
         end
     end
 
@@ -1606,7 +1614,7 @@ do
             if (level >= db.UNKNOWN_SKILL) then
                 imgui.TextColored(COLORS.bad, ('%s ?'):fmt(db.crafts[index].name));
                 if (imgui.IsItemHovered()) then
-                    imgui.SetTooltip(('The server data lists this subcraft as %d, a placeholder for an unverified level.'):fmt(level));
+                    set_tooltip(('The server data lists this subcraft as %d, a placeholder for an unverified level.'):fmt(level));
                 end
             else
                 colored_text(recipe_color(recipe, index, level), ('%s %d'):fmt(db.crafts[index].name, level));
@@ -1676,7 +1684,7 @@ do
 
         imgui.Text(percent(skillup_per_synth(skillup, success)));
         if (imgui.IsItemHovered()) then
-            imgui.SetTooltip(('%s on success, %s on break.\nBreaks only give skill-ups within %d levels above your skill.'):fmt(percent(skillup.on_success), percent(skillup.on_break), SKILLUP_BREAK_WINDOW));
+            set_tooltip(('%s on success, %s on break.\nBreaks only give skill-ups within %d levels above your skill.'):fmt(percent(skillup.on_success), percent(skillup.on_break), SKILLUP_BREAK_WINDOW));
         end
 
         imgui.TableNextColumn();
@@ -1722,9 +1730,9 @@ do
         if (imgui.IsItemHovered()) then
             local cheapest = db.cheapest[row.id];
             if (custom) then
-                imgui.SetTooltip(('%s each at your price'):fmt(commas(each)));
+                set_tooltip(('%s each at your price'):fmt(commas(each)));
             else
-                imgui.SetTooltip(('%s each at %s (%s)'):fmt(commas(each), cheapest.npc, db.zone_name(cheapest.zone)));
+                set_tooltip(('%s each at %s (%s)'):fmt(commas(each), cheapest.npc, db.zone_name(cheapest.zone)));
             end
         end
 
@@ -1792,7 +1800,7 @@ do
         if (missing > 0) then
             imgui.TextDisabled('?');
             if (imgui.IsItemHovered()) then
-                imgui.SetTooltip('Some materials have no NPC or custom price. Enter one under Materials.');
+                set_tooltip('Some materials have no NPC or custom price. Enter one under Materials.');
             end
             return;
         end
@@ -1917,7 +1925,7 @@ do
             state.save_tracked();
         end
         if (imgui.IsItemHovered()) then
-            imgui.SetTooltip(('Pin the materials to a small note that stays up while you craft (up to %d recipes).\n/cb track hides or shows it.'):fmt(MAX_TRACKED));
+            set_tooltip(('Pin the materials to a small note that stays up while you craft (up to %d recipes).\n/cb track hides or shows it.'):fmt(MAX_TRACKED));
         end
     end
 
@@ -1950,7 +1958,7 @@ do
                 open_recipe(best.recipe);
             end
             if (imgui.IsItemHovered()) then
-                imgui.SetTooltip(('How to make %s: %s %d.'):fmt(db.item_name(source.id), db.crafts[best.recipe.main].name, best.recipe.level));
+                set_tooltip(('How to make %s: %s %d.'):fmt(db.item_name(source.id), db.crafts[best.recipe.main].name, best.recipe.level));
             end
             return;
         end
@@ -1970,7 +1978,7 @@ do
             if (#breaks > 1) then
                 text = ('%s %d desynths, all on the item page under Breaks into.'):fmt(text, #breaks);
             end
-            imgui.SetTooltip(text);
+            set_tooltip(text);
         end
     end
 
@@ -2024,7 +2032,7 @@ local draw_detail;
 do
     local function position_tooltip(row)
         if (row.x ~= nil and imgui.IsItemHovered()) then
-            imgui.SetTooltip(('%s  (%.1f, %.1f, %.1f)'):fmt(db.zone_name(row.zone), row.x, row.y, row.z));
+            set_tooltip(('%s  (%.1f, %.1f, %.1f)'):fmt(db.zone_name(row.zone), row.x, row.y, row.z));
         end
     end
 
@@ -2097,7 +2105,7 @@ do
             imgui.TableNextColumn();
             imgui.Text(('%s-%s'):fmt(commas(row.price), commas(row.pricemax)));
             if (imgui.IsItemHovered()) then
-                imgui.SetTooltip('Price at normal stock, rising toward the second number as the shelf empties.');
+                set_tooltip('Price at normal stock, rising toward the second number as the shelf empties.');
             end
             imgui.TableNextColumn();
             imgui.Text(('%02d:00-%02d:00'):fmt(row.open, row.close));
@@ -2258,7 +2266,7 @@ do
             if (#made_by > 1) then
                 text = ('%s. %d recipes make this, all listed under Made by.'):fmt(text, #made_by);
             end
-            imgui.SetTooltip(text);
+            set_tooltip(text);
         end
     end
 
@@ -2406,7 +2414,7 @@ do
             state.save_layout();
         end
         if (imgui.IsItemHovered()) then
-            imgui.SetTooltip(tooltip);
+            set_tooltip(tooltip);
         end
     end
 
@@ -2804,7 +2812,7 @@ do
             imgui.SameLine();
             imgui.Checkbox('All characters', state.log_all);
             if (imgui.IsItemHovered()) then
-                imgui.SetTooltip(('Off: only %s.'):fmt(history.character()));
+                set_tooltip(('Off: only %s.'):fmt(history.character()));
             end
 
             if (imgui.BeginTabBar('##historytabs')) then
@@ -2856,7 +2864,7 @@ local function draw_tracked_row(row)
     imgui.TableNextColumn();
     imgui.TextColored(color, db.item_name(row.id));
     if (total > bag and imgui.IsItemHovered()) then
-        imgui.SetTooltip(('%d more in storage'):fmt(total - bag));
+        set_tooltip(('%d more in storage'):fmt(total - bag));
     end
 end
 
@@ -2876,12 +2884,12 @@ local function draw_tracked_odds(recipe)
         imgui.TextColored(COLORS.hq, ('T%d %s'):fmt(outlook.tier, percent(outlook.hq)));
     end
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('HQ tier and HQ chance when the synth succeeds.');
+        set_tooltip('HQ tier and HQ chance when the synth succeeds.');
     end
 
     imgui.TextColored(success_color(outlook.success), ('Succ %s'):fmt(percent(outlook.success)));
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('Chance the synth does not break.');
+        set_tooltip('Chance the synth does not break.');
     end
 
     local skillup = skillup_outlook(recipe, recipe.main);
@@ -2891,7 +2899,7 @@ local function draw_tracked_odds(recipe)
 
     imgui.TextDisabled(('SU %s'):fmt(percent(skillup_per_synth(skillup, outlook.success))));
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip(('%s skill-up chance per synth.'):fmt(db.crafts[recipe.main].name));
+        set_tooltip(('%s skill-up chance per synth.'):fmt(db.crafts[recipe.main].name));
     end
 end
 
@@ -2903,13 +2911,13 @@ local function draw_tracked_name(recipe, index, synths)
     end
     local untrack = imgui.IsItemClicked(ImGuiMouseButton_Right);
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('Click to open in the book. Right-click to stop tracking.');
+        set_tooltip('Click to open in the book. Right-click to stop tracking.');
     end
 
     imgui.SameLine();
     imgui.TextDisabled(('(%d)'):fmt(synths));
     if (imgui.IsItemHovered()) then
-        imgui.SetTooltip('Synths your bag covers.');
+        set_tooltip('Synths your bag covers.');
     end
 
     return untrack;
@@ -3051,7 +3059,7 @@ do
 
     local function tooltip(text)
         if (imgui.IsItemHovered()) then
-            imgui.SetTooltip(text);
+            set_tooltip(text);
         end
     end
 
