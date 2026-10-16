@@ -70,7 +70,7 @@ The left pane is the list and the right pane is the recipe or item you clicked.
 **A recipe's page**
 
 - Crystal, materials with how many you have (bags and all storage), and the cost per synth.
-- NQ and HQ results with NPC sell price and profit.
+- NQ and HQ results with NPC sell price, profit and profit margin.
 - Your success chance and HQ tier and chance, for example `Leather Ring (T0 1.6%)`.
 - Skill-up chance per synth for each craft the recipe uses, and the odds of each gain from +0.1 to +0.5.
 - Favorite saves it to the Favorites mode. Track pins it to the tracker note.
@@ -121,6 +121,8 @@ NPC prices are not always what you pay. Type your own price into any "My price" 
 
 - For a material, it replaces the NPC price in the cost per synth.
 - For a result, it is what you sell for, and fills the My profit column.
+- Profit and My profit show the gil and the profit margin, for example `+1,200 (35%)`. Margin is
+  (sale price - cost) / sale price.
 - The My prices mode lists every price you have set. Clear a box to go back to the NPC price.
 
 Prices are shared by all your characters.

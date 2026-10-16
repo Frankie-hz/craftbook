@@ -1810,7 +1810,11 @@ do
         if (profit < 0) then
             color = COLORS.bad;
         end
-        imgui.TextColored(color, signed_commas(profit));
+        local margin = math.floor(profit / value * 100 + 0.5);
+        imgui.TextColored(color, ('%s (%d%%)'):fmt(signed_commas(profit), margin));
+        if (imgui.IsItemHovered()) then
+            set_tooltip(('Profit per synth, and the profit margin.\nMargin = (sale price - cost) / sale price = (%s - %s) / %s.'):fmt(commas(value), commas(cost), commas(value)));
+        end
     end
 
     local function draw_results(recipe, cost, missing)
