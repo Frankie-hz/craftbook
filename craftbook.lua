@@ -21,6 +21,12 @@ local ui       = require('ui');
 local FOLLOW_GAME      = -1;
 local LAST_WINDOW_TYPE = 7;
 
+-- Ashita keeps a 10 KB copy of each packet until its event is collected, but Lua counts it as a few bytes, so with the
+-- recipe data's big heap the collector waited minutes and held thousands. Each packet now steps it by its copy, or by a
+-- share of a big heap.
+local PACKET_COPY_KB = 10;
+local HEAP_SHARE     = 256;
+
 local default_settings = T{
     icons       = true,
     mode        = 1,
@@ -356,6 +362,7 @@ ashita.events.register('command', 'command_cb', function (e)
 end);
 
 ashita.events.register('packet_in', 'packet_in_cb', function (e)
+    collectgarbage('step', math.max(PACKET_COPY_KB, collectgarbage('count') / HEAP_SHARE));
     history.packet_in(e.id, e.data);
 end);
 
