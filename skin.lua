@@ -297,14 +297,14 @@ function skin.get(window_type)
     return art;
 end
 
+-- Art that failed to load stays marked, so its chat message is not repeated each time the book reopens.
 function skin.release()
-    for _, art in pairs(cache) do
+    for window_type, art in pairs(cache) do
         if (art ~= false) then
             release_art(art);
+            cache[window_type] = nil;
         end
     end
-
-    cache = {};
 end
 
 -- ---------------------------------------------------------------------------

@@ -3573,8 +3573,12 @@ function ui.render()
     local settings = state.settings_visible[1];
     if (not tracking and not logging and not detail and not settings and not state.visible[1]) then
         release_cursor();
+        -- Nothing of craftbook is on screen, so its textures go back until a window opens again.
+        icons.release();
+        skin.release();
         return;
     end
+    icons.new_frame();
     hovered = false;
 
     link_id = 0;

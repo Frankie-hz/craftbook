@@ -4,11 +4,12 @@ local ffi = require('ffi');
 local d3d = require('d3d8');
 local C   = ffi.C;
 
-local MAX_ICONS = 1024;
+local MAX_ICONS = 512;
 
 local icons = {
     enabled = true,
     broken  = false,
+    full    = false,
     cache   = {},
     count   = 0,
 };
@@ -22,6 +23,15 @@ function icons.release()
 
     icons.cache = {};
     icons.count = 0;
+    icons.full  = false;
+end
+
+-- Call before anything is drawn. A full cache is emptied here, between frames, never while ImGui still has this
+-- frame's icons queued to draw: releasing those mid-frame left ImGui drawing freed textures.
+function icons.new_frame()
+    if (icons.full) then
+        icons.release();
+    end
 end
 
 local function create(item_id)
@@ -48,7 +58,8 @@ function icons.get(item_id)
     local entry = icons.cache[item_id];
     if (entry == nil) then
         if (icons.count >= MAX_ICONS) then
-            icons.release();
+            icons.full = true;
+            return nil;
         end
 
         local ok, created = pcall(create, item_id);
