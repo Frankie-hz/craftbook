@@ -3264,65 +3264,105 @@ local function draw_tracker()
     imgui.End();
 end
 
-local function draw_scrolled_detail()
-    if (state.scroll_detail) then
-        imgui.SetScrollY(0);
-        state.scroll_detail = false;
-    end
-    draw_detail();
-end
-
--- The list and the detail side by side.
-local function draw_docked_panes()
-    local width = imgui.GetContentRegionAvail();
-    local left  = math.max(320, math.floor(width * 0.40));
-
-    imgui.BeginChild('##list', { left, 0 }, bit.bor(ImGuiChildFlags_Borders, ImGuiChildFlags_ResizeX));
-    draw_list();
-    imgui.EndChild();
-
-    imgui.SameLine();
-
-    imgui.BeginChild('##detail', { 0, 0 }, ImGuiChildFlags_Borders);
-    draw_scrolled_detail();
-    imgui.EndChild();
-end
-
--- With the detail popped out the book is only the list, so it may be much narrower.
-local function draw_list_pane()
-    imgui.BeginChild('##listonly', { 0, 0 }, ImGuiChildFlags_Borders);
-    draw_list();
-    imgui.EndChild();
-end
-
-local function draw_book()
-    imgui.SetNextWindowSize({ 1000, 620 }, ImGuiCond_FirstUseEver);
-    if (state.detached) then
-        imgui.SetNextWindowSizeConstraints({ 360, 240 }, { 4000, 4000 });
-    else
-        imgui.SetNextWindowSizeConstraints({ 700, 360 }, { 4000, 4000 });
+-- The book window and its panes. They keep their helpers to themselves, since Lua allows only 200 top-level
+-- locals in one file.
+local draw_scrolled_detail;
+local draw_book;
+do
+    function draw_scrolled_detail()
+        if (state.scroll_detail) then
+            imgui.SetScrollY(0);
+            state.scroll_detail = false;
+        end
+        draw_detail();
     end
 
-    undock();
-    if (imgui.Begin('Craftbook###craftbook', state.visible, WINDOW_FLAGS)) then
-        draw_skin(true, 1);
-        close_on_escape(state.visible);
-        note_hover();
-        if (not db.loaded) then
-            imgui.TextColored(COLORS.bad, db.error or 'Data not loaded.');
-        else
-            icons.enabled = state.icons[1];
+    -- The list and the detail side by side.
+    local function draw_docked_panes()
+        local width = imgui.GetContentRegionAvail();
+        local left  = math.max(320, math.floor(width * 0.40));
 
-            draw_filters();
-            refresh_results();
-            if (state.detached) then
-                draw_list_pane();
+        imgui.BeginChild('##list', { left, 0 }, bit.bor(ImGuiChildFlags_Borders, ImGuiChildFlags_ResizeX));
+        draw_list();
+        imgui.EndChild();
+
+        imgui.SameLine();
+
+        imgui.BeginChild('##detail', { 0, 0 }, ImGuiChildFlags_Borders);
+        draw_scrolled_detail();
+        imgui.EndChild();
+    end
+
+    -- With the detail popped out the book is only the list, so it may be much narrower.
+    local function draw_list_pane()
+        imgui.BeginChild('##listonly', { 0, 0 }, ImGuiChildFlags_Borders);
+        draw_list();
+        imgui.EndChild();
+    end
+
+    -- The list and the detail as two tabs of the book. Opening a recipe or item switches to its tab, the same frames
+    -- scroll_detail asks for the page to start at the top.
+    local function draw_tabbed_panes()
+        if (not imgui.BeginTabBar('##booktabs')) then
+            return;
+        end
+
+        if (imgui.BeginTabItem('List')) then
+            draw_list_pane();
+            imgui.EndTabItem();
+        end
+        if (state.view ~= nil) then
+            local flags = ImGuiTabItemFlags_None;
+            if (state.scroll_detail) then
+                flags = ImGuiTabItemFlags_SetSelected;
+            end
+            local title = nil;
+            if (state.view.kind == 'recipe') then
+                title = recipe_label(state.view.recipe);
             else
-                draw_docked_panes();
+                title = db.item_name(state.view.id);
+            end
+            if (imgui.BeginTabItem(('%s###bookdetail'):fmt(title), nil, flags)) then
+                imgui.BeginChild('##detail', { 0, 0 }, ImGuiChildFlags_Borders);
+                draw_scrolled_detail();
+                imgui.EndChild();
+                imgui.EndTabItem();
             end
         end
+        imgui.EndTabBar();
     end
-    imgui.End();
+
+    function draw_book()
+        imgui.SetNextWindowSize({ 1000, 620 }, ImGuiCond_FirstUseEver);
+        if (state.detached or state.tabbed) then
+            imgui.SetNextWindowSizeConstraints({ 360, 240 }, { 4000, 4000 });
+        else
+            imgui.SetNextWindowSizeConstraints({ 700, 360 }, { 4000, 4000 });
+        end
+
+        undock();
+        if (imgui.Begin('Craftbook###craftbook', state.visible, WINDOW_FLAGS)) then
+            draw_skin(true, 1);
+            close_on_escape(state.visible);
+            note_hover();
+            if (not db.loaded) then
+                imgui.TextColored(COLORS.bad, db.error or 'Data not loaded.');
+            else
+                icons.enabled = state.icons[1];
+
+                draw_filters();
+                refresh_results();
+                if (state.detached) then
+                    draw_list_pane();
+                elseif (state.tabbed) then
+                    draw_tabbed_panes();
+                else
+                    draw_docked_panes();
+                end
+            end
+        end
+        imgui.End();
+    end
 end
 
 -- ---------------------------------------------------------------------------
@@ -3407,14 +3447,29 @@ do
         end
     end
 
-    local function draw_detached()
-        local value = { state.detached };
-        if (imgui.Checkbox('Detail in its own window', value)) then
-            state.detached       = value[1];
+    local LAYOUT = { beside = 1, tab = 2, window = 3, names = { 'Beside the list', 'Tab in the book', 'Own window' } };
+
+    local function current_layout()
+        if (state.detached) then
+            return LAYOUT.window;
+        end
+        if (state.tabbed) then
+            return LAYOUT.tab;
+        end
+
+        return LAYOUT.beside;
+    end
+
+    local function draw_layout()
+        local current = current_layout();
+        local picked  = draw_combo('Recipe page', LAYOUT.names, current, nil, in_order(LAYOUT.names));
+        tooltip('Where a recipe or item opens: beside the list, as a tab next to the List tab, or in its own window.\nPop out and Dock move it to its own window and back.');
+        if (picked ~= current) then
+            state.detached       = picked == LAYOUT.window;
+            state.tabbed         = picked == LAYOUT.tab;
             state.detail_open[1] = true;
             state.save_settings();
         end
-        tooltip('Same as Pop out and Dock: the book shows only the list and the recipe or item opens beside it.');
     end
 
     local function draw_tracker_opacity()
@@ -3446,7 +3501,7 @@ do
             saved_checkbox('Full item names', state.full_names, 'Show "Black Tiger Fang" instead of the game\'s "Blk. Tiger Fang".\nSearch finds items by either name either way.');
 
             section('Layout');
-            draw_detached();
+            draw_layout();
             draw_cursor_mode();
             saved_checkbox('Esc closes windows', state.esc_closes, 'Pressing Esc closes the craftbook window you are in.');
 

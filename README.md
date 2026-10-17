@@ -56,7 +56,8 @@ favorites, prices and history live in Ashita's `config` folder and are kept.
 
 ## The book
 
-The left pane is the list and the right pane is the recipe or item you clicked.
+The left pane is the list and the right pane is the recipe or item you clicked. Settings > Recipe page can show them
+as two tabs instead, or put the recipe page in its own window.
 
 **Finding recipes**
 
@@ -153,7 +154,8 @@ Open with the Settings button or `/cb settings`.
 - Item icons on or off.
 - Full item names: "Black Tiger Fang" instead of the game's "Blk. Tiger Fang". Search finds items by either name
   whatever the setting.
-- Recipe or item page in its own window (the same as Pop out and Dock).
+- Recipe page: beside the list, as a tab next to a List tab (good for a narrow book), or in its own window. Pop out
+  and Dock switch between the book and its own window.
 - Mouse over craftbook: Auto draws a mouse over craftbook windows only when the game's own mouse would hide behind
   them. Pick Never if you see two mice, or Always if the mouse disappears over the book.
 - Esc closes windows, on or off.
