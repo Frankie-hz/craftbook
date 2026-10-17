@@ -85,6 +85,11 @@ end
 
 use_theme(themes.get('default'));
 
+-- Takes a window back out of a dock it was dragged into before docking was turned off. Call right before Begin.
+local function undock()
+    pcall(imgui.SetNextWindowDockID, 0, ImGuiCond_Always);
+end
+
 -- Classic only: paints the game's window art behind the window that was just begun.
 local function draw_skin(titled, alpha)
     if (active_theme.skin ~= nil) then
@@ -185,7 +190,9 @@ local function begin_fit_table(id, columns, extra_flags)
 end
 local SORT_FLAGS  = bit.bor(ImGuiTableFlags_Sortable, ImGuiTableFlags_SortTristate);
 
-local TRACKER_FLAGS = bit.bor(ImGuiWindowFlags_NoTitleBar, ImGuiWindowFlags_NoFocusOnAppearing, ImGuiWindowFlags_NoNav);
+-- ImGui docking would put craftbook windows in a shared tab bar, which breaks their themes. Pop out and Dock cover it.
+local WINDOW_FLAGS  = ImGuiWindowFlags_NoDocking or 0;
+local TRACKER_FLAGS = bit.bor(ImGuiWindowFlags_NoTitleBar, ImGuiWindowFlags_NoFocusOnAppearing, ImGuiWindowFlags_NoNav, WINDOW_FLAGS);
 local MAX_TRACKED   = 8;
 local TRACKER_TABLE_FLAGS = bit.bor(ImGuiTableFlags_SizingFixedFit, ImGuiTableFlags_BordersInnerH, ImGuiTableFlags_BordersInnerV);
 local COMBO_PADDING  = 8;
@@ -3067,7 +3074,8 @@ do
 
     function draw_history()
         imgui.SetNextWindowSize({ 640, 420 }, ImGuiCond_FirstUseEver);
-        if (imgui.Begin('Craftbook history###cbhistory', state.log_visible, ImGuiWindowFlags_None)) then
+        undock();
+        if (imgui.Begin('Craftbook history###cbhistory', state.log_visible, WINDOW_FLAGS)) then
             draw_skin(true, 1);
             close_on_escape(state.log_visible);
             note_hover();
@@ -3229,6 +3237,7 @@ local function draw_tracker()
     end
     imgui.SetNextWindowPos({ 20, 200 }, ImGuiCond_FirstUseEver);
     imgui.SetNextWindowSize({ 320, 300 }, ImGuiCond_FirstUseEver);
+    undock();
     if (imgui.Begin('Craftbook tracker###cbtracker', state.tracker, TRACKER_FLAGS)) then
         draw_skin(false, state.tracker_alpha);
         note_hover();
@@ -3294,7 +3303,8 @@ local function draw_book()
         imgui.SetNextWindowSizeConstraints({ 700, 360 }, { 4000, 4000 });
     end
 
-    if (imgui.Begin('Craftbook###craftbook', state.visible, ImGuiWindowFlags_None)) then
+    undock();
+    if (imgui.Begin('Craftbook###craftbook', state.visible, WINDOW_FLAGS)) then
         draw_skin(true, 1);
         close_on_escape(state.visible);
         note_hover();
@@ -3420,7 +3430,8 @@ do
     end
 
     function draw_settings()
-        if (imgui.Begin('Craftbook settings###cbsettings', state.settings_visible, ImGuiWindowFlags_AlwaysAutoResize)) then
+        undock();
+        if (imgui.Begin('Craftbook settings###cbsettings', state.settings_visible, bit.bor(ImGuiWindowFlags_AlwaysAutoResize, WINDOW_FLAGS))) then
             draw_skin(true, 1);
             close_on_escape(state.settings_visible);
             note_hover();
@@ -3453,7 +3464,8 @@ end
 
 local function draw_detail_window()
     imgui.SetNextWindowSize({ 560, 620 }, ImGuiCond_FirstUseEver);
-    if (imgui.Begin('Craftbook detail###cbdetail', state.detail_open, ImGuiWindowFlags_None)) then
+    undock();
+    if (imgui.Begin('Craftbook detail###cbdetail', state.detail_open, WINDOW_FLAGS)) then
         draw_skin(true, 1);
         close_on_escape(state.detail_open);
         note_hover();
