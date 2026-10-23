@@ -109,7 +109,8 @@ example "Leather" or "Field gear", and open the one you need.
 
 - Track on a recipe page picks which tracker gets the recipe, or starts a new tracker.
 - The Trackers button in the book opens and closes each tracker. `/cb track leather` does the same by name.
-- Right-click a tracker's name to rename, close or delete it, or to turn its odds column on or off.
+- The x at the top right of a tracker closes it. Right-click its name to rename or delete it, or to turn its odds
+  column on or off.
 - Drag a recipe's name onto another tracker to move it there, or onto another row to reorder.
 - Each recipe shows its HQ tier, success chance and skill-up chance, image support included.
 - Click a name to open the recipe. Right-click it to stop tracking.

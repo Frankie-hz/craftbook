@@ -3399,6 +3399,17 @@ do
         end
         imgui.SameLine();
         imgui.TextDisabled(('%d/%d'):fmt(#tracker.recipes, trackers.max_recipes));
+
+        imgui.SameLine();
+        local width = imgui.CalcTextSize('x') + imgui.GetStyle().FramePadding.x * 2;
+        imgui.SetCursorPosX(imgui.GetCursorPosX() + math.max(0, imgui.GetContentRegionAvail() - width));
+        if (imgui.SmallButton('x##closetracker')) then
+            tracker.open[1] = false;
+            state.save_tracked();
+        end
+        if (imgui.IsItemHovered()) then
+            set_tooltip('Close this tracker. Reopen it from the Trackers button or with /cb track <name>.');
+        end
         draw_tracker_menu(tracker);
     end
 
