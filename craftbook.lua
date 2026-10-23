@@ -28,12 +28,16 @@ local LAST_WINDOW_TYPE = 7;
 local PACKET_COPY_KB = 10;
 local HEAP_SHARE     = 256;
 
+-- No recipe on Phoenix is above 104. Settings still on the old default of 110 move to the new one.
+local DEFAULT_LEVEL_MAX = 106;
+local OLD_LEVEL_MAX     = 110;
+
 local default_settings = T{
     icons       = true,
     mode        = 1,
     craft       = 0,
     level_min   = 0,
-    level_max   = 110,
+    level_max   = DEFAULT_LEVEL_MAX,
     include_sub = false,
     desynth     = false,
     support     = 0,
@@ -70,7 +74,7 @@ local state = {
     mode          = 1,
     craft         = 0,
     level_min     = { 0 },
-    level_max     = { 110 },
+    level_max     = { DEFAULT_LEVEL_MAX },
     include_sub   = { false },
     desynth       = { false },
     support       = 0,
@@ -107,6 +111,9 @@ local function apply_config()
     state.craft          = config.craft;
     state.level_min[1]   = config.level_min;
     state.level_max[1]   = config.level_max;
+    if (config.level_max == OLD_LEVEL_MAX) then
+        state.level_max[1] = DEFAULT_LEVEL_MAX;
+    end
     state.include_sub[1] = config.include_sub;
     state.desynth[1]     = config.desynth;
     state.support        = config.support;

@@ -1153,7 +1153,7 @@ local function reset_filters()
     state.search[1]      = '';
     state.craft          = 0;
     state.level_min[1]   = 0;
-    state.level_max[1]   = 110;
+    state.level_max[1]   = 106;
     state.include_sub[1] = false;
     state.desynth[1]     = false;
     state.skillup[1]     = false;
