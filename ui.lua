@@ -760,13 +760,13 @@ local function have_text(id, needed)
     local text = ('%d / %d'):fmt(bag, total);
     if (bag >= needed) then
         imgui.TextColored(COLORS.good, text);
-    elseif (total >= needed) then
+    elseif (total > bag) then
         imgui.TextColored(COLORS.warn, text);
     else
         imgui.TextDisabled(text);
     end
     if (imgui.IsItemHovered()) then
-        set_tooltip('In bag / in bag and all storage');
+        set_tooltip('In your bag / in your bag, satchel, sack, case and storage together.\nYellow when some of what you need is outside your bag.');
     end
 end
 
@@ -3231,22 +3231,30 @@ do
         return synths or 0;
     end
 
+    -- Green when the bag holds enough, yellow when more sit in the satchel, sack, case or storage, red otherwise.
     local function draw_tracked_row(row)
         local bag, total = player.count(row.id);
+        local stored     = total - bag;
         local color      = COLORS.good;
-        if (bag < row.count and total >= row.count) then
+        if (bag < row.count and stored > 0) then
             color = COLORS.warn;
         elseif (bag < row.count) then
             color = COLORS.bad;
         end
 
+        local count = ('%d/%d'):fmt(bag, row.count);
+        if (stored > 0) then
+            count = ('%s +%d'):fmt(count, stored);
+        end
+
         imgui.TableNextRow();
         imgui.TableNextColumn();
-        imgui.TextColored(color, ('%d/%d'):fmt(bag, row.count));
+        imgui.TextColored(color, count);
+        local hovered = imgui.IsItemHovered();
         imgui.TableNextColumn();
         imgui.TextColored(color, db.item_name(row.id));
-        if (total > bag and imgui.IsItemHovered()) then
-            set_tooltip(('%d more in storage'):fmt(total - bag));
+        if (stored > 0 and (hovered or imgui.IsItemHovered())) then
+            set_tooltip(('%d in your bag, %d more in your satchel, sack, case or storage.'):fmt(bag, stored));
         end
     end
 
