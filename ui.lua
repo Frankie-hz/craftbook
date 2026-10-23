@@ -3327,7 +3327,7 @@ do
             imgui.EndTable();
         end
 
-        if (state.tracker_odds[1]) then
+        if (tracker.odds[1]) then
             imgui.TableNextColumn();
             draw_tracked_odds(recipe);
         end
@@ -3349,6 +3349,13 @@ do
             state.save_tracked();
         end
 
+        if (imgui.MenuItem('Odds column', nil, tracker.odds[1])) then
+            tracker.odds[1] = not tracker.odds[1];
+            state.save_tracked();
+        end
+        if (imgui.IsItemHovered()) then
+            set_tooltip('HQ tier, success and skill-up chance beside each recipe in this tracker.');
+        end
         if (imgui.MenuItem('Close')) then
             tracker.open[1] = false;
             state.save_tracked();
@@ -3380,7 +3387,7 @@ do
             imgui.OpenPopup('##trackermenu');
         end
         if (drag == nil and imgui.IsItemHovered()) then
-            set_tooltip('Right-click to rename, close or delete this tracker.');
+            set_tooltip('Right-click to rename, close or delete this tracker, or to turn its odds column on or off.');
         end
         imgui.SameLine();
         imgui.TextDisabled(('%d/%d'):fmt(#tracker.recipes, trackers.max_recipes));
@@ -3424,7 +3431,7 @@ do
 
             local remove = nil;
             local columns = 1;
-            if (state.tracker_odds[1]) then
+            if (tracker.odds[1]) then
                 columns = 2;
             end
             if (#tracker.recipes == 0) then
@@ -3752,7 +3759,6 @@ do
 
             section('Trackers');
             saved_checkbox('Show trackers', state.tracker, 'Show or hide every open tracker. /cb track does the same.');
-            saved_checkbox('Odds column', state.tracker_odds, 'Show HQ tier, success and skill-up chance beside each tracked recipe.');
             draw_tracker_opacity();
         end
         imgui.End();

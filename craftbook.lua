@@ -112,7 +112,7 @@ local function apply_config()
     state.support        = config.support;
     state.skillup[1]     = config.skillup;
     state.favorites      = config.favorites;
-    trackers.load(config.trackers, config.tracker_next, config.tracked);
+    trackers.load(config.trackers, config.tracker_next, config.tracked, config.tracker_odds);
     state.tracker[1]     = config.tracker;
     state.theme          = config.theme;
     state.window_type    = math.max(FOLLOW_GAME, math.min(config.window_type, LAST_WINDOW_TYPE));

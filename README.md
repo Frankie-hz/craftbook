@@ -109,11 +109,11 @@ example "Leather" or "Field gear", and open the one you need.
 
 - Track on a recipe page picks which tracker gets the recipe, or starts a new tracker.
 - The Trackers button in the book opens and closes each tracker. `/cb track leather` does the same by name.
-- Right-click a tracker's name to rename, close or delete it.
+- Right-click a tracker's name to rename, close or delete it, or to turn its odds column on or off.
 - Drag a recipe's name onto another tracker to move it there, or onto another row to reorder.
 - Each recipe shows its HQ tier, success chance and skill-up chance, image support included.
 - Click a name to open the recipe. Right-click it to stop tracking.
-- Drag the edges to resize a tracker. Opacity and the odds column are in Settings.
+- Drag the edges to resize a tracker. Opacity is in Settings.
 
 Your trackers are saved per character. The single tracker from older versions becomes the first one, named "Tracker".
 
@@ -171,7 +171,7 @@ Open with the Settings button or `/cb settings`.
   them. Pick Never if you see two mice, or Always if the mouse disappears over the book.
 - Esc closes windows, on or off.
 - Skill-ups section on recipe pages, on or off.
-- Trackers: show them, the odds column, and how solid their background is.
+- Trackers: show them, and how solid their background is.
 
 Everything is saved under Ashita's `config/addons/craftbook` folder:
 

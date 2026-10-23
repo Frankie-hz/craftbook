@@ -21,8 +21,8 @@ local function copy(list)
     return result;
 end
 
-local function make(key, name, recipes, open)
-    return { key = key, name = name, recipes = copy(recipes), open = { open } };
+local function make(key, name, recipes, open, odds)
+    return { key = key, name = name, recipes = copy(recipes), open = { open }, odds = { odds } };
 end
 
 local function name_taken(name)
@@ -35,20 +35,25 @@ local function name_taken(name)
     return false;
 end
 
--- Fills the list from settings. A character from before multiple trackers gets its one list as "Tracker".
-function trackers.load(saved, next_key, legacy_recipes)
+-- Fills the list from settings. A character from before multiple trackers gets its one list as "Tracker", and
+-- trackers saved before each had its own odds column take the old shared setting.
+function trackers.load(saved, next_key, legacy_recipes, legacy_odds)
     trackers.list     = {};
     trackers.next_key = math.max(1, next_key or 1);
 
     for _, entry in ipairs(saved or {}) do
         if (#trackers.list < MAX_TRACKERS and entry.key ~= nil and entry.name ~= nil) then
-            trackers.list[#trackers.list + 1] = make(entry.key, entry.name, entry.recipes or {}, entry.open == true);
+            local odds = legacy_odds ~= false;
+            if (entry.odds ~= nil) then
+                odds = entry.odds == true;
+            end
+            trackers.list[#trackers.list + 1] = make(entry.key, entry.name, entry.recipes or {}, entry.open == true, odds);
             trackers.next_key = math.max(trackers.next_key, entry.key + 1);
         end
     end
 
     if (#trackers.list == 0) then
-        trackers.list[1] = make(trackers.next_key, 'Tracker', legacy_recipes or {}, true);
+        trackers.list[1] = make(trackers.next_key, 'Tracker', legacy_recipes or {}, true, legacy_odds ~= false);
         trackers.next_key = trackers.next_key + 1;
     end
 end
@@ -57,7 +62,7 @@ end
 function trackers.export()
     local saved = {};
     for index, tracker in ipairs(trackers.list) do
-        saved[index] = { key = tracker.key, name = tracker.name, recipes = copy(tracker.recipes), open = tracker.open[1] };
+        saved[index] = { key = tracker.key, name = tracker.name, recipes = copy(tracker.recipes), open = tracker.open[1], odds = tracker.odds[1] };
     end
 
     return saved, trackers.next_key;
@@ -78,7 +83,7 @@ function trackers.create()
         name   = ('Tracker %d'):fmt(number);
     end
 
-    local tracker = make(trackers.next_key, name, {}, true);
+    local tracker = make(trackers.next_key, name, {}, true, true);
     trackers.next_key = trackers.next_key + 1;
     trackers.list[#trackers.list + 1] = tracker;
     return tracker;
