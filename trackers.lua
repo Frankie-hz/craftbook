@@ -52,8 +52,10 @@ function trackers.load(saved, next_key, legacy_recipes, legacy_odds)
         end
     end
 
+    -- It only opens if it has recipes, so a character with nothing tracked yet does not get an empty note.
     if (#trackers.list == 0) then
-        trackers.list[1] = make(trackers.next_key, 'Tracker', legacy_recipes or {}, true, legacy_odds ~= false);
+        local recipes = legacy_recipes or {};
+        trackers.list[1] = make(trackers.next_key, 'Tracker', recipes, #recipes > 0, legacy_odds ~= false);
         trackers.next_key = trackers.next_key + 1;
     end
 end
