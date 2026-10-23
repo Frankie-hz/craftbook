@@ -461,6 +461,20 @@ function db.item_name(id)
     return item.name;
 end
 
+-- How many of an item make a stack, from the game's item data. 1 when it does not stack or is unknown.
+function db.stack_size(id)
+    local item = item_entry(id);
+    if (item.stack == nil) then
+        item.stack = 1;
+        local resource = AshitaCore:GetResourceManager():GetItemById(id);
+        if (resource ~= nil and resource.StackSize ~= nil and resource.StackSize > 1) then
+            item.stack = resource.StackSize;
+        end
+    end
+
+    return item.stack;
+end
+
 -- Both of an item's names in lowercase, so a search finds "Blk. Tiger Fang" by "black tiger" too.
 function db.item_search(id)
     local item = item_entry(id);

@@ -1459,7 +1459,7 @@ local function draw_price_input(id)
     local buffer = { '' };
     local price  = prices.get(id);
     if (price ~= nil) then
-        buffer[1] = tostring(price);
+        buffer[1] = prices.text(price);
     end
 
     imgui.SetNextItemWidth(price_input_width());
@@ -1734,17 +1734,43 @@ do
             return nil;
         end
 
-        imgui.Text(commas(each * row.count));
+        imgui.Text(commas(math.floor(each * row.count + 0.5)));
         if (imgui.IsItemHovered()) then
             local cheapest = db.cheapest[row.id];
             if (custom) then
-                set_tooltip(('%s each at your price'):fmt(commas(each)));
+                set_tooltip(('%s each at your price'):fmt(prices.text(each)));
             else
                 set_tooltip(('%s each at %s (%s)'):fmt(commas(each), cheapest.npc, db.zone_name(cheapest.zone)));
             end
         end
 
         return each * row.count;
+    end
+
+    -- Your price typed for a whole stack, stored as the price for one.
+    local function draw_stack_price_input(id)
+        local size = db.stack_size(id);
+        if (size <= 1) then
+            imgui.TextDisabled('-');
+            return;
+        end
+
+        local buffer = { '' };
+        local price  = prices.get(id);
+        if (price ~= nil) then
+            buffer[1] = prices.text(price * size);
+        end
+
+        imgui.SetNextItemWidth(price_input_width());
+        if (imgui.InputTextWithHint(('##stack%d'):fmt(next_id()), '-', buffer, AH_INPUT_CHARS, ImGuiInputTextFlags_CharsDecimal)) then
+            prices.set(id, (tonumber(buffer[1]) or 0) / size);
+        end
+        if (imgui.IsItemDeactivatedAfterEdit()) then
+            prices.save();
+        end
+        if (imgui.IsItemHovered()) then
+            set_tooltip(('Your price for a stack of %d. It sets your price for one to the stack price / %d.\nClear it to go back to the NPC price.'):fmt(size, size));
+        end
     end
 
     local function draw_materials(recipe)
@@ -1756,12 +1782,13 @@ do
         local crystal_cost = 0;
         local missing      = {};
 
-        if (begin_fit_table('##materials', 5)) then
+        if (begin_fit_table('##materials', 6)) then
             setup_column('Qty', ImGuiTableColumnFlags_WidthFixed, 30);
             setup_column('Item', ImGuiTableColumnFlags_WidthStretch);
             setup_column('Have', ImGuiTableColumnFlags_WidthFixed, 64);
             setup_column('Cost', ImGuiTableColumnFlags_WidthFixed, 70);
             setup_column('My price', ImGuiTableColumnFlags_WidthFixed, price_input_width());
+            setup_column('My stack', ImGuiTableColumnFlags_WidthFixed, price_input_width());
             imgui.TableHeadersRow();
 
             for _, row in ipairs(rows) do
@@ -1788,6 +1815,9 @@ do
 
                 imgui.TableNextColumn();
                 draw_price_input(row.id);
+
+                imgui.TableNextColumn();
+                draw_stack_price_input(row.id);
             end
 
             imgui.EndTable();
@@ -2124,7 +2154,7 @@ do
             draw_price_input(tier.id);
 
             imgui.TableNextColumn();
-            local my_value = (prices.get(tier.id) or 0) * tier.qty;
+            local my_value = math.floor((prices.get(tier.id) or 0) * tier.qty + 0.5);
             draw_profit(my_value, cost, missing);
 
             values[tier.grade]    = value;

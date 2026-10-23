@@ -121,6 +121,8 @@ that item.
 NPC prices are not always what you pay. Type your own price into any "My price" box, for a material or a result.
 
 - For a material, it replaces the NPC price in the cost per synth.
+- Materials that stack also have a "My stack" box. Type what a stack costs, for example 800 for 12 Earth Crystals,
+  and craftbook works out the price for one.
 - For a result, it is what you sell for, and fills the My profit column.
 - Profit and My profit show the gil and the profit margin, for example `+1,200 (35%)`. Margin is
   (sale price - cost) / sale price.

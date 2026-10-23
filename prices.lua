@@ -3,6 +3,10 @@ require('common');
 local MAX_PRICE = 999999999;
 local MAX_LINES = 100000;
 
+-- A stack price split over the stack leaves decimals, kept to this many places.
+local SAVED_DECIMALS = 4;
+local SHOWN_DECIMALS = 2;
+
 -- Custom prices the player typed in, per item: what they pay for it and what they sell it for.
 -- Shared by every character on this install.
 local prices = {
@@ -34,13 +38,27 @@ function prices.load()
             break;
         end
 
-        local id, price = line:match('^(%d+)\t(%d+)');
+        local id, price = line:match('^(%d+)\t([%d%.]+)');
         if (id ~= nil) then
             prices.values[tonumber(id)] = tonumber(price);
         end
     end
 
     file:close();
+end
+
+local function trimmed(value, decimals)
+    if (value == math.floor(value)) then
+        return ('%d'):fmt(value);
+    end
+
+    local text = ('%.' .. decimals .. 'f'):fmt(value):gsub('0+$', ''):gsub('%.$', '');
+    return text;
+end
+
+-- A price as typed or shown: whole gil without decimals, otherwise up to two places.
+function prices.text(value)
+    return trimmed(value, SHOWN_DECIMALS);
 end
 
 function prices.save()
@@ -61,7 +79,7 @@ function prices.save()
     table.sort(ids);
 
     for _, id in ipairs(ids) do
-        file:write(('%d\t%d\n'):fmt(id, prices.values[id]));
+        file:write(('%d\t%s\n'):fmt(id, trimmed(prices.values[id], SAVED_DECIMALS)));
     end
 
     file:close();
