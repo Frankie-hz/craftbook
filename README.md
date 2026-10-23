@@ -62,7 +62,7 @@ as two tabs instead, or put the recipe page in its own window.
 
 **Finding recipes**
 
-- Pick a mode: Results (search by what a recipe makes), Ingredients (by what it uses), Items, Favorites or My prices.
+- Pick a mode: Results (search by what a recipe makes), Ingredients (by what it uses), Items or My prices.
 - Filter by craft, level range and sub-crafts. Reset clears every filter.
 - Skill-ups lists only the recipes 1 to 5 levels above your skill, where skill-ups are most likely.
 - T1, T2 and T3 list the recipes you are at that HQ tier for right now (11 to 30, 31 to 50 and 51 or more levels over).
@@ -75,7 +75,8 @@ as two tabs instead, or put the recipe page in its own window.
 - NQ and HQ results with NPC sell price, profit and profit margin.
 - Your success chance and HQ tier and chance, for example `Leather Ring (T0 1.6%)`.
 - Skill-up chance per synth for each craft the recipe uses, and the odds of each gain from +0.1 to +0.5.
-- Favorite saves it to the Favorites mode. Track pins it to a tracker of your choice.
+- Favorite adds it to your favorites. The Favorites button (top right, beside What-if) lists them, and a second click
+  goes back. Track pins it to a tracker of your choice.
 
 **An item's page**
 

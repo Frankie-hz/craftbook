@@ -34,6 +34,9 @@ local MODE_ITEMS       = 3;
 local MODE_FAVORITES   = 4;
 local MODE_PRICES      = 5;
 
+-- The mode dropdown. Favorites has its own button by What-if instead.
+local LIST_MODES = { MODE_RESULTS, MODE_INGREDIENTS, MODE_ITEMS, MODE_PRICES };
+
 local SUPPORT_BONUS = { [0] = 0, [1] = 1, [2] = 3 };
 
 -- Base HQ chance by the lowest tier across every craft the recipe uses (synthutils calculateSynthResult).
@@ -1203,7 +1206,23 @@ local function draw_what_if_panel()
     end
 end
 
--- Sits at the right end of the top row.
+-- Favorites is a list mode on a button of its own. A second click goes back to the mode you were in.
+local function draw_favorites_button()
+    local showing = state.mode == MODE_FAVORITES;
+    if (toggle_button('Favorites', showing)) then
+        if (showing) then
+            state.mode = state.mode_before_favorites or MODE_RESULTS;
+        else
+            state.mode_before_favorites = state.mode;
+            state.mode = MODE_FAVORITES;
+        end
+    end
+    if (imgui.IsItemHovered()) then
+        set_tooltip('List the recipes you favorited. Click again to go back.\nFavorite a recipe from its page.');
+    end
+end
+
+-- Favorites and What-if sit at the right end of the top row.
 local function draw_what_if()
     local label = 'What-if';
     if (what_if.active) then
@@ -1211,9 +1230,11 @@ local function draw_what_if()
     end
 
     imgui.SameLine();
-    local width = button_width(label);
+    local width = button_width('Favorites') + imgui.GetStyle().ItemSpacing.x + button_width(label);
     local avail = imgui.GetContentRegionAvail();
     imgui.SetCursorPosX(imgui.GetCursorPosX() + math.max(0, avail - width));
+    draw_favorites_button();
+    imgui.SameLine();
     if (toggle_button(label, what_if.active)) then
         imgui.OpenPopup('##whatifpanel');
     end
@@ -1283,7 +1304,7 @@ local function draw_filters()
     imgui.InputTextWithHint('##search', 'Search names...', state.search, 64);
 
     imgui.SameLine();
-    state.mode = draw_combo('##mode', MODES, state.mode, nil, in_order(MODES));
+    state.mode = draw_combo('##mode', MODES, state.mode, nil, LIST_MODES);
 
     imgui.SameLine();
     local craft_names = {};
