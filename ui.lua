@@ -8,6 +8,7 @@ local player = require('player');
 local prices = require('prices');
 local history = require('history');
 local themes  = require('themes');
+local trackers = require('trackers');
 local skin    = require('skin');
 local window  = require('window');
 
@@ -89,6 +90,9 @@ use_theme(themes.get('default'));
 local function undock()
     pcall(imgui.SetNextWindowDockID, 0, ImGuiCond_Always);
 end
+
+-- Defined with the trackers, used by the book's Trackers button.
+local draw_trackers_menu;
 
 -- Classic only: paints the game's window art behind the window that was just begun.
 local function draw_skin(titled, alpha)
@@ -193,7 +197,6 @@ local SORT_FLAGS  = bit.bor(ImGuiTableFlags_Sortable, ImGuiTableFlags_SortTrista
 -- ImGui docking would put craftbook windows in a shared tab bar, which breaks their themes. Pop out and Dock cover it.
 local WINDOW_FLAGS  = ImGuiWindowFlags_NoDocking or 0;
 local TRACKER_FLAGS = bit.bor(ImGuiWindowFlags_NoTitleBar, ImGuiWindowFlags_NoFocusOnAppearing, ImGuiWindowFlags_NoNav, WINDOW_FLAGS);
-local MAX_TRACKED   = 8;
 local TRACKER_TABLE_FLAGS = bit.bor(ImGuiTableFlags_SizingFixedFit, ImGuiTableFlags_BordersInnerH, ImGuiTableFlags_BordersInnerV);
 local COMBO_PADDING  = 8;
 
@@ -1304,6 +1307,15 @@ local function draw_filters()
     end
 
     imgui.SameLine();
+    if (imgui.Button('Trackers')) then
+        imgui.OpenPopup('##trackerlist');
+    end
+    if (imgui.IsItemHovered()) then
+        set_tooltip('Open or close your saved trackers, or start a new one.\nRight-click a tracker\'s name to rename or delete it.');
+    end
+    draw_trackers_menu();
+
+    imgui.SameLine();
     if (imgui.Button('Settings')) then
         state.settings_visible[1] = not state.settings_visible[1];
     end
@@ -2186,36 +2198,53 @@ do
         end
     end
 
-    local function tracked_index(recipe)
-        for index, id in ipairs(state.tracked) do
-            if (id == recipe.id) then
-                return index;
-            end
+    -- Track picks the tracker from a menu, with a tick on each one that already holds the recipe.
+    local function draw_track_menu(recipe)
+        if (not imgui.BeginPopup('##trackmenu')) then
+            return;
         end
 
-        return nil;
+        for _, tracker in ipairs(trackers.list) do
+            local has     = trackers.index_of(tracker, recipe.id) ~= nil;
+            local enabled = has or not trackers.is_full(tracker);
+            if (imgui.MenuItem(('%s (%d/%d)##trackin%d'):fmt(tracker.name, #tracker.recipes, trackers.max_recipes, tracker.key), nil, has, enabled)) then
+                trackers.toggle(tracker, recipe.id);
+                if (not has) then
+                    tracker.open[1]  = true;
+                    state.tracker[1] = true;
+                end
+                state.save_tracked();
+            end
+        end
+        if (#trackers.list > 0) then
+            imgui.Separator();
+        end
+        if (imgui.MenuItem('New tracker')) then
+            local tracker = trackers.create();
+            if (tracker ~= nil) then
+                trackers.toggle(tracker, recipe.id);
+                state.tracker[1] = true;
+                state.save_tracked();
+            end
+        end
+        imgui.EndPopup();
     end
 
     local function draw_track_button(recipe)
-        local index = tracked_index(recipe);
-        local label = 'Track###track';
-        if (index ~= nil) then
+        local holding = trackers.holding(recipe.id);
+        local label   = 'Track###track';
+        if (holding > 0) then
             label = 'Tracking###track';
         end
 
         imgui.SameLine();
-        if (toggle_button(label, index ~= nil)) then
-            if (index ~= nil) then
-                table.remove(state.tracked, index);
-            elseif (#state.tracked < MAX_TRACKED) then
-                state.tracked[#state.tracked + 1] = recipe.id;
-                state.tracker[1] = true;
-            end
-            state.save_tracked();
+        if (toggle_button(label, holding > 0)) then
+            imgui.OpenPopup('##trackmenu');
         end
         if (imgui.IsItemHovered()) then
-            set_tooltip(('Pin the materials to a small note that stays up while you craft (up to %d recipes).\n/cb track hides or shows it.'):fmt(MAX_TRACKED));
+            set_tooltip(('Pin the materials to a tracker note that stays up while you craft, up to %d recipes each.\nPick a tracker or start a new one. /cb track hides or shows them all.'):fmt(trackers.max_recipes));
         end
+        draw_track_menu(recipe);
     end
 
     local function easiest(recipes)
@@ -3147,151 +3176,313 @@ do
     end
 end
 
-local function synths_possible(rows)
-    local synths = nil;
-    for _, row in ipairs(rows) do
-        local bag = player.count(row.id);
-        local can = math.floor(bag / row.count);
-        if (synths == nil or can < synths) then
-            synths = can;
-        end
-    end
+-- ---------------------------------------------------------------------------
+-- Trackers: saved recipe lists, each shown as a note of its materials. They keep their helpers to themselves,
+-- since Lua allows only 200 top-level locals in one file.
+-- ---------------------------------------------------------------------------
 
-    return synths or 0;
-end
+local draw_trackers;
+do
+    local NAME_CHARS     = 33;
+    local WINDOW_STAGGER = 30;
+    local STAGGER_STEPS  = 10;
+    local DROP_HOVER     = bit.bor(ImGuiHoveredFlags_RootAndChildWindows, ImGuiHoveredFlags_AllowWhenBlockedByActiveItem);
 
-local function draw_tracked_row(row)
-    local bag, total = player.count(row.id);
-    local color      = COLORS.good;
-    if (bag < row.count and total >= row.count) then
-        color = COLORS.warn;
-    elseif (bag < row.count) then
-        color = COLORS.bad;
-    end
+    -- The recipe being dragged, the row and note under the mouse, and the rename buffer and delete confirmation of
+    -- the open tracker menu.
+    local drag           = nil;
+    local drop_before    = nil;
+    local drop_target    = nil;
+    local name_edit      = { '' };
+    local confirm_delete = nil;
+    local pending_delete = nil;
 
-    imgui.TableNextRow();
-    imgui.TableNextColumn();
-    imgui.TextColored(color, ('%d/%d'):fmt(bag, row.count));
-    imgui.TableNextColumn();
-    imgui.TextColored(color, db.item_name(row.id));
-    if (total > bag and imgui.IsItemHovered()) then
-        set_tooltip(('%d more in storage'):fmt(total - bag));
-    end
-end
-
--- The right-hand column: HQ tier and chance, success, and main-craft skill-up chance, support included.
-local function draw_tracked_odds(recipe)
-    local outlook = synth_outlook(recipe);
-    if (outlook == nil) then
-        imgui.TextDisabled('-');
-        return;
-    end
-
-    if (not outlook.can_hq) then
-        imgui.TextDisabled('No HQ');
-    elseif (outlook.tier == nil) then
-        imgui.TextColored(COLORS.hq, ('HQ %s'):fmt(percent(outlook.hq)));
-    else
-        imgui.TextColored(COLORS.hq, ('T%d %s'):fmt(outlook.tier, percent(outlook.hq)));
-    end
-    if (imgui.IsItemHovered()) then
-        set_tooltip('HQ tier and HQ chance when the synth succeeds.');
-    end
-
-    imgui.TextColored(success_color(outlook.success), ('Succ %s'):fmt(percent(outlook.success)));
-    if (imgui.IsItemHovered()) then
-        set_tooltip('Chance the synth does not break.');
-    end
-
-    local skillup = skillup_outlook(recipe, recipe.main);
-    if (skillup == nil) then
-        return;
-    end
-
-    imgui.TextDisabled(('SU %s'):fmt(percent(skillup_per_synth(skillup, outlook.success))));
-    if (imgui.IsItemHovered()) then
-        set_tooltip(('%s skill-up chance per synth.'):fmt(db.crafts[recipe.main].name));
-    end
-end
-
--- Returns true when the player right-clicked the name to stop tracking it.
-local function draw_tracked_name(recipe, index, synths)
-    if (imgui.TextLink(('%s##tracked%d'):fmt(db.item_name(recipe.result), index))) then
-        state.visible[1] = true;
-        open_recipe(recipe);
-    end
-    local untrack = imgui.IsItemClicked(ImGuiMouseButton_Right);
-    if (imgui.IsItemHovered()) then
-        set_tooltip('Click to open in the book. Right-click to stop tracking.');
-    end
-
-    imgui.SameLine();
-    imgui.TextDisabled(('(%d)'):fmt(synths));
-    if (imgui.IsItemHovered()) then
-        set_tooltip('Synths your bag covers.');
-    end
-
-    return untrack;
-end
-
--- One row of the tracker table: the recipe and its materials on the left, the odds on the right.
-local function draw_tracked_recipe(recipe, index)
-    local rows   = material_rows(recipe);
-    local synths = synths_possible(rows);
-
-    imgui.TableNextRow();
-    imgui.TableNextColumn();
-    local untrack = draw_tracked_name(recipe, index, synths);
-
-    if (begin_table(('##trackedrows%d'):fmt(index), 2, ImGuiTableFlags_SizingFixedFit)) then
+    local function synths_possible(rows)
+        local synths = nil;
         for _, row in ipairs(rows) do
-            draw_tracked_row(row);
+            local bag = player.count(row.id);
+            local can = math.floor(bag / row.count);
+            if (synths == nil or can < synths) then
+                synths = can;
+            end
         end
-        imgui.EndTable();
+
+        return synths or 0;
     end
 
-    if (state.tracker_odds[1]) then
+    local function draw_tracked_row(row)
+        local bag, total = player.count(row.id);
+        local color      = COLORS.good;
+        if (bag < row.count and total >= row.count) then
+            color = COLORS.warn;
+        elseif (bag < row.count) then
+            color = COLORS.bad;
+        end
+
+        imgui.TableNextRow();
         imgui.TableNextColumn();
-        draw_tracked_odds(recipe);
-    end
-
-    return untrack;
-end
-
-local function draw_tracker()
-    -- Under Classic the art carries the note's opacity, so the flat fill behind it is switched off.
-    if (active_theme.skin ~= nil and skin.get(active_theme.skin) ~= nil) then
-        imgui.SetNextWindowBgAlpha(0);
-    else
-        imgui.SetNextWindowBgAlpha(state.tracker_alpha);
-    end
-    imgui.SetNextWindowPos({ 20, 200 }, ImGuiCond_FirstUseEver);
-    imgui.SetNextWindowSize({ 320, 300 }, ImGuiCond_FirstUseEver);
-    undock();
-    if (imgui.Begin('Craftbook tracker###cbtracker', state.tracker, TRACKER_FLAGS)) then
-        draw_skin(false, state.tracker_alpha);
-        note_hover();
-        local remove = nil;
-        local columns = 1;
-        if (state.tracker_odds[1]) then
-            columns = 2;
+        imgui.TextColored(color, ('%d/%d'):fmt(bag, row.count));
+        imgui.TableNextColumn();
+        imgui.TextColored(color, db.item_name(row.id));
+        if (total > bag and imgui.IsItemHovered()) then
+            set_tooltip(('%d more in storage'):fmt(total - bag));
         end
-        if (begin_table(('##tracker%d'):fmt(columns), columns, TRACKER_TABLE_FLAGS)) then
-            for index, id in ipairs(state.tracked) do
-                local recipe = db.recipe_by_id[id];
-                if (recipe ~= nil and draw_tracked_recipe(recipe, index)) then
-                    remove = index;
-                end
+    end
+
+    -- The right-hand column: HQ tier and chance, success, and main-craft skill-up chance, support included.
+    local function draw_tracked_odds(recipe)
+        local outlook = synth_outlook(recipe);
+        if (outlook == nil) then
+            imgui.TextDisabled('-');
+            return;
+        end
+
+        if (not outlook.can_hq) then
+            imgui.TextDisabled('No HQ');
+        elseif (outlook.tier == nil) then
+            imgui.TextColored(COLORS.hq, ('HQ %s'):fmt(percent(outlook.hq)));
+        else
+            imgui.TextColored(COLORS.hq, ('T%d %s'):fmt(outlook.tier, percent(outlook.hq)));
+        end
+        if (imgui.IsItemHovered()) then
+            set_tooltip('HQ tier and HQ chance when the synth succeeds.');
+        end
+
+        imgui.TextColored(success_color(outlook.success), ('Succ %s'):fmt(percent(outlook.success)));
+        if (imgui.IsItemHovered()) then
+            set_tooltip('Chance the synth does not break.');
+        end
+
+        local skillup = skillup_outlook(recipe, recipe.main);
+        if (skillup == nil) then
+            return;
+        end
+
+        imgui.TextDisabled(('SU %s'):fmt(percent(skillup_per_synth(skillup, outlook.success))));
+        if (imgui.IsItemHovered()) then
+            set_tooltip(('%s skill-up chance per synth.'):fmt(db.crafts[recipe.main].name));
+        end
+    end
+
+    -- Returns true when the player right-clicked the name to stop tracking it.
+    local function draw_tracked_name(tracker, recipe, index, synths)
+        if (imgui.TextLink(('%s##tracked%d'):fmt(db.item_name(recipe.result), index))) then
+            state.visible[1] = true;
+            open_recipe(recipe);
+        end
+        if (drag == nil and imgui.IsItemActive() and imgui.IsMouseDragging(ImGuiMouseButton_Left)) then
+            drag = { key = tracker.key, id = recipe.id, name = db.item_name(recipe.result) };
+        end
+        if (drag ~= nil and imgui.IsItemHovered(ImGuiHoveredFlags_AllowWhenBlockedByActiveItem)) then
+            drop_before = { key = tracker.key, index = index };
+        end
+        local untrack = imgui.IsItemClicked(ImGuiMouseButton_Right);
+        if (drag == nil and imgui.IsItemHovered()) then
+            set_tooltip('Click to open in the book. Drag it onto another tracker, or onto another row to reorder.\nRight-click to stop tracking.');
+        end
+
+        imgui.SameLine();
+        imgui.TextDisabled(('(%d)'):fmt(synths));
+        if (imgui.IsItemHovered()) then
+            set_tooltip('Synths your bag covers.');
+        end
+
+        return untrack;
+    end
+
+    -- One row of the tracker table: the recipe and its materials on the left, the odds on the right.
+    local function draw_tracked_recipe(tracker, recipe, index)
+        local rows   = material_rows(recipe);
+        local synths = synths_possible(rows);
+
+        imgui.TableNextRow();
+        imgui.TableNextColumn();
+        local untrack = draw_tracked_name(tracker, recipe, index, synths);
+
+        if (begin_table(('##trackedrows%d'):fmt(index), 2, ImGuiTableFlags_SizingFixedFit)) then
+            for _, row in ipairs(rows) do
+                draw_tracked_row(row);
             end
             imgui.EndTable();
         end
 
-        if (remove ~= nil) then
-            table.remove(state.tracked, remove);
+        if (state.tracker_odds[1]) then
+            imgui.TableNextColumn();
+            draw_tracked_odds(recipe);
+        end
+
+        return untrack;
+    end
+
+    -- Right-click menu of a tracker's name: rename, close, start another, delete.
+    local function draw_tracker_menu(tracker)
+        if (not imgui.BeginPopup('##trackermenu')) then
+            return;
+        end
+
+        imgui.SetNextItemWidth(px(180));
+        if (imgui.InputText('Name##trackername', name_edit, NAME_CHARS)) then
+            trackers.rename(tracker, name_edit[1]);
+        end
+        if (imgui.IsItemDeactivatedAfterEdit()) then
             state.save_tracked();
         end
+
+        if (imgui.MenuItem('Close')) then
+            tracker.open[1] = false;
+            state.save_tracked();
+        end
+        if (imgui.MenuItem('New tracker') and trackers.create() ~= nil) then
+            state.save_tracked();
+        end
+
+        local label = 'Delete tracker';
+        if (confirm_delete == tracker.key) then
+            label = 'Click again to delete it';
+        end
+        if (imgui.Selectable(('%s##delete'):fmt(label), false, ImGuiSelectableFlags_NoAutoClosePopups)) then
+            if (confirm_delete == tracker.key or #tracker.recipes == 0) then
+                pending_delete = tracker.key;
+                imgui.CloseCurrentPopup();
+            else
+                confirm_delete = tracker.key;
+            end
+        end
+        imgui.EndPopup();
     end
-    imgui.End();
+
+    local function draw_tracker_header(tracker)
+        imgui.TextColored(COLORS.title, tracker.name);
+        if (imgui.IsItemClicked(ImGuiMouseButton_Right)) then
+            name_edit[1]   = tracker.name;
+            confirm_delete = nil;
+            imgui.OpenPopup('##trackermenu');
+        end
+        if (drag == nil and imgui.IsItemHovered()) then
+            set_tooltip('Right-click to rename, close or delete this tracker.');
+        end
+        imgui.SameLine();
+        imgui.TextDisabled(('%d/%d'):fmt(#tracker.recipes, trackers.max_recipes));
+        draw_tracker_menu(tracker);
+    end
+
+    -- The first tracker keeps the window id of the single note it replaced, and so its place on screen.
+    local function tracker_window_id(tracker)
+        if (tracker.key == 1) then
+            return '###cbtracker';
+        end
+
+        return ('###cbtracker%d'):fmt(tracker.key);
+    end
+
+    local function outline_window()
+        local x, y          = imgui.GetWindowPos();
+        local width, height = imgui.GetWindowSize();
+        imgui.GetWindowDrawList():AddRect({ x + 1, y + 1 }, { x + width - 1, y + height - 1 }, imgui.GetColorU32(COLORS.title), 0, 0, 2);
+    end
+
+    local function draw_tracker_window(tracker)
+        -- Under Classic the art carries the note's opacity, so the flat fill behind it is switched off.
+        if (active_theme.skin ~= nil and skin.get(active_theme.skin) ~= nil) then
+            imgui.SetNextWindowBgAlpha(0);
+        else
+            imgui.SetNextWindowBgAlpha(state.tracker_alpha);
+        end
+        local offset = WINDOW_STAGGER * ((tracker.key - 1) % STAGGER_STEPS);
+        imgui.SetNextWindowPos({ 20 + offset, 200 + offset }, ImGuiCond_FirstUseEver);
+        imgui.SetNextWindowSize({ 320, 300 }, ImGuiCond_FirstUseEver);
+        undock();
+        if (imgui.Begin(tracker.name .. tracker_window_id(tracker), tracker.open, TRACKER_FLAGS)) then
+            draw_skin(false, state.tracker_alpha);
+            note_hover();
+            if (drag ~= nil and imgui.IsWindowHovered(DROP_HOVER)) then
+                drop_target = tracker.key;
+                outline_window();
+            end
+            draw_tracker_header(tracker);
+
+            local remove = nil;
+            local columns = 1;
+            if (state.tracker_odds[1]) then
+                columns = 2;
+            end
+            if (#tracker.recipes == 0) then
+                imgui.TextDisabled('Empty. Use Track on a recipe page, or drag a recipe here.');
+            elseif (begin_table(('##tracker%d'):fmt(columns), columns, TRACKER_TABLE_FLAGS)) then
+                for index, id in ipairs(tracker.recipes) do
+                    local recipe = db.recipe_by_id[id];
+                    if (recipe ~= nil and draw_tracked_recipe(tracker, recipe, index)) then
+                        remove = index;
+                    end
+                end
+                imgui.EndTable();
+            end
+
+            if (remove ~= nil) then
+                trackers.remove_at(tracker, remove);
+                state.save_tracked();
+            end
+        end
+        imgui.End();
+    end
+
+    -- A drop lands when the button comes up: on the row under the mouse, else at the end of the note under it.
+    local function finish_drag()
+        if (imgui.IsMouseDown(ImGuiMouseButton_Left)) then
+            set_tooltip(('Move %s'):fmt(drag.name));
+            return;
+        end
+
+        local before = nil;
+        if (drop_before ~= nil and drop_before.key == drop_target) then
+            before = drop_before.index;
+        end
+        if (drop_target ~= nil and trackers.move(drag.id, drag.key, drop_target, before)) then
+            state.save_tracked();
+        end
+        drag = nil;
+    end
+
+    function draw_trackers()
+        drop_target = nil;
+        drop_before = nil;
+        for _, tracker in ipairs(trackers.list) do
+            if (tracker.open[1]) then
+                draw_tracker_window(tracker);
+            end
+        end
+
+        if (pending_delete ~= nil) then
+            trackers.delete(pending_delete);
+            pending_delete = nil;
+            state.save_tracked();
+        end
+        if (drag ~= nil) then
+            finish_drag();
+        end
+    end
+
+    -- The list behind the book's Trackers button: open or close each tracker, or start another.
+    function draw_trackers_menu()
+        if (not imgui.BeginPopup('##trackerlist')) then
+            return;
+        end
+
+        for _, tracker in ipairs(trackers.list) do
+            if (imgui.Checkbox(('%s (%d)##show%d'):fmt(tracker.name, #tracker.recipes, tracker.key), tracker.open)) then
+                state.tracker[1] = true;
+                state.save_tracked();
+            end
+        end
+        if (#trackers.list > 0) then
+            imgui.Separator();
+        end
+        if (imgui.Selectable('New tracker') and trackers.create() ~= nil) then
+            state.tracker[1] = true;
+            state.save_tracked();
+        end
+        imgui.EndPopup();
+    end
 end
 
 -- The book window and its panes. They keep their helpers to themselves, since Lua allows only 200 top-level
@@ -3538,8 +3729,8 @@ do
             section('Recipe page');
             saved_checkbox('Skill-ups section', state.show_skillups, 'Show the skill-up chance and gain odds on each recipe.');
 
-            section('Tracker note');
-            saved_checkbox('Show the note', state.tracker, 'Show or hide the tracked recipes note. /cb track does the same.');
+            section('Trackers');
+            saved_checkbox('Show trackers', state.tracker, 'Show or hide every open tracker. /cb track does the same.');
             saved_checkbox('Odds column', state.tracker_odds, 'Show HQ tier, success and skill-up chance beside each tracked recipe.');
             draw_tracker_opacity();
         end
@@ -3597,7 +3788,7 @@ function ui.render()
         end_quick_look();
     end
 
-    local tracking = db.loaded and state.tracker[1] and #state.tracked > 0;
+    local tracking = db.loaded and state.tracker[1] and trackers.any_open();
     local logging  = db.loaded and state.log_visible[1];
     local detail   = db.loaded and state.detached and state.detail_open[1] and state.view ~= nil;
     local settings = state.settings_visible[1];
@@ -3634,7 +3825,7 @@ function ui.render()
 
     local pushed_colors, pushed_vars = themes.push(theme, ui_scale());
     if (tracking) then
-        draw_tracker();
+        draw_trackers();
     end
     if (state.visible[1]) then
         draw_book();

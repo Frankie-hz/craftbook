@@ -7,7 +7,7 @@ comes from.
 - 3,315 recipes with crystals, materials, HQ results, sub-craft and key item requirements.
 - Success, HQ tier and skill-up chances worked out from your own skill, using the server's formulas.
 - Sources for every item: NPC vendors, guild shops, monster drops, mining, logging, harvesting and excavation.
-- A recipe tracker note, a synth history log, your own price list with profit per synth, and three themes.
+- Saved recipe trackers, a synth history log, your own price list with profit per synth, and three themes.
 
 craftbook only reads. It never sends packets or commands to the server.
 
@@ -46,7 +46,8 @@ favorites, prices and history live in Ashita's `config` folder and are kept.
 | `/cb` | Show or hide the book. Esc also closes it. |
 | `/cb <name>` | Open and search. An exact recipe or item name jumps straight to its page: `/cb sheep leather` |
 | `/cb lvl 59-67` | Open on recipes level 59 to 67, for this opening only. Add a craft: `/cb lvl 59-67 bone` |
-| `/cb track` | Show or hide the tracker note. |
+| `/cb track` | Show or hide your trackers. |
+| `/cb track <name>` | Open or close one tracker: `/cb track leather` |
 | `/cb history` | Show or hide your synth history. |
 | `/cb settings` | Open Settings. |
 | `/cb theme <name>` | Switch theme: `phoenix`, `classic` or `default`. No name lists them. |
@@ -74,7 +75,7 @@ as two tabs instead, or put the recipe page in its own window.
 - NQ and HQ results with NPC sell price, profit and profit margin.
 - Your success chance and HQ tier and chance, for example `Leather Ring (T0 1.6%)`.
 - Skill-up chance per synth for each craft the recipe uses, and the odds of each gain from +0.1 to +0.5.
-- Favorite saves it to the Favorites mode. Track pins it to the tracker note.
+- Favorite saves it to the Favorites mode. Track pins it to a tracker of your choice.
 
 **An item's page**
 
@@ -99,14 +100,21 @@ really have the buff, it is read from your status and used instead of the button
 Type other craft levels in the top right to see tiers, chances and skill-ups as if you had them. Nothing is saved.
 "Use my skills" goes back to your real levels.
 
-## Tracker note
+## Trackers
 
-Track a recipe to pin a small see-through note listing its materials: how many you have, how many you need, and how
-many synths that makes. It stays up with the book closed.
+A tracker is a saved list of up to 8 recipes, shown as a small see-through note of their materials: how many you
+have, how many you need, and how many synths that makes. It stays up with the book closed. Keep one per project, for
+example "Leather" or "Field gear", and open the one you need.
 
+- Track on a recipe page picks which tracker gets the recipe, or starts a new tracker.
+- The Trackers button in the book opens and closes each tracker. `/cb track leather` does the same by name.
+- Right-click a tracker's name to rename, close or delete it.
+- Drag a recipe's name onto another tracker to move it there, or onto another row to reorder.
 - Each recipe shows its HQ tier, success chance and skill-up chance, image support included.
 - Click a name to open the recipe. Right-click it to stop tracking.
-- Drag the edges to resize the note. Its opacity and the odds column are in Settings.
+- Drag the edges to resize a tracker. Opacity and the odds column are in Settings.
+
+Your trackers are saved per character. The single tracker from older versions becomes the first one, named "Tracker".
 
 ## History
 
@@ -162,7 +170,7 @@ Open with the Settings button or `/cb settings`.
   them. Pick Never if you see two mice, or Always if the mouse disappears over the book.
 - Esc closes windows, on or off.
 - Skill-ups section on recipe pages, on or off.
-- Tracker note: show it, the odds column, and how solid its background is.
+- Trackers: show them, the odds column, and how solid their background is.
 
 Everything is saved under Ashita's `config/addons/craftbook` folder:
 

@@ -14,6 +14,7 @@ local player   = require('player');
 local prices   = require('prices');
 local history  = require('history');
 local themes   = require('themes');
+local trackers = require('trackers');
 local window   = require('window');
 local ui       = require('ui');
 
@@ -39,6 +40,8 @@ local default_settings = T{
     skillup     = false,
     favorites   = T{},
     tracked     = T{},
+    trackers    = T{},
+    tracker_next = 1,
     tracker     = true,
     theme       = themes.starting,
     window_type = FOLLOW_GAME,
@@ -74,7 +77,6 @@ local state = {
     skillup       = { false },
     favorites     = {},
     favorites_rev = 0,
-    tracked       = {},
     tracker       = { true },
     theme         = themes.starting,
     window_type   = FOLLOW_GAME,
@@ -110,7 +112,7 @@ local function apply_config()
     state.support        = config.support;
     state.skillup[1]     = config.skillup;
     state.favorites      = config.favorites;
-    state.tracked        = config.tracked;
+    trackers.load(config.trackers, config.tracker_next, config.tracked);
     state.tracker[1]     = config.tracker;
     state.theme          = config.theme;
     state.window_type    = math.max(FOLLOW_GAME, math.min(config.window_type, LAST_WINDOW_TYPE));
@@ -139,6 +141,14 @@ local function lasting_filters()
     return { mode = state.mode, craft = state.craft, level_min = state.level_min[1], level_max = state.level_max[1], skillup = state.skillup[1] };
 end
 
+-- The old single tracker list is emptied once its recipes have moved into the first tracker.
+local function store_trackers()
+    local saved, next_key = trackers.export();
+    config.trackers     = saved;
+    config.tracker_next = next_key;
+    config.tracked      = T{};
+end
+
 local function store_config()
     local filters = lasting_filters();
     config.mode        = filters.mode;
@@ -150,6 +160,7 @@ local function store_config()
     config.support     = state.support;
     config.skillup     = filters.skillup;
     config.tracker     = state.tracker[1];
+    store_trackers();
     config.theme       = state.theme;
     config.window_type = state.window_type;
     config.detached    = state.detached;
@@ -215,6 +226,7 @@ function state.save_theme()
 end
 
 function state.save_tracked()
+    store_trackers();
     settings.save();
 end
 
@@ -318,10 +330,23 @@ ashita.events.register('command', 'command_cb', function (e)
     end
 
     if (sub == 'track') then
-        state.tracker[1] = not state.tracker[1];
-        if (#state.tracked == 0) then
-            message('Nothing tracked yet. Open a recipe and click Track.');
+        local name = table.concat(args, ' ', 3);
+        if (name == '') then
+            state.tracker[1] = not state.tracker[1];
+            if (trackers.recipe_count() == 0) then
+                message('Nothing tracked yet. Open a recipe and click Track.');
+            end
+            return;
         end
+
+        local tracker = trackers.find_name(name);
+        if (tracker == nil) then
+            message(('No tracker called "%s". Trackers: %s.'):fmt(name, table.concat(trackers.names(), ', ')));
+            return;
+        end
+        tracker.open[1]  = not tracker.open[1];
+        state.tracker[1] = true;
+        state.save_tracked();
         return;
     end
 
@@ -349,7 +374,8 @@ ashita.events.register('command', 'command_cb', function (e)
         message('/craftbook or /cb - toggle the window');
         message('/craftbook <name> - open and search, jumping straight to an exact recipe or item match');
         message('/craftbook lvl 59-67 [craft] - open on a level range for this opening only');
-        message('/craftbook track - show or hide the tracked recipes note');
+        message('/craftbook track - show or hide your trackers');
+        message('/craftbook track <name> - open or close one tracker');
         message('/craftbook history - show or hide your synth history');
         message('/craftbook settings - theme, UI scale, icons, layout and tracker options');
         message('/craftbook theme <name> - switch theme (no name lists them)');
