@@ -50,6 +50,7 @@ favorites, prices and history live in Ashita's `config` folder and are kept.
 | `/cb track <name>` | Open or close one tracker: `/cb track leather` |
 | `/cb history` | Show or hide your synth history. |
 | `/cb settings` | Open Settings. |
+| `/cb changelog` | What changed in each version. It also opens once by itself after each update. |
 | `/cb theme <name>` | Switch theme: `phoenix`, `classic` or `default`. No name lists them. |
 | `/cb fit` | Size the game window to exactly the size the game renders at. See [Troubleshooting](#troubleshooting). |
 | `/cb reload` | Reload the data files. |
@@ -173,6 +174,7 @@ Open with the Settings button or `/cb settings`.
 - Esc closes windows, on or off.
 - Skill-ups section on recipe pages, on or off.
 - Trackers: show them, and how solid their background is.
+- About: your craftbook version and a Changelog button.
 
 Everything is saved under Ashita's `config/addons/craftbook` folder:
 

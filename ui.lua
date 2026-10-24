@@ -9,6 +9,7 @@ local prices = require('prices');
 local history = require('history');
 local themes  = require('themes');
 local trackers = require('trackers');
+local changelog = require('changelog');
 local skin    = require('skin');
 local window  = require('window');
 
@@ -21,6 +22,7 @@ local function set_tooltip(text)
 end
 
 local MAX_RESULTS = 500;
+local CHANGELOG_SIZE = { 520, 460 };
 local MAX_ROWS    = 300;
 local MAX_HISTORY = 64;
 local MAX_WORDS   = 8;
@@ -3779,8 +3781,119 @@ do
             section('Trackers');
             saved_checkbox('Show trackers', state.tracker, 'Show or hide every open tracker. /cb track does the same.');
             draw_tracker_opacity();
+
+            section('About');
+            imgui.AlignTextToFramePadding();
+            imgui.Text(('craftbook %s'):fmt(addon.version));
+            imgui.SameLine();
+            if (imgui.Button('Changelog')) then
+                state.changelog_entries    = changelog.all();
+                state.changelog_all        = true;
+                state.changelog_visible[1] = true;
+            end
+            tooltip('What changed in each version. /cb changelog opens it too.');
         end
         imgui.End();
+    end
+end
+
+-- What changed since the last version this install showed, or every version after /cb changelog. Each version is a
+-- bar that folds, with its notes grouped as new, changed and fixed under coloured labels.
+local draw_changelog;
+do
+    local HEADING_SCALE = 1.35;
+    local KINDS = {
+        { key = 'new',     label = 'New',     color = 'good' },
+        { key = 'changed', label = 'Changed', color = 'hq' },
+        { key = 'fixed',   label = 'Fixed',   color = 'warn' },
+    };
+
+    local function draw_heading()
+        local pushed = pcall(imgui.PushFont, imgui.GetFont(), imgui.GetFontSize() * HEADING_SCALE);
+        imgui.TextColored(COLORS.title, ('craftbook %s'):fmt(addon.version));
+        if (pushed) then
+            imgui.PopFont();
+        end
+
+        if (state.changelog_all) then
+            imgui.TextDisabled('Every version so far, newest first.');
+        else
+            imgui.TextDisabled('Here is what changed since you last used craftbook.');
+        end
+        imgui.Separator();
+    end
+
+    local function draw_notes(entry, kind)
+        local notes = entry[kind.key];
+        if (notes == nil or #notes == 0) then
+            return;
+        end
+
+        local color = COLORS[kind.color];
+        imgui.TextColored(color, kind.label);
+        for _, note in ipairs(notes) do
+            imgui.PushStyleColor(ImGuiCol_Text, color);
+            imgui.Bullet();
+            imgui.PopStyleColor(1);
+            imgui.SameLine();
+            imgui.Text(note);
+        end
+        imgui.Spacing();
+    end
+
+    local function draw_entry(entry, open)
+        local label = ('craftbook %s'):fmt(entry.version);
+        if (entry.date ~= nil) then
+            label = ('%s     %s'):fmt(label, entry.date);
+        end
+
+        local flags = ImGuiTreeNodeFlags_None;
+        if (open) then
+            flags = ImGuiTreeNodeFlags_DefaultOpen;
+        end
+        if (not imgui.CollapsingHeader(('%s###changelog%s'):fmt(label, entry.version), flags)) then
+            return;
+        end
+
+        imgui.Indent();
+        for _, kind in ipairs(KINDS) do
+            draw_notes(entry, kind);
+        end
+        imgui.Unindent();
+    end
+
+    function draw_changelog()
+        imgui.SetNextWindowSize({ px(CHANGELOG_SIZE[1]), px(CHANGELOG_SIZE[2]) }, ImGuiCond_FirstUseEver);
+        imgui.SetNextWindowSizeConstraints({ px(280), px(200) }, { 4000, 4000 });
+        undock();
+        if (imgui.Begin('What\'s new in craftbook###cbchangelog', state.changelog_visible, WINDOW_FLAGS)) then
+            draw_skin(true, 1);
+            close_on_escape(state.changelog_visible);
+            note_hover();
+            draw_heading();
+
+            -- The notes scroll and wrap to the window, and Got it stays in view below them. After an update every
+            -- version shown is new, so all start open. The full list opens only the newest.
+            imgui.BeginChild('##changelognotes', { 0, -imgui.GetFrameHeightWithSpacing() });
+            imgui.PushTextWrapPos(0);
+            for index, entry in ipairs(state.changelog_entries) do
+                draw_entry(entry, index == 1 or not state.changelog_all);
+            end
+            imgui.PopTextWrapPos();
+            imgui.EndChild();
+
+            if (imgui.Button('Got it')) then
+                state.changelog_visible[1] = false;
+            end
+            imgui.SameLine();
+            imgui.AlignTextToFramePadding();
+            imgui.TextDisabled('/cb changelog opens this again.');
+        end
+        imgui.End();
+
+        if (not state.changelog_visible[1]) then
+            changelog.mark_seen(addon.version);
+        end
     end
 end
 
@@ -3838,7 +3951,8 @@ function ui.render()
     local logging  = db.loaded and state.log_visible[1];
     local detail   = db.loaded and state.detached and state.detail_open[1] and state.view ~= nil;
     local settings = state.settings_visible[1];
-    if (not tracking and not logging and not detail and not settings and not state.visible[1]) then
+    local news     = state.changelog_visible[1];
+    if (not tracking and not logging and not detail and not settings and not news and not state.visible[1]) then
         release_cursor();
         -- Nothing of craftbook is on screen, so its textures go back until a window opens again.
         icons.release();
@@ -3881,6 +3995,9 @@ function ui.render()
     end
     if (logging) then
         draw_history();
+    end
+    if (news) then
+        draw_changelog();
     end
     if (settings) then
         draw_settings();

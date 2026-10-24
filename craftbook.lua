@@ -15,6 +15,7 @@ local prices   = require('prices');
 local history  = require('history');
 local themes   = require('themes');
 local trackers = require('trackers');
+local changelog = require('changelog');
 local window   = require('window');
 local ui       = require('ui');
 
@@ -104,6 +105,9 @@ local state = {
     full_names    = { false },
     cursor_mode   = 1,
     settings_visible = { false },
+    changelog_visible = { false },
+    changelog_entries = {},
+    changelog_all     = false,
 };
 
 local function apply_config()
@@ -242,6 +246,12 @@ ashita.events.register('load', 'load_cb', function ()
     prices.load();
     history.load();
     history.tier_of = ui.synth_tier;
+    local pending = changelog.pending(addon.version);
+    if (#pending > 0) then
+        state.changelog_entries    = pending;
+        state.changelog_all        = false;
+        state.changelog_visible[1] = true;
+    end
     ui.set_state(state);
     reload();
 end);
@@ -384,6 +394,7 @@ ashita.events.register('command', 'command_cb', function (e)
         message('/craftbook track - show or hide your trackers');
         message('/craftbook track <name> - open or close one tracker');
         message('/craftbook history - show or hide your synth history');
+        message('/craftbook changelog - what changed in each version');
         message('/craftbook settings - theme, UI scale, icons, layout and tracker options');
         message('/craftbook theme <name> - switch theme (no name lists them)');
         message('/craftbook fit - size the game window to exactly the size the game renders at');
