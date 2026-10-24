@@ -2799,63 +2799,83 @@ end
 
 -- A window opening under a resting mouse leaves the game drawing its own cursor behind it. While any craftbook
 -- window is hovered ImGui draws its cursor on top; the shared setting goes back the moment the mouse leaves.
-local hovered        = false;
-local cursor_claimed = false;
-local cursor_before  = false;
-
 -- Settings > Mouse over craftbook. The game either lets Windows draw the mouse, which shows over every window, or
 -- draws its own, which craftbook windows cover. ImGui's mouse is only needed in the second case.
 local CURSOR = { auto = 1, always = 2, never = 3, names = { 'Auto', 'Always draw it', 'Never draw it' } };
 
--- Whether Windows was drawing the mouse the last time craftbook was not drawing its own.
-local system_cursor = nil;
+-- Each window calls note_hover after Begin. Render starts the frame with reset_hover and ends it with update_cursor.
+-- The state stays in this block, since Lua allows only 200 top-level locals in one file.
+local note_hover;
+local reset_hover;
+local update_cursor;
+local release_cursor;
+do
+    local hovered        = false;
+    local cursor_claimed = false;
+    local cursor_before  = false;
 
-local function note_hover()
-    if (imgui.IsWindowHovered(ImGuiHoveredFlags_RootAndChildWindows)) then
-        hovered = true;
-    end
-end
+    -- Whether Windows was drawing the mouse the last time craftbook was not drawing its own.
+    local system_cursor = nil;
 
-local function set_draw_cursor(value)
-    pcall(function ()
-        imgui.GetIO().MouseDrawCursor = value;
-    end);
-end
-
-local function claim_cursor()
-    if (cursor_claimed) then
-        return;
-    end
-
-    local ok, current = pcall(function ()
-        return imgui.GetIO().MouseDrawCursor;
-    end);
-    cursor_before  = ok and current == true;
-    cursor_claimed = true;
-    set_draw_cursor(true);
-end
-
-local function release_cursor()
-    if (not cursor_claimed) then
-        return;
+    local function set_draw_cursor(value)
+        pcall(function ()
+            imgui.GetIO().MouseDrawCursor = value;
+        end);
     end
 
-    cursor_claimed = false;
-    set_draw_cursor(cursor_before);
-end
+    local function claim_cursor()
+        if (cursor_claimed) then
+            return;
+        end
 
-local function wants_drawn_cursor()
-    if (state.cursor_mode == CURSOR.always) then
-        return true;
-    end
-    if (state.cursor_mode == CURSOR.never) then
-        return false;
-    end
-    if (not cursor_claimed) then
-        system_cursor = window.system_cursor_visible();
+        local ok, current = pcall(function ()
+            return imgui.GetIO().MouseDrawCursor;
+        end);
+        cursor_before  = ok and current == true;
+        cursor_claimed = true;
+        set_draw_cursor(true);
     end
 
-    return system_cursor ~= true;
+    function release_cursor()
+        if (not cursor_claimed) then
+            return;
+        end
+
+        cursor_claimed = false;
+        set_draw_cursor(cursor_before);
+    end
+
+    local function wants_drawn_cursor()
+        if (state.cursor_mode == CURSOR.always) then
+            return true;
+        end
+        if (state.cursor_mode == CURSOR.never) then
+            return false;
+        end
+        if (not cursor_claimed) then
+            system_cursor = window.system_cursor_visible();
+        end
+
+        return system_cursor ~= true;
+    end
+
+    function note_hover()
+        if (imgui.IsWindowHovered(ImGuiHoveredFlags_RootAndChildWindows)) then
+            hovered = true;
+        end
+    end
+
+    function reset_hover()
+        hovered = false;
+    end
+
+    function update_cursor()
+        if (hovered and wants_drawn_cursor()) then
+            claim_cursor();
+        else
+            release_cursor();
+        end
+    end
 end
 
 -- Call right after Begin. The first Esc leaves an active text box and the next one closes the window.
@@ -3960,7 +3980,7 @@ function ui.render()
         return;
     end
     icons.new_frame();
-    hovered = false;
+    reset_hover();
 
     link_id = 0;
     if (db.loaded) then
@@ -4007,11 +4027,7 @@ function ui.render()
         imgui.PopFont();
     end
 
-    if (hovered and wants_drawn_cursor()) then
-        claim_cursor();
-    else
-        release_cursor();
-    end
+    update_cursor();
 end
 
 function ui.release()
