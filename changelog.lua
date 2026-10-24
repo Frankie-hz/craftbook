@@ -8,17 +8,22 @@ local MAX_VERSION_PARTS = 4;
 local ENTRIES = {
     {
         version = '1.3',
+        date    = 'October 24, 2026',
         new = {
             'Trackers: keep several saved recipe lists, like one for Leather and one for Field gear. Open each from the new Trackers button or with /cb track <name>.',
+            'Right-click a tracker\'s name for its settings: rename it, turn its odds column on or off, close it or delete it.',
             'Track on a recipe page asks which tracker gets the recipe, or starts a new one.',
-            'Drag a recipe onto another tracker to move it, or onto another row to reorder. Right-click a tracker\'s name to rename it, turn its odds column on or off, or delete it. The x closes it.',
+            'Drag a recipe onto another tracker to move it, or onto another row to reorder. The x closes a tracker.',
             'Materials have a My stack box: type what a stack costs and craftbook works out the price for one.',
+            'Guild test items, the ones guild masters ask for to rank up, are marked in their own colour. Settings picks the colour or turns it off.',
+            'A Key items checkbox beside Desynthesis hides recipes that need a key item.',
             'This window. It shows once after each update, and /cb changelog or Settings > Changelog opens it again.',
         },
         changed = {
             'Favorites moved to a button beside What-if. Click it again to go back.',
             'Trackers and the Have column turn yellow when some of what you need is in your satchel, sack, case or storage.',
             'The level filter now defaults to 0 to 106.',
+            'The support buttons are labelled Synthesis support. With Advanced support, the Avg row and Made totals count breaks as losing 40% of each material instead of 50%.',
         },
     },
     {

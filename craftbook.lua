@@ -1,6 +1,6 @@
 addon.name    = 'craftbook';
 addon.author  = 'Frankie';
-addon.version = '1.2.1';
+addon.version = '1.3';
 addon.desc    = 'Searchable crafting recipes with where to buy, farm or gather every material.';
 addon.link    = 'https://github.com/Frankie-hz/craftbook';
 
