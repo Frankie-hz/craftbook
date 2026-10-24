@@ -1251,7 +1251,7 @@ local function draw_favorites_button()
     end
 end
 
--- Favorites and What-if sit at the right end of the top row.
+-- Favorites, What-if and History sit at the right end of the top row.
 local function draw_what_if()
     local label = 'What-if';
     if (what_if.active) then
@@ -1259,7 +1259,7 @@ local function draw_what_if()
     end
 
     imgui.SameLine();
-    local width = button_width('Favorites') + imgui.GetStyle().ItemSpacing.x + button_width(label);
+    local width = button_width('Favorites') + button_width(label) + button_width('History') + imgui.GetStyle().ItemSpacing.x * 2;
     local avail = imgui.GetContentRegionAvail();
     imgui.SetCursorPosX(imgui.GetCursorPosX() + math.max(0, avail - width));
     draw_favorites_button();
@@ -1269,6 +1269,13 @@ local function draw_what_if()
     end
     if (imgui.IsItemHovered()) then
         set_tooltip('Change your main or sub craft levels to see the tier, HQ and success chances.');
+    end
+    imgui.SameLine();
+    if (toggle_button('History', state.log_visible[1])) then
+        state.log_visible[1] = not state.log_visible[1];
+    end
+    if (imgui.IsItemHovered()) then
+        set_tooltip('Your synth results and skill-ups. /cb history opens it too.');
     end
 
     if (imgui.BeginPopup('##whatifpanel')) then
@@ -1357,11 +1364,6 @@ local function draw_filters()
     if (imgui.IsItemHovered()) then
         set_tooltip('Clear the search, craft, level range, sub-crafts, desynthesis, skill-ups and tier filters.');
     end
-    imgui.SameLine();
-    if (imgui.Button('History')) then
-        state.log_visible[1] = not state.log_visible[1];
-    end
-
     imgui.SameLine();
     if (imgui.Button('Trackers')) then
         imgui.OpenPopup('##trackerlist');
