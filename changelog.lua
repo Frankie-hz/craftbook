@@ -7,6 +7,13 @@ local MAX_VERSION_PARTS = 4;
 -- public build, so they never mention anything it leaves out. A version without a date is not released yet.
 local ENTRIES = {
     {
+        version = '1.3.1',
+        date    = 'October 24, 2026',
+        new = {
+            'Vendors and guild shops show their map square, for example "Bastok Mines (H-7)". Hover one for its exact coordinates.',
+        },
+    },
+    {
         version = '1.3',
         date    = 'October 24, 2026',
         new = {
