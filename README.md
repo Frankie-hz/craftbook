@@ -82,7 +82,8 @@ as two tabs instead, or put the recipe page in its own window.
 
 **An item's page**
 
-- Vendors with their nation and regional conditions, and guild shops with price range and opening hours.
+- Vendors with their nation and regional conditions, and guild shops with price range and opening hours. Each shows
+  its map square, like "Bastok Mines (H-7)", and hovering it gives the exact coordinates.
 - Monster drops with the combined chance per kill, notorious monsters, and what can be stolen.
 - Mining, logging, harvesting and excavation points.
 - The recipes that make it, the recipes that use it, and what it breaks down into.
@@ -225,6 +226,8 @@ Success, HQ and skill-up chances follow Phoenix's synthesis code and its era ski
 - [Ashita](https://www.ashitaxi.com/) by atom0s and the Ashita team.
 - Recipe, shop, drop and gathering data from the [Phoenix XI](https://github.com/phoenixffxi/Phoenix) server, which
   is built on [LandSandBoat](https://github.com/LandSandBoat/server).
+- Map square calibration (`data/mapdata.lua`) taken from the Libra addon by Montijin, which generated it from Tako's
+  mapdata.
 
 ## License
 
