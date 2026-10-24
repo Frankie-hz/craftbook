@@ -599,7 +599,7 @@ idx	name	zone	lvmin	lvmax	nm	spawns
 597	Carmine Eruca	51	70	70	0	3
 598	Chigoe	51	71	73	0	2
 599	Chigoe	51	71	73	0	3
-600	Dark Esquire	51	76	76	0	3
+600	Dark Esquire	51	79	81	0	3
 601	Defoliate Treant	51	71	74	0	12
 602	Grand Marid	51	79	80	0	2
 603	Great Ameretat	51	73	74	0	8
@@ -635,7 +635,7 @@ idx	name	zone	lvmin	lvmax	nm	spawns
 633	Berried Chigoe	52	60	60	1	1
 634	Chigoe	52	71	73	0	5
 635	Colibri	52	71	73	0	22
-636	Dark Esquire	52	76	76	0	3
+636	Dark Esquire	52	79	81	0	3
 637	Date Eruca	52	72	73	0	5
 638	Grand Marid	52	79	80	0	2
 639	Haunt	52	63	64	0	3
@@ -747,10 +747,10 @@ idx	name	zone	lvmin	lvmax	nm	spawns
 745	Thunder Elemental	59	60	60	0	1
 746	Utukku S	59	55	56	0	1
 747	Ancient Bombs	61	74	78	1	1
-748	Assassin Fly	61	70	76	0	19
+748	Assassin Fly	61	71	74	0	19
 749	Assassin Fly	61	73	76	0	8
 750	Cerberus	61	85	85	1	1
-751	Dark Esquire	61	76	76	0	3
+751	Dark Esquire	61	79	81	0	3
 752	Earth Elemental	61	74	76	0	7
 753	Ebony Pudding	61	79	80	0	10
 754	Fire Elemental	61	74	76	0	7
@@ -1030,1676 +1030,1676 @@ idx	name	zone	lvmin	lvmax	nm	spawns
 1028	Mosshorn	79	80	81	0	5
 1029	Oil Slick CM	79	65	69	0	6
 1030	Orderly Imp	79	63	68	0	6
-1031	Peallaidh	79	75	75	1	1
-1032	Puktrap	79	64	66	0	20
-1033	Qiqirn Mireguide	79	67	69	0	4
-1034	Qiqirn Rock Hound	79	67	69	0	3
-1035	Ravin Raven	79	63	65	1	1
+1031	Puktrap	79	64	66	0	20
+1032	Qiqirn Mireguide	79	67	69	0	4
+1033	Qiqirn Rock Hound	79	67	69	0	3
+1034	Ravin Raven	79	63	65	1	1
+1035	Reserve Draugar	79	73	74	0	2
 1036	Reserve Draugar	79	73	74	0	2
-1037	Reserve Draugar	79	73	74	0	2
-1038	Soulflayer	79	82	83	0	16
-1039	Spongilla Fly	79	78	79	0	11
-1040	Suhur Mas	79	69	71	0	1
-1041	Thunder Elemental	79	70	71	0	1
-1042	Tyger	79	88	90	1	1
-1043	Water Elemental	79	70	71	0	6
-1044	Wild Karakul	79	68	70	0	14
-1045	Bomb	100	8	10	0	3
-1046	Carrion Worm	100	2	6	0	36
-1047	Ding Bats	100	1	5	0	40
-1048	Enchanted Bones blm	100	6	8	0	7
-1049	Enchanted Bones war	100	4	7	0	7
-1050	Forest Funguar	100	4	6	0	19
-1051	Forest Hare	100	2	6	0	86
-1052	Fungus Beetle	100	10	15	1	1
-1053	Goblin Digger	100	7	8	0	1
-1054	Goblin Fisher	100	6	7	0	4
-1055	Goblin Thug	100	4	8	0	21
-1056	Goblin Weaver	100	4	8	0	14
-1057	Jaggedy-Eared Jack	100	9	10	1	1
-1058	Land Crab	100	5	6	0	1
-1059	Limicoline Crab	100	2	4	0	1
-1060	Marauder Dvogzog	100	67	67	1	1
-1061	Mouse Bat	100	2	6	0	26
-1062	Orcish Fodder	100	3	7	0	21
-1063	Orcish Grappler	100	3	8	0	18
-1064	Orcish Mesmerizer	100	4	8	0	16
-1065	Passage Crab	100	9	9	0	1
-1066	River Crab	100	5	6	0	8
-1067	Scarab Beetle	100	4	7	0	25
-1068	Tainted Hound	100	5	8	0	10
-1069	Tree Crab	100	3	4	0	1
-1070	Tunnel Worm	100	1	1	0	14
-1071	Vermivorous Crab	100	7	8	0	1
-1072	Wild Rabbit	100	1	1	0	27
-1073	Wild Sheep	100	5	8	0	45
-1074	Bigmouth Billy	101	9	10	1	1
-1075	Bomb	101	8	10	0	3
-1076	Carrion Worm	101	2	6	0	30
-1077	Cheval Pugil	101	9	10	0	1
-1078	Ding Bats	101	1	5	0	41
-1079	Enchanted Bones blm	101	4	8	0	13
-1080	Enchanted Bones war	101	5	8	0	2
-1081	Fighting Pugil	101	9	10	0	1
-1082	Forest Funguar	101	4	6	0	15
-1083	Forest Hare	101	2	6	0	75
-1084	Goblin Digger	101	7	8	0	1
-1085	Goblin Fisher	101	3	6	0	7
-1086	Goblin Thug	101	3	8	0	18
-1087	Goblin Weaver	101	4	8	0	15
-1088	Mouse Bat	101	3	7	0	22
-1089	Mud Pugil	101	9	10	0	1
-1090	Orcish Fodder	101	3	8	0	12
-1091	Orcish Grappler	101	3	8	0	9
-1092	Orcish Mesmerizer	101	3	8	0	9
-1093	Pug Pugil	101	9	10	0	1
-1094	Pugil	101	1	5	0	24
-1095	Pugil	101	1	5	0	1
-1096	Scarab Beetle	101	4	7	0	22
-1097	Swamfisk	101	11	15	1	2
-1098	Tainted Hound	101	6	8	0	7
-1099	Tunnel Worm	101	1	1	0	13
-1100	Wild Rabbit	101	1	1	0	25
-1101	Wild Sheep	101	6	8	0	32
-1102	Acro Bat	102	8	11	0	18
-1103	Air Elemental	102	18	20	0	5
-1104	Akbaba LTP	102	11	13	0	38
-1105	Battering Ram	102	22	23	0	2
-1106	Bloodtear Baldurf	102	55	56	1	1
-1107	Coral Crab	102	8	10	0	1
-1108	Gale Bats	102	8	10	0	25
-1109	Ghost	102	15	16	0	6
-1110	Giant Pugil	102	14	16	0	1
-1111	Goblin Ambusher	102	12	13	0	5
-1112	Goblin Archaeologist	102	30	75	1	1
-1113	Goblin Butcher	102	12	13	0	5
-1114	Goblin Digger	102	11	12	0	1
-1115	Goblin Fisher	102	9	10	0	4
-1116	Goblin Thug	102	8	10	0	6
-1117	Goblin Tinkerer	102	12	13	0	6
-1118	Goblin Weaver	102	8	10	0	6
-1119	Grass Funguar	102	12	13	0	22
-1120	Grenade	102	15	17	0	4
-1121	Huge Wasp	102	10	12	0	21
-1122	Lumbering Lambert	102	27	28	1	1
-1123	Mad Sheep	102	11	13	0	32
-1124	Orcish Fodder	102	8	10	0	8
-1125	Orcish Grappler	102	8	10	0	8
-1126	Orcish Grunt	102	12	13	0	6
-1127	Orcish Mesmerizer	102	8	10	0	8
-1128	Orcish Neckchopper	102	12	13	0	6
-1129	Orcish Stonechucker	102	12	13	0	6
-1130	Plague Bats	102	10	12	0	8
-1131	Poison Bat	102	12	14	0	7
-1132	Poison Funguar	102	14	15	0	13
-1133	Puffer Pugil	102	14	16	0	1
-1134	Pug Pugil	102	8	10	0	1
-1135	Rock Eater	102	10	11	0	42
-1136	Skeleton Sorcerer	102	11	13	0	13
-1137	Skeleton Warrior	102	10	12	0	13
-1138	Steppe Hare	102	8	10	0	45
-1139	Strolling Sapling	102	8	10	0	41
-1140	Thickshell	102	13	14	0	10
-1141	Thickshell	102	12	14	0	1
-1142	Tumbling Truffle	102	19	20	1	1
-1143	Water Elemental	102	18	20	0	3
-1144	Wolf Zombie	102	8	10	0	11
-1145	Beach Pugil	103	23	26	0	12
-1146	Beach Pugil	103	23	26	0	1
-1147	Bogy	103	28	30	0	9
-1148	Brutal Sheep	103	21	23	0	33
-1149	Cutter	103	28	30	0	1
-1150	Damselfly	103	20	23	0	53
-1151	Earth Elemental	103	38	40	0	3
-1152	Fire Elemental	103	38	40	0	8
-1153	Ghoul blm	103	20	24	0	19
-1154	Ghoul war	103	18	22	0	17
-1155	Giant Bat	103	21	22	0	4
-1156	Goblin Ambusher	103	17	20	0	12
-1157	Goblin Bounty Hunter	103	17	20	0	12
-1158	Goblin Butcher	103	17	20	0	10
-1159	Goblin Digger	103	19	20	0	1
-1160	Goblin Gambler	103	22	25	0	20
-1161	Goblin Leecher	103	22	25	0	21
-1162	Goblin Mugger	103	22	25	0	20
-1163	Goblin Tinkerer	103	17	20	0	8
-1164	Golden Bat	103	26	27	1	1
-1165	Hill Lizard	103	15	19	0	42
-1166	Marchelute	103	41	41	1	1
-1167	Night Bats	103	12	15	0	12
-1168	Puffer Pugil	103	15	17	0	1
-1169	Sand Bats	103	12	13	0	7
-1170	Sand Hare	103	15	18	0	51
-1171	Snipper	103	18	22	0	49
-1172	Snipper	103	18	22	0	1
-1173	Stag Crab	103	15	17	0	1
-1174	Star Bat	103	17	20	0	5
-1175	Thread Leech	103	22	25	0	29
-1176	Valkurm Emperor	103	29	30	1	1
-1177	Will-o-the-Wisp	103	25	27	0	7
-1178	Boggart	104	25	26	0	7
-1179	Bogy	104	25	26	0	6
-1180	Brutal Sheep	104	20	21	0	43
-1181	Ferocious Pugil	104	24	25	0	1
-1182	Forest Leech	104	21	22	0	27
-1183	Forest Tiger	104	24	25	0	15
-1184	Fradubio	104	59	60	1	1
-1185	Fraelissa	104	34	35	1	1
-1186	Ghoul war	104	16	17	0	7
-1187	Goblin Ambusher	104	16	17	0	3
-1188	Goblin Butcher	104	16	17	0	3
-1189	Goblin Digger	104	18	19	0	1
-1190	Goblin Gambler	104	21	22	0	3
-1191	Goblin Leecher	104	21	22	0	3
-1192	Goblin Mugger	104	21	22	0	3
-1193	Goblin Tinkerer	104	16	17	0	3
-1194	Huge Leech	104	27	29	0	1
-1195	Jugner Funguar	104	24	25	0	46
-1196	King Arthro	104	55	55	1	1
-1197	Knight Crab	104	35	35	0	10
-1198	Land Pugil	104	19	20	0	22
-1199	Meteormauler Zhagtegg	104	37	40	1	1
-1200	Orcish Cursemaker	104	21	22	0	5
-1201	Orcish Cursemaker	104	25	25	0	1
-1202	Orcish Fighter	104	21	22	0	6
-1203	Orcish Grunt	104	16	17	0	5
-1204	Orcish Neckchopper	104	16	17	0	5
-1205	Orcish Serjeant	104	21	22	0	5
-1206	Orcish Serjeant	104	24	25	0	1
-1207	Orcish Stonechucker	104	16	17	0	5
-1208	Panzer Percival	104	25	26	1	2
-1209	Scavenging Hound	104	22	23	0	16
-1210	Screamer	104	17	18	0	24
-1211	Snipper	104	19	20	0	22
-1212	Spring Pugil	104	16	18	0	1
-1213	Stag Beetle	104	22	23	0	47
-1214	Stag Crab	104	17	18	0	1
-1215	Thread Leech	104	19	22	0	1
-1216	Thunder Elemental	104	27	29	0	4
-1217	Walking Tree	104	27	28	0	3
-1218	Wandering Sapling	104	15	16	0	63
-1219	Water Elemental	104	27	29	0	6
-1220	Will-o-the-Wisp	104	24	25	0	3
-1221	Zombie blm	104	16	22	0	7
-1222	Ahtu	105	51	52	1	1
-1223	Ba	105	27	28	0	26
-1224	Clipper	105	24	25	0	11
-1225	Cutter	105	28	30	0	1
-1226	Earth Elemental	105	38	40	0	3
-1227	Evil Spirit	105	35	36	0	7
-1228	Goblin Bounty Hunter	105	30	36	0	13
-1229	Goblin Digger	105	28	29	0	1
-1230	Goblin Furrier	105	30	31	0	11
-1231	Goblin Gambler	105	26	27	0	5
-1232	Goblin Leecher	105	26	27	0	5
-1233	Goblin Mugger	105	26	27	0	5
-1234	Goblin Pathfinder	105	30	31	0	8
-1235	Goblin Shaman	105	30	31	0	11
-1236	Goblin Smithy	105	30	31	0	11
-1237	Greater Pugil	105	20	23	0	1
-1238	Ice Elemental	105	38	40	0	3
-1239	Ignis Fatuus	105	34	36	0	4
-1240	Kraken	105	37	40	0	1
-1241	Land Pugil	105	20	23	0	1
-1242	Lumber Jack	105	55	55	1	1
-1243	Mauthe Doog BD	105	31	32	0	20
-1244	May Fly	105	25	26	0	43
-1245	Orcish Beastrider	105	30	31	0	5
-1246	Orcish Brawler	105	30	31	0	5
-1247	Orcish Cursemaker	105	26	27	0	5
-1248	Orcish Fighter	105	26	27	0	5
-1249	Orcish Impaler	105	30	31	0	5
-1250	Orcish Nightraider	105	30	31	0	5
-1251	Orcish Serjeant	105	26	27	0	5
-1252	Sabertooth Tiger	105	31	32	0	57
-1253	Snipper	105	20	23	0	1
-1254	Sobbing Sapling	105	36	38	0	5
-1255	Stalking Sapling	105	23	24	0	81
-1256	Tottering Toby	105	27	28	1	1
-1257	Treant	105	36	37	0	2
-1258	Wight blm	105	26	32	0	10
-1259	Wight war	105	26	32	0	10
-1260	Amber Quadav	106	3	8	0	16
-1261	Amethyst Quadav	106	3	8	0	14
-1262	Black Wolf	106	5	8	0	9
-1263	Ding Bats	106	1	5	0	33
-1264	Enchanted Bones blm	106	5	8	0	8
-1265	Enchanted Bones war	106	5	8	0	4
-1266	Fighting Pugil	106	9	10	0	1
-1267	Fledermaus	106	3	6	0	13
-1268	Goblin Digger	106	6	7	0	1
-1269	Goblin Fisher	106	4	5	0	3
-1270	Goblin Gambler	106	21	22	0	4
-1271	Goblin Leecher	106	21	22	0	4
-1272	Goblin Mugger	106	21	22	0	2
-1273	Goblin Thug	106	4	8	0	16
-1274	Goblin Weaver	106	4	8	0	9
-1275	Huge Hornet	106	1	1	0	26
-1276	Land Crab	106	5	6	0	1
-1277	Maneating Hornet	106	3	6	0	40
-1278	Ornery Sheep	106	5	8	0	22
-1279	Pug Pugil	106	7	8	0	1
-1280	River Crab	106	2	5	0	8
-1281	Rock Lizard	106	4	8	0	22
-1282	Sand Crab	106	3	4	0	1
-1283	Sand Pugil	106	19	20	0	6
-1284	Shrapnel	106	8	10	0	6
-1285	Stinging Sophie	106	9	10	1	2
-1286	Stone Crab	106	2	4	0	1
-1287	Stone Eater	106	2	6	0	69
-1288	Tunnel Worm	106	1	1	0	13
-1289	Vulture	106	3	7	0	28
-1290	Walking Sapling	106	3	6	0	40
-1291	Young Quadav	106	3	8	0	29
-1292	Amber Quadav	107	3	8	0	13
-1293	Amethyst Quadav	107	3	8	0	11
-1294	Black Wolf	107	5	8	0	10
-1295	Bubbly Bernie	107	9	10	1	1
-1296	Carnero	107	11	12	1	2
-1297	Ding Bats	107	1	5	0	25
-1298	Enchanted Bones blm	107	4	8	0	8
-1299	Enchanted Bones war	107	5	8	0	8
-1300	Fledermaus	107	3	6	0	12
-1301	Goblin Digger	107	7	8	0	1
-1302	Goblin Fisher	107	3	5	0	4
-1303	Goblin Thug	107	3	8	0	17
-1304	Goblin Weaver	107	4	8	0	11
-1305	Huge Hornet	107	1	1	0	26
-1306	Land Crab	107	6	7	0	16
-1307	Land Crab	107	5	8	0	1
-1308	Leaping Lizzy	107	10	11	1	2
-1309	Maneating Hornet	107	3	6	0	30
-1310	Mole Crab	107	7	8	0	1
-1311	Ornery Sheep	107	5	8	0	21
-1312	Passage Crab	107	9	10	0	1
-1313	Rock Lizard	107	4	8	0	33
-1314	Sand Crab	107	3	4	0	1
-1315	Shrapnel	107	8	10	0	7
-1316	Stone Crab	107	2	3	0	1
-1317	Stone Eater	107	2	5	0	68
-1318	Tunnel Worm	107	1	1	0	14
-1319	Vulture	107	3	7	0	42
-1320	Walking Sapling	107	3	6	0	49
-1321	Young Quadav	107	3	8	0	23
-1322	Amber Quadav	108	9	10	0	6
-1323	Amethyst Quadav	108	9	15	0	6
-1324	Earth Elemental	108	18	20	0	3
-1325	Ghost	108	15	16	0	5
-1326	Goblin Ambusher	108	12	16	0	8
-1327	Goblin Archaeologist	108	30	75	1	1
-1328	Goblin Butcher	108	8	14	0	9
-1329	Goblin Digger	108	13	14	0	1
-1330	Goblin Thug	108	8	13	0	8
-1331	Goblin Tinkerer	108	9	14	0	7
-1332	Goblin Weaver	108	9	13	0	10
-1333	Greater Quadav	108	13	15	0	4
-1334	Grenade	108	15	17	0	3
-1335	Huge Wasp	108	9	12	0	70
-1336	Mad Sheep	108	9	14	0	53
-1337	Mist Lizard	108	10	12	0	62
-1338	Onyx Quadav	108	13	15	0	5
-1339	Rampaging Ram	108	27	28	1	1
-1340	Rock Eater	108	10	11	0	24
-1341	Skeleton Sorcerer	108	11	13	0	7
-1342	Skeleton Warrior	108	10	12	0	9
-1343	Steelfleece Baldarich	108	55	56	1	1
-1344	Stray Mary	108	19	20	1	2
-1345	Strolling Sapling	108	8	13	0	76
-1346	Thunder Elemental	108	18	20	0	3
-1347	Tremor Ram	108	22	23	0	2
-1348	Veteran Quadav	108	13	15	0	5
-1349	Wolf Zombie	108	9	14	0	11
-1350	Young Quadav	108	9	10	0	5
-1351	Black Bat	109	17	18	0	37
-1352	Bloodpool Vorax	109	24	25	1	1
-1353	BoWho Warmonger	109	36	37	1	1
-1354	Bog Bunny	109	15	16	0	35
-1355	Bog Dog	109	17	22	0	9
-1356	Bogy	109	25	26	0	6
-1357	Brass Quadav	109	22	23	0	7
-1358	Carnivorous Crawler	109	22	23	0	25
-1359	Copper Quadav	109	22	23	0	6
-1360	Fox Fire	109	24	25	0	3
-1361	Gadfly	109	20	21	0	52
-1362	Ghoul war	109	18	24	0	6
-1363	Goblin Ambusher	109	16	17	0	5
-1364	Goblin Butcher	109	16	17	0	5
-1365	Goblin Digger	109	18	19	0	1
-1366	Goblin Gambler	109	21	22	0	5
-1367	Goblin Leecher	109	21	22	0	5
-1368	Goblin Mugger	109	21	22	0	5
-1369	Goblin Tinkerer	109	16	17	0	5
-1370	Goobbue	109	24	25	0	10
-1371	Greater Quadav	109	17	18	0	6
-1372	Jolly Green	109	27	28	1	1
-1373	Land Pugil	109	19	20	0	13
-1374	Malboro	109	27	28	0	8
-1375	Marsh Funguar	109	24	25	0	27
-1376	Night Bats	109	15	16	0	66
-1377	Old Quadav	109	22	23	0	6
-1378	Onyx Quadav	109	17	18	0	7
-1379	Snipper	109	19	23	0	18
-1380	Stag Crab	109	14	15	0	1
-1381	Swamp Leech	109	13	15	0	1
-1382	Swamp Pugil	109	19	20	0	1
-1383	Thread Leech	109	21	22	0	17
-1384	Thread Leech	109	21	22	0	1
-1385	Thunder Elemental	109	27	29	0	6
-1386	Veteran Quadav	109	17	18	0	6
-1387	Water Elemental	109	27	29	0	5
-1388	Water Wasp	109	17	18	0	28
-1389	Zombie blm	109	18	24	0	6
-1390	Berry Grub	110	27	28	0	91
-1391	Big Jaw	110	22	23	0	1
-1392	Big Leech	110	34	36	0	1
-1393	Black Triple Stars	110	26	27	1	2
-1394	Brass Quadav	110	27	28	0	4
-1395	Bronze Quadav	110	32	33	0	4
-1396	Clipper	110	24	25	0	13
-1397	Copper Quadav	110	27	28	0	4
-1398	Death Wasp	110	25	26	0	58
-1399	Drooling Daisy	110	39	40	1	1
-1400	Evil Spirit	110	35	36	0	5
-1401	Fire Elemental	110	38	40	0	3
-1402	Garnet Quadav	110	32	33	0	4
-1403	Goblin Digger	110	28	29	0	1
-1404	Goblin Furrier	110	31	32	0	6
-1405	Goblin Gambler	110	26	27	0	6
-1406	Goblin Leecher	110	26	27	0	6
-1407	Goblin Mugger	110	26	27	0	6
-1408	Goblin Pathfinder	110	31	32	0	6
-1409	Goblin Shaman	110	31	32	0	6
-1410	Goblin Smithy	110	31	32	0	6
-1411	Goobbue Farmer	110	31	32	0	12
-1412	Greater Pugil	110	29	30	0	1
-1413	Horrid Fluke	110	29	30	0	1
-1414	Ignis Fatuus	110	34	36	0	3
-1415	Midnight Wings	110	22	23	0	75
-1416	Moon Bat	110	25	26	0	40
-1417	Ochu	110	36	37	0	30
-1418	Old Quadav	110	27	28	0	4
-1419	Poison Leech	110	25	26	0	15
-1420	Silk Caterpillar	110	28	30	1	1
-1421	Silver Quadav	110	32	33	0	4
-1422	Simurgh	110	58	58	1	1
-1423	Snipper	110	22	23	0	1
-1424	Water Elemental	110	38	40	0	3
-1425	Wight blm	110	28	34	0	9
-1426	Wight war	110	28	34	0	9
-1427	Zircon Quadav	110	32	33	0	4
-1428	Apsaras	111	41	42	0	1
-1429	Bat Eye	111	40	42	0	29
-1430	Cold Gigas	111	40	43	0	10
-1431	Dark Elemental	111	44	46	0	4
-1432	Gargantua	111	47	48	1	1
-1433	Ghast blm	111	37	40	0	4
-1434	Ghast war	111	35	38	0	5
-1435	Goblin Furrier	111	35	38	0	4
-1436	Goblin Pathfinder	111	35	38	0	4
-1437	Goblin Poacher	111	40	43	0	9
-1438	Goblin Reaper	111	40	43	0	9
-1439	Goblin Robber	111	40	43	0	9
-1440	Goblin Shaman	111	35	38	0	4
-1441	Goblin Smithy	111	35	38	0	4
-1442	Goblin Trader	111	40	43	0	9
-1443	Greater Pugil	111	32	34	0	1
-1444	Ice Elemental	111	44	46	0	6
-1445	Kirata	111	41	41	1	1
-1446	Kraken	111	38	40	0	1
-1447	Living Statue	111	37	39	0	18
-1448	Lugat	111	39	42	0	5
-1449	Morgawr	111	44	45	0	1
-1450	Nue	111	41	42	1	1
-1451	Rime Gigas	111	40	43	0	10
-1452	Sleet Gigas	111	40	43	0	10
-1453	Snow Gigas	111	40	43	0	10
-1454	Stone Golem	111	40	42	0	5
-1455	Tundra Tiger	111	34	37	0	50
-1456	Vepar	111	32	34	0	1
-1457	Blizzard Gigas	112	45	48	0	8
-1458	Dark Elemental	112	48	50	0	5
-1459	Ereshkigal	112	48	50	1	1
-1460	Etemmu	112	43	46	0	17
-1461	Evil Eye	112	45	48	0	33
-1462	Frost Gigas	112	45	48	0	8
-1463	Graupel Gigas	112	45	48	0	8
-1464	Hail Gigas	112	45	48	0	8
-1465	Ice Elemental	112	48	50	0	10
-1466	Lost Soul blm	112	42	45	0	27
-1467	Lost Soul war	112	42	45	0	27
-1468	Shadow Eye	112	48	49	1	1
-1469	Air Elemental	113	52	69	0	4
-1470	Beach Bunny	113	62	65	0	32
-1471	Doom Mage	113	67	71	0	6
-1472	Doom Soldier	113	66	70	0	14
-1473	Enna-enna	113	65	69	0	4
-1474	Fantasma	113	65	68	0	4
-1475	Fire Elemental	113	67	69	0	4
-1476	Frostmane	113	80	80	1	1
-1477	Goblin Alchemist	113	65	68	0	11
-1478	Goblin Bandit	113	65	68	0	10
-1479	Goblin Mercenary	113	65	68	0	16
-1480	Goblin Shepherd	113	65	68	0	11
-1481	Greater Manticore	113	76	79	0	29
-1482	Kreutzet	113	79	80	1	1
-1483	Razorjaw Pugil	113	59	60	0	1
-1484	Robber Crab	113	64	67	0	31
-1485	Rock Crab	113	59	60	0	1
-1486	Sand Cockatrice	113	71	74	0	53
-1487	Sand Lizard CT	113	62	66	0	36
-1488	Stygian Pugil	113	63	67	0	3
-1489	Terror Pugil	113	66	70	0	8
-1490	Velociraptor	113	66	69	0	54
-1491	Antican Auxiliarius	114	35	39	0	8
-1492	Antican Centurio	114	50	52	0	3
-1493	Antican Decurio	114	44	49	0	18
-1494	Antican Decurio	114	44	49	0	1
-1495	Antican Faber	114	35	38	0	5
-1496	Antican Funditor	114	35	39	0	7
-1497	Antican Sagittarius	114	44	49	0	6
-1498	Antican Speculator	114	44	49	0	6
-1499	Antican Speculator	114	44	49	0	1
-1500	Antican Veles	114	50	52	0	3
-1501	Bigclaw	114	48	51	0	1
-1502	Cactrot Rapido	114	80	81	1	1
-1503	Cutter	114	30	33	0	1
-1504	Desert Dhalmel	114	39	44	0	35
-1505	Diatryma	114	47	50	0	7
-1506	Doom Scorpion	114	44	47	0	5
-1507	Dune Widow	114	45	47	1	1
-1508	Earth Elemental	114	47	49	0	7
-1509	Fire Elemental	114	47	49	0	6
-1510	Flesh Eater EAD	114	37	42	0	28
-1511	Giant Spider	114	30	34	0	51
-1512	Goblin Digger	114	45	49	0	1
-1513	Goblin Poacher	114	45	49	0	9
-1514	Goblin Reaper	114	45	49	0	6
-1515	Goblin Robber	114	45	49	0	10
-1516	Goblin Trader	114	45	49	0	6
-1517	Greater Pugil	114	30	33	0	1
-1518	Ironshell	114	36	39	0	1
-1519	Lesser Manticore	114	47	49	0	10
-1520	Lost Soul blm	114	44	48	0	12
-1521	Lost Soul war	114	44	48	0	14
-1522	Makara	114	29	30	0	1
-1523	Sabotender	114	42	46	0	16
-1524	Sand Beetle	114	36	40	0	65
-1525	Balloon	115	8	10	0	5
-1526	Bumblebee	115	1	1	0	10
-1527	Carrion Crow	115	3	6	0	38
-1528	Crawler	115	4	7	0	35
-1529	Crawler	115	7	8	0	6
-1530	Giant Bee	115	7	8	0	29
-1531	Goblin Digger	115	5	6	0	1
-1532	Goblin Fisher	115	3	4	0	3
-1533	Goblin Thug	115	3	5	0	12
-1534	Goblin Weaver	115	3	5	0	6
-1535	Land Crab	115	5	6	0	1
-1536	Mad Fox	115	4	6	0	5
-1537	Magicked Bones blm	115	5	8	0	7
-1538	Magicked Bones club	115	4	8	0	8
-1539	Mandragora	115	4	5	0	32
-1540	Mugger Crab	115	7	8	0	1
-1541	Palm Crab	115	2	4	0	1
-1542	Passage Crab	115	9	10	0	1
-1543	River Crab	115	2	3	0	11
-1544	Savanna Crab	115	2	4	0	1
-1545	Savanna Rarab	115	2	5	0	66
-1546	Tiny Mandragora	115	1	1	0	17
-1547	Tom Tit Tat	115	9	10	1	2
-1548	Yagudo Acolyte	115	4	6	0	13
-1549	Yagudo Initiate	115	4	6	0	16
-1550	Yagudo Scribe	115	4	6	0	12
-1551	Balloon	116	8	10	0	6
-1552	Bumblebee	116	1	1	0	8
-1553	Carrion Crow	116	3	5	0	41
-1554	Crawler	116	4	6	0	45
-1555	Fighting Pugil	116	9	10	0	1
-1556	Giant Bee	116	7	8	0	31
-1557	Goblin Digger	116	6	7	0	1
-1558	Goblin Fisher	116	4	6	0	11
-1559	Goblin Thug	116	3	6	0	12
-1560	Goblin Weaver	116	3	6	0	13
-1561	Mad Fox	116	3	8	0	10
-1562	Magicked Bones blm	116	3	8	0	9
-1563	Magicked Bones club	116	3	8	0	10
-1564	Mandragora	116	4	6	0	51
-1565	Mud Pugil	116	5	6	0	1
-1566	Palm Crab	116	2	4	0	1
-1567	Pug Pugil	116	5	8	0	33
-1568	Pug Pugil	116	5	6	0	1
-1569	River Crab	116	3	6	0	33
-1570	Savanna Crab	116	2	4	0	1
-1571	Savanna Rarab	116	2	6	0	78
-1572	Spiny Spipi	116	9	10	1	1
-1573	Tiny Mandragora	116	1	1	0	9
-1574	Yagudo Acolyte	116	3	6	0	14
-1575	Yagudo Initiate	116	3	6	0	19
-1576	Yagudo Scribe	116	3	6	0	14
-1577	Air Elemental	117	18	19	0	4
-1578	Akbaba TC	117	11	13	0	21
-1579	Barghest	117	8	11	0	10
-1580	Canyon Crawler	117	12	13	0	19
-1581	Canyon Rarab	117	7	11	0	72
-1582	Earth Elemental	117	18	20	0	4
-1583	Ghost	117	15	16	0	10
-1584	Goblin Ambusher	117	12	14	0	7
-1585	Goblin Archaeologist	117	30	75	1	1
-1586	Goblin Butcher	117	12	14	0	6
-1587	Goblin Digger	117	12	13	0	1
-1588	Goblin Thug	117	8	9	0	3
-1589	Goblin Tinkerer	117	12	14	0	6
-1590	Goblin Weaver	117	8	9	0	3
-1591	Grenade	117	15	17	0	5
-1592	Killer Bee	117	10	12	0	60
-1593	Pygmaioi	117	8	11	0	61
-1594	Serpopard Ishtar	117	19	20	1	2
-1595	Skeleton Sorcerer	117	11	13	0	12
-1596	Skeleton Warrior	117	10	12	0	15
-1597	Strolling Sapling	117	7	11	0	64
-1598	Wild Dhalmel	117	14	16	0	31
-1599	Yagudo Acolyte	117	8	9	0	3
-1600	Yagudo Initiate	117	8	9	0	3
-1601	Yagudo Mendicant	117	13	15	0	5
-1602	Yagudo Persecutor	117	13	15	0	5
-1603	Yagudo Piper	117	13	15	0	5
-1604	Yagudo Scribe	117	8	9	0	3
-1605	Yara Ma Yha Who	117	14	14	1	1
-1606	Air Elemental	118	28	30	0	9
-1607	Bogy	118	23	25	0	12
-1608	Buburimboo	118	30	31	1	1
-1609	Bull Dhalmel	118	21	24	0	47
-1610	Carnivorous Crawler	118	20	23	0	38
-1611	Clipper	118	25	25	0	1
-1612	Ghoul blm	118	20	24	0	21
-1613	Goblin Ambusher	118	17	20	0	13
-1614	Goblin Bounty Hunter	118	17	20	0	17
-1615	Goblin Butcher	118	17	20	0	14
-1616	Goblin Digger	118	20	21	0	1
-1617	Goblin Gambler	118	22	25	0	14
-1618	Goblin Leecher	118	22	25	0	14
-1619	Goblin Mugger	118	22	25	0	14
-1620	Goblin Tinkerer	118	17	20	0	14
-1621	Helldiver	118	29	30	1	1
-1622	Mighty Rarab	118	15	18	0	38
-1623	Poison Leech	118	21	24	0	15
-1624	Puffer Pugil	118	15	18	0	2
-1625	Shoal Pugil	118	24	27	0	11
-1626	Shoal Pugil	118	26	26	0	1
-1627	Snipper	118	19	22	0	18
-1628	Snipper	118	22	22	0	1
-1629	Stag Crab	118	18	18	0	1
-1630	Sylvestre	118	15	19	0	57
-1631	Water Elemental	118	28	30	0	3
-1632	Will-o-the-Wisp	118	23	27	0	11
-1633	Zombie war	118	18	22	0	28
-1634	Zu	118	20	24	0	62
-1635	Axe Beak	119	27	28	0	9
-1636	Black Bat	119	17	18	0	12
-1637	Boggart	119	26	27	0	18
-1638	Bogy	119	25	26	0	4
-1639	Coeurl	119	25	26	0	9
-1640	Crane Fly	119	20	21	0	57
-1641	Daggerclaw Dracos	119	27	28	1	1
-1642	Earth Elemental	119	27	29	0	5
-1643	Fire Elemental	119	27	29	0	3
-1644	Goblin Ambusher	119	16	17	0	7
-1645	Goblin Butcher	119	16	17	0	7
-1646	Goblin Digger	119	18	19	0	1
-1647	Goblin Gambler	119	16	25	0	9
-1648	Goblin Leecher	119	21	22	0	8
-1649	Goblin Mugger	119	21	22	0	8
-1650	Goblin Tinkerer	119	16	17	0	7
-1651	Hill Lizard	119	21	22	0	46
-1652	Jubjub	119	17	18	0	36
-1653	Night Bats	119	15	16	0	23
-1654	Raptor	119	24	25	0	15
-1655	Scavenging Hound	119	22	26	0	5
-1656	Stag Beetle	119	22	23	0	14
-1657	Wandering Sapling	119	15	16	0	72
-1658	Waraxe Beak	119	55	56	1	1
-1659	Will-o-the-Wisp	119	24	25	0	4
-1660	Yagudo Mendicant	119	17	18	0	5
-1661	Yagudo Persecutor	119	17	18	0	6
-1662	Yagudo Piper	119	17	18	0	5
-1663	Yagudo Priest	119	22	23	0	6
-1664	Yagudo Theologist	119	22	25	0	7
-1665	Yagudo Votary	119	22	25	0	7
-1666	Zombie blm	119	16	24	0	9
-1667	Zombie war	119	16	24	0	9
-1668	Big Jaw	120	20	23	0	1
-1669	Champaign Coeurl	120	33	34	0	5
-1670	Cutter	120	28	30	0	1
-1671	Deadly Dodo	120	39	40	1	1
-1672	Diving Beetle	120	27	28	0	17
-1673	Earth Elemental	120	38	40	0	3
-1674	Evil Spirit	120	35	36	0	19
-1675	Goblin Bounty Hunter	120	30	36	0	5
-1676	Goblin Digger	120	29	30	0	1
-1677	Goblin Furrier	120	26	32	0	8
-1678	Goblin Gambler	120	26	27	0	7
-1679	Goblin Leecher	120	26	27	0	6
-1680	Goblin Mugger	120	26	27	0	7
-1681	Goblin Pathfinder	120	26	32	0	9
-1682	Goblin Shaman	120	26	32	0	8
-1683	Goblin Smithy	120	26	32	0	9
-1684	Greater Pugil	120	28	30	0	1
-1685	Hill Lizard	120	25	26	0	39
-1686	Ignis Fatuus	120	34	36	0	3
-1687	Kraken	120	38	40	0	1
-1688	Midnight Wings	120	23	24	0	57
-1689	Moon Bat	120	24	26	0	27
-1690	Roc	120	55	55	1	1
-1691	Sabertooth Tiger	120	31	32	0	3
-1692	Sauromugue Skink	120	31	32	0	36
-1693	Snipper	120	20	23	0	1
-1694	Tabar Beak	120	36	37	0	13
-1695	Thunder Elemental	120	38	40	0	3
-1696	Wight blm	120	26	34	0	9
-1697	Wight war	120	26	34	0	9
-1698	Yagudo Drummer	120	32	33	0	5
-1699	Yagudo Herald	120	32	33	0	5
-1700	Yagudo Interrogator	120	32	33	0	6
-1701	Yagudo Oracle	120	32	33	0	6
-1702	Yagudo Priest	120	27	28	0	5
-1703	Yagudo Theologist	120	27	28	0	5
-1704	Yagudo Votary	120	27	28	0	4
-1705	Ancient Bat	121	26	28	0	38
-1706	Apsaras	121	26	31	0	1
-1707	Bigclaw	121	38	39	0	1
-1708	Clipper	121	25	28	0	1
-1709	Goblin Furrier	121	31	34	0	4
-1710	Goblin Gambler	121	25	29	0	8
-1711	Goblin Leecher	121	25	29	0	9
-1712	Goblin Mugger	121	25	29	0	12
-1713	Goblin Poacher	121	42	46	0	7
-1714	Goblin Reaper	121	42	46	0	4
-1715	Goblin Robber SoZ	121	42	46	0	11
-1716	Goblin Smithy	121	31	34	0	7
-1717	Goblin Trader	121	42	46	0	6
-1718	Goobbue Gardener	121	40	43	0	13
-1719	Goobbue Parasite	121	42	45	0	47
-1720	Greater Pugil	121	26	31	0	2
-1721	Hell Hound	121	46	50	0	20
-1722	Keeper of Halidom	121	56	58	1	1
-1723	Lesser Gaylas	121	39	42	0	50
-1724	Lost Soul blm	121	51	55	0	9
-1725	Master Coeurl	121	44	47	0	31
-1726	Myxomycete	121	41	46	0	58
-1727	Ogrefly	121	41	44	0	45
-1728	Puroboros	121	47	49	0	4
-1729	Revenant SoZ ENS FY	121	45	47	0	7
-1730	Rock Golem	121	49	50	0	17
-1731	Rot Prowler	121	49	53	0	19
-1732	Thunder Elemental	121	48	49	0	4
-1733	Water Elemental	121	48	49	0	4
-1734	Cannonball	122	66	70	0	4
-1735	Cursed Puppet	122	65	69	0	28
-1736	Darksteel Golem	122	80	82	0	8
-1737	Magic Flagon	122	64	69	0	40
-1738	Mythril Golem	122	68	70	0	3
-1739	Nightmare Vase	122	70	73	1	2
-1740	Thunder Elemental	122	67	69	0	2
-1741	Water Elemental	122	67	69	0	2
-1742	Bigclaw	123	41	46	0	2
-1743	Bloodsucker	123	47	49	0	1
-1744	Creek Sahagin	123	34	38	0	9
-1745	Creek Sahagin	123	34	38	0	1
-1746	Death Jacket jungle	123	34	37	0	53
-1747	Fire Elemental	123	48	50	0	6
-1748	Goblin Digger	123	36	38	0	1
-1749	Goblin Furrier	123	32	37	0	33
-1750	Goblin Poacher	123	42	47	0	19
-1751	Goblin Reaper	123	42	47	0	9
-1752	Goblin Robber	123	42	47	0	11
-1753	Goblin Smithy	123	32	37	0	30
-1754	Ironshell	123	35	37	0	2
-1755	Ivory Lizard	123	32	35	0	35
-1756	Jungle Coeurl	123	35	38	0	5
-1757	Lava Bomb	123	47	50	0	3
-1758	Makara	123	35	38	0	21
-1759	Mischievous Micholas	123	53	55	1	1
-1760	Overgrown Rose	123	45	48	0	8
-1761	River Sahagin	123	34	38	0	4
-1762	Rose Garden	123	50	50	1	1
-1763	Soldier Crawler	123	37	41	0	54
-1764	Stream Sahagin	123	34	38	0	4
-1765	Stream Sahagin	123	34	38	0	1
-1766	Voluptuous Vilma	123	52	53	1	1
-1767	Water Elemental	123	48	50	0	6
-1768	Young Opo-opo	123	34	36	0	90
-1769	Yuhtunga Mandragora	123	30	33	0	26
-1770	Anemone	124	51	54	0	9
-1771	Big Jaw	124	43	47	0	9
-1772	Clipper	124	30	33	0	1
-1773	Edacious Opo-opo	124	55	55	1	1
-1774	Fire Elemental	124	53	55	0	2
-1775	Goblin Bouncer	124	51	55	0	7
-1776	Goblin Digger	124	41	44	0	1
-1777	Goblin Hunter	124	51	55	0	7
-1778	Goblin Pathfinder	124	35	39	0	3
-1779	Goblin Poacher	124	45	49	0	10
-1780	Goblin Reaper	124	41	45	0	12
-1781	Goblin Robber	124	45	49	0	10
-1782	Goblin Shaman	124	35	39	0	10
-1783	Goblin Smithy	124	35	39	0	6
-1784	Goblin Trader	124	45	49	0	4
-1785	Greater Pugil	124	30	33	0	1
-1786	Makara	124	43	45	0	1
-1787	Master Coeurl	124	47	50	0	17
-1788	Puroboros	124	51	54	0	2
-1789	Tonberry Chopper	124	61	63	0	7
-1790	Tonberry Creeper	124	45	49	0	32
-1791	Tonberry Harasser	124	45	49	0	5
-1792	Tonberry Harasser	124	45	49	0	1
-1793	Tonberry Hexer	124	45	49	0	25
-1794	Tonberry Hexer	124	45	49	0	1
-1795	Tonberry Jinxer	124	61	63	0	4
-1796	Tonberry Shadower	124	61	63	0	8
-1797	Vepar	124	36	37	0	2
-1798	Water Elemental	124	53	55	0	3
-1799	White Lizard	124	36	39	0	12
-1800	Woodland Sage	124	60	61	1	1
-1801	Worker Crawler	124	43	46	0	69
-1802	Yhoator Mandragora	124	35	37	0	17
-1803	Yhoator Wasp	124	37	40	0	37
-1804	Young Opo-opo	124	40	44	0	69
-1805	Antican Eques	125	45	49	0	5
-1806	Antican Essedarius	125	41	45	0	8
-1807	Antican Hoplomachus	125	54	58	0	29
-1808	Antican Lanista	125	54	58	0	40
-1809	Antican Retiarius	125	45	49	0	12
-1810	Antican Secutor	125	54	58	0	25
-1811	Apsaras	125	40	42	0	1
-1812	Bigclaw	125	45	47	0	2
-1813	Cactuar	125	48	53	0	37
-1814	Cactuar Cantautor	125	55	59	1	1
-1815	Celphie	125	47	50	1	1
-1816	Desert Beetle	125	47	51	0	100
-1817	Desert Dhalmel	125	44	48	0	23
-1818	Desert Manticore	125	53	57	0	16
-1819	Desert Spider	125	40	44	0	30
-1820	Desert Worm	125	43	47	0	24
-1821	Earth Elemental	125	56	58	0	6
-1822	Fallen Knight	125	50	54	0	9
-1823	Fire Elemental	125	56	58	0	6
-1824	Goblin Bouncer	125	51	55	0	2
-1825	Goblin Digger	125	51	54	0	1
-1826	Goblin Enchanter	125	51	55	0	2
-1827	Goblin Hunter	125	51	55	0	2
-1828	Goblin Welldigger	125	51	55	0	2
-1829	Ironshell	125	41	42	0	1
-1830	King Vinegarroon	125	80	80	1	1
-1831	Lich	125	49	53	0	6
-1832	Phorusrhacos	125	57	60	0	9
-1833	Razorjaw Pugil	125	50	52	0	1
-1834	Tulwar Scorpion	125	53	56	0	31
-1835	Acrophies	126	33	34	0	18
-1836	Ancient Bat	126	28	29	0	6
-1837	Banshee	126	31	32	0	10
-1838	Clipper	126	28	29	0	62
-1839	Dark Bats	126	26	27	0	18
-1840	Glow Bat	126	28	29	0	12
-1841	Goblin Bounty Hunter	126	10	36	0	12
-1842	Greater Pugil	126	28	29	0	20
-1843	Greater Pugil	126	28	29	0	1
-1844	Kraken	126	37	37	0	1
-1845	Kraken	126	39	40	1	2
-1846	Land Worm	126	26	27	0	18
-1847	Light Elemental	126	35	36	0	8
-1848	Qufim Pugil	126	25	27	0	1
-1849	Sea Bishop	126	31	32	0	1
-1850	Seeker Bats	126	26	27	0	13
-1851	Thunder Elemental	126	35	36	0	4
-1852	Trickster Kinetix	126	35	36	1	1
-1853	Vepar	126	35	36	0	1
-1854	Wight blm	126	28	29	0	10
-1855	Wight war	126	28	29	0	18
-1856	Behemoth	127	70	70	1	1
-1857	Bhuta	127	47	48	0	2
-1858	Greater Gayla	127	43	44	0	6
-1859	King Behemoth	127	85	85	1	1
-1860	Lesser Gaylas	127	41	42	0	7
-1861	Light Elemental	127	48	50	0	5
-1862	Lost Soul blm	127	45	46	0	2
-1863	Lost Soul war	127	45	46	0	2
-1864	Master Coeurl	127	49	50	0	2
-1865	Thunder Elemental	127	48	50	0	5
-1866	Adamantoise	128	70	70	1	1
-1867	Air Elemental	128	66	68	0	2
-1868	Aspidochelone	128	85	85	1	1
-1869	Fire Elemental	128	66	68	0	2
-1870	Peryton	128	69	72	0	9
-1871	Valley Manticore	128	71	74	0	3
-1872	Velociraptor	128	66	69	0	16
-1873	Air Elemental	130	78	79	0	4
-1874	Byakko	130	88	90	1	1
-1875	Dark Elemental	130	78	79	0	4
-1876	Earth Elemental	130	78	79	0	4
-1877	Fire Elemental	130	78	79	0	4
-1878	Flamingo	130	72	74	0	64
-1879	Genbu	130	88	90	1	1
-1880	Groundskeeper	130	75	78	0	61
-1881	Groundskeeper	130	75	78	0	40
-1882	Ice Elemental	130	78	79	0	4
-1883	Light Elemental	130	78	79	0	4
-1884	Seiryu	130	88	90	1	1
-1885	Sprinkler	130	73	76	0	84
-1886	Suzaku	130	88	90	1	1
-1887	Thunder Elemental	130	78	79	0	4
-1888	Water Elemental	130	78	79	0	4
-1889	Adamantking Effigy	134	65	65	1	26
-1890	Ascetox Ratgums	134	82	82	1	1
-1891	Avatar Icon	134	82	82	1	25
-1892	BeZhe Keeprazer	134	82	82	1	1
-1893	Bhuu Wjato the Firepool	134	82	82	1	1
-1894	Bordox Kittyback	134	82	82	1	1
-1895	Brewnix Bittypupils	134	82	82	1	1
-1896	Caa Xaza the Madpiercer	134	82	82	1	1
-1897	Cobraclaw Buchzvotch	134	82	82	1	1
-1898	DeBho Pyrohand	134	82	82	1	1
-1899	Deathcaller Bidfbid	134	82	82	1	1
-1900	Drakefeast Wubmfub	134	82	82	1	1
-1901	Draklix Scalecrust	134	82	82	1	1
-1902	Droprix Granitepalms	134	82	82	1	1
-1903	Elvaanlopper Grokdok	134	82	82	1	1
-1904	Foo Peku the Bloodcloak	134	82	82	1	1
-1905	GaFho Venomtouch	134	82	82	1	1
-1906	Galkarider Retzpratz	134	82	82	1	1
-1907	Gibberox Pimplebeak	134	82	82	1	1
-1908	GoTyo Magenapper	134	82	82	1	1
-1909	Goblin Replica	134	65	65	1	26
-1910	GuKhu Dukesniper	134	82	82	1	1
-1911	GuNha Wallstormer	134	82	82	1	1
-1912	Guu Waji the Preacher	134	82	82	1	1
-1913	Heavymail Djidzbad	134	82	82	1	1
-1914	Hee Mida the Meticulous	134	82	82	1	1
-1915	Humegutter Adzjbadj	134	82	82	1	1
-1916	Jeunoraider Gepkzip	134	82	82	1	1
-1917	JiFhu Infiltrator	134	82	82	1	1
-1918	JiKhu Towercleaver	134	82	82	1	1
-1919	Knii Hoqo the Bisector	134	82	82	1	1
-1920	Koo Saxu the Everfast	134	82	82	1	1
-1921	Kuu Xuka the Nimble	134	82	82	1	1
-1922	Lockbuster Zapdjipp	134	82	82	1	1
-1923	Maa Zaua the Wyrmkeeper	134	82	82	1	1
-1924	MiRhe Whisperblade	134	82	82	1	1
-1925	Mithraslaver Debhabob	134	82	82	1	1
-1926	Moltenox Stubthumbs	134	82	82	1	1
-1927	Morblox Chubbychin	134	82	82	1	1
-1928	MuGha Legionkiller	134	82	82	1	1
-1929	NaHya Floodmaker	134	82	82	1	1
-1930	Nee Huxa the Judgmental	134	82	82	1	1
-1931	NuBhi Spiraleye	134	82	82	1	1
-1932	Puu Timu the Phantasmal	134	82	82	1	1
-1933	Routsix Rubbertendon	134	82	82	1	1
-1934	Ruffbix Jumbolobes	134	82	82	1	1
-1935	Ryy Qihi the Idolrobber	134	82	82	1	1
-1936	Serjeant Tombstone	134	65	65	1	25
-1937	Shisox Widebrow	134	82	82	1	1
-1938	Skinmask Ugghfogg	134	82	82	1	1
-1939	Slinkix Trufflesniff	134	82	82	1	1
-1940	SoGho Adderhandler	134	82	82	1	1
-1941	SoZho Metalbender	134	82	82	1	1
-1942	Soo Jopo the Fiendking	134	82	82	1	1
-1943	Spinalsucker Galflmall	134	82	82	1	1
-1944	Swypestix Tigershins	134	82	82	1	1
-1945	TaHyu Gallanthunter	134	82	82	1	1
-1946	Taruroaster Biggsjig	134	82	82	1	1
-1947	Tocktix Thinlids	134	82	82	1	1
-1948	Ultrasonic Zeknajak	134	82	82	1	1
-1949	Vanguard Alchemist	134	75	77	1	3
-1950	Vanguard Ambusher	134	75	77	1	2
-1951	Vanguard Amputator	134	75	77	1	2
-1952	Vanguard Armorer	134	75	77	1	3
-1953	Vanguard Assassin	134	75	77	1	3
-1954	Vanguard Backstabber	134	75	77	1	3
-1955	Vanguard Beasttender	134	75	77	1	3
-1956	Vanguard Bugler	134	75	77	1	2
-1957	Vanguard Chanter	134	75	77	1	2
-1958	Vanguard Constable	134	75	77	1	2
-1959	Vanguard Defender	134	75	77	1	2
-1960	Vanguard Dollmaster	134	75	77	1	2
-1961	Vanguard Dragontamer	134	75	77	1	3
-1962	Vanguard Drakekeeper	134	75	77	1	2
-1963	Vanguard Enchanter	134	75	77	1	2
-1964	Vanguard Exemplar	134	75	77	1	3
-1965	Vanguard Footsoldier	134	75	77	1	2
-1966	Vanguard Grappler	134	75	77	1	3
-1967	Vanguard Gutslasher	134	75	77	1	2
-1968	Vanguard Hatamoto	134	75	77	1	2
-1969	Vanguard Hawker	134	75	77	1	2
-1970	Vanguard Hitman	134	75	77	1	2
-1971	Vanguard Impaler	134	75	77	1	2
-1972	Vanguard Inciter	134	75	77	1	2
-1973	Vanguard Kusa	134	75	77	1	2
-1974	Vanguard Liberator	134	75	77	1	3
-1975	Vanguard Maestro	134	75	77	1	2
-1976	Vanguard Mason	134	75	77	1	3
-1977	Vanguard Mesmerizer	134	75	77	1	3
-1978	Vanguard Militant	134	75	77	1	2
-1979	Vanguard Minstrel	134	75	77	1	2
-1980	Vanguard Neckchopper	134	75	77	1	2
-1981	Vanguard Necromancer	134	75	77	1	2
-1982	Vanguard Ogresoother	134	75	77	1	2
-1983	Vanguard Oracle	134	75	77	1	2
-1984	Vanguard Partisan	134	75	77	1	1
-1985	Vanguard Pathfinder	134	75	77	1	2
-1986	Vanguard Persecutor	134	75	77	1	3
-1987	Vanguard Pillager	134	75	77	1	2
-1988	Vanguard Pitfighter	134	75	77	1	3
-1989	Vanguard Predator	134	75	77	1	3
-1990	Vanguard Prelate	134	75	77	1	2
-1991	Vanguard Priest	134	75	77	1	2
-1992	Vanguard Protector	134	75	77	1	2
-1993	Vanguard Purloiner	134	75	77	1	2
-1994	Vanguard Ronin	134	75	77	1	3
-1995	Vanguard Salvager	134	75	77	1	2
-1996	Vanguard Sentinel	134	75	77	1	2
-1997	Vanguard Shaman	134	75	77	1	2
-1998	Vanguard Skirmisher	134	75	77	1	3
-1999	Vanguard Smithy	134	75	77	1	2
-2000	Vanguard Thaumaturge	134	75	77	1	2
-2001	Vanguard Tinkerer	134	75	77	1	3
-2002	Vanguard Trooper	134	75	77	1	2
-2003	Vanguard Undertaker	134	75	77	1	3
-2004	Vanguard Vexer	134	75	77	1	2
-2005	Vanguard Vigilante	134	75	77	1	2
-2006	Vanguard Vindicator	134	75	77	1	4
-2007	Vanguard Visionary	134	75	77	1	4
-2008	Vanguard Welldigger	134	75	77	1	3
-2009	Whistrix Toadthroat	134	82	82	1	1
-2010	Wraithdancer Gidbnod	134	82	82	1	1
-2011	Xaa Chau the Roctalon	134	82	82	1	1
-2012	Xhoo Fuza the Sublime	134	82	82	1	1
-2013	Bloody Vrukwuk	140	14	14	0	1
-2014	Cheiroptera GO	140	3	6	0	21
-2015	Fodderchief Vokdek	140	8	8	1	1
-2016	Fogweaver Mozzfuzz	140	14	14	0	1
-2017	Ghelsba Pugil	140	3	6	0	15
-2018	Giant Pugil	140	11	13	0	1
-2019	Orcish Fodder	140	3	9	0	37
-2020	Orcish Grappler	140	3	9	0	38
-2021	Orcish Grunt	140	11	15	0	22
-2022	Orcish Mesmerizer	140	3	9	0	34
-2023	Orcish Neckchopper	140	11	15	0	19
-2024	Orcish Stonechucker	140	11	15	0	19
-2025	Puffer Pugil	140	15	17	0	1
-2026	Pug Pugil	140	7	9	0	1
-2027	Pugil	140	3	5	0	2
-2028	Spectacled Bats	140	1	5	0	11
-2029	Thousandarm Deshglesh	140	11	13	1	1
-2030	Toadstool	140	4	6	0	13
-2031	Warchief Vatgit	140	16	16	1	1
-2032	Watch Lizard	140	3	5	0	18
-2033	Cheiroptera FG	141	8	10	0	20
-2034	Giant Pugil	141	10	12	0	1
-2035	Hundredscar Hajwaj	141	12	13	1	1
-2036	Land Pugil	141	18	20	0	1
-2037	Orcish Cursemaker	141	21	21	0	4
-2038	Orcish Fighter	141	21	21	0	2
-2039	Orcish Fighter	141	21	21	0	1
-2040	Orcish Fodder	141	8	10	0	19
-2041	Orcish Grappler	141	8	10	0	20
-2042	Orcish Grunt	141	11	17	0	33
-2043	Orcish Mesmerizer	141	8	10	0	20
-2044	Orcish Neckchopper	141	11	17	0	33
-2045	Orcish Serjeant	141	21	21	0	1
-2046	Orcish Stonechucker	141	11	17	0	38
-2047	Puffer Pugil	141	14	16	0	1
-2048	Pug Pugil	141	6	8	0	2
-2049	Sentry Lizard	141	11	14	0	8
-2050	Spectacled Bats	141	6	8	0	15
-2051	Ashmaker Gotblut	142	17	18	1	1
-2052	Grotto Bats	142	8	11	0	27
-2053	Orcish Cursemaker	142	21	23	0	18
-2054	Orcish Fighter	142	21	23	0	20
-2055	Orcish Grunt	142	14	18	0	32
-2056	Orcish Neckchopper	142	14	18	0	29
-2057	Orcish Serjeant	142	21	23	0	2
-2058	Orcish Stonechucker	142	14	18	0	30
-2059	Riding Lizard	142	12	15	0	9
-2060	Stealth Bat	142	15	18	0	19
-2061	Amber Quadav	143	3	10	0	38
-2062	Amethyst Quadav	143	3	10	0	38
-2063	Brass Quadav	143	21	23	0	9
-2064	Cave Funguar	143	9	11	0	11
-2065	Copper Beetle	143	9	12	0	15
-2066	Copper Quadav	143	21	23	0	13
-2067	Coral Crab	143	9	10	0	1
-2068	Greater Quadav	143	11	18	0	39
-2069	Mine Crab	143	3	4	0	2
-2070	Mine Scorpion	143	14	16	0	3
-2071	Old Quadav	143	21	23	0	15
-2072	Onyx Quadav	143	11	18	0	39
-2073	Pit Hare	143	2	6	0	42
-2074	Rabid Rat	143	11	13	0	12
-2075	Scimitar Scorpion	143	19	21	0	2
-2076	Stag Crab	143	13	15	0	1
-2077	Veteran Quadav	143	11	18	0	39
-2078	Young Quadav	143	3	10	0	48
-2079	Digger Wasp	145	11	13	0	37
-2080	Dirt Eater	145	3	5	0	19
-2081	Earth Eater	145	10	12	0	14
-2082	Giant Pugil	145	8	11	0	3
-2083	Giddeus Bee	145	2	5	0	19
-2084	Giddeus Pugil	145	2	5	0	9
-2085	Hoo Mjuu the Torrent	145	16	17	1	1
-2086	Juu Duzu the Whirlwind	145	13	13	1	1
-2087	Land Pugil	145	19	19	0	1
-2088	Puffer Pugil	145	14	14	0	1
-2089	Pug Pugil	145	10	10	0	1
-2090	Pugil	145	3	5	0	2
-2091	Yagudo Acolyte	145	3	10	0	34
-2092	Yagudo Initiate	145	3	10	0	36
-2093	Yagudo Mendicant	145	11	18	0	47
-2094	Yagudo Persecutor	145	11	18	0	48
-2095	Yagudo Piper	145	11	18	0	50
-2096	Yagudo Priest	145	21	23	0	11
-2097	Yagudo Scribe	145	3	10	0	34
-2098	Yagudo Theologist	145	21	23	0	11
-2099	Yagudo Votary	145	21	23	0	12
-2100	Ancient Quadav	147	62	66	0	10
-2101	BiGho Headtaker	147	25	25	1	1
-2102	Big Jaw	147	37	39	0	3
-2103	Big Jaw	147	37	39	0	13
-2104	Brass Quadav	147	22	28	0	24
-2105	Bronze Quadav	147	32	36	0	30
-2106	Broo	147	39	41	0	17
-2107	Caterpillar	147	22	25	0	16
-2108	Charging Sheep	147	28	30	0	14
-2109	Copper Quadav	147	22	27	0	31
-2110	Darksteel Quadav	147	63	67	0	7
-2111	Elder Quadav	147	42	46	0	15
-2112	Emerald Quadav	147	45	49	0	15
-2113	GaBhu Unvanquished	147	47	48	1	1
-2114	Garnet Quadav	147	35	39	0	30
-2115	Gloop	147	38	40	0	4
-2116	Gold Quadav	147	54	58	0	10
-2117	Iron Quadav	147	43	47	0	15
-2118	Land Pugil	147	20	23	0	20
-2119	Larva	147	35	38	0	9
-2120	Mythril Quadav	147	53	57	0	10
-2121	Old Quadav	147	22	26	0	26
-2122	Ooze	147	28	30	0	4
-2123	Platinum Quadav	147	64	68	0	11
-2124	Sapphire Quadav	147	65	69	0	8
-2125	Silver Quadav	147	33	37	0	30
-2126	Spinel Quadav	147	44	48	0	15
-2127	Steel Quadav	147	52	56	0	11
-2128	Thunder Elemental	147	47	49	0	4
-2129	Topaz Quadav	147	55	59	0	11
-2130	Water Elemental	147	47	49	0	4
-2131	Zircon Quadav	147	34	38	0	30
-2132	ZoKhu Blackcloud	147	36	38	1	1
-2133	Adaman Quadav	148	72	74	1	1
-2134	Ancient Quadav	148	69	72	0	3
-2135	Darksteel Quadav	148	69	72	0	4
-2136	Diamond Quadav	148	75	75	1	2
-2137	Platinum Quadav	148	69	72	0	3
-2138	Ruby Quadav	148	72	74	1	2
-2139	Sapphire Quadav	148	69	72	0	4
-2140	ZaDha Adamantking	148	85	85	1	1
-2141	Blubbery Bulge	149	45	47	1	1
-2142	Davoi Hornet	149	20	23	0	17
-2143	Davoi Mush	149	33	35	0	3
-2144	Davoi Pugil	149	26	29	0	27
-2145	Davoi Wasp	149	30	33	0	15
-2146	Dirtyhanded Gochakzuk	149	71	71	1	1
-2147	Ferocious Pugil	149	22	24	0	2
-2148	Gavotvut	149	45	45	1	1
-2149	Geezard	149	34	37	0	17
-2150	Gloop	149	38	40	0	1
-2151	Greater Pugil	149	30	32	0	1
-2152	Hawkeyed Dnatbat	149	26	28	1	1
-2153	Morbol	149	37	39	0	3
-2154	Oil Spill	149	45	47	0	1
-2155	One-eyed Gwajboj	149	62	62	1	1
-2156	Orcish Beastrider	149	33	37	0	19
-2157	Orcish Bowshooter	149	42	46	0	26
-2158	Orcish Brawler	149	35	39	0	18
-2159	Orcish Champion	149	64	68	0	7
-2160	Orcish Cursemaker	149	22	27	0	10
-2161	Orcish Dragoon	149	65	69	0	7
-2162	Orcish Dreadnought	149	63	67	0	9
-2163	Orcish Farkiller	149	62	66	0	9
-2164	Orcish Fighter	149	22	26	0	10
-2165	Orcish Footsoldier	149	44	47	0	26
-2166	Orcish Gladiator	149	44	48	0	26
-2167	Orcish Impaler	149	32	36	0	19
-2168	Orcish Nightraider	149	34	38	0	19
-2169	Orcish Predator	149	54	57	0	9
-2170	Orcish Serjeant	149	22	28	0	9
-2171	Orcish Trooper	149	46	49	0	26
-2172	Orcish Veteran	149	52	56	0	9
-2173	Orcish Warchief	149	55	59	0	12
-2174	Orcish Zerker	149	54	58	0	9
-2175	Poisonhand Gnadgad	149	39	40	1	1
-2176	Purpleflash Brukdok	149	45	45	1	1
-2177	Steelbiter Gudrud	149	33	34	1	1
-2178	Three-eyed Prozpuz	149	60	60	1	1
-2179	Thunder Elemental	149	47	49	0	9
-2180	Tigerbane Bakdak	149	31	32	1	1
-2181	War Lizard	149	29	32	0	24
-2182	Water Elemental	149	47	49	0	9
-2183	Wolf Bat	149	25	28	0	22
-2184	Wood Bats	149	20	23	0	5
-2185	Orcish Bowshooter	150	42	46	0	8
-2186	Orcish Champion	150	64	72	0	16
-2187	Orcish Dragoon	150	65	72	0	15
-2188	Orcish Dreadnought	150	63	72	0	18
-2189	Orcish Farkiller	150	62	72	0	17
-2190	Orcish Footsoldier	150	43	47	0	8
-2191	Orcish Gladiator	150	44	48	0	8
-2192	Orcish Overlord	150	75	75	1	2
-2193	Orcish Predator	150	53	57	0	20
-2194	Orcish Protector	150	70	72	0	4
-2195	Orcish Trooper	150	45	49	0	8
-2196	Orcish Veteran	150	52	56	0	20
-2197	Orcish Warchief	150	55	59	0	20
-2198	Orcish Warlord	150	72	74	1	2
-2199	Orcish Zerker	150	54	58	0	20
-2200	Overlord Bakgodek	150	85	85	1	1
-2201	Bastion Bats	151	18	21	0	16
-2202	Bulwark Bat	151	29	31	0	22
-2203	Cutter	151	30	32	0	11
-2204	Earth Elemental	151	47	49	0	8
-2205	Fire Elemental	151	47	49	0	8
-2206	Huu Xalmo the Savage	151	63	63	1	1
-2207	Meat Maggot	151	29	31	0	16
-2208	Mee Deggi the Punisher	151	35	36	1	1
-2209	Ooze	151	38	40	0	2
-2210	Tzee Xicu the Manifest	151	85	85	1	1
-2211	Yaa Haqa the Profane	151	43	43	1	1
-2212	Yagudo Abbot	151	55	59	0	8
-2213	Yagudo Assassin	151	64	72	0	9
-2214	Yagudo Avatar	151	75	75	1	1
-2215	Yagudo Chanter	151	53	57	0	8
-2216	Yagudo Conquistador	151	43	47	0	13
-2217	Yagudo Drummer	151	33	37	0	28
-2218	Yagudo Flagellant	151	62	72	0	9
-2219	Yagudo Herald	151	32	36	0	29
-2220	Yagudo High Priest	151	72	74	1	2
-2221	Yagudo Inquisitor	151	54	58	0	8
-2222	Yagudo Interrogator	151	35	39	0	29
-2223	Yagudo Lutenist	151	44	48	0	14
-2224	Yagudo Oracle	151	34	38	0	30
-2225	Yagudo Parasite	151	45	48	0	4
-2226	Yagudo Prelate	151	65	72	0	9
-2227	Yagudo Priest	151	22	28	0	19
-2228	Yagudo Prior	151	45	49	0	15
-2229	Yagudo Sentinel	151	52	56	0	8
-2230	Yagudo Templar	151	72	74	1	1
-2231	Yagudo Theologist	151	22	27	0	19
-2232	Yagudo Votary	151	22	26	0	17
-2233	Yagudo Zealot	151	42	46	0	14
-2234	Ancient Goobbue	153	80	80	1	1
-2235	Aquarius	153	69	71	1	1
-2236	Bark Spider	153	60	63	0	30
-2237	Bark Tarantula	153	75	78	0	21
-2238	Bouncing Ball	153	65	67	0	1
-2239	Boyahda Sapling	153	74	77	0	18
-2240	Darter	153	75	78	0	21
-2241	Death Cap	153	60	63	0	27
-2242	Demonic Pugil	153	70	72	0	2
-2243	Demonic Rose	153	75	78	0	4
-2244	Elder Goobbue	153	74	77	0	30
-2245	Ellyllon	153	65	66	1	1
-2246	Knight Crawler BT	153	62	67	0	7
-2247	Korrigan	153	72	75	0	29
-2248	Leshonki	153	79	81	1	1
-2249	Morbol Menace	153	67	70	0	2
-2250	Moss Eater	153	62	66	0	44
-2251	Mourioche	153	62	68	0	57
-2252	Old Goobbue	153	65	68	0	8
-2253	Processionaire	153	72	75	0	29
-2254	Robber Crab	153	62	66	0	18
-2255	Scavenger Crab	153	60	62	0	1
-2256	Skimmer	153	72	74	0	16
-2257	Steelshell	153	73	76	0	6
-2258	Steelshell	153	73	76	0	12
-2259	Stygian Pugil	153	60	62	0	1
-2260	Thunder Elemental	153	69	72	0	10
-2261	Unut	153	69	71	1	1
-2262	Voluptuous Vivian	153	80	81	1	1
-2263	Water Elemental	153	69	72	0	18
-2264	Bark Tarantula	154	77	80	0	12
-2265	Darter	154	76	79	0	11
-2266	Demonic Pugil	154	70	75	0	5
-2267	Demonic Rose	154	77	79	0	1
-2268	Fafnir	154	90	90	1	1
-2269	Nidhogg	154	90	90	1	1
-2270	Banshee	157	32	33	0	3
-2271	Big Bat	157	29	31	0	18
-2272	Eurytos	157	32	32	1	1
-2273	Evil Spirit MDT	157	34	35	0	4
-2274	Goblin Furrier	157	30	34	0	29
-2275	Goblin Pathfinder	157	30	34	0	29
-2276	Goblin Shaman	157	30	34	0	29
-2277	Goblin Smithy	157	30	34	0	29
-2278	Jagd Doll	157	33	34	0	3
-2279	Light Elemental	157	35	36	0	6
-2280	Magic Jar	157	31	32	0	3
-2281	Magic Pot	157	28	29	0	5
-2282	Mold Bats	157	25	27	0	6
-2283	Ogygos	157	35	35	1	1
-2284	Ophion	157	34	34	1	1
-2285	Panzer Doll	157	31	32	0	4
-2286	Polybotes	157	34	34	1	1
-2287	Rhoikos	157	34	34	1	1
-2288	Rhoitos	157	34	34	1	1
-2289	Stirge	157	27	29	0	7
-2290	Thunder Elemental	157	35	36	0	6
-2291	Tower Bats	157	27	29	0	13
-2292	Alkyoneus	158	75	75	1	1
-2293	Demonic Doll	158	68	70	0	5
-2294	Dire Bat UDT TC SSG	158	64	66	0	5
-2295	Enkelados	158	40	40	1	2
-2296	Incubus Bats UDT	158	62	64	0	8
-2297	Ixtab	158	71	71	1	2
-2298	Jotunn Gatekeeper	158	65	69	0	8
-2299	Jotunn Hallkeeper	158	65	69	0	8
-2300	Jotunn Wallkeeper	158	65	69	0	8
-2301	Jotunn Wildkeeper	158	65	69	0	8
-2302	Light Elemental	158	35	36	0	5
-2303	Magic Pot UDT	158	68	70	0	5
-2304	Magic Urn	158	34	35	0	3
-2305	Pallas	158	72	72	1	1
-2306	Phasma UDT	158	67	69	0	6
-2307	Thunder Elemental	158	35	36	0	5
-2308	Beryl-footed Molberry	159	61	63	1	1
-2309	Bloodsucker	159	55	62	0	2
-2310	Bouncing Ball	159	65	67	0	1
-2311	Branding Iron	159	55	58	0	2
-2312	Crimson-toothed Pawberry	159	70	71	1	1
-2313	Death from Above	159	57	59	1	1
-2314	Fire Elemental	159	65	68	0	5
-2315	Flauros	159	59	61	1	1
-2316	Habetrot	159	57	59	1	1
-2317	Hover Tank	159	64	68	0	15
-2318	Iron Maiden	159	64	68	0	14
-2319	Manipulator	159	59	61	1	1
-2320	Rumble Crawler	159	53	56	0	11
-2321	Rumble Crawler	159	53	56	0	1
-2322	Sacrificial Goblet	159	66	68	1	1
-2323	Sozu Rogberry	159	65	66	1	1
-2324	Sozu Sarberry	159	66	66	1	1
-2325	Temple Bee	159	60	63	0	12
-2326	Temple Opo-opo	159	51	54	0	22
-2327	Tonberry Cutter	159	51	59	0	38
-2328	Tonberry Dismayer	159	61	69	0	11
-2329	Tonberry Harrier	159	51	59	0	26
-2330	Tonberry Kinq	159	65	66	1	1
-2331	Tonberry Maledictor	159	61	69	0	13
-2332	Tonberry Pursuer	159	61	69	0	14
-2333	Tonberry Stabber	159	61	69	0	10
-2334	Tonberry Stalker	159	51	59	0	35
-2335	Torama	159	55	58	0	9
-2336	Uggalepih Leech	159	50	52	0	2
-2337	Water Elemental	159	61	64	0	3
-2338	Wespe TU	159	52	55	0	22
-2339	Bifrons DoR	160	68	70	0	6
-2340	Bistre-hearted Malberry	160	71	73	1	1
-2341	Bloodsucker	160	58	60	0	1
-2342	Bullbeggar	160	78	80	0	26
-2343	Carmine-tailed Janberry	160	66	67	1	1
-2344	Cave Worm DoR	160	61	64	0	13
-2345	Celeste-eyed Tozberry	160	67	69	1	1
-2346	Cutlass Scorpion DR	160	68	70	0	2
-2347	Demonic Pugil	160	73	76	0	11
-2348	Den Scorpion	160	79	81	0	8
-2349	Dire Bat	160	60	63	0	86
-2350	Doom Toad	160	75	78	0	9
-2351	Fire Elemental	160	70	72	0	4
-2352	Friar Rush	160	70	70	1	1
-2353	Million Eyes DR	160	73	76	0	23
-2354	Mousse DoR PMS	160	64	67	0	48
-2355	Mousse	160	64	67	0	2
-2356	Ogama	160	80	82	1	1
-2357	Puck	160	74	77	0	23
-2358	Razorjaw Pugil	160	53	55	0	1
-2359	Rock Crab	160	53	55	0	1
-2360	Sozu Bliberry	160	65	66	1	1
-2361	Succubus Bats	160	65	68	0	11
-2362	Tawny-fingered Mugberry	160	70	72	1	1
-2363	Tonberry Beleaguerer	160	66	72	0	21
-2364	Tonberry Decapitator	160	72	74	1	2
-2365	Tonberry Imprecator	160	62	64	0	11
-2366	Tonberry Pontifex	160	75	75	1	1
-2367	Tonberry Slasher	160	67	71	0	36
-2368	Tonberry Tracker	160	72	74	1	2
-2369	Tonberry Trailer	160	62	65	0	16
-2370	Tormentor	160	75	78	0	30
-2371	Water Elemental	160	68	73	0	3
-2372	Abyssal Demon	161	64	66	0	6
-2373	Ahriman	161	63	65	0	22
-2374	Arch Demon	161	64	66	0	6
-2375	Dark Elemental	161	48	49	0	5
-2376	Doom Demon	161	64	66	0	6
-2377	Dread Demon CZB	161	71	73	0	7
-2378	Duke Haborym	161	76	76	1	1
-2379	Elder Quadav	161	47	49	0	5
-2380	Emerald Quadav	161	47	49	0	5
-2381	Evil Eye	161	46	48	0	15
-2382	Goblin Poacher	161	47	49	0	5
-2383	Goblin Reaper	161	47	49	0	5
-2384	Goblin Robber	161	47	49	0	5
-2385	Goblin Trader	161	47	49	0	5
-2386	Grand Duke Batym	161	76	76	1	1
-2387	Ice Elemental	161	48	49	0	5
-2388	Iron Quadav	161	47	49	0	5
-2389	Judicator Demon CZB	161	71	73	0	7
-2390	Marquis Allocen	161	76	76	1	1
-2391	Marquis Amon	161	76	76	1	1
-2392	Morbid Eye	161	52	55	0	10
-2393	Orcish Bowshooter	161	47	49	0	5
-2394	Orcish Footsoldier	161	47	49	0	5
-2395	Orcish Gladiator	161	47	49	0	5
-2396	Orcish Trooper	161	47	49	0	5
-2397	Spinel Quadav	161	47	49	0	5
-2398	Stygian Demon CZB	161	71	73	0	7
-2399	Yagudo Conquistador	161	47	49	0	5
-2400	Yagudo Lutenist	161	47	49	0	5
-2401	Yagudo Prior	161	47	49	0	5
-2402	Yagudo Zealot	161	47	49	0	5
-2403	Baron Vapula	162	68	68	1	1
-2404	Baronet Romwe	162	68	68	1	1
-2405	Count Bifrons	162	68	68	1	1
-2406	Deadly Iris	162	55	56	0	6
-2407	Elder Quadav	162	47	49	0	5
-2408	Emerald Quadav	162	47	49	0	5
-2409	Evil Eye	162	46	48	0	14
-2410	Goblin Bouncer	162	50	52	0	9
-2411	Goblin Enchanter	162	50	52	0	9
-2412	Goblin Hunter	162	50	52	0	9
-2413	Goblin Poacher	162	47	49	0	4
-2414	Goblin Reaper	162	47	49	0	4
-2415	Goblin Robber	162	47	49	0	4
-2416	Goblin Trader	162	47	49	0	4
-2417	Gold Quadav	162	50	52	0	4
-2418	Iron Quadav	162	47	49	0	5
-2419	Morbid Eye	162	52	53	0	4
-2420	Mythril Quadav	162	50	52	0	4
-2421	Orcish Bowshooter	162	47	49	0	5
-2422	Orcish Footsoldier	162	47	49	0	5
-2423	Orcish Gladiator	162	47	49	0	5
-2424	Orcish Predator	162	50	52	0	7
-2425	Orcish Trooper	162	47	49	0	5
-2426	Orcish Veteran	162	50	52	0	7
-2427	Orcish Warchief	162	50	52	0	7
-2428	Orcish Zerker	162	50	52	0	7
-2429	Spinel Quadav	162	47	49	0	5
-2430	Steel Quadav	162	50	52	0	4
-2431	Topaz Quadav	162	50	52	0	4
-2432	Viscount Morax	162	68	68	1	1
-2433	Yagudo Abbot	162	50	52	0	3
-2434	Yagudo Chanter	162	50	52	0	3
-2435	Yagudo Conquistador	162	47	49	0	5
-2436	Yagudo Inquisitor	162	50	52	0	3
-2437	Yagudo Lutenist	162	47	49	0	5
-2438	Yagudo Prior	162	47	49	0	5
-2439	Yagudo Sentinel	162	50	52	0	3
-2440	Yagudo Zealot	162	47	49	0	5
-2441	Bat Eye	166	34	44	0	4
-2442	Blade Bat	166	4	7	0	6
-2443	Cave Scorpion	166	30	33	0	2
-2444	Giant Scorpion	166	38	40	0	1
-2445	Goblin Gambler	166	26	30	0	6
-2446	Goblin Leecher	166	26	30	0	7
-2447	Goblin Mugger	166	26	30	0	8
-2448	Goblin Thug	166	4	8	0	2
-2449	Goblin Weaver	166	4	8	0	3
-2450	Hecteyes RP	166	31	34	0	5
-2451	Oil Slick RP	166	7	9	0	2
-2452	Ooze	166	28	30	0	5
-2453	Seeker Bats	166	25	28	0	28
-2454	Stirge	166	30	33	0	40
-2455	Taisai	166	35	38	0	3
-2456	Taisaijin	166	60	60	1	1
-2457	Wind Bats	166	3	5	0	5
-2458	Goblin Furrier	166	32	36	0	1
-2459	Goblin Shaman	166	32	36	0	1
-2460	Goblin Smithy	166	32	36	0	4
-2461	Acid Grease	167	52	54	0	1
-2462	Arioch	167	56	62	1	1
-2463	Bloodsucker	167	65	68	0	39
-2464	Bloodsucker	167	70	73	1	1
-2465	Bloodsucker	167	57	68	0	2
-2466	Dark Aspic	167	52	54	0	14
-2467	Funnel Bats BO	167	52	55	0	19
-2468	Garm BO	167	64	66	0	20
-2469	Gespenst	167	68	70	0	5
-2470	Haunt	167	60	63	0	13
-2471	Hecatomb Hound	167	56	59	0	12
-2472	Manes	167	72	73	1	1
-2473	Mousse	167	58	62	0	11
-2474	Mousse	167	60	68	0	2
-2475	Sewer Syrup	167	64	66	1	1
-2476	Shii	167	70	71	1	1
-2477	Werebat	167	55	59	0	45
-2478	Bigclaw	169	49	52	0	19
-2479	Bigclaw	169	49	52	0	1
-2480	Bloodsucker	169	54	67	0	11
-2481	Bloodsucker	169	54	57	0	1
-2482	Bouncing Ball	169	64	67	0	13
-2483	Canal Bats TC	169	45	47	0	17
-2484	Dark Aspic	169	53	55	0	7
-2485	Dire Bat UDT TC SSG	169	62	64	0	6
-2486	Doom Mage TC	169	65	67	0	4
-2487	Doom Soldier TC	169	65	67	0	4
-2488	Fallen Knight	169	52	55	0	17
-2489	Fleshcraver	169	60	62	0	12
-2490	Girtab	169	58	60	0	2
-2491	Hell Bat TC	169	47	49	0	29
-2492	Impish Bats	169	58	60	0	16
-2493	Lich	169	54	57	0	7
-2494	Makara	169	49	52	0	33
-2495	Mindcraver	169	60	62	0	12
-2496	Mousse	169	63	65	0	6
-2497	Mousse	169	63	65	0	1
-2498	Oni Carcass	169	68	70	1	1
-2499	Rock Crab	169	52	54	0	1
-2500	Rotten Sod	169	58	60	0	1
-2501	Scavenger Crab	169	60	62	0	21
-2502	Starmite	169	65	67	0	5
-2503	Stygian Pugil	169	57	65	0	41
-2504	Cutlass Scorpion AC	169	64	66	0	6
-2505	Ding Bats	172	1	3	0	15
-2506	River Crab	172	2	4	0	3
-2507	Mouse Bat	172	2	4	0	8
-2508	Tunnel Worm	172	1	3	0	13
-2509	Bogy	173	30	33	0	9
-2510	Cargo Crab Colin	173	34	37	1	1
-2511	Clipper	173	29	32	0	28
-2512	Combat	173	27	30	0	48
-2513	Dame Blanche	173	34	35	1	1
-2514	Falcatus Aranei	173	32	32	1	1
-2515	Gigas Foreman	173	35	37	0	4
-2516	Gigas Stonecarrier	173	35	37	0	4
-2517	Gigas Stonegrinder	173	35	37	0	4
-2518	Gigas Stonemason	173	35	37	0	4
-2519	Goblin Bounty Hunter	173	10	10	0	19
-2520	Greater Pugil	173	30	33	0	25
-2521	Greater Pugil	173	30	33	0	2
-2522	Huge Spider	173	28	31	0	33
-2523	Jelly KT GM	173	23	27	0	20
-2524	Kraken	173	35	37	0	1
-2525	Land Worm	173	20	25	0	37
-2526	Morion Worm	173	28	28	1	1
-2527	Sea Monk	173	32	35	0	6
-2528	Seeker Bats	173	22	26	0	60
-2529	Snipper	173	22	24	0	2
-2530	Thread Leech	173	28	31	0	31
-2531	Thunder Elemental	173	32	34	0	2
-2532	Water Elemental	173	32	34	0	4
-2533	Air Elemental	174	68	70	0	9
-2534	Amemet	174	65	66	1	1
-2535	Arachne	174	67	69	1	1
-2536	Bloodthirster Madkix	174	70	72	1	1
-2537	Cancer	174	65	65	1	1
-2538	Cave Worm KT	174	60	63	0	20
-2539	Deinonychus	174	65	68	0	26
-2540	Devil Manta	174	66	68	0	1
-2541	Diplopod	174	68	71	0	3
-2542	Fire Elemental	174	67	68	0	9
-2543	Goblin Alchemist	174	66	69	0	6
-2544	Goblin Bandit	174	66	69	0	6
-2545	Goblin Mercenary	174	66	69	0	7
-2546	Goblin Tamer	174	66	69	0	5
-2547	Greater Cockatrice	174	78	80	0	16
-2548	Guivre	174	84	84	1	1
-2549	Haunt	174	63	66	0	10
-2550	Kuftal Digger	174	66	69	0	12
-2551	Ladon	174	80	82	0	6
-2552	Ovinnik	174	77	79	0	15
-2553	Pelican	174	80	81	1	1
-2554	Phantom Worm	174	70	72	1	1
-2555	Recluse Spider	174	63	66	0	28
-2556	Robber Crab	174	60	63	0	61
-2557	Robber Crab	174	60	63	0	1
-2558	Sabotender Mariachi	174	68	70	1	1
-2559	Sabotender Sediendo	174	64	67	0	16
-2560	Sand Lizard	174	61	64	0	20
-2561	Scavenger Crab	174	60	62	0	2
-2562	Stygian Pugil	174	64	66	0	2
-2563	Yowie	174	69	71	1	1
-2564	Abyss Sahagin	176	72	74	1	2
-2565	Big Jaw	176	35	37	0	2
-2566	Bigclaw	176	43	48	0	17
-2567	Bigclaw	176	43	48	0	1
-2568	Blubber Eyes PX	176	55	58	0	5
-2569	Bog Sahagin	176	52	59	0	16
-2570	Brook Sahagin	176	41	48	0	27
-2571	Charybdis	176	79	81	1	1
-2572	Coastal Sahagin	176	62	72	0	9
-2573	Coral Sahagin	176	72	74	1	1
-2574	Delta Sahagin	176	62	72	0	16
-2575	Denn the Orcavoiced	176	64	65	1	1
-2576	Devil Manta	176	66	69	0	10
-2577	Dire Bat UDT TC SSG	176	63	66	0	10
-2578	Fyuu the Seabellow	176	48	48	1	1
-2579	Ghast blm	176	38	41	0	12
-2580	Ghast war	176	38	41	0	11
-2581	Greatclaw	176	66	69	0	7
-2582	Grotto Pugil	176	44	47	0	8
-2583	Ironshell	176	37	40	0	14
-2584	Lagoon Sahagin	176	62	72	0	10
-2585	Lake Sahagin	176	36	39	0	3
-2586	Marsh Sahagin	176	52	59	0	18
-2587	Masan	176	39	39	1	1
-2588	Mindgazer SSG	176	66	69	0	11
-2589	Mousse	176	62	65	0	5
-2590	Mouu the Waverider	176	64	66	1	1
-2591	Namtar	176	39	41	1	1
-2592	Nightmare Bats NM SSG	176	66	69	0	2
-2593	Novv the Whitehearted	176	66	67	1	1
-2594	Ocean Sahagin	176	75	75	1	1
-2595	Ooze	176	39	42	0	7
-2596	Pahh the Gullcaller	176	56	58	1	1
-2597	Pond Sahagin	176	36	39	0	5
-2598	Qull the Shellbuster	176	49	51	1	1
-2599	Razorjaw Pugil	176	57	60	0	8
-2600	Riparian Sahagin	176	44	48	0	13
-2601	Rivulet Sahagin	176	41	48	0	25
-2602	Robber Crab SSG	176	62	67	0	22
-2603	Rock Crab	176	53	58	0	22
-2604	Rock Crab	176	53	58	0	1
-2605	Royal Leech	176	35	38	0	24
-2606	Sahagin Parasite	176	50	53	0	10
-2607	Sea Bonze	176	47	50	0	3
-2608	Sea Hog	176	62	63	1	1
-2609	Shore Sahagin	176	62	72	0	13
-2610	Spring Sahagin	176	36	39	0	6
-2611	Stygian Pugil	176	65	67	0	1
-2612	Swamp Sahagin	176	52	59	0	12
-2613	Thunder Elemental	176	55	58	0	6
-2614	Undead Bats	176	36	39	0	19
-2615	Vampire Bat	176	42	45	0	8
-2616	Voll the Sharkfinned	176	64	66	1	1
-2617	Water Elemental	176	65	68	0	9
-2618	Worr the Clawfisted	176	60	61	1	1
-2619	Wuur the Sandcomber	176	42	44	1	1
-2620	Yarr the Pearleyed	176	64	66	1	1
-2621	Zuug the Shoreleaper	176	70	70	1	1
-2622	Air Elemental	177	79	80	0	12
-2623	Caretaker	177	76	79	0	68
-2624	Dustbuster	177	75	78	0	76
-2625	Earth Elemental	177	79	80	0	12
-2626	Enkidu	177	77	80	0	42
-2627	Fire Elemental	177	79	80	0	4
-2628	Ice Elemental	177	79	80	0	6
-2629	Steam Cleaner	177	81	83	1	1
-2630	Thunder Elemental	177	79	80	0	4
-2631	Water Elemental	177	79	80	0	6
-2632	Air Elemental	178	71	72	0	4
-2633	Aura Butler	178	77	82	0	47
-2634	Aura Gear	178	76	81	0	30
-2635	Aura Pot	178	75	80	0	37
-2636	Aura Statue	178	81	84	0	45
-2637	Dark Elemental	178	73	74	0	4
-2638	Earth Elemental	178	71	72	0	4
-2639	Fire Elemental	178	73	74	0	4
-2640	Ice Elemental	178	73	74	0	4
-2641	Kirin	178	92	92	1	1
-2642	Olla Grande	178	85	85	1	1
-2643	Thunder Elemental	178	73	74	0	4
-2644	Water Elemental	178	73	74	0	4
-2645	Ancient Bat LDT MoS	184	27	29	0	24
-2646	Bogy LDT	184	30	32	0	11
-2647	Chaos Idol	184	28	30	0	10
-2648	Epialtes	184	32	32	1	1
-2649	Eurymedon	184	32	32	1	1
-2650	Goblin Leecher	184	27	30	0	14
-2651	Goblin Mugger	184	27	30	0	14
-2652	Hippolytos	184	32	32	1	1
-2653	Light Elemental	184	35	36	0	2
-2654	Magic Pot	184	28	29	0	2
-2655	Magic Urn	184	34	35	0	5
-2656	Seeker Bats LDT	184	25	27	0	27
-2657	Thunder Elemental	184	35	36	0	2
-2658	Overlords Tombstone	185	65	65	1	1
-2659	Reapertongue Gadgquok	185	80	80	1	1
-2660	Serjeant Tombstone	185	65	65	1	112
-2661	Vanguard Amputator	185	75	77	1	20
-2662	Vanguard Backstabber	185	75	77	1	19
-2663	Vanguard Bugler	185	75	77	1	18
-2664	Vanguard Dollmaster	185	75	77	1	19
-2665	Vanguard Footsoldier	185	75	77	1	19
-2666	Vanguard Grappler	185	75	77	1	20
-2667	Vanguard Gutslasher	185	75	77	1	20
-2668	Vanguard Hawker	185	75	77	1	20
-2669	Vanguard Impaler	185	75	77	1	19
-2670	Vanguard Mesmerizer	185	75	77	1	18
-2671	Vanguard Neckchopper	185	75	77	1	20
-2672	Vanguard Pillager	185	75	77	1	19
-2673	Vanguard Predator	185	75	77	1	21
-2674	Vanguard Trooper	185	75	77	1	20
-2675	Vanguard Vexer	185	75	77	1	20
-2676	Voidstreaker Butchnotch	185	80	80	1	1
-2677	Wyrmgnasher Bjakdek	185	80	80	1	1
-2678	Adamantking Effigy	186	65	65	1	163
-2679	GiPha Manameister	186	80	80	1	1
-2680	GuDha Effigy	186	65	65	1	1
-2681	GuNhi Noondozer	186	80	80	1	1
-2682	KoDho Cannonball	186	80	80	1	1
-2683	Vanguard Beasttender	186	75	77	1	18
-2684	Vanguard Constable	186	75	77	1	23
-2685	Vanguard Defender	186	75	77	1	22
-2686	Vanguard Drakekeeper	186	75	77	1	18
-2687	Vanguard Hatamoto	186	75	77	1	22
-2688	Vanguard Kusa	186	75	77	1	21
-2689	Vanguard Mason	186	75	77	1	13
-2690	Vanguard Militant	186	75	77	1	22
-2691	Vanguard Minstrel	186	75	77	1	22
-2692	Vanguard Protector	186	75	77	1	20
-2693	Vanguard Purloiner	186	75	77	1	21
-2694	Vanguard Thaumaturge	186	75	77	1	22
-2695	Vanguard Undertaker	186	75	77	1	8
-2696	Vanguard Vigilante	186	75	77	1	22
-2697	Vanguard Vindicator	186	75	77	1	21
-2698	ZeVho Fallsplitter	186	80	80	1	1
-2699	AaNyu Dismantler	186	80	80	1	1
-2700	BeEbo Tortoisedriver	186	80	80	1	4
+1037	Soulflayer	79	82	83	0	16
+1038	Spongilla Fly	79	78	79	0	11
+1039	Suhur Mas	79	69	71	0	1
+1040	Thunder Elemental	79	70	71	0	1
+1041	Tyger	79	88	90	1	1
+1042	Water Elemental	79	70	71	0	6
+1043	Wild Karakul	79	68	70	0	14
+1044	Bomb	100	8	10	0	3
+1045	Carrion Worm	100	2	6	0	36
+1046	Ding Bats	100	1	5	0	40
+1047	Enchanted Bones blm	100	6	8	0	7
+1048	Enchanted Bones war	100	4	7	0	7
+1049	Forest Funguar	100	4	6	0	19
+1050	Forest Hare	100	2	6	0	86
+1051	Fungus Beetle	100	10	15	1	1
+1052	Goblin Digger	100	7	8	0	1
+1053	Goblin Fisher	100	6	7	0	4
+1054	Goblin Thug	100	4	8	0	21
+1055	Goblin Weaver	100	4	8	0	14
+1056	Jaggedy-Eared Jack	100	9	10	1	1
+1057	Land Crab	100	5	6	0	1
+1058	Limicoline Crab	100	2	4	0	1
+1059	Marauder Dvogzog	100	67	67	1	1
+1060	Mouse Bat	100	2	6	0	26
+1061	Orcish Fodder	100	3	7	0	21
+1062	Orcish Grappler	100	3	8	0	18
+1063	Orcish Mesmerizer	100	4	8	0	16
+1064	Passage Crab	100	9	9	0	1
+1065	River Crab	100	5	6	0	8
+1066	Scarab Beetle	100	4	7	0	25
+1067	Tainted Hound	100	5	8	0	10
+1068	Tree Crab	100	3	4	0	1
+1069	Tunnel Worm	100	1	1	0	14
+1070	Vermivorous Crab	100	7	8	0	1
+1071	Wild Rabbit	100	1	1	0	27
+1072	Wild Sheep	100	5	8	0	45
+1073	Bigmouth Billy	101	9	10	1	1
+1074	Bomb	101	8	10	0	3
+1075	Carrion Worm	101	2	6	0	30
+1076	Cheval Pugil	101	9	10	0	1
+1077	Ding Bats	101	1	5	0	41
+1078	Enchanted Bones blm	101	4	8	0	13
+1079	Enchanted Bones war	101	5	8	0	2
+1080	Fighting Pugil	101	9	10	0	1
+1081	Forest Funguar	101	4	6	0	15
+1082	Forest Hare	101	2	6	0	75
+1083	Goblin Digger	101	7	8	0	1
+1084	Goblin Fisher	101	3	6	0	7
+1085	Goblin Thug	101	3	8	0	18
+1086	Goblin Weaver	101	4	8	0	15
+1087	Mouse Bat	101	3	7	0	22
+1088	Mud Pugil	101	9	10	0	1
+1089	Orcish Fodder	101	3	8	0	12
+1090	Orcish Grappler	101	3	8	0	9
+1091	Orcish Mesmerizer	101	3	8	0	9
+1092	Pug Pugil	101	9	10	0	1
+1093	Pugil	101	1	5	0	24
+1094	Pugil	101	1	5	0	1
+1095	Scarab Beetle	101	4	7	0	22
+1096	Swamfisk	101	11	15	1	2
+1097	Tainted Hound	101	6	8	0	7
+1098	Tunnel Worm	101	1	1	0	13
+1099	Wild Rabbit	101	1	1	0	25
+1100	Wild Sheep	101	6	8	0	32
+1101	Acro Bat	102	8	11	0	18
+1102	Air Elemental	102	18	20	0	5
+1103	Akbaba LTP	102	11	13	0	38
+1104	Battering Ram	102	22	23	0	2
+1105	Bloodtear Baldurf	102	55	56	1	1
+1106	Coral Crab	102	8	10	0	1
+1107	Gale Bats	102	8	10	0	25
+1108	Ghost	102	15	16	0	6
+1109	Giant Pugil	102	14	16	0	1
+1110	Goblin Ambusher	102	12	13	0	5
+1111	Goblin Archaeologist	102	30	75	1	1
+1112	Goblin Butcher	102	12	13	0	5
+1113	Goblin Digger	102	11	12	0	1
+1114	Goblin Fisher	102	9	10	0	4
+1115	Goblin Thug	102	8	10	0	6
+1116	Goblin Tinkerer	102	12	13	0	6
+1117	Goblin Weaver	102	8	10	0	6
+1118	Grass Funguar	102	12	13	0	22
+1119	Grenade	102	15	17	0	4
+1120	Huge Wasp	102	10	12	0	21
+1121	Lumbering Lambert	102	27	28	1	1
+1122	Mad Sheep	102	11	13	0	32
+1123	Orcish Fodder	102	8	10	0	8
+1124	Orcish Grappler	102	8	10	0	8
+1125	Orcish Grunt	102	12	13	0	6
+1126	Orcish Mesmerizer	102	8	10	0	8
+1127	Orcish Neckchopper	102	12	13	0	6
+1128	Orcish Stonechucker	102	12	13	0	6
+1129	Plague Bats	102	10	12	0	8
+1130	Poison Bat	102	12	14	0	7
+1131	Poison Funguar	102	14	15	0	13
+1132	Puffer Pugil	102	14	16	0	1
+1133	Pug Pugil	102	8	10	0	1
+1134	Rock Eater	102	10	11	0	42
+1135	Skeleton Sorcerer	102	11	13	0	13
+1136	Skeleton Warrior	102	10	12	0	13
+1137	Steppe Hare	102	8	10	0	45
+1138	Strolling Sapling	102	8	10	0	41
+1139	Thickshell	102	13	14	0	10
+1140	Thickshell	102	12	14	0	1
+1141	Tumbling Truffle	102	19	20	1	1
+1142	Water Elemental	102	18	20	0	3
+1143	Wolf Zombie	102	8	10	0	11
+1144	Beach Pugil	103	23	26	0	12
+1145	Beach Pugil	103	23	26	0	1
+1146	Bogy	103	28	30	0	9
+1147	Brutal Sheep	103	21	23	0	33
+1148	Cutter	103	28	30	0	1
+1149	Damselfly	103	20	23	0	53
+1150	Earth Elemental	103	38	40	0	3
+1151	Fire Elemental	103	38	40	0	8
+1152	Ghoul blm	103	20	24	0	19
+1153	Ghoul war	103	18	22	0	17
+1154	Giant Bat	103	21	22	0	4
+1155	Goblin Ambusher	103	17	20	0	12
+1156	Goblin Bounty Hunter	103	17	20	0	12
+1157	Goblin Butcher	103	17	20	0	10
+1158	Goblin Digger	103	19	20	0	1
+1159	Goblin Gambler	103	22	25	0	20
+1160	Goblin Leecher	103	22	25	0	21
+1161	Goblin Mugger	103	22	25	0	20
+1162	Goblin Tinkerer	103	17	20	0	8
+1163	Golden Bat	103	26	27	1	1
+1164	Hill Lizard	103	15	19	0	42
+1165	Marchelute	103	41	41	1	1
+1166	Night Bats	103	12	15	0	12
+1167	Puffer Pugil	103	15	17	0	1
+1168	Sand Bats	103	12	13	0	7
+1169	Sand Hare	103	15	18	0	51
+1170	Snipper	103	18	22	0	49
+1171	Snipper	103	18	22	0	1
+1172	Stag Crab	103	15	17	0	1
+1173	Star Bat	103	17	20	0	5
+1174	Thread Leech	103	22	25	0	29
+1175	Valkurm Emperor	103	29	30	1	1
+1176	Will-o-the-Wisp	103	25	27	0	7
+1177	Boggart	104	25	26	0	7
+1178	Bogy	104	25	26	0	6
+1179	Brutal Sheep	104	20	21	0	43
+1180	Ferocious Pugil	104	24	25	0	1
+1181	Forest Leech	104	21	22	0	27
+1182	Forest Tiger	104	24	25	0	15
+1183	Fradubio	104	59	60	1	1
+1184	Fraelissa	104	34	35	1	1
+1185	Ghoul war	104	16	17	0	7
+1186	Goblin Ambusher	104	16	17	0	3
+1187	Goblin Butcher	104	16	17	0	3
+1188	Goblin Digger	104	18	19	0	1
+1189	Goblin Gambler	104	21	22	0	3
+1190	Goblin Leecher	104	21	22	0	3
+1191	Goblin Mugger	104	21	22	0	3
+1192	Goblin Tinkerer	104	16	17	0	3
+1193	Huge Leech	104	27	29	0	1
+1194	Jugner Funguar	104	24	25	0	46
+1195	King Arthro	104	55	55	1	1
+1196	Knight Crab	104	35	35	0	10
+1197	Land Pugil	104	19	20	0	22
+1198	Meteormauler Zhagtegg	104	37	40	1	1
+1199	Orcish Cursemaker	104	21	22	0	5
+1200	Orcish Cursemaker	104	25	25	0	1
+1201	Orcish Fighter	104	21	22	0	6
+1202	Orcish Grunt	104	16	17	0	5
+1203	Orcish Neckchopper	104	16	17	0	5
+1204	Orcish Serjeant	104	21	22	0	5
+1205	Orcish Serjeant	104	24	25	0	1
+1206	Orcish Stonechucker	104	16	17	0	5
+1207	Panzer Percival	104	25	26	1	2
+1208	Scavenging Hound	104	22	23	0	16
+1209	Screamer	104	17	18	0	24
+1210	Snipper	104	19	20	0	22
+1211	Spring Pugil	104	16	18	0	1
+1212	Stag Beetle	104	22	23	0	47
+1213	Stag Crab	104	17	18	0	1
+1214	Thread Leech	104	19	22	0	1
+1215	Thunder Elemental	104	27	29	0	4
+1216	Walking Tree	104	27	28	0	3
+1217	Wandering Sapling	104	15	16	0	63
+1218	Water Elemental	104	27	29	0	6
+1219	Will-o-the-Wisp	104	24	25	0	3
+1220	Zombie blm	104	16	22	0	7
+1221	Ahtu	105	51	52	1	1
+1222	Ba	105	27	28	0	26
+1223	Clipper	105	24	25	0	11
+1224	Cutter	105	28	30	0	1
+1225	Earth Elemental	105	38	40	0	3
+1226	Evil Spirit	105	35	36	0	7
+1227	Goblin Bounty Hunter	105	30	36	0	13
+1228	Goblin Digger	105	28	29	0	1
+1229	Goblin Furrier	105	30	31	0	11
+1230	Goblin Gambler	105	26	27	0	5
+1231	Goblin Leecher	105	26	27	0	5
+1232	Goblin Mugger	105	26	27	0	5
+1233	Goblin Pathfinder	105	30	31	0	8
+1234	Goblin Shaman	105	30	31	0	11
+1235	Goblin Smithy	105	30	31	0	11
+1236	Greater Pugil	105	20	23	0	1
+1237	Ice Elemental	105	38	40	0	3
+1238	Ignis Fatuus	105	34	36	0	4
+1239	Kraken	105	37	40	0	1
+1240	Land Pugil	105	20	23	0	1
+1241	Lumber Jack	105	55	55	1	1
+1242	Mauthe Doog BD	105	31	32	0	20
+1243	May Fly	105	25	26	0	43
+1244	Orcish Beastrider	105	30	31	0	5
+1245	Orcish Brawler	105	30	31	0	5
+1246	Orcish Cursemaker	105	26	27	0	5
+1247	Orcish Fighter	105	26	27	0	5
+1248	Orcish Impaler	105	30	31	0	5
+1249	Orcish Nightraider	105	30	31	0	5
+1250	Orcish Serjeant	105	26	27	0	5
+1251	Sabertooth Tiger	105	31	32	0	57
+1252	Snipper	105	20	23	0	1
+1253	Sobbing Sapling	105	36	38	0	5
+1254	Stalking Sapling	105	23	24	0	81
+1255	Tottering Toby	105	27	28	1	1
+1256	Treant	105	36	37	0	2
+1257	Wight blm	105	26	32	0	10
+1258	Wight war	105	26	32	0	10
+1259	Amber Quadav	106	3	8	0	16
+1260	Amethyst Quadav	106	3	8	0	14
+1261	Black Wolf	106	5	8	0	9
+1262	Ding Bats	106	1	5	0	33
+1263	Enchanted Bones blm	106	5	8	0	8
+1264	Enchanted Bones war	106	5	8	0	4
+1265	Fighting Pugil	106	9	10	0	1
+1266	Fledermaus	106	3	6	0	13
+1267	Goblin Digger	106	6	7	0	1
+1268	Goblin Fisher	106	4	5	0	3
+1269	Goblin Gambler	106	21	22	0	4
+1270	Goblin Leecher	106	21	22	0	4
+1271	Goblin Mugger	106	21	22	0	2
+1272	Goblin Thug	106	4	8	0	16
+1273	Goblin Weaver	106	4	8	0	9
+1274	Huge Hornet	106	1	1	0	26
+1275	Land Crab	106	5	6	0	1
+1276	Maneating Hornet	106	3	6	0	40
+1277	Ornery Sheep	106	5	8	0	22
+1278	Pug Pugil	106	7	8	0	1
+1279	River Crab	106	2	5	0	8
+1280	Rock Lizard	106	4	8	0	22
+1281	Sand Crab	106	3	4	0	1
+1282	Sand Pugil	106	19	20	0	6
+1283	Shrapnel	106	8	10	0	6
+1284	Stinging Sophie	106	9	10	1	2
+1285	Stone Crab	106	2	4	0	1
+1286	Stone Eater	106	2	6	0	69
+1287	Tunnel Worm	106	1	1	0	13
+1288	Vulture	106	3	7	0	28
+1289	Walking Sapling	106	3	6	0	40
+1290	Young Quadav	106	3	8	0	29
+1291	Amber Quadav	107	3	8	0	13
+1292	Amethyst Quadav	107	3	8	0	11
+1293	Black Wolf	107	5	8	0	10
+1294	Bubbly Bernie	107	9	10	1	1
+1295	Carnero	107	11	12	1	2
+1296	Ding Bats	107	1	5	0	25
+1297	Enchanted Bones blm	107	4	8	0	8
+1298	Enchanted Bones war	107	5	8	0	8
+1299	Fledermaus	107	3	6	0	12
+1300	Goblin Digger	107	7	8	0	1
+1301	Goblin Fisher	107	3	5	0	4
+1302	Goblin Thug	107	3	8	0	17
+1303	Goblin Weaver	107	4	8	0	11
+1304	Huge Hornet	107	1	1	0	26
+1305	Land Crab	107	6	7	0	16
+1306	Land Crab	107	5	8	0	1
+1307	Leaping Lizzy	107	10	11	1	2
+1308	Maneating Hornet	107	3	6	0	30
+1309	Mole Crab	107	7	8	0	1
+1310	Ornery Sheep	107	5	8	0	21
+1311	Passage Crab	107	9	10	0	1
+1312	Rock Lizard	107	4	8	0	33
+1313	Sand Crab	107	3	4	0	1
+1314	Shrapnel	107	8	10	0	7
+1315	Stone Crab	107	2	3	0	1
+1316	Stone Eater	107	2	5	0	68
+1317	Tunnel Worm	107	1	1	0	14
+1318	Vulture	107	3	7	0	42
+1319	Walking Sapling	107	3	6	0	49
+1320	Young Quadav	107	3	8	0	23
+1321	Amber Quadav	108	9	10	0	6
+1322	Amethyst Quadav	108	9	15	0	6
+1323	Earth Elemental	108	18	20	0	3
+1324	Ghost	108	15	16	0	5
+1325	Goblin Ambusher	108	12	16	0	8
+1326	Goblin Archaeologist	108	30	75	1	1
+1327	Goblin Butcher	108	8	14	0	9
+1328	Goblin Digger	108	13	14	0	1
+1329	Goblin Thug	108	8	13	0	8
+1330	Goblin Tinkerer	108	9	14	0	7
+1331	Goblin Weaver	108	9	13	0	10
+1332	Greater Quadav	108	13	15	0	4
+1333	Grenade	108	15	17	0	3
+1334	Huge Wasp	108	9	12	0	70
+1335	Mad Sheep	108	9	14	0	53
+1336	Mist Lizard	108	10	12	0	62
+1337	Onyx Quadav	108	13	15	0	5
+1338	Rampaging Ram	108	27	28	1	1
+1339	Rock Eater	108	10	11	0	24
+1340	Skeleton Sorcerer	108	11	13	0	7
+1341	Skeleton Warrior	108	10	12	0	9
+1342	Steelfleece Baldarich	108	55	56	1	1
+1343	Stray Mary	108	19	20	1	2
+1344	Strolling Sapling	108	8	13	0	76
+1345	Thunder Elemental	108	18	20	0	3
+1346	Tremor Ram	108	22	23	0	2
+1347	Veteran Quadav	108	13	15	0	5
+1348	Wolf Zombie	108	9	14	0	11
+1349	Young Quadav	108	9	10	0	5
+1350	Black Bat	109	17	18	0	37
+1351	Bloodpool Vorax	109	24	25	1	1
+1352	BoWho Warmonger	109	36	37	1	1
+1353	Bog Bunny	109	15	16	0	35
+1354	Bog Dog	109	17	22	0	9
+1355	Bogy	109	25	26	0	6
+1356	Brass Quadav	109	22	23	0	7
+1357	Carnivorous Crawler	109	22	23	0	25
+1358	Copper Quadav	109	22	23	0	6
+1359	Fox Fire	109	24	25	0	3
+1360	Gadfly	109	20	21	0	52
+1361	Ghoul war	109	18	24	0	6
+1362	Goblin Ambusher	109	16	17	0	5
+1363	Goblin Butcher	109	16	17	0	5
+1364	Goblin Digger	109	18	19	0	1
+1365	Goblin Gambler	109	21	22	0	5
+1366	Goblin Leecher	109	21	22	0	5
+1367	Goblin Mugger	109	21	22	0	5
+1368	Goblin Tinkerer	109	16	17	0	5
+1369	Goobbue	109	24	25	0	10
+1370	Greater Quadav	109	17	18	0	6
+1371	Jolly Green	109	27	28	1	1
+1372	Land Pugil	109	19	20	0	13
+1373	Malboro	109	27	28	0	8
+1374	Marsh Funguar	109	24	25	0	27
+1375	Night Bats	109	15	16	0	66
+1376	Old Quadav	109	22	23	0	6
+1377	Onyx Quadav	109	17	18	0	7
+1378	Snipper	109	19	23	0	18
+1379	Stag Crab	109	14	15	0	1
+1380	Swamp Leech	109	13	15	0	1
+1381	Swamp Pugil	109	19	20	0	1
+1382	Thread Leech	109	21	22	0	17
+1383	Thread Leech	109	21	22	0	1
+1384	Thunder Elemental	109	27	29	0	6
+1385	Veteran Quadav	109	17	18	0	6
+1386	Water Elemental	109	27	29	0	5
+1387	Water Wasp	109	17	18	0	28
+1388	Zombie blm	109	18	24	0	6
+1389	Berry Grub	110	27	28	0	91
+1390	Big Jaw	110	22	23	0	1
+1391	Big Leech	110	34	36	0	1
+1392	Black Triple Stars	110	26	27	1	2
+1393	Brass Quadav	110	27	28	0	4
+1394	Bronze Quadav	110	32	33	0	4
+1395	Clipper	110	24	25	0	13
+1396	Copper Quadav	110	27	28	0	4
+1397	Death Wasp	110	25	26	0	58
+1398	Drooling Daisy	110	39	40	1	1
+1399	Evil Spirit	110	35	36	0	5
+1400	Fire Elemental	110	38	40	0	3
+1401	Garnet Quadav	110	32	33	0	4
+1402	Goblin Digger	110	28	29	0	1
+1403	Goblin Furrier	110	31	32	0	6
+1404	Goblin Gambler	110	26	27	0	6
+1405	Goblin Leecher	110	26	27	0	6
+1406	Goblin Mugger	110	26	27	0	6
+1407	Goblin Pathfinder	110	31	32	0	6
+1408	Goblin Shaman	110	31	32	0	6
+1409	Goblin Smithy	110	31	32	0	6
+1410	Goobbue Farmer	110	31	32	0	12
+1411	Greater Pugil	110	29	30	0	1
+1412	Horrid Fluke	110	29	30	0	1
+1413	Ignis Fatuus	110	34	36	0	3
+1414	Midnight Wings	110	22	23	0	75
+1415	Moon Bat	110	25	26	0	40
+1416	Ochu	110	36	37	0	30
+1417	Old Quadav	110	27	28	0	4
+1418	Poison Leech	110	25	26	0	15
+1419	Silk Caterpillar	110	28	30	1	1
+1420	Silver Quadav	110	32	33	0	4
+1421	Simurgh	110	58	58	1	1
+1422	Snipper	110	22	23	0	1
+1423	Water Elemental	110	38	40	0	3
+1424	Wight blm	110	28	34	0	9
+1425	Wight war	110	28	34	0	9
+1426	Zircon Quadav	110	32	33	0	4
+1427	Apsaras	111	41	42	0	1
+1428	Bat Eye	111	40	42	0	29
+1429	Cold Gigas	111	40	43	0	10
+1430	Dark Elemental	111	44	46	0	4
+1431	Gargantua	111	47	48	1	1
+1432	Ghast blm	111	37	40	0	4
+1433	Ghast war	111	35	38	0	5
+1434	Goblin Furrier	111	35	38	0	4
+1435	Goblin Pathfinder	111	35	38	0	4
+1436	Goblin Poacher	111	40	43	0	9
+1437	Goblin Reaper	111	40	43	0	9
+1438	Goblin Robber	111	40	43	0	9
+1439	Goblin Shaman	111	35	38	0	4
+1440	Goblin Smithy	111	35	38	0	4
+1441	Goblin Trader	111	40	43	0	9
+1442	Greater Pugil	111	32	34	0	1
+1443	Ice Elemental	111	44	46	0	6
+1444	Kirata	111	41	41	1	1
+1445	Kraken	111	38	40	0	1
+1446	Living Statue	111	37	39	0	18
+1447	Lugat	111	39	42	0	5
+1448	Morgawr	111	44	45	0	1
+1449	Nue	111	41	42	1	1
+1450	Rime Gigas	111	40	43	0	10
+1451	Sleet Gigas	111	40	43	0	10
+1452	Snow Gigas	111	40	43	0	10
+1453	Stone Golem	111	40	42	0	5
+1454	Tundra Tiger	111	34	37	0	50
+1455	Vepar	111	32	34	0	1
+1456	Blizzard Gigas	112	45	48	0	8
+1457	Dark Elemental	112	48	50	0	5
+1458	Ereshkigal	112	48	50	1	1
+1459	Etemmu	112	43	46	0	17
+1460	Evil Eye	112	45	48	0	33
+1461	Frost Gigas	112	45	48	0	8
+1462	Graupel Gigas	112	45	48	0	8
+1463	Hail Gigas	112	45	48	0	8
+1464	Ice Elemental	112	48	50	0	10
+1465	Lost Soul blm	112	42	45	0	27
+1466	Lost Soul war	112	42	45	0	27
+1467	Shadow Eye	112	48	49	1	1
+1468	Air Elemental	113	52	69	0	4
+1469	Beach Bunny	113	62	65	0	32
+1470	Doom Mage	113	67	71	0	6
+1471	Doom Soldier	113	66	70	0	14
+1472	Enna-enna	113	65	69	0	4
+1473	Fantasma	113	65	68	0	4
+1474	Fire Elemental	113	67	69	0	4
+1475	Frostmane	113	80	80	1	1
+1476	Goblin Alchemist	113	65	68	0	11
+1477	Goblin Bandit	113	65	68	0	10
+1478	Goblin Mercenary	113	65	68	0	16
+1479	Goblin Shepherd	113	65	68	0	11
+1480	Greater Manticore	113	76	79	0	29
+1481	Kreutzet	113	79	80	1	1
+1482	Razorjaw Pugil	113	59	60	0	1
+1483	Robber Crab	113	64	67	0	31
+1484	Rock Crab	113	59	60	0	1
+1485	Sand Cockatrice	113	71	74	0	53
+1486	Sand Lizard CT	113	62	66	0	36
+1487	Stygian Pugil	113	63	67	0	3
+1488	Terror Pugil	113	66	70	0	8
+1489	Velociraptor	113	66	69	0	54
+1490	Antican Auxiliarius	114	35	39	0	8
+1491	Antican Centurio	114	50	52	0	3
+1492	Antican Decurio	114	44	49	0	18
+1493	Antican Decurio	114	44	49	0	1
+1494	Antican Faber	114	35	38	0	5
+1495	Antican Funditor	114	35	39	0	7
+1496	Antican Sagittarius	114	44	49	0	6
+1497	Antican Speculator	114	44	49	0	6
+1498	Antican Speculator	114	44	49	0	1
+1499	Antican Veles	114	50	52	0	3
+1500	Bigclaw	114	48	51	0	1
+1501	Cactrot Rapido	114	80	81	1	1
+1502	Cutter	114	30	33	0	1
+1503	Desert Dhalmel	114	39	44	0	35
+1504	Diatryma	114	47	50	0	7
+1505	Doom Scorpion	114	44	47	0	5
+1506	Dune Widow	114	45	47	1	1
+1507	Earth Elemental	114	47	49	0	7
+1508	Fire Elemental	114	47	49	0	6
+1509	Flesh Eater EAD	114	37	42	0	28
+1510	Giant Spider	114	30	34	0	51
+1511	Goblin Digger	114	45	49	0	1
+1512	Goblin Poacher	114	45	49	0	9
+1513	Goblin Reaper	114	45	49	0	6
+1514	Goblin Robber	114	45	49	0	10
+1515	Goblin Trader	114	45	49	0	6
+1516	Greater Pugil	114	30	33	0	1
+1517	Ironshell	114	36	39	0	1
+1518	Lesser Manticore	114	47	49	0	10
+1519	Lost Soul blm	114	44	48	0	12
+1520	Lost Soul war	114	44	48	0	14
+1521	Makara	114	29	30	0	1
+1522	Sabotender	114	42	46	0	16
+1523	Sand Beetle	114	36	40	0	65
+1524	Balloon	115	8	10	0	5
+1525	Bumblebee	115	1	1	0	10
+1526	Carrion Crow	115	3	6	0	38
+1527	Crawler	115	4	7	0	35
+1528	Crawler	115	7	8	0	6
+1529	Giant Bee	115	7	8	0	29
+1530	Goblin Digger	115	5	6	0	1
+1531	Goblin Fisher	115	3	4	0	3
+1532	Goblin Thug	115	3	5	0	12
+1533	Goblin Weaver	115	3	5	0	6
+1534	Land Crab	115	5	6	0	1
+1535	Mad Fox	115	4	6	0	5
+1536	Magicked Bones blm	115	5	8	0	7
+1537	Magicked Bones club	115	4	8	0	8
+1538	Mandragora	115	4	5	0	32
+1539	Mugger Crab	115	7	8	0	1
+1540	Palm Crab	115	2	4	0	1
+1541	Passage Crab	115	9	10	0	1
+1542	River Crab	115	2	3	0	11
+1543	Savanna Crab	115	2	4	0	1
+1544	Savanna Rarab	115	2	5	0	66
+1545	Tiny Mandragora	115	1	1	0	17
+1546	Tom Tit Tat	115	9	10	1	2
+1547	Yagudo Acolyte	115	4	6	0	13
+1548	Yagudo Initiate	115	4	6	0	16
+1549	Yagudo Scribe	115	4	6	0	12
+1550	Balloon	116	8	10	0	6
+1551	Bumblebee	116	1	1	0	8
+1552	Carrion Crow	116	3	5	0	41
+1553	Crawler	116	4	6	0	45
+1554	Fighting Pugil	116	9	10	0	1
+1555	Giant Bee	116	7	8	0	31
+1556	Goblin Digger	116	6	7	0	1
+1557	Goblin Fisher	116	4	6	0	11
+1558	Goblin Thug	116	3	6	0	12
+1559	Goblin Weaver	116	3	6	0	13
+1560	Mad Fox	116	3	8	0	10
+1561	Magicked Bones blm	116	3	8	0	9
+1562	Magicked Bones club	116	3	8	0	10
+1563	Mandragora	116	4	6	0	51
+1564	Mud Pugil	116	5	6	0	1
+1565	Palm Crab	116	2	4	0	1
+1566	Pug Pugil	116	5	8	0	33
+1567	Pug Pugil	116	5	6	0	1
+1568	River Crab	116	3	6	0	33
+1569	Savanna Crab	116	2	4	0	1
+1570	Savanna Rarab	116	2	6	0	78
+1571	Spiny Spipi	116	9	10	1	1
+1572	Tiny Mandragora	116	1	1	0	9
+1573	Yagudo Acolyte	116	3	6	0	14
+1574	Yagudo Initiate	116	3	6	0	19
+1575	Yagudo Scribe	116	3	6	0	14
+1576	Air Elemental	117	18	19	0	4
+1577	Akbaba TC	117	11	13	0	21
+1578	Barghest	117	8	11	0	10
+1579	Canyon Crawler	117	12	13	0	19
+1580	Canyon Rarab	117	7	11	0	72
+1581	Earth Elemental	117	18	20	0	4
+1582	Ghost	117	15	16	0	10
+1583	Goblin Ambusher	117	12	14	0	7
+1584	Goblin Archaeologist	117	30	75	1	1
+1585	Goblin Butcher	117	12	14	0	6
+1586	Goblin Digger	117	12	13	0	1
+1587	Goblin Thug	117	8	9	0	3
+1588	Goblin Tinkerer	117	12	14	0	6
+1589	Goblin Weaver	117	8	9	0	3
+1590	Grenade	117	15	17	0	5
+1591	Killer Bee	117	10	12	0	60
+1592	Pygmaioi	117	8	11	0	61
+1593	Serpopard Ishtar	117	19	20	1	2
+1594	Skeleton Sorcerer	117	11	13	0	12
+1595	Skeleton Warrior	117	10	12	0	15
+1596	Strolling Sapling	117	7	11	0	64
+1597	Wild Dhalmel	117	14	16	0	31
+1598	Yagudo Acolyte	117	8	9	0	3
+1599	Yagudo Initiate	117	8	9	0	3
+1600	Yagudo Mendicant	117	13	15	0	5
+1601	Yagudo Persecutor	117	13	15	0	5
+1602	Yagudo Piper	117	13	15	0	5
+1603	Yagudo Scribe	117	8	9	0	3
+1604	Yara Ma Yha Who	117	14	14	1	1
+1605	Air Elemental	118	28	30	0	9
+1606	Bogy	118	23	25	0	12
+1607	Buburimboo	118	30	31	1	1
+1608	Bull Dhalmel	118	21	24	0	47
+1609	Carnivorous Crawler	118	20	23	0	38
+1610	Clipper	118	25	25	0	1
+1611	Ghoul blm	118	20	24	0	21
+1612	Goblin Ambusher	118	17	20	0	13
+1613	Goblin Bounty Hunter	118	17	20	0	17
+1614	Goblin Butcher	118	17	20	0	14
+1615	Goblin Digger	118	20	21	0	1
+1616	Goblin Gambler	118	22	25	0	14
+1617	Goblin Leecher	118	22	25	0	14
+1618	Goblin Mugger	118	22	25	0	14
+1619	Goblin Tinkerer	118	17	20	0	14
+1620	Helldiver	118	29	30	1	1
+1621	Mighty Rarab	118	15	18	0	38
+1622	Poison Leech	118	21	24	0	15
+1623	Puffer Pugil	118	15	18	0	2
+1624	Shoal Pugil	118	24	27	0	11
+1625	Shoal Pugil	118	26	26	0	1
+1626	Snipper	118	19	22	0	18
+1627	Snipper	118	22	22	0	1
+1628	Stag Crab	118	18	18	0	1
+1629	Sylvestre	118	15	19	0	57
+1630	Water Elemental	118	28	30	0	3
+1631	Will-o-the-Wisp	118	23	27	0	11
+1632	Zombie war	118	18	22	0	28
+1633	Zu	118	20	24	0	62
+1634	Axe Beak	119	27	28	0	9
+1635	Black Bat	119	17	18	0	12
+1636	Boggart	119	26	27	0	18
+1637	Bogy	119	25	26	0	4
+1638	Coeurl	119	25	26	0	9
+1639	Crane Fly	119	20	21	0	57
+1640	Daggerclaw Dracos	119	27	28	1	1
+1641	Earth Elemental	119	27	29	0	5
+1642	Fire Elemental	119	27	29	0	3
+1643	Goblin Ambusher	119	16	17	0	7
+1644	Goblin Butcher	119	16	17	0	7
+1645	Goblin Digger	119	18	19	0	1
+1646	Goblin Gambler	119	16	25	0	9
+1647	Goblin Leecher	119	21	22	0	8
+1648	Goblin Mugger	119	21	22	0	8
+1649	Goblin Tinkerer	119	16	17	0	7
+1650	Hill Lizard	119	21	22	0	46
+1651	Jubjub	119	17	18	0	36
+1652	Night Bats	119	15	16	0	23
+1653	Raptor	119	24	25	0	15
+1654	Scavenging Hound	119	22	26	0	5
+1655	Stag Beetle	119	22	23	0	14
+1656	Wandering Sapling	119	15	16	0	72
+1657	Waraxe Beak	119	55	56	1	1
+1658	Will-o-the-Wisp	119	24	25	0	4
+1659	Yagudo Mendicant	119	17	18	0	5
+1660	Yagudo Persecutor	119	17	18	0	6
+1661	Yagudo Piper	119	17	18	0	5
+1662	Yagudo Priest	119	22	23	0	6
+1663	Yagudo Theologist	119	22	25	0	7
+1664	Yagudo Votary	119	22	25	0	7
+1665	Zombie blm	119	16	24	0	9
+1666	Zombie war	119	16	24	0	9
+1667	Big Jaw	120	20	23	0	1
+1668	Champaign Coeurl	120	33	34	0	5
+1669	Cutter	120	28	30	0	1
+1670	Deadly Dodo	120	39	40	1	1
+1671	Diving Beetle	120	27	28	0	17
+1672	Earth Elemental	120	38	40	0	3
+1673	Evil Spirit	120	35	36	0	19
+1674	Goblin Bounty Hunter	120	30	36	0	5
+1675	Goblin Digger	120	29	30	0	1
+1676	Goblin Furrier	120	26	32	0	8
+1677	Goblin Gambler	120	26	27	0	7
+1678	Goblin Leecher	120	26	27	0	6
+1679	Goblin Mugger	120	26	27	0	7
+1680	Goblin Pathfinder	120	26	32	0	9
+1681	Goblin Shaman	120	26	32	0	8
+1682	Goblin Smithy	120	26	32	0	9
+1683	Greater Pugil	120	28	30	0	1
+1684	Hill Lizard	120	25	26	0	39
+1685	Ignis Fatuus	120	34	36	0	3
+1686	Kraken	120	38	40	0	1
+1687	Midnight Wings	120	23	24	0	57
+1688	Moon Bat	120	24	26	0	27
+1689	Roc	120	55	55	1	1
+1690	Sabertooth Tiger	120	31	32	0	3
+1691	Sauromugue Skink	120	31	32	0	36
+1692	Snipper	120	20	23	0	1
+1693	Tabar Beak	120	36	37	0	13
+1694	Thunder Elemental	120	38	40	0	3
+1695	Wight blm	120	26	34	0	9
+1696	Wight war	120	26	34	0	9
+1697	Yagudo Drummer	120	32	33	0	5
+1698	Yagudo Herald	120	32	33	0	5
+1699	Yagudo Interrogator	120	32	33	0	6
+1700	Yagudo Oracle	120	32	33	0	6
+1701	Yagudo Priest	120	27	28	0	5
+1702	Yagudo Theologist	120	27	28	0	5
+1703	Yagudo Votary	120	27	28	0	4
+1704	Ancient Bat	121	26	28	0	38
+1705	Apsaras	121	26	31	0	1
+1706	Bigclaw	121	38	39	0	1
+1707	Clipper	121	25	28	0	1
+1708	Goblin Furrier	121	31	34	0	4
+1709	Goblin Gambler	121	25	29	0	8
+1710	Goblin Leecher	121	25	29	0	9
+1711	Goblin Mugger	121	25	29	0	12
+1712	Goblin Poacher	121	42	46	0	7
+1713	Goblin Reaper	121	42	46	0	4
+1714	Goblin Robber SoZ	121	42	46	0	11
+1715	Goblin Smithy	121	31	34	0	7
+1716	Goblin Trader	121	42	46	0	6
+1717	Goobbue Gardener	121	40	43	0	13
+1718	Goobbue Parasite	121	42	45	0	47
+1719	Greater Pugil	121	26	31	0	2
+1720	Hell Hound	121	46	50	0	20
+1721	Keeper of Halidom	121	56	58	1	1
+1722	Lesser Gaylas	121	39	42	0	50
+1723	Lost Soul blm	121	51	55	0	9
+1724	Master Coeurl	121	44	47	0	31
+1725	Myxomycete	121	41	46	0	58
+1726	Ogrefly	121	41	44	0	45
+1727	Puroboros	121	47	49	0	4
+1728	Revenant SoZ ENS FY	121	45	47	0	7
+1729	Rock Golem	121	49	50	0	17
+1730	Rot Prowler	121	49	53	0	19
+1731	Thunder Elemental	121	48	49	0	4
+1732	Water Elemental	121	48	49	0	4
+1733	Cannonball	122	66	70	0	4
+1734	Cursed Puppet	122	65	69	0	28
+1735	Darksteel Golem	122	80	82	0	8
+1736	Magic Flagon	122	64	69	0	40
+1737	Mythril Golem	122	68	70	0	3
+1738	Nightmare Vase	122	70	73	1	2
+1739	Thunder Elemental	122	67	69	0	2
+1740	Water Elemental	122	67	69	0	2
+1741	Bigclaw	123	41	46	0	2
+1742	Bloodsucker	123	47	49	0	1
+1743	Creek Sahagin	123	34	38	0	9
+1744	Creek Sahagin	123	34	38	0	1
+1745	Death Jacket jungle	123	34	37	0	53
+1746	Fire Elemental	123	48	50	0	6
+1747	Goblin Digger	123	36	38	0	1
+1748	Goblin Furrier	123	32	37	0	33
+1749	Goblin Poacher	123	42	47	0	19
+1750	Goblin Reaper	123	42	47	0	9
+1751	Goblin Robber	123	42	47	0	11
+1752	Goblin Smithy	123	32	37	0	30
+1753	Ironshell	123	35	37	0	2
+1754	Ivory Lizard	123	32	35	0	35
+1755	Jungle Coeurl	123	35	38	0	5
+1756	Lava Bomb	123	47	50	0	3
+1757	Makara	123	35	38	0	21
+1758	Mischievous Micholas	123	53	55	1	1
+1759	Overgrown Rose	123	45	48	0	8
+1760	River Sahagin	123	34	38	0	4
+1761	Rose Garden	123	50	50	1	1
+1762	Soldier Crawler	123	37	41	0	54
+1763	Stream Sahagin	123	34	38	0	4
+1764	Stream Sahagin	123	34	38	0	1
+1765	Voluptuous Vilma	123	52	53	1	1
+1766	Water Elemental	123	48	50	0	6
+1767	Young Opo-opo	123	34	36	0	90
+1768	Yuhtunga Mandragora	123	30	33	0	26
+1769	Anemone	124	51	54	0	9
+1770	Big Jaw	124	43	47	0	9
+1771	Clipper	124	30	33	0	1
+1772	Edacious Opo-opo	124	55	55	1	1
+1773	Fire Elemental	124	53	55	0	2
+1774	Goblin Bouncer	124	51	55	0	7
+1775	Goblin Digger	124	41	44	0	1
+1776	Goblin Hunter	124	51	55	0	7
+1777	Goblin Pathfinder	124	35	39	0	3
+1778	Goblin Poacher	124	45	49	0	10
+1779	Goblin Reaper	124	41	45	0	12
+1780	Goblin Robber	124	45	49	0	10
+1781	Goblin Shaman	124	35	39	0	10
+1782	Goblin Smithy	124	35	39	0	6
+1783	Goblin Trader	124	45	49	0	4
+1784	Greater Pugil	124	30	33	0	1
+1785	Makara	124	43	45	0	1
+1786	Master Coeurl	124	47	50	0	17
+1787	Puroboros	124	51	54	0	2
+1788	Tonberry Chopper	124	61	63	0	7
+1789	Tonberry Creeper	124	45	49	0	32
+1790	Tonberry Harasser	124	45	49	0	5
+1791	Tonberry Harasser	124	45	49	0	1
+1792	Tonberry Hexer	124	45	49	0	25
+1793	Tonberry Hexer	124	45	49	0	1
+1794	Tonberry Jinxer	124	61	63	0	4
+1795	Tonberry Shadower	124	61	63	0	8
+1796	Vepar	124	36	37	0	2
+1797	Water Elemental	124	53	55	0	3
+1798	White Lizard	124	36	39	0	12
+1799	Woodland Sage	124	60	61	1	1
+1800	Worker Crawler	124	43	46	0	69
+1801	Yhoator Mandragora	124	35	37	0	17
+1802	Yhoator Wasp	124	37	40	0	37
+1803	Young Opo-opo	124	40	44	0	69
+1804	Antican Eques	125	45	49	0	5
+1805	Antican Essedarius	125	41	45	0	8
+1806	Antican Hoplomachus	125	54	58	0	29
+1807	Antican Lanista	125	54	58	0	40
+1808	Antican Retiarius	125	45	49	0	12
+1809	Antican Secutor	125	54	58	0	25
+1810	Apsaras	125	40	42	0	1
+1811	Bigclaw	125	45	47	0	2
+1812	Cactuar	125	48	53	0	37
+1813	Cactuar Cantautor	125	55	59	1	1
+1814	Celphie	125	47	50	1	1
+1815	Desert Beetle	125	47	51	0	100
+1816	Desert Dhalmel	125	44	48	0	23
+1817	Desert Manticore	125	53	57	0	16
+1818	Desert Spider	125	40	44	0	30
+1819	Desert Worm	125	43	47	0	24
+1820	Earth Elemental	125	56	58	0	6
+1821	Fallen Knight	125	50	54	0	9
+1822	Fire Elemental	125	56	58	0	6
+1823	Goblin Bouncer	125	51	55	0	2
+1824	Goblin Digger	125	51	54	0	1
+1825	Goblin Enchanter	125	51	55	0	2
+1826	Goblin Hunter	125	51	55	0	2
+1827	Goblin Welldigger	125	51	55	0	2
+1828	Ironshell	125	41	42	0	1
+1829	King Vinegarroon	125	80	80	1	1
+1830	Lich	125	49	53	0	6
+1831	Phorusrhacos	125	57	60	0	9
+1832	Razorjaw Pugil	125	50	52	0	1
+1833	Tulwar Scorpion	125	53	56	0	31
+1834	Acrophies	126	33	34	0	18
+1835	Ancient Bat	126	28	29	0	6
+1836	Banshee	126	31	32	0	10
+1837	Clipper	126	28	29	0	62
+1838	Dark Bats	126	26	27	0	18
+1839	Glow Bat	126	28	29	0	12
+1840	Goblin Bounty Hunter	126	10	36	0	12
+1841	Greater Pugil	126	28	29	0	20
+1842	Greater Pugil	126	28	29	0	1
+1843	Kraken	126	37	37	0	1
+1844	Kraken	126	39	40	1	2
+1845	Land Worm	126	26	27	0	18
+1846	Light Elemental	126	35	36	0	8
+1847	Qufim Pugil	126	25	27	0	1
+1848	Sea Bishop	126	31	32	0	1
+1849	Seeker Bats	126	26	27	0	13
+1850	Thunder Elemental	126	35	36	0	4
+1851	Trickster Kinetix	126	35	36	1	1
+1852	Vepar	126	35	36	0	1
+1853	Wight blm	126	28	29	0	10
+1854	Wight war	126	28	29	0	18
+1855	Behemoth	127	70	70	1	1
+1856	Bhuta	127	47	48	0	2
+1857	Greater Gayla	127	43	44	0	6
+1858	King Behemoth	127	85	85	1	1
+1859	Lesser Gaylas	127	41	42	0	7
+1860	Light Elemental	127	48	50	0	5
+1861	Lost Soul blm	127	45	46	0	2
+1862	Lost Soul war	127	45	46	0	2
+1863	Master Coeurl	127	49	50	0	2
+1864	Thunder Elemental	127	48	50	0	5
+1865	Adamantoise	128	70	70	1	1
+1866	Air Elemental	128	66	68	0	2
+1867	Aspidochelone	128	85	85	1	1
+1868	Fire Elemental	128	66	68	0	2
+1869	Peryton	128	69	72	0	9
+1870	Valley Manticore	128	71	74	0	3
+1871	Velociraptor	128	66	69	0	16
+1872	Air Elemental	130	78	79	0	4
+1873	Byakko	130	88	90	1	1
+1874	Dark Elemental	130	78	79	0	4
+1875	Earth Elemental	130	78	79	0	4
+1876	Fire Elemental	130	78	79	0	4
+1877	Flamingo	130	72	74	0	64
+1878	Genbu	130	88	90	1	1
+1879	Groundskeeper	130	75	78	0	61
+1880	Groundskeeper	130	75	78	0	40
+1881	Ice Elemental	130	78	79	0	4
+1882	Light Elemental	130	78	79	0	4
+1883	Seiryu	130	88	90	1	1
+1884	Sprinkler	130	73	76	0	84
+1885	Suzaku	130	88	90	1	1
+1886	Thunder Elemental	130	78	79	0	4
+1887	Water Elemental	130	78	79	0	4
+1888	Adamantking Effigy	134	65	65	1	26
+1889	Ascetox Ratgums	134	82	82	1	1
+1890	Avatar Icon	134	82	82	1	25
+1891	BeZhe Keeprazer	134	82	82	1	1
+1892	Bhuu Wjato the Firepool	134	82	82	1	1
+1893	Bordox Kittyback	134	82	82	1	1
+1894	Brewnix Bittypupils	134	82	82	1	1
+1895	Caa Xaza the Madpiercer	134	82	82	1	1
+1896	Cobraclaw Buchzvotch	134	82	82	1	1
+1897	DeBho Pyrohand	134	82	82	1	1
+1898	Deathcaller Bidfbid	134	82	82	1	1
+1899	Drakefeast Wubmfub	134	82	82	1	1
+1900	Draklix Scalecrust	134	82	82	1	1
+1901	Droprix Granitepalms	134	82	82	1	1
+1902	Elvaanlopper Grokdok	134	82	82	1	1
+1903	Foo Peku the Bloodcloak	134	82	82	1	1
+1904	GaFho Venomtouch	134	82	82	1	1
+1905	Galkarider Retzpratz	134	82	82	1	1
+1906	Gibberox Pimplebeak	134	82	82	1	1
+1907	GoTyo Magenapper	134	82	82	1	1
+1908	Goblin Replica	134	65	65	1	26
+1909	GuKhu Dukesniper	134	82	82	1	1
+1910	GuNha Wallstormer	134	82	82	1	1
+1911	Guu Waji the Preacher	134	82	82	1	1
+1912	Heavymail Djidzbad	134	82	82	1	1
+1913	Hee Mida the Meticulous	134	82	82	1	1
+1914	Humegutter Adzjbadj	134	82	82	1	1
+1915	Jeunoraider Gepkzip	134	82	82	1	1
+1916	JiFhu Infiltrator	134	82	82	1	1
+1917	JiKhu Towercleaver	134	82	82	1	1
+1918	Knii Hoqo the Bisector	134	82	82	1	1
+1919	Koo Saxu the Everfast	134	82	82	1	1
+1920	Kuu Xuka the Nimble	134	82	82	1	1
+1921	Lockbuster Zapdjipp	134	82	82	1	1
+1922	Maa Zaua the Wyrmkeeper	134	82	82	1	1
+1923	MiRhe Whisperblade	134	82	82	1	1
+1924	Mithraslaver Debhabob	134	82	82	1	1
+1925	Moltenox Stubthumbs	134	82	82	1	1
+1926	Morblox Chubbychin	134	82	82	1	1
+1927	MuGha Legionkiller	134	82	82	1	1
+1928	NaHya Floodmaker	134	82	82	1	1
+1929	Nee Huxa the Judgmental	134	82	82	1	1
+1930	NuBhi Spiraleye	134	82	82	1	1
+1931	Puu Timu the Phantasmal	134	82	82	1	1
+1932	Routsix Rubbertendon	134	82	82	1	1
+1933	Ruffbix Jumbolobes	134	82	82	1	1
+1934	Ryy Qihi the Idolrobber	134	82	82	1	1
+1935	Serjeant Tombstone	134	65	65	1	25
+1936	Shisox Widebrow	134	82	82	1	1
+1937	Skinmask Ugghfogg	134	82	82	1	1
+1938	Slinkix Trufflesniff	134	82	82	1	1
+1939	SoGho Adderhandler	134	82	82	1	1
+1940	SoZho Metalbender	134	82	82	1	1
+1941	Soo Jopo the Fiendking	134	82	82	1	1
+1942	Spinalsucker Galflmall	134	82	82	1	1
+1943	Swypestix Tigershins	134	82	82	1	1
+1944	TaHyu Gallanthunter	134	82	82	1	1
+1945	Taruroaster Biggsjig	134	82	82	1	1
+1946	Tocktix Thinlids	134	82	82	1	1
+1947	Ultrasonic Zeknajak	134	82	82	1	1
+1948	Vanguard Alchemist	134	75	77	1	3
+1949	Vanguard Ambusher	134	75	77	1	2
+1950	Vanguard Amputator	134	75	77	1	2
+1951	Vanguard Armorer	134	75	77	1	3
+1952	Vanguard Assassin	134	75	77	1	3
+1953	Vanguard Backstabber	134	75	77	1	3
+1954	Vanguard Beasttender	134	75	77	1	3
+1955	Vanguard Bugler	134	75	77	1	2
+1956	Vanguard Chanter	134	75	77	1	2
+1957	Vanguard Constable	134	75	77	1	2
+1958	Vanguard Defender	134	75	77	1	2
+1959	Vanguard Dollmaster	134	75	77	1	2
+1960	Vanguard Dragontamer	134	75	77	1	3
+1961	Vanguard Drakekeeper	134	75	77	1	2
+1962	Vanguard Enchanter	134	75	77	1	2
+1963	Vanguard Exemplar	134	75	77	1	3
+1964	Vanguard Footsoldier	134	75	77	1	2
+1965	Vanguard Grappler	134	75	77	1	3
+1966	Vanguard Gutslasher	134	75	77	1	2
+1967	Vanguard Hatamoto	134	75	77	1	2
+1968	Vanguard Hawker	134	75	77	1	2
+1969	Vanguard Hitman	134	75	77	1	2
+1970	Vanguard Impaler	134	75	77	1	2
+1971	Vanguard Inciter	134	75	77	1	2
+1972	Vanguard Kusa	134	75	77	1	2
+1973	Vanguard Liberator	134	75	77	1	3
+1974	Vanguard Maestro	134	75	77	1	2
+1975	Vanguard Mason	134	75	77	1	3
+1976	Vanguard Mesmerizer	134	75	77	1	3
+1977	Vanguard Militant	134	75	77	1	2
+1978	Vanguard Minstrel	134	75	77	1	2
+1979	Vanguard Neckchopper	134	75	77	1	2
+1980	Vanguard Necromancer	134	75	77	1	2
+1981	Vanguard Ogresoother	134	75	77	1	2
+1982	Vanguard Oracle	134	75	77	1	2
+1983	Vanguard Partisan	134	75	77	1	1
+1984	Vanguard Pathfinder	134	75	77	1	2
+1985	Vanguard Persecutor	134	75	77	1	3
+1986	Vanguard Pillager	134	75	77	1	2
+1987	Vanguard Pitfighter	134	75	77	1	3
+1988	Vanguard Predator	134	75	77	1	3
+1989	Vanguard Prelate	134	75	77	1	2
+1990	Vanguard Priest	134	75	77	1	2
+1991	Vanguard Protector	134	75	77	1	2
+1992	Vanguard Purloiner	134	75	77	1	2
+1993	Vanguard Ronin	134	75	77	1	3
+1994	Vanguard Salvager	134	75	77	1	2
+1995	Vanguard Sentinel	134	75	77	1	2
+1996	Vanguard Shaman	134	75	77	1	2
+1997	Vanguard Skirmisher	134	75	77	1	3
+1998	Vanguard Smithy	134	75	77	1	2
+1999	Vanguard Thaumaturge	134	75	77	1	2
+2000	Vanguard Tinkerer	134	75	77	1	3
+2001	Vanguard Trooper	134	75	77	1	2
+2002	Vanguard Undertaker	134	75	77	1	3
+2003	Vanguard Vexer	134	75	77	1	2
+2004	Vanguard Vigilante	134	75	77	1	2
+2005	Vanguard Vindicator	134	75	77	1	4
+2006	Vanguard Visionary	134	75	77	1	4
+2007	Vanguard Welldigger	134	75	77	1	3
+2008	Whistrix Toadthroat	134	82	82	1	1
+2009	Wraithdancer Gidbnod	134	82	82	1	1
+2010	Xaa Chau the Roctalon	134	82	82	1	1
+2011	Xhoo Fuza the Sublime	134	82	82	1	1
+2012	Bloody Vrukwuk	140	14	14	0	1
+2013	Cheiroptera GO	140	3	6	0	21
+2014	Fodderchief Vokdek	140	8	8	1	1
+2015	Fogweaver Mozzfuzz	140	14	14	0	1
+2016	Ghelsba Pugil	140	3	6	0	15
+2017	Giant Pugil	140	11	13	0	1
+2018	Orcish Fodder	140	3	9	0	37
+2019	Orcish Grappler	140	3	9	0	38
+2020	Orcish Grunt	140	11	15	0	22
+2021	Orcish Mesmerizer	140	3	9	0	34
+2022	Orcish Neckchopper	140	11	15	0	19
+2023	Orcish Stonechucker	140	11	15	0	19
+2024	Puffer Pugil	140	15	17	0	1
+2025	Pug Pugil	140	7	9	0	1
+2026	Pugil	140	3	5	0	2
+2027	Spectacled Bats	140	1	5	0	11
+2028	Thousandarm Deshglesh	140	11	13	1	1
+2029	Toadstool	140	4	6	0	13
+2030	Warchief Vatgit	140	16	16	1	1
+2031	Watch Lizard	140	3	5	0	18
+2032	Cheiroptera FG	141	8	10	0	20
+2033	Giant Pugil	141	10	12	0	1
+2034	Hundredscar Hajwaj	141	12	13	1	1
+2035	Land Pugil	141	18	20	0	1
+2036	Orcish Cursemaker	141	21	21	0	4
+2037	Orcish Fighter	141	21	21	0	2
+2038	Orcish Fighter	141	21	21	0	1
+2039	Orcish Fodder	141	8	10	0	19
+2040	Orcish Grappler	141	8	10	0	20
+2041	Orcish Grunt	141	11	17	0	33
+2042	Orcish Mesmerizer	141	8	10	0	20
+2043	Orcish Neckchopper	141	11	17	0	33
+2044	Orcish Serjeant	141	21	21	0	1
+2045	Orcish Stonechucker	141	11	17	0	38
+2046	Puffer Pugil	141	14	16	0	1
+2047	Pug Pugil	141	6	8	0	2
+2048	Sentry Lizard	141	11	14	0	8
+2049	Spectacled Bats	141	6	8	0	15
+2050	Ashmaker Gotblut	142	17	18	1	1
+2051	Grotto Bats	142	8	11	0	27
+2052	Orcish Cursemaker	142	21	23	0	18
+2053	Orcish Fighter	142	21	23	0	20
+2054	Orcish Grunt	142	14	18	0	32
+2055	Orcish Neckchopper	142	14	18	0	29
+2056	Orcish Serjeant	142	21	23	0	2
+2057	Orcish Stonechucker	142	14	18	0	30
+2058	Riding Lizard	142	12	15	0	9
+2059	Stealth Bat	142	15	18	0	19
+2060	Amber Quadav	143	3	10	0	38
+2061	Amethyst Quadav	143	3	10	0	38
+2062	Brass Quadav	143	21	23	0	9
+2063	Cave Funguar	143	9	11	0	11
+2064	Copper Beetle	143	9	12	0	15
+2065	Copper Quadav	143	21	23	0	13
+2066	Coral Crab	143	9	10	0	1
+2067	Greater Quadav	143	11	18	0	39
+2068	Mine Crab	143	3	4	0	2
+2069	Mine Scorpion	143	14	16	0	3
+2070	Old Quadav	143	21	23	0	15
+2071	Onyx Quadav	143	11	18	0	39
+2072	Pit Hare	143	2	6	0	42
+2073	Rabid Rat	143	11	13	0	12
+2074	Scimitar Scorpion	143	19	21	0	2
+2075	Stag Crab	143	13	15	0	1
+2076	Veteran Quadav	143	11	18	0	39
+2077	Young Quadav	143	3	10	0	48
+2078	Digger Wasp	145	11	13	0	37
+2079	Dirt Eater	145	3	5	0	19
+2080	Earth Eater	145	10	12	0	14
+2081	Giant Pugil	145	8	11	0	3
+2082	Giddeus Bee	145	2	5	0	19
+2083	Giddeus Pugil	145	2	5	0	9
+2084	Hoo Mjuu the Torrent	145	16	17	1	1
+2085	Juu Duzu the Whirlwind	145	13	13	1	1
+2086	Land Pugil	145	19	19	0	1
+2087	Puffer Pugil	145	14	14	0	1
+2088	Pug Pugil	145	10	10	0	1
+2089	Pugil	145	3	5	0	2
+2090	Yagudo Acolyte	145	3	10	0	34
+2091	Yagudo Initiate	145	3	10	0	36
+2092	Yagudo Mendicant	145	11	18	0	47
+2093	Yagudo Persecutor	145	11	18	0	48
+2094	Yagudo Piper	145	11	18	0	50
+2095	Yagudo Priest	145	21	23	0	11
+2096	Yagudo Scribe	145	3	10	0	34
+2097	Yagudo Theologist	145	21	23	0	11
+2098	Yagudo Votary	145	21	23	0	12
+2099	Ancient Quadav	147	62	66	0	10
+2100	BiGho Headtaker	147	25	25	1	1
+2101	Big Jaw	147	37	39	0	3
+2102	Big Jaw	147	37	39	0	13
+2103	Brass Quadav	147	22	28	0	24
+2104	Bronze Quadav	147	32	36	0	30
+2105	Broo	147	39	41	0	17
+2106	Caterpillar	147	22	25	0	16
+2107	Charging Sheep	147	28	30	0	14
+2108	Copper Quadav	147	22	27	0	31
+2109	Darksteel Quadav	147	63	67	0	7
+2110	Elder Quadav	147	42	46	0	15
+2111	Emerald Quadav	147	45	49	0	15
+2112	GaBhu Unvanquished	147	47	48	1	1
+2113	Garnet Quadav	147	35	39	0	30
+2114	Gloop	147	38	40	0	4
+2115	Gold Quadav	147	54	58	0	10
+2116	Iron Quadav	147	43	47	0	15
+2117	Land Pugil	147	20	23	0	20
+2118	Larva	147	35	38	0	9
+2119	Mythril Quadav	147	53	57	0	10
+2120	Old Quadav	147	22	26	0	26
+2121	Ooze	147	28	30	0	4
+2122	Platinum Quadav	147	64	68	0	11
+2123	Sapphire Quadav	147	65	69	0	8
+2124	Silver Quadav	147	33	37	0	30
+2125	Spinel Quadav	147	44	48	0	15
+2126	Steel Quadav	147	52	56	0	11
+2127	Thunder Elemental	147	47	49	0	4
+2128	Topaz Quadav	147	55	59	0	11
+2129	Water Elemental	147	47	49	0	4
+2130	Zircon Quadav	147	34	38	0	30
+2131	ZoKhu Blackcloud	147	36	38	1	1
+2132	Adaman Quadav	148	72	74	1	1
+2133	Ancient Quadav	148	69	72	0	3
+2134	Darksteel Quadav	148	69	72	0	4
+2135	Diamond Quadav	148	75	75	1	2
+2136	Platinum Quadav	148	69	72	0	3
+2137	Ruby Quadav	148	72	74	1	2
+2138	Sapphire Quadav	148	69	72	0	4
+2139	ZaDha Adamantking	148	85	85	1	1
+2140	Blubbery Bulge	149	45	47	1	1
+2141	Davoi Hornet	149	20	23	0	17
+2142	Davoi Mush	149	33	35	0	3
+2143	Davoi Pugil	149	26	29	0	27
+2144	Davoi Wasp	149	30	33	0	15
+2145	Dirtyhanded Gochakzuk	149	71	71	1	1
+2146	Ferocious Pugil	149	22	24	0	2
+2147	Gavotvut	149	45	45	1	1
+2148	Geezard	149	34	37	0	17
+2149	Gloop	149	38	40	0	1
+2150	Greater Pugil	149	30	32	0	1
+2151	Hawkeyed Dnatbat	149	26	28	1	1
+2152	Morbol	149	37	39	0	3
+2153	Oil Spill	149	45	47	0	1
+2154	One-eyed Gwajboj	149	62	62	1	1
+2155	Orcish Beastrider	149	33	37	0	19
+2156	Orcish Bowshooter	149	42	46	0	26
+2157	Orcish Brawler	149	35	39	0	18
+2158	Orcish Champion	149	64	68	0	7
+2159	Orcish Cursemaker	149	22	27	0	10
+2160	Orcish Dragoon	149	65	69	0	7
+2161	Orcish Dreadnought	149	63	67	0	9
+2162	Orcish Farkiller	149	62	66	0	9
+2163	Orcish Fighter	149	22	26	0	10
+2164	Orcish Footsoldier	149	44	47	0	26
+2165	Orcish Gladiator	149	44	48	0	26
+2166	Orcish Impaler	149	32	36	0	19
+2167	Orcish Nightraider	149	34	38	0	19
+2168	Orcish Predator	149	54	57	0	9
+2169	Orcish Serjeant	149	22	28	0	9
+2170	Orcish Trooper	149	46	49	0	26
+2171	Orcish Veteran	149	52	56	0	9
+2172	Orcish Warchief	149	55	59	0	12
+2173	Orcish Zerker	149	54	58	0	9
+2174	Poisonhand Gnadgad	149	39	40	1	1
+2175	Purpleflash Brukdok	149	45	45	1	1
+2176	Steelbiter Gudrud	149	33	34	1	1
+2177	Three-eyed Prozpuz	149	60	60	1	1
+2178	Thunder Elemental	149	47	49	0	9
+2179	Tigerbane Bakdak	149	31	32	1	1
+2180	War Lizard	149	29	32	0	24
+2181	Water Elemental	149	47	49	0	9
+2182	Wolf Bat	149	25	28	0	22
+2183	Wood Bats	149	20	23	0	5
+2184	Orcish Bowshooter	150	42	46	0	8
+2185	Orcish Champion	150	64	72	0	16
+2186	Orcish Dragoon	150	65	72	0	15
+2187	Orcish Dreadnought	150	63	72	0	18
+2188	Orcish Farkiller	150	62	72	0	17
+2189	Orcish Footsoldier	150	43	47	0	8
+2190	Orcish Gladiator	150	44	48	0	8
+2191	Orcish Overlord	150	75	75	1	2
+2192	Orcish Predator	150	53	57	0	20
+2193	Orcish Protector	150	70	72	0	4
+2194	Orcish Trooper	150	45	49	0	8
+2195	Orcish Veteran	150	52	56	0	20
+2196	Orcish Warchief	150	55	59	0	20
+2197	Orcish Warlord	150	72	74	1	2
+2198	Orcish Zerker	150	54	58	0	20
+2199	Overlord Bakgodek	150	85	85	1	1
+2200	Bastion Bats	151	18	21	0	16
+2201	Bulwark Bat	151	29	31	0	22
+2202	Cutter	151	30	32	0	11
+2203	Earth Elemental	151	47	49	0	8
+2204	Fire Elemental	151	47	49	0	8
+2205	Huu Xalmo the Savage	151	63	63	1	1
+2206	Meat Maggot	151	29	31	0	16
+2207	Mee Deggi the Punisher	151	35	36	1	1
+2208	Ooze	151	38	40	0	2
+2209	Tzee Xicu the Manifest	151	85	85	1	1
+2210	Yaa Haqa the Profane	151	43	43	1	1
+2211	Yagudo Abbot	151	55	59	0	8
+2212	Yagudo Assassin	151	64	72	0	9
+2213	Yagudo Avatar	151	75	75	1	1
+2214	Yagudo Chanter	151	53	57	0	8
+2215	Yagudo Conquistador	151	43	47	0	13
+2216	Yagudo Drummer	151	33	37	0	28
+2217	Yagudo Flagellant	151	62	72	0	9
+2218	Yagudo Herald	151	32	36	0	29
+2219	Yagudo High Priest	151	72	74	1	2
+2220	Yagudo Inquisitor	151	54	58	0	8
+2221	Yagudo Interrogator	151	35	39	0	29
+2222	Yagudo Lutenist	151	44	48	0	14
+2223	Yagudo Oracle	151	34	38	0	30
+2224	Yagudo Parasite	151	45	48	0	4
+2225	Yagudo Prelate	151	65	72	0	9
+2226	Yagudo Priest	151	22	28	0	19
+2227	Yagudo Prior	151	45	49	0	15
+2228	Yagudo Sentinel	151	52	56	0	8
+2229	Yagudo Templar	151	72	74	1	1
+2230	Yagudo Theologist	151	22	27	0	19
+2231	Yagudo Votary	151	22	26	0	17
+2232	Yagudo Zealot	151	42	46	0	14
+2233	Ancient Goobbue	153	80	80	1	1
+2234	Aquarius	153	69	71	1	1
+2235	Bark Spider	153	60	63	0	30
+2236	Bark Tarantula	153	75	78	0	21
+2237	Bouncing Ball	153	65	67	0	1
+2238	Boyahda Sapling	153	74	77	0	18
+2239	Darter	153	75	78	0	21
+2240	Death Cap	153	60	63	0	27
+2241	Demonic Pugil	153	70	72	0	2
+2242	Demonic Rose	153	75	78	0	4
+2243	Elder Goobbue	153	74	77	0	30
+2244	Ellyllon	153	65	66	1	1
+2245	Knight Crawler BT	153	62	67	0	7
+2246	Korrigan	153	72	75	0	29
+2247	Leshonki	153	79	81	1	1
+2248	Morbol Menace	153	67	70	0	2
+2249	Moss Eater	153	62	66	0	44
+2250	Mourioche	153	62	68	0	57
+2251	Old Goobbue	153	65	68	0	8
+2252	Processionaire	153	72	75	0	29
+2253	Robber Crab	153	62	66	0	18
+2254	Scavenger Crab	153	60	62	0	1
+2255	Skimmer	153	72	74	0	16
+2256	Steelshell	153	73	76	0	6
+2257	Steelshell	153	73	76	0	12
+2258	Stygian Pugil	153	60	62	0	1
+2259	Thunder Elemental	153	69	72	0	10
+2260	Unut	153	69	71	1	1
+2261	Voluptuous Vivian	153	80	81	1	1
+2262	Water Elemental	153	69	72	0	18
+2263	Bark Tarantula	154	77	80	0	12
+2264	Darter	154	76	79	0	11
+2265	Demonic Pugil	154	70	75	0	5
+2266	Demonic Rose	154	77	79	0	1
+2267	Fafnir	154	90	90	1	1
+2268	Nidhogg	154	90	90	1	1
+2269	Banshee	157	32	33	0	3
+2270	Big Bat	157	29	31	0	18
+2271	Eurytos	157	32	32	1	1
+2272	Evil Spirit MDT	157	34	35	0	4
+2273	Goblin Furrier	157	30	34	0	29
+2274	Goblin Pathfinder	157	30	34	0	29
+2275	Goblin Shaman	157	30	34	0	29
+2276	Goblin Smithy	157	30	34	0	29
+2277	Jagd Doll	157	33	34	0	3
+2278	Light Elemental	157	35	36	0	6
+2279	Magic Jar	157	31	32	0	3
+2280	Magic Pot	157	28	29	0	5
+2281	Mold Bats	157	25	27	0	6
+2282	Ogygos	157	35	35	1	1
+2283	Ophion	157	34	34	1	1
+2284	Panzer Doll	157	31	32	0	4
+2285	Polybotes	157	34	34	1	1
+2286	Rhoikos	157	34	34	1	1
+2287	Rhoitos	157	34	34	1	1
+2288	Stirge	157	27	29	0	7
+2289	Thunder Elemental	157	35	36	0	6
+2290	Tower Bats	157	27	29	0	13
+2291	Alkyoneus	158	75	75	1	1
+2292	Demonic Doll	158	68	70	0	5
+2293	Dire Bat UDT TC SSG	158	64	66	0	5
+2294	Enkelados	158	40	40	1	2
+2295	Incubus Bats UDT	158	62	64	0	8
+2296	Ixtab	158	71	71	1	2
+2297	Jotunn Gatekeeper	158	65	69	0	8
+2298	Jotunn Hallkeeper	158	65	69	0	8
+2299	Jotunn Wallkeeper	158	65	69	0	8
+2300	Jotunn Wildkeeper	158	65	69	0	8
+2301	Light Elemental	158	35	36	0	5
+2302	Magic Pot UDT	158	68	70	0	5
+2303	Magic Urn	158	34	35	0	3
+2304	Pallas	158	72	72	1	1
+2305	Phasma UDT	158	67	69	0	6
+2306	Thunder Elemental	158	35	36	0	5
+2307	Beryl-footed Molberry	159	61	63	1	1
+2308	Bloodsucker	159	55	62	0	2
+2309	Bouncing Ball	159	65	67	0	1
+2310	Branding Iron	159	55	58	0	2
+2311	Crimson-toothed Pawberry	159	70	71	1	1
+2312	Death from Above	159	57	59	1	1
+2313	Fire Elemental	159	65	68	0	5
+2314	Flauros	159	59	61	1	1
+2315	Habetrot	159	57	59	1	1
+2316	Hover Tank	159	64	68	0	15
+2317	Iron Maiden	159	64	68	0	14
+2318	Manipulator	159	59	61	1	1
+2319	Rumble Crawler	159	53	56	0	11
+2320	Rumble Crawler	159	53	56	0	1
+2321	Sacrificial Goblet	159	66	68	1	1
+2322	Sozu Rogberry	159	65	66	1	1
+2323	Sozu Sarberry	159	66	66	1	1
+2324	Temple Bee	159	60	63	0	12
+2325	Temple Opo-opo	159	51	54	0	22
+2326	Tonberry Cutter	159	51	59	0	38
+2327	Tonberry Dismayer	159	61	69	0	11
+2328	Tonberry Harrier	159	51	59	0	26
+2329	Tonberry Kinq	159	65	66	1	1
+2330	Tonberry Maledictor	159	61	69	0	13
+2331	Tonberry Pursuer	159	61	69	0	14
+2332	Tonberry Stabber	159	61	69	0	10
+2333	Tonberry Stalker	159	51	59	0	35
+2334	Torama	159	55	58	0	9
+2335	Uggalepih Leech	159	50	52	0	2
+2336	Water Elemental	159	61	64	0	3
+2337	Wespe TU	159	52	55	0	22
+2338	Bifrons DoR	160	68	70	0	6
+2339	Bistre-hearted Malberry	160	71	73	1	1
+2340	Bloodsucker	160	58	60	0	1
+2341	Bullbeggar	160	78	80	0	26
+2342	Carmine-tailed Janberry	160	66	67	1	1
+2343	Cave Worm DoR	160	61	64	0	13
+2344	Celeste-eyed Tozberry	160	67	69	1	1
+2345	Cutlass Scorpion DR	160	68	70	0	2
+2346	Demonic Pugil	160	73	76	0	11
+2347	Den Scorpion	160	79	81	0	8
+2348	Dire Bat	160	60	63	0	86
+2349	Doom Toad	160	75	78	0	9
+2350	Fire Elemental	160	70	72	0	4
+2351	Friar Rush	160	70	70	1	1
+2352	Million Eyes DR	160	73	76	0	23
+2353	Mousse DoR PMS	160	64	67	0	48
+2354	Mousse	160	64	67	0	2
+2355	Ogama	160	80	82	1	1
+2356	Puck	160	74	77	0	23
+2357	Razorjaw Pugil	160	53	55	0	1
+2358	Rock Crab	160	53	55	0	1
+2359	Sozu Bliberry	160	65	66	1	1
+2360	Succubus Bats	160	65	68	0	11
+2361	Tawny-fingered Mugberry	160	70	72	1	1
+2362	Tonberry Beleaguerer	160	66	72	0	21
+2363	Tonberry Decapitator	160	72	74	1	2
+2364	Tonberry Imprecator	160	62	64	0	11
+2365	Tonberry Pontifex	160	75	75	1	1
+2366	Tonberry Slasher	160	67	71	0	36
+2367	Tonberry Tracker	160	72	74	1	2
+2368	Tonberry Trailer	160	62	65	0	16
+2369	Tormentor	160	75	78	0	30
+2370	Water Elemental	160	68	73	0	3
+2371	Abyssal Demon	161	64	66	0	6
+2372	Ahriman	161	63	65	0	22
+2373	Arch Demon	161	64	66	0	6
+2374	Dark Elemental	161	48	49	0	5
+2375	Doom Demon	161	64	66	0	6
+2376	Dread Demon CZB	161	71	73	0	7
+2377	Duke Haborym	161	76	76	1	1
+2378	Elder Quadav	161	47	49	0	5
+2379	Emerald Quadav	161	47	49	0	5
+2380	Evil Eye	161	46	48	0	15
+2381	Goblin Poacher	161	47	49	0	5
+2382	Goblin Reaper	161	47	49	0	5
+2383	Goblin Robber	161	47	49	0	5
+2384	Goblin Trader	161	47	49	0	5
+2385	Grand Duke Batym	161	76	76	1	1
+2386	Ice Elemental	161	48	49	0	5
+2387	Iron Quadav	161	47	49	0	5
+2388	Judicator Demon CZB	161	71	73	0	7
+2389	Marquis Allocen	161	76	76	1	1
+2390	Marquis Amon	161	76	76	1	1
+2391	Morbid Eye	161	52	55	0	10
+2392	Orcish Bowshooter	161	47	49	0	5
+2393	Orcish Footsoldier	161	47	49	0	5
+2394	Orcish Gladiator	161	47	49	0	5
+2395	Orcish Trooper	161	47	49	0	5
+2396	Spinel Quadav	161	47	49	0	5
+2397	Stygian Demon CZB	161	71	73	0	7
+2398	Yagudo Conquistador	161	47	49	0	5
+2399	Yagudo Lutenist	161	47	49	0	5
+2400	Yagudo Prior	161	47	49	0	5
+2401	Yagudo Zealot	161	47	49	0	5
+2402	Baron Vapula	162	68	68	1	1
+2403	Baronet Romwe	162	68	68	1	1
+2404	Count Bifrons	162	68	68	1	1
+2405	Deadly Iris	162	55	56	0	6
+2406	Elder Quadav	162	47	49	0	5
+2407	Emerald Quadav	162	47	49	0	5
+2408	Evil Eye	162	46	48	0	14
+2409	Goblin Bouncer	162	50	52	0	9
+2410	Goblin Enchanter	162	50	52	0	9
+2411	Goblin Hunter	162	50	52	0	9
+2412	Goblin Poacher	162	47	49	0	4
+2413	Goblin Reaper	162	47	49	0	4
+2414	Goblin Robber	162	47	49	0	4
+2415	Goblin Trader	162	47	49	0	4
+2416	Gold Quadav	162	50	52	0	4
+2417	Iron Quadav	162	47	49	0	5
+2418	Morbid Eye	162	52	53	0	4
+2419	Mythril Quadav	162	50	52	0	4
+2420	Orcish Bowshooter	162	47	49	0	5
+2421	Orcish Footsoldier	162	47	49	0	5
+2422	Orcish Gladiator	162	47	49	0	5
+2423	Orcish Predator	162	50	52	0	7
+2424	Orcish Trooper	162	47	49	0	5
+2425	Orcish Veteran	162	50	52	0	7
+2426	Orcish Warchief	162	50	52	0	7
+2427	Orcish Zerker	162	50	52	0	7
+2428	Spinel Quadav	162	47	49	0	5
+2429	Steel Quadav	162	50	52	0	4
+2430	Topaz Quadav	162	50	52	0	4
+2431	Viscount Morax	162	68	68	1	1
+2432	Yagudo Abbot	162	50	52	0	3
+2433	Yagudo Chanter	162	50	52	0	3
+2434	Yagudo Conquistador	162	47	49	0	5
+2435	Yagudo Inquisitor	162	50	52	0	3
+2436	Yagudo Lutenist	162	47	49	0	5
+2437	Yagudo Prior	162	47	49	0	5
+2438	Yagudo Sentinel	162	50	52	0	3
+2439	Yagudo Zealot	162	47	49	0	5
+2440	Bat Eye	166	34	44	0	4
+2441	Blade Bat	166	4	7	0	6
+2442	Cave Scorpion	166	30	33	0	2
+2443	Giant Scorpion	166	38	40	0	1
+2444	Goblin Gambler	166	26	30	0	6
+2445	Goblin Leecher	166	26	30	0	7
+2446	Goblin Mugger	166	26	30	0	8
+2447	Goblin Thug	166	4	8	0	2
+2448	Goblin Weaver	166	4	8	0	3
+2449	Hecteyes RP	166	31	34	0	5
+2450	Oil Slick RP	166	7	9	0	2
+2451	Ooze	166	28	30	0	5
+2452	Seeker Bats	166	25	28	0	28
+2453	Stirge	166	30	33	0	40
+2454	Taisai	166	35	38	0	3
+2455	Taisaijin	166	60	60	1	1
+2456	Wind Bats	166	3	5	0	5
+2457	Goblin Furrier	166	32	36	0	1
+2458	Goblin Shaman	166	32	36	0	1
+2459	Goblin Smithy	166	32	36	0	4
+2460	Acid Grease	167	52	54	0	1
+2461	Arioch	167	56	62	1	1
+2462	Bloodsucker	167	65	68	0	39
+2463	Bloodsucker	167	70	73	1	1
+2464	Bloodsucker	167	57	68	0	2
+2465	Dark Aspic	167	52	54	0	14
+2466	Funnel Bats BO	167	52	55	0	19
+2467	Garm BO	167	64	66	0	20
+2468	Gespenst	167	68	70	0	5
+2469	Haunt	167	60	63	0	13
+2470	Hecatomb Hound	167	56	59	0	12
+2471	Manes	167	72	73	1	1
+2472	Mousse	167	58	62	0	11
+2473	Mousse	167	60	68	0	2
+2474	Sewer Syrup	167	64	66	1	1
+2475	Shii	167	70	71	1	1
+2476	Werebat	167	55	59	0	45
+2477	Bigclaw	169	49	52	0	19
+2478	Bigclaw	169	49	52	0	1
+2479	Bloodsucker	169	54	57	0	11
+2480	Bloodsucker	169	54	57	0	1
+2481	Bouncing Ball	169	64	67	0	13
+2482	Canal Bats TC	169	45	47	0	17
+2483	Dark Aspic	169	53	55	0	7
+2484	Dire Bat UDT TC SSG	169	62	64	0	6
+2485	Doom Mage TC	169	65	67	0	4
+2486	Doom Soldier TC	169	65	67	0	4
+2487	Fallen Knight	169	52	55	0	17
+2488	Fleshcraver	169	60	62	0	12
+2489	Girtab	169	58	60	0	2
+2490	Hell Bat TC	169	47	49	0	29
+2491	Impish Bats	169	58	60	0	16
+2492	Lich	169	54	57	0	7
+2493	Makara	169	49	52	0	33
+2494	Mindcraver	169	60	62	0	12
+2495	Mousse	169	63	65	0	6
+2496	Mousse	169	63	65	0	1
+2497	Oni Carcass	169	68	70	1	1
+2498	Rock Crab	169	52	54	0	1
+2499	Rotten Sod	169	58	60	0	1
+2500	Scavenger Crab	169	60	62	0	21
+2501	Starmite	169	65	67	0	5
+2502	Stygian Pugil	169	57	65	0	41
+2503	Cutlass Scorpion AC	169	64	66	0	6
+2504	Ding Bats	172	1	2	0	15
+2505	River Crab	172	2	4	0	3
+2506	Mouse Bat	172	2	4	0	8
+2507	Tunnel Worm	172	1	3	0	13
+2508	Bogy	173	30	33	0	9
+2509	Cargo Crab Colin	173	34	37	1	1
+2510	Clipper	173	29	32	0	28
+2511	Combat	173	27	30	0	48
+2512	Dame Blanche	173	34	35	1	1
+2513	Falcatus Aranei	173	32	32	1	1
+2514	Gigas Foreman	173	35	37	0	4
+2515	Gigas Stonecarrier	173	35	37	0	4
+2516	Gigas Stonegrinder	173	35	37	0	4
+2517	Gigas Stonemason	173	35	37	0	4
+2518	Goblin Bounty Hunter	173	10	10	0	19
+2519	Greater Pugil	173	30	33	0	25
+2520	Greater Pugil	173	30	33	0	2
+2521	Huge Spider	173	28	31	0	33
+2522	Jelly KT GM	173	23	27	0	20
+2523	Kraken	173	35	37	0	1
+2524	Land Worm	173	20	25	0	37
+2525	Morion Worm	173	28	28	1	1
+2526	Sea Monk	173	32	35	0	6
+2527	Seeker Bats	173	22	26	0	60
+2528	Snipper	173	22	24	0	2
+2529	Thread Leech	173	28	31	0	31
+2530	Thunder Elemental	173	32	34	0	2
+2531	Water Elemental	173	32	34	0	4
+2532	Air Elemental	174	68	70	0	9
+2533	Amemet	174	65	66	1	1
+2534	Arachne	174	67	69	1	1
+2535	Bloodthirster Madkix	174	70	72	1	1
+2536	Cancer	174	65	65	1	1
+2537	Cave Worm KT	174	60	63	0	20
+2538	Deinonychus	174	65	68	0	26
+2539	Devil Manta	174	66	68	0	1
+2540	Diplopod	174	68	71	0	3
+2541	Fire Elemental	174	67	68	0	9
+2542	Goblin Alchemist	174	66	69	0	6
+2543	Goblin Bandit	174	66	69	0	6
+2544	Goblin Mercenary	174	66	69	0	7
+2545	Goblin Tamer	174	66	69	0	5
+2546	Greater Cockatrice	174	78	80	0	16
+2547	Guivre	174	84	84	1	1
+2548	Haunt	174	63	66	0	10
+2549	Kuftal Digger	174	66	69	0	12
+2550	Ladon	174	80	82	0	6
+2551	Ovinnik	174	77	79	0	15
+2552	Pelican	174	80	81	1	1
+2553	Phantom Worm	174	70	72	1	1
+2554	Recluse Spider	174	63	66	0	28
+2555	Robber Crab	174	60	63	0	61
+2556	Robber Crab	174	60	63	0	1
+2557	Sabotender Mariachi	174	68	70	1	1
+2558	Sabotender Sediendo	174	64	67	0	16
+2559	Sand Lizard	174	61	64	0	20
+2560	Scavenger Crab	174	60	62	0	2
+2561	Stygian Pugil	174	64	66	0	2
+2562	Yowie	174	69	71	1	1
+2563	Abyss Sahagin	176	72	74	1	2
+2564	Big Jaw	176	35	37	0	2
+2565	Bigclaw	176	43	48	0	17
+2566	Bigclaw	176	43	48	0	1
+2567	Blubber Eyes PX	176	55	58	0	5
+2568	Bog Sahagin	176	52	59	0	16
+2569	Brook Sahagin	176	41	48	0	27
+2570	Charybdis	176	79	81	1	1
+2571	Coastal Sahagin	176	62	72	0	9
+2572	Coral Sahagin	176	72	74	1	1
+2573	Delta Sahagin	176	62	72	0	16
+2574	Denn the Orcavoiced	176	64	65	1	1
+2575	Devil Manta	176	66	69	0	10
+2576	Dire Bat UDT TC SSG	176	63	66	0	10
+2577	Fyuu the Seabellow	176	48	48	1	1
+2578	Ghast blm	176	38	41	0	12
+2579	Ghast war	176	38	41	0	11
+2580	Greatclaw	176	66	69	0	7
+2581	Grotto Pugil	176	44	47	0	8
+2582	Ironshell	176	37	40	0	14
+2583	Lagoon Sahagin	176	62	72	0	10
+2584	Lake Sahagin	176	36	39	0	3
+2585	Marsh Sahagin	176	52	59	0	18
+2586	Masan	176	39	39	1	1
+2587	Mindgazer SSG	176	66	69	0	11
+2588	Mousse	176	62	65	0	5
+2589	Mouu the Waverider	176	64	66	1	1
+2590	Namtar	176	39	41	1	1
+2591	Nightmare Bats NM SSG	176	66	69	0	2
+2592	Novv the Whitehearted	176	66	67	1	1
+2593	Ocean Sahagin	176	75	75	1	1
+2594	Ooze	176	39	42	0	7
+2595	Pahh the Gullcaller	176	56	58	1	1
+2596	Pond Sahagin	176	36	39	0	5
+2597	Qull the Shellbuster	176	49	51	1	1
+2598	Razorjaw Pugil	176	57	60	0	8
+2599	Riparian Sahagin	176	44	48	0	13
+2600	Rivulet Sahagin	176	41	48	0	25
+2601	Robber Crab SSG	176	62	67	0	22
+2602	Rock Crab	176	53	58	0	22
+2603	Rock Crab	176	53	58	0	1
+2604	Royal Leech	176	35	38	0	24
+2605	Sahagin Parasite	176	50	53	0	10
+2606	Sea Bonze	176	47	50	0	3
+2607	Sea Hog	176	62	63	1	1
+2608	Shore Sahagin	176	62	72	0	13
+2609	Spring Sahagin	176	36	39	0	6
+2610	Stygian Pugil	176	65	67	0	1
+2611	Swamp Sahagin	176	52	59	0	12
+2612	Thunder Elemental	176	55	58	0	6
+2613	Undead Bats	176	36	39	0	19
+2614	Vampire Bat	176	42	45	0	8
+2615	Voll the Sharkfinned	176	64	66	1	1
+2616	Water Elemental	176	65	68	0	9
+2617	Worr the Clawfisted	176	60	61	1	1
+2618	Wuur the Sandcomber	176	42	44	1	1
+2619	Yarr the Pearleyed	176	64	66	1	1
+2620	Zuug the Shoreleaper	176	70	70	1	1
+2621	Air Elemental	177	79	80	0	12
+2622	Caretaker	177	76	79	0	68
+2623	Dustbuster	177	75	78	0	76
+2624	Earth Elemental	177	79	80	0	12
+2625	Enkidu	177	77	80	0	42
+2626	Fire Elemental	177	79	80	0	4
+2627	Ice Elemental	177	79	80	0	6
+2628	Steam Cleaner	177	81	83	1	1
+2629	Thunder Elemental	177	79	80	0	4
+2630	Water Elemental	177	79	80	0	6
+2631	Air Elemental	178	71	72	0	4
+2632	Aura Butler	178	77	82	0	47
+2633	Aura Gear	178	76	81	0	30
+2634	Aura Pot	178	75	80	0	37
+2635	Aura Statue	178	81	84	0	45
+2636	Dark Elemental	178	73	74	0	4
+2637	Earth Elemental	178	71	72	0	4
+2638	Fire Elemental	178	73	74	0	4
+2639	Ice Elemental	178	73	74	0	4
+2640	Kirin	178	92	92	1	1
+2641	Olla Grande	178	85	85	1	1
+2642	Thunder Elemental	178	73	74	0	4
+2643	Water Elemental	178	73	74	0	4
+2644	Ancient Bat LDT MoS	184	27	29	0	24
+2645	Bogy LDT	184	30	32	0	11
+2646	Chaos Idol	184	28	30	0	10
+2647	Epialtes	184	32	32	1	1
+2648	Eurymedon	184	32	32	1	1
+2649	Goblin Leecher	184	27	30	0	14
+2650	Goblin Mugger	184	27	30	0	14
+2651	Hippolytos	184	32	32	1	1
+2652	Light Elemental	184	35	36	0	2
+2653	Magic Pot	184	28	29	0	2
+2654	Magic Urn	184	34	35	0	5
+2655	Seeker Bats LDT	184	25	27	0	27
+2656	Thunder Elemental	184	35	36	0	2
+2657	Overlords Tombstone	185	65	65	1	1
+2658	Reapertongue Gadgquok	185	80	80	1	1
+2659	Serjeant Tombstone	185	65	65	1	112
+2660	Vanguard Amputator	185	75	77	1	20
+2661	Vanguard Backstabber	185	75	77	1	19
+2662	Vanguard Bugler	185	75	77	1	18
+2663	Vanguard Dollmaster	185	75	77	1	19
+2664	Vanguard Footsoldier	185	75	77	1	19
+2665	Vanguard Grappler	185	75	77	1	20
+2666	Vanguard Gutslasher	185	75	77	1	20
+2667	Vanguard Hawker	185	75	77	1	20
+2668	Vanguard Impaler	185	75	77	1	19
+2669	Vanguard Mesmerizer	185	75	77	1	18
+2670	Vanguard Neckchopper	185	75	77	1	20
+2671	Vanguard Pillager	185	75	77	1	19
+2672	Vanguard Predator	185	75	77	1	21
+2673	Vanguard Trooper	185	75	77	1	20
+2674	Vanguard Vexer	185	75	77	1	20
+2675	Voidstreaker Butchnotch	185	80	80	1	1
+2676	Wyrmgnasher Bjakdek	185	80	80	1	1
+2677	Adamantking Effigy	186	65	65	1	163
+2678	GiPha Manameister	186	80	80	1	1
+2679	GuDha Effigy	186	65	65	1	1
+2680	GuNhi Noondozer	186	80	80	1	1
+2681	KoDho Cannonball	186	80	80	1	1
+2682	Vanguard Beasttender	186	75	77	1	18
+2683	Vanguard Constable	186	75	77	1	23
+2684	Vanguard Defender	186	75	77	1	22
+2685	Vanguard Drakekeeper	186	75	77	1	18
+2686	Vanguard Hatamoto	186	75	77	1	22
+2687	Vanguard Kusa	186	75	77	1	21
+2688	Vanguard Mason	186	75	77	1	13
+2689	Vanguard Militant	186	75	77	1	22
+2690	Vanguard Minstrel	186	75	77	1	22
+2691	Vanguard Protector	186	75	77	1	20
+2692	Vanguard Purloiner	186	75	77	1	21
+2693	Vanguard Thaumaturge	186	75	77	1	22
+2694	Vanguard Undertaker	186	75	77	1	8
+2695	Vanguard Vigilante	186	75	77	1	22
+2696	Vanguard Vindicator	186	75	77	1	21
+2697	ZeVho Fallsplitter	186	80	80	1	1
+2698	AaNyu Dismantler	186	80	80	1	1
+2699	BeEbo Tortoisedriver	186	80	80	1	4
+2700	Effigy Shield	186	65	65	1	1
 2701	Effigy Shield	186	65	65	1	1
 2702	Effigy Shield	186	65	65	1	1
 2703	Effigy Shield	186	65	65	1	1
@@ -2714,578 +2714,577 @@ idx	name	zone	lvmin	lvmax	nm	spawns
 2712	Effigy Shield	186	65	65	1	1
 2713	Effigy Shield	186	65	65	1	1
 2714	Effigy Shield	186	65	65	1	1
-2715	Effigy Shield	186	65	65	1	1
-2716	Avatar Icon	187	65	65	1	83
-2717	Haa Pevi the Stentorian	187	80	80	1	1
-2718	Loo Hepe the Eyepiercer	187	80	80	1	1
-2719	Tzee Xicu Idol	187	85	85	1	1
-2720	Vanguard Assassin	187	75	77	1	22
-2721	Vanguard Chanter	187	75	77	1	16
-2722	Vanguard Exemplar	187	75	77	1	18
-2723	Vanguard Inciter	187	75	77	1	20
-2724	Vanguard Liberator	187	75	77	1	22
-2725	Vanguard Ogresoother	187	75	77	1	17
-2726	Vanguard Oracle	187	75	77	1	18
-2727	Vanguard Partisan	187	75	77	1	17
-2728	Vanguard Persecutor	187	75	77	1	16
-2729	Vanguard Prelate	187	75	77	1	27
-2730	Vanguard Priest	187	75	77	1	19
-2731	Vanguard Salvager	187	75	77	1	19
-2732	Vanguard Sentinel	187	75	77	1	18
-2733	Vanguard Skirmisher	187	75	77	1	25
-2734	Vanguard Visionary	187	75	77	1	22
-2735	Wuu Qoho the Razorclaw	187	80	80	1	1
-2736	Xoo Kaza the Solemn	187	80	80	1	1
-2737	Anvilix Sootwrists	188	80	80	1	1
-2738	Bandrix Rockjaw	188	80	80	1	1
-2739	Blazox Boneybod	188	80	80	1	1
-2740	Bootrix Jaggedelbow	188	80	80	1	1
-2741	Buffrix Eargone	188	80	80	1	1
-2742	Cloktix Longnail	188	80	80	1	1
-2743	Distilix Stickytoes	188	80	80	1	1
-2744	Elixmix Hooknose	188	80	80	1	1
-2745	Eremix Snottynostril	188	80	80	1	1
-2746	Gabblox Magpietongue	188	80	80	1	1
-2747	Goblin Golem	188	80	80	1	1
-2748	Goblin Replica	188	65	65	1	147
-2749	Hermitrix Toothrot	188	80	80	1	1
-2750	Humnox Drumbelly	188	80	80	1	1
-2751	Jabbrox Grannyguise	188	80	80	1	1
-2752	Jabkix Pigeonpecs	188	80	80	1	1
-2753	Karashix Swollenskull	188	80	80	1	1
-2754	Kikklix Longlegs	188	80	80	1	1
-2755	Lurklox Dhalmelneck	188	80	80	1	1
-2756	Mobpix Mucousmouth	188	80	80	1	1
-2757	Morgmox Moldnoggin	188	80	80	1	1
-2758	Mortilox Wartpaws	188	80	80	1	1
-2759	Prowlox Barrelbelly	188	80	80	1	1
-2760	Rutrix Hamgams	188	80	80	1	1
-2761	Scruffix Shaggychest	188	80	80	1	1
-2762	Slystix Megapeepers	188	80	80	1	1
-2763	Smeltix Thickhide	188	80	80	1	1
-2764	Snypestix Eaglebeak	188	80	80	1	1
-2765	Sparkspox Sweatbrow	188	80	80	1	1
-2766	Ticktox Beadyeyes	188	80	80	1	1
-2767	Trailblix Goatmug	188	80	80	1	1
-2768	Tufflix Loglimbs	188	80	80	1	1
-2769	Tymexox Ninefingers	188	80	80	1	1
-2770	Vanguard Alchemist	188	75	77	1	19
-2771	Vanguard Ambusher	188	75	77	1	18
-2772	Vanguard Armorer	188	75	77	1	17
-2773	Vanguard Dragontamer	188	75	77	1	17
-2774	Vanguard Enchanter	188	75	77	1	19
-2775	Vanguard Hitman	188	75	77	1	18
-2776	Vanguard Maestro	188	75	77	1	19
-2777	Vanguard Necromancer	188	75	77	1	19
-2778	Vanguard Pathfinder	188	75	77	1	16
-2779	Vanguard Pitfighter	188	75	77	1	17
-2780	Vanguard Ronin	188	75	77	1	17
-2781	Vanguard Shaman	188	75	77	1	22
-2782	Vanguard Smithy	188	75	77	1	18
-2783	Vanguard Tinkerer	188	75	77	1	15
-2784	Vanguard Welldigger	188	75	77	1	17
-2785	Wasabix Callusdigit	188	80	80	1	1
-2786	Wyrmwix Snakespecs	188	80	80	1	1
-2787	Carrion Worm	190	2	5	0	19
-2788	Cemetery Cherry	190	72	73	1	1
-2789	Cherry Sapling	190	62	64	0	8
-2790	Crypt Ghost	190	20	21	0	1
-2791	Ding Bats	190	2	5	0	30
-2792	Enchanted Bones blm	190	4	8	0	20
-2793	Enchanted Bones war	190	4	8	0	8
-2794	Goblin Ambusher	190	12	16	0	13
-2795	Goblin Butcher	190	12	16	0	13
-2796	Goblin Gambler	190	21	23	0	4
-2797	Goblin Leecher	190	21	23	0	4
-2798	Goblin Mugger	190	21	23	0	4
-2799	Goblin Thug	190	3	8	0	22
-2800	Goblin Tinkerer	190	12	16	0	13
-2801	Goblin Weaver	190	4	8	0	21
-2802	Grave Bat	190	11	13	0	20
-2803	Hati	190	77	79	0	13
-2804	Mouse Bat	190	3	6	0	19
-2805	Nachzehrer blm	190	15	18	0	10
-2806	Nachzehrer war	190	15	18	0	10
-2807	Plague Bats	190	15	17	0	14
-2808	Rock Eater	190	14	16	0	20
-2809	Spartoi Sorcerer	190	80	82	0	27
-2810	Spartoi Warrior	190	78	80	0	23
-2811	Spook	190	11	13	0	1
-2812	Stone Eater	190	5	7	0	6
-2813	Tomb Bat	190	17	19	0	3
-2814	Vrtra	190	95	95	1	1
-2815	Wind Bats	190	9	11	0	11
-2816	Locus Armet Beetle	190	64	66	0	5
-2817	Cutlass Scorpion AC	190	63	65	0	3
-2818	Dire Bat UDT TC SSG	190	62	64	0	12
-2819	Ghost	190	80	80	0	7
-2820	Dodomeki	190	60	62	0	5
-2821	Locus Tomb Worm	190	60	62	0	29
-2822	Coral Crab	191	10	12	0	1
-2823	Fire Elemental	191	75	75	1	1
-2824	Geyser Lizard	191	28	30	1	1
-2825	Goblin Ambusher	191	12	16	0	14
-2826	Goblin Butcher	191	12	16	0	18
-2827	Goblin Fisher	191	5	8	0	10
-2828	Goblin Thug	191	5	8	0	24
-2829	Goblin Tinkerer	191	12	16	0	20
-2830	Goblin Weaver	191	5	8	0	19
-2831	Hoarder Hare	191	6	8	0	12
-2832	Land Crab	191	5	7	0	2
-2833	Rock Lizard	191	5	8	0	27
-2834	Steam Lizard	191	16	20	0	12
-2835	Stone Eater	191	3	5	0	6
-2836	Thread Leech	191	21	23	0	1
-2837	Wadi Crab	191	7	20	0	16
-2838	Wadi Hare	191	11	14	0	26
-2839	Wadi Leech	191	7	14	0	31
-2840	Wadi Leech	191	15	17	0	1
-2841	Witchetty Grub	191	9	12	0	18
-2842	Goblin Gambler	191	21	23	0	10
-2843	Goblin Leecher	191	21	23	0	9
-2844	Goblin Mugger	191	21	23	0	10
-2845	Balloon	192	8	10	0	2
-2846	Battle Bat	192	17	20	0	17
-2847	Battue Bats	192	1	5	0	20
-2848	Blade Bat	192	4	6	0	10
-2849	Boggart	192	22	26	0	12
-2850	Goblin Gambler	192	20	23	0	9
-2851	Goblin Leecher	192	20	23	0	9
-2852	Goblin Mugger	192	20	23	0	9
-2853	Goblin Thug	192	1	6	0	22
-2854	Goblin Weaver	192	1	7	0	14
-2855	Magicked Bones club	192	3	8	0	8
-2856	Magicked Bones dagger	192	3	8	0	1
-2857	Maltha	192	22	23	1	1
-2858	Wendigo blm	192	25	28	0	10
-2859	Wendigo war	192	25	28	0	11
-2860	Will-o-the-Wisp	192	23	25	0	5
-2861	Battue Bats	192	12	15	0	10
-2862	Beady Beetle	192	11	16	0	9
-2863	Goblin Ambusher	192	20	23	0	2
-2864	Goblin Butcher	192	20	23	0	2
-2865	Goblin Tinkerer	192	20	23	0	2
-2866	Air Elemental	193	33	36	0	1
-2867	Air Elemental	193	33	36	1	1
-2868	Ancient Bat	193	26	28	0	8
-2869	Blood Bunny	193	17	19	0	19
-2870	Clipper	193	26	29	0	3
-2871	Dung Beetle	193	23	26	0	14
-2872	Fly Agaric OC	193	21	24	0	10
-2873	Goblin Ambusher	193	17	20	0	7
-2874	Goblin Butcher	193	17	20	0	7
-2875	Goblin Furrier	193	31	34	0	5
-2876	Goblin Gambler	193	22	26	0	13
-2877	Goblin Leecher	193	22	26	0	14
-2878	Goblin Mugger	193	22	26	0	13
-2879	Goblin Pathfinder	193	31	34	0	5
-2880	Goblin Shaman	193	31	34	0	5
-2881	Goblin Smithy	193	31	34	0	4
-2882	Goblin Tinkerer	193	17	20	0	7
-2883	Goliath Beetle	193	29	31	0	8
-2884	Hognosed Bat	193	17	20	0	36
-2885	Jelly MS OC	193	26	28	0	8
-2886	Morbolger	193	42	44	1	1
-2887	Napalm	193	31	33	0	2
-2888	Poison Leech	193	25	27	0	1
-2889	Poison Leech	193	25	27	0	6
-2890	Rancid Ooze	193	34	36	0	1
-2891	Seeker Bats	193	23	26	0	25
-2892	Shrieker OC	193	24	27	0	8
-2893	Slash Pine	193	27	29	0	4
-2894	Snipper OC	193	17	20	0	2
-2895	Stag Crab	193	15	17	0	2
-2896	Stalking Sapling	193	18	21	0	28
-2897	Stink Bats	193	15	18	0	55
-2898	Stroper	193	31	34	0	6
-2899	Stroper Chyme	193	33	35	0	4
-2900	Thread Leech OC	193	18	21	0	15
-2901	Thread Leech	193	21	22	0	1
-2902	Vorpal Bunny	193	23	26	0	16
-2903	Water Elemental	193	33	36	0	1
-2904	Will-o-the-Wisp	193	23	25	0	5
-2905	Balloon OHR	194	8	10	0	6
-2906	Battue Bats	194	2	4	0	7
-2907	Black Slime	194	23	25	0	2
-2908	Blade Bat	194	4	7	0	10
-2909	Bomb King	194	16	18	1	3
-2910	Combat	194	20	23	0	6
-2911	Doppelganger Dio	194	23	25	1	3
-2912	Doppelganger Gog	194	23	25	1	3
-2913	Ghoul blm	194	23	26	0	9
-2914	Ghoul war	194	23	26	0	10
-2915	Goblin Ambusher	194	10	14	0	10
-2916	Goblin Butcher	194	10	14	0	10
-2917	Goblin Thug	194	4	7	0	10
-2918	Goblin Tinkerer	194	10	14	0	8
-2919	Goblin Weaver	194	4	7	0	10
-2920	Stink Bats OHR	194	15	18	0	14
-2921	Thunder Elemental	194	75	75	1	1
-2922	Anemone	195	45	46	0	2
-2923	Azer	195	51	53	0	4
-2924	Blood Soul	195	50	52	0	9
-2925	Dark Stalker blm	195	57	59	0	4
-2926	Dark Stalker rng	195	57	59	0	4
-2927	Dark Stalker thf	195	57	59	0	4
-2928	Dark Stalker	195	57	59	0	4
-2929	Earth Elemental	195	52	55	0	5
-2930	Fallen Knight EN	195	54	56	0	12
-2931	Gazer	195	41	43	0	12
-2932	Haunt EN	195	63	65	0	12
-2933	Hell Hound	195	46	49	0	13
-2934	Ice Elemental	195	52	55	0	5
-2935	Ice Elemental	195	75	75	1	1
-2936	Ka blm	195	52	54	0	6
-2937	Ka rng	195	52	54	0	5
-2938	Ka thf	195	52	54	0	7
-2939	Ka war	195	52	54	0	6
-2940	Lich	195	51	55	0	20
-2941	Lich C Magnus	195	58	58	0	1
-2942	Lost Soul blm EN	195	42	46	0	25
-2943	Lost Soul war EN	195	42	46	0	13
-2944	Marchosias	195	40	43	0	11
-2945	Mummy	195	50	52	0	10
-2946	Puroboros EN GC	195	42	44	0	3
-2947	Revenant NGS EN GC	195	44	47	0	9
-2948	Shade drk	195	46	48	0	3
-2949	Shade thf	195	46	48	0	3
-2950	Shade war	195	42	48	0	6
-2951	Skull of Envy	195	60	60	1	1
-2952	Skull of Gluttony	195	60	60	1	1
-2953	Skull of Greed	195	60	60	1	1
-2954	Skull of Lust	195	60	60	1	1
-2955	Skull of Pride	195	60	60	1	1
-2956	Skull of Sloth	195	60	60	1	1
-2957	Skull of Wrath	195	60	60	1	1
-2958	Spriggan blm	195	64	66	0	6
-2959	Spriggan rng	195	64	66	0	6
-2960	Spriggan thf	195	64	66	0	6
-2961	Spriggan war	195	64	66	0	6
-2962	Tomb Mage	195	60	63	0	14
-2963	Tomb Warrior	195	60	62	0	17
-2964	Tomb Wolf	195	53	55	0	23
-2965	Utukku EN FY	195	55	57	0	15
-2966	Amphisbaena	196	28	30	0	12
-2967	Asphyxiated Amsel	196	36	38	1	1
-2968	Bandersnatch	196	21	24	0	13
-2969	Banshee GM	196	31	34	0	11
-2970	Blind Moby	196	25	26	1	1
-2971	Bogy	196	27	29	0	10
-2972	Burned Bergmann	196	36	38	1	1
-2973	Crushed Krause	196	37	38	1	1
-2974	Earth Elemental	196	33	36	0	2
-2975	Earth Elemental	196	33	36	1	1
-2976	Feu Follet	196	35	38	0	6
-2977	Fly Agaric GM	196	20	23	0	8
-2978	Foul Meat	196	43	45	0	2
-2979	Gallinipper GM	196	32	35	0	16
-2980	Ghast blm GM	196	33	36	0	6
-2981	Ghoul blm GM	196	23	27	0	6
-2982	Ghoul war GM MoS	196	20	24	0	23
-2983	Greater Pugil	196	29	31	0	11
-2984	Greater Pugil	196	25	27	0	1
-2985	Jelly KT GM	196	27	29	0	6
-2986	Mauthe Doog GM	196	28	31	0	15
-2987	Mush	196	35	37	0	1
-2988	Myconid	196	30	32	0	13
-2989	Ooze	196	30	32	0	1
-2990	Ore Eater	196	23	26	0	15
-2991	Pirate Pugil	196	20	22	0	2
-2992	Pulverized Pfeffer	196	36	38	1	1
-2993	Rancid Ooze	196	31	34	0	5
-2994	Sadfly	196	27	30	0	16
-2995	Skeleton Warrior GM	196	15	17	0	8
-2996	Smothered Schmidt	196	36	38	1	1
-2997	Spunkie GM	196	28	30	0	7
-2998	Thunder Elemental	196	33	36	0	2
-2999	Wendigo war	196	26	30	0	20
-3000	Wight blm	196	29	34	0	12
-3001	Wight war GM	196	31	34	0	16
-3002	Wounded Wurfel	196	36	38	1	1
-3003	Awd Goggie	197	68	68	1	1
-3004	Blazer Beetle	197	52	54	0	12
-3005	Caveberry	197	42	44	0	10
-3006	Crawler Hunter	197	60	62	0	7
-3007	Death Jacket CN RFS	197	40	42	0	12
-3008	Demonic Tiphia	197	60	60	1	1
-3009	Doom Scorpion	197	45	47	0	6
-3010	Dragonfly CN	197	55	58	0	6
-3011	Drone Crawler	197	50	50	1	2
-3012	Exoray	197	51	53	0	21
-3013	Fire Elemental	197	52	54	0	8
-3014	Guardian Crawler	197	45	45	1	2
-3015	Helm Beetle	197	59	62	0	7
-3016	Hornfly	197	51	53	0	24
-3017	Killer Mushroom	197	45	47	0	6
-3018	Knight Crawler CN	197	60	63	0	11
-3019	Labyrinth Lizard	197	49	51	0	12
-3020	Matron Crawler	197	64	64	1	1
-3021	Maze Lizard	197	41	43	0	6
-3022	Mushussu CN	197	53	57	0	7
-3023	Nest Beetle	197	45	47	0	7
-3024	Puroboros	197	45	45	0	2
-3025	Queen Crawler	197	64	64	1	1
-3026	Rumble Crawler	197	53	55	0	6
-3027	Soldier Crawler	197	47	49	0	26
-3028	Soul Stinger	197	48	50	0	8
-3029	Water Elemental	197	52	54	0	8
-3030	Water Elemental	197	75	75	1	1
-3031	Wespe CN	197	55	57	0	7
-3032	Witch Hazel	197	50	52	0	12
-3033	Worker Crawler CN	197	40	44	0	28
-3034	Abyss Worm	198	27	30	0	18
-3035	Air Elemental	198	33	36	0	6
-3036	Ancient Bat LDT MoS	198	26	29	0	27
-3037	Argus	198	36	37	1	1
-3038	Carnivorous Crawler	198	22	25	0	31
-3039	Caterchipillar	198	29	31	0	8
-3040	Combat MoS	198	20	23	0	22
-3041	Dark Elemental	198	75	75	1	1
-3042	Earth Elemental	198	33	36	0	6
-3043	Ghoul war GM MoS	198	22	26	0	22
-3044	Goblin Ambusher	198	16	18	0	14
-3045	Goblin Butcher	198	16	18	0	14
-3046	Goblin Furrier	198	31	34	0	6
-3047	Goblin Gambler	198	22	26	0	7
-3048	Goblin Leecher	198	22	26	0	7
-3049	Goblin Mugger	198	22	26	0	7
-3050	Goblin Pathfinder	198	31	34	0	6
-3051	Goblin Shaman	198	31	34	0	6
-3052	Goblin Smithy	198	31	34	0	6
-3053	Goblin Tinkerer	198	16	18	0	14
-3054	Ichorous Ire	198	35	36	1	1
-3055	Jelly MS OC	198	26	28	0	11
-3056	Labyrinth Scorpion	198	30	33	0	12
-3057	Leech King	198	35	36	1	1
-3058	Maze Maker	198	18	21	0	20
-3059	Maze Scorpion	198	25	28	0	10
-3060	Poison Leech	198	24	28	0	38
-3061	Protozoan	198	29	31	0	5
-3062	Seeker Bats	198	23	26	0	21
-3063	Stink Bats	198	15	18	0	25
-3064	Wendigo blm MoS	198	24	28	0	15
-3065	Wight blm	198	32	35	0	15
-3066	Wight war	198	32	35	0	21
-3067	Acid Grease	200	52	54	0	6
-3068	Bhuta	200	47	49	0	4
-3069	Borer Beetle	200	41	44	0	7
-3070	Chamber Beetle	200	56	58	0	19
-3071	Citadel Bats	200	46	48	0	22
-3072	Clockwork Pod GC	200	44	45	0	2
-3073	Droma GC	200	52	54	0	12
-3074	Earth Elemental	200	52	54	0	3
-3075	Explosure	200	52	53	0	13
-3076	Fallen Evacuee blm	200	42	43	0	3
-3077	Fallen Evacuee war	200	42	43	0	3
-3078	Fallen Mage	200	59	62	0	8
-3079	Fallen Major	200	59	62	0	8
-3080	Fallen Officer blm	200	52	55	0	12
-3081	Fallen Officer war	200	52	55	0	12
-3082	Fallen Soldier blm	200	47	49	0	4
-3083	Fallen Soldier war	200	47	49	0	4
-3084	Fetid Flesh	200	54	56	0	2
-3085	Funnel Bats GC	200	51	53	0	27
-3086	Light Elemental	200	75	75	1	1
-3087	Oil Spill	200	43	45	0	2
-3088	Old Two-Wings	200	52	52	1	1
-3089	Puroboros EN GC	200	43	45	0	2
-3090	Revenant NGS EN GC	200	44	46	0	2
-3091	Serket	200	70	70	1	1
-3092	Siege Bat	200	40	43	0	22
-3093	Skewer Sam	200	54	54	1	1
-3094	Tainted Flesh GC	200	63	65	0	4
-3095	Thunder Elemental	200	52	54	0	3
-3096	Wingrats GC	200	40	42	0	10
-3097	Wraith	200	60	62	0	9
-3098	Altedour I Tavnazia	204	65	65	1	1
-3099	Camazotz FY	204	52	54	0	17
-3100	Capricious Cassie	204	70	70	1	1
-3101	Clockwork Pod FY	204	41	43	0	7
-3102	Colossus	204	56	58	0	11
-3103	Dark Elemental	204	56	58	0	1
-3104	Droma FY	204	54	56	0	10
-3105	Drone	204	41	43	0	15
-3106	Eastern Shadow	204	63	63	1	1
-3107	Goliath	204	62	62	1	4
-3108	Ice Elemental	204	56	58	0	1
-3109	Northern Shadow	204	63	63	1	1
-3110	Ore Golem	204	43	45	0	9
-3111	Revenant SoZ ENS FY	204	40	42	0	12
-3112	Shadow blm	204	44	46	0	11
-3113	Shadow rng	204	44	46	0	9
-3114	Shadow thf	204	44	46	0	7
-3115	Shadow war	204	44	46	0	9
-3116	Southern Shadow	204	63	63	1	1
-3117	Specter blm	204	55	58	0	8
-3118	Specter rng	204	55	58	0	8
-3119	Specter thf	204	55	58	0	8
-3120	Specter war	204	55	58	0	8
-3121	Talos	204	53	55	0	10
-3122	Undead Bats	204	38	40	0	21
-3123	Underworld Bats	204	50	52	0	43
-3124	Utukku EN FY	204	55	57	0	13
-3125	Vampire Bat FY	204	40	42	0	24
-3126	Western Shadow	204	63	63	1	1
-3127	Ash Dragon	205	82	82	1	1
-3128	Ash Lizard	205	73	76	0	15
-3129	Bomb Queen	205	79	81	1	1
-3130	Dire Bat	205	60	63	0	12
-3131	Dodomeki	205	63	68	0	7
-3132	Eotyrannus	205	70	73	0	13
-3133	Foreseer Oramix	205	69	72	1	1
-3134	Goblin Alchemist	205	66	69	0	8
-3135	Goblin Bandit	205	66	69	0	7
-3136	Goblin Mercenary	205	66	69	0	7
-3137	Goblin Shepherd	205	66	69	0	7
-3138	Hurricane Wyvern	205	75	78	0	7
-3139	Lindwurm	205	74	76	1	1
-3140	Nightmare Bats	205	68	72	0	14
-3141	Old Opo-opo	205	61	65	0	26
-3142	Sulfur Scorpion	205	70	73	0	9
-3143	Tarasque	205	72	74	1	1
-3144	Tyrannic Tunnok	205	74	76	1	1
-3145	Volcanic Bomb	205	71	78	0	44
-3146	Volcanic Gas	205	62	68	0	60
-3147	Volcano Wasp	205	61	64	0	10
-3148	Vouivre	205	79	81	1	1
-3149	Antican Aedilis	208	62	72	0	25
-3150	Antican Antesignanus	208	62	72	0	28
-3151	Antican Consul	208	75	75	1	1
-3152	Antican Hastatus	208	52	59	0	46
-3153	Antican Legatus	208	72	74	1	1
-3154	Antican Magister	208	65	66	1	1
-3155	Antican Praefectus	208	65	65	1	1
-3156	Antican Praetor	208	72	74	1	2
-3157	Antican Princeps	208	52	59	0	51
-3158	Antican Proconsul	208	65	65	1	1
-3159	Antican Quaestor	208	62	72	0	29
-3160	Antican Signifer	208	52	59	0	47
-3161	Antican Triarius	208	62	72	0	28
-3162	Antican Tribunus	208	65	65	1	1
-3163	Centurio X-I	208	56	58	1	1
-3164	Diamond Daig	208	70	70	1	1
-3165	Girtab	208	62	65	0	19
-3166	Helm Beetle	208	51	58	0	35
-3167	Nussknacker	208	60	61	1	1
-3168	Proconsul XII	208	70	72	1	1
-3169	Sabotender Bailaor	208	52	59	0	25
-3170	Sabotender Bailarin	208	59	61	1	1
-3171	Sabotender Bailarina	208	80	81	1	1
-3172	Sagittarius X-XIII	208	55	57	1	1
-3173	Sand Digger	208	62	65	0	4
-3174	Sand Eater	208	51	59	0	32
-3175	Sand Lizard	208	56	59	0	27
-3176	Sand Spider	208	51	55	0	16
-3177	Sand Tarantula	208	65	69	0	12
-3178	Spelunking Sabotender	208	62	68	0	11
-3179	Triarius X-XV	208	72	74	1	1
-3180	Tribunus VII-I	208	60	62	1	1
-3181	Amikiri	212	80	82	1	1
-3182	Antares GT	212	77	79	0	5
-3183	Baobhan Sith	212	79	81	1	1
-3184	Bune	212	83	83	1	1
-3185	Demonic Pugil	212	73	76	0	27
-3186	Doom Guard	212	75	77	0	31
-3187	Doom Mage	212	65	67	0	4
-3188	Doom Soldier	212	65	67	0	7
-3189	Doom Warlock	212	76	78	0	29
-3190	Earth Elemental	212	75	77	0	3
-3191	Erlik	212	75	78	0	7
-3192	Fire Elemental	212	75	77	0	2
-3193	Goblin Alchemist	212	65	68	0	3
-3194	Goblin Mercenary	212	65	68	0	4
-3195	Goblin Poacher	212	46	49	0	5
-3196	Goblin Reaper	212	46	49	0	4
-3197	Goblin Robber	212	46	49	0	5
-3198	Goblin Shepherd	212	65	68	0	5
-3199	Goblinsavior Heronox	212	51	52	1	1
-3200	Greater Gaylas	212	46	49	0	6
-3201	Hawker	212	45	48	0	11
-3202	Hell Bat	212	44	48	0	4
-3203	Labyrinth Leech	212	45	48	0	8
-3204	Labyrinth Lizard	212	46	49	0	9
-3205	Makara	212	46	49	0	8
-3206	Robber Crab	212	65	68	0	15
-3207	Taxim	212	78	80	1	1
-3208	Typhoon Wyvern	212	78	80	0	10
-3209	Ungur	212	81	83	1	1
-3210	Wyvernpoacher Drachlox	212	70	72	1	1
-3211	Air Elemental	213	60	62	0	8
-3212	Cockatrice	213	50	53	0	24
-3213	Flying Manta	213	55	59	0	16
-3214	Goblin Alchemist	213	66	69	0	3
-3215	Goblin Bandit	213	66	69	0	3
-3216	Goblin Bouncer	213	51	58	0	13
-3217	Goblin Enchanter	213	51	58	0	12
-3218	Goblin Hunter	213	51	58	0	13
-3219	Goblin Mercenary	213	66	69	0	4
-3220	Goblin Miner	213	51	58	0	14
-3221	Goblin Poacher	213	46	49	0	2
-3222	Goblin Reaper	213	46	49	0	2
-3223	Goblin Robber	213	46	49	0	2
-3224	Goblin Shepherd	213	66	69	0	3
-3225	Goblin Trader	213	46	49	0	1
-3226	Hellion	213	66	66	1	1
-3227	Labyrinth Leech	213	45	48	0	5
-3228	Labyrinth Manticore	213	71	74	0	6
-3229	Lord of Onzozo	213	74	77	1	1
-3230	Mushussu LO	213	51	57	0	15
-3231	Mysticmaker Profblix	213	50	52	1	1
-3232	Narasimha	213	75	77	1	1
-3233	Ose	213	74	76	1	1
-3234	Peg Powler	213	61	62	1	1
-3235	Soulstealer Skullnix	213	69	72	1	1
-3236	Tainted Flesh LoO	213	60	63	0	2
-3237	Torama	213	70	73	0	17
-3238	Water Elemental	213	60	62	0	9
-3239	Wyvern	213	72	75	0	1
-3240	Ocean Crab	220	10	14	0	1
-3241	Ocean Pugil	220	15	19	0	1
-3242	Phantom	220	22	25	0	1
-3243	Pirate Pugil	220	20	22	0	1
-3244	Sea Crab	220	10	20	0	2
-3245	Sea Horror	220	60	62	1	1
+2715	Avatar Icon	187	65	65	1	83
+2716	Haa Pevi the Stentorian	187	80	80	1	1
+2717	Loo Hepe the Eyepiercer	187	80	80	1	1
+2718	Tzee Xicu Idol	187	85	85	1	1
+2719	Vanguard Assassin	187	75	77	1	22
+2720	Vanguard Chanter	187	75	77	1	16
+2721	Vanguard Exemplar	187	75	77	1	18
+2722	Vanguard Inciter	187	75	77	1	20
+2723	Vanguard Liberator	187	75	77	1	22
+2724	Vanguard Ogresoother	187	75	77	1	17
+2725	Vanguard Oracle	187	75	77	1	18
+2726	Vanguard Partisan	187	75	77	1	17
+2727	Vanguard Persecutor	187	75	77	1	16
+2728	Vanguard Prelate	187	75	77	1	27
+2729	Vanguard Priest	187	75	77	1	19
+2730	Vanguard Salvager	187	75	77	1	19
+2731	Vanguard Sentinel	187	75	77	1	18
+2732	Vanguard Skirmisher	187	75	77	1	25
+2733	Vanguard Visionary	187	75	77	1	22
+2734	Wuu Qoho the Razorclaw	187	80	80	1	1
+2735	Xoo Kaza the Solemn	187	80	80	1	1
+2736	Anvilix Sootwrists	188	80	80	1	1
+2737	Bandrix Rockjaw	188	80	80	1	1
+2738	Blazox Boneybod	188	80	80	1	1
+2739	Bootrix Jaggedelbow	188	80	80	1	1
+2740	Buffrix Eargone	188	80	80	1	1
+2741	Cloktix Longnail	188	80	80	1	1
+2742	Distilix Stickytoes	188	80	80	1	1
+2743	Elixmix Hooknose	188	80	80	1	1
+2744	Eremix Snottynostril	188	80	80	1	1
+2745	Gabblox Magpietongue	188	80	80	1	1
+2746	Goblin Golem	188	80	80	1	1
+2747	Goblin Replica	188	65	65	1	147
+2748	Hermitrix Toothrot	188	80	80	1	1
+2749	Humnox Drumbelly	188	80	80	1	1
+2750	Jabbrox Grannyguise	188	80	80	1	1
+2751	Jabkix Pigeonpecs	188	80	80	1	1
+2752	Karashix Swollenskull	188	80	80	1	1
+2753	Kikklix Longlegs	188	80	80	1	1
+2754	Lurklox Dhalmelneck	188	80	80	1	1
+2755	Mobpix Mucousmouth	188	80	80	1	1
+2756	Morgmox Moldnoggin	188	80	80	1	1
+2757	Mortilox Wartpaws	188	80	80	1	1
+2758	Prowlox Barrelbelly	188	80	80	1	1
+2759	Rutrix Hamgams	188	80	80	1	1
+2760	Scruffix Shaggychest	188	80	80	1	1
+2761	Slystix Megapeepers	188	80	80	1	1
+2762	Smeltix Thickhide	188	80	80	1	1
+2763	Snypestix Eaglebeak	188	80	80	1	1
+2764	Sparkspox Sweatbrow	188	80	80	1	1
+2765	Ticktox Beadyeyes	188	80	80	1	1
+2766	Trailblix Goatmug	188	80	80	1	1
+2767	Tufflix Loglimbs	188	80	80	1	1
+2768	Tymexox Ninefingers	188	80	80	1	1
+2769	Vanguard Alchemist	188	75	77	1	19
+2770	Vanguard Ambusher	188	75	77	1	18
+2771	Vanguard Armorer	188	75	77	1	17
+2772	Vanguard Dragontamer	188	75	77	1	17
+2773	Vanguard Enchanter	188	75	77	1	19
+2774	Vanguard Hitman	188	75	77	1	18
+2775	Vanguard Maestro	188	75	77	1	19
+2776	Vanguard Necromancer	188	75	77	1	19
+2777	Vanguard Pathfinder	188	75	77	1	16
+2778	Vanguard Pitfighter	188	75	77	1	17
+2779	Vanguard Ronin	188	75	77	1	17
+2780	Vanguard Shaman	188	75	77	1	22
+2781	Vanguard Smithy	188	75	77	1	18
+2782	Vanguard Tinkerer	188	75	77	1	15
+2783	Vanguard Welldigger	188	75	77	1	17
+2784	Wasabix Callusdigit	188	80	80	1	1
+2785	Wyrmwix Snakespecs	188	80	80	1	1
+2786	Carrion Worm	190	2	5	0	19
+2787	Cemetery Cherry	190	72	73	1	1
+2788	Cherry Sapling	190	62	64	0	8
+2789	Crypt Ghost	190	20	21	0	1
+2790	Ding Bats	190	2	5	0	30
+2791	Enchanted Bones blm	190	4	8	0	20
+2792	Enchanted Bones war	190	4	8	0	8
+2793	Goblin Ambusher	190	12	16	0	13
+2794	Goblin Butcher	190	12	16	0	13
+2795	Goblin Gambler	190	21	23	0	4
+2796	Goblin Leecher	190	21	23	0	4
+2797	Goblin Mugger	190	21	23	0	4
+2798	Goblin Thug	190	3	8	0	22
+2799	Goblin Tinkerer	190	12	16	0	13
+2800	Goblin Weaver	190	4	8	0	21
+2801	Grave Bat	190	11	13	0	20
+2802	Hati	190	77	78	0	13
+2803	Mouse Bat	190	3	6	0	19
+2804	Nachzehrer blm	190	15	18	0	10
+2805	Nachzehrer war	190	15	18	0	10
+2806	Plague Bats	190	15	17	0	14
+2807	Rock Eater	190	14	16	0	20
+2808	Spartoi Sorcerer	190	80	81	0	27
+2809	Spartoi Warrior	190	78	80	0	23
+2810	Spook	190	11	13	0	1
+2811	Stone Eater	190	5	7	0	6
+2812	Tomb Bat	190	17	19	0	3
+2813	Vrtra	190	95	95	1	1
+2814	Wind Bats	190	9	11	0	11
+2815	Locus Armet Beetle	190	64	66	0	5
+2816	Cutlass Scorpion AC	190	63	65	0	3
+2817	Dire Bat UDT TC SSG	190	62	64	0	12
+2818	Ghost	190	80	80	0	7
+2819	Dodomeki	190	60	62	0	5
+2820	Locus Tomb Worm	190	60	62	0	29
+2821	Coral Crab	191	10	12	0	1
+2822	Fire Elemental	191	75	75	1	1
+2823	Geyser Lizard	191	28	30	1	1
+2824	Goblin Ambusher	191	12	16	0	14
+2825	Goblin Butcher	191	12	16	0	18
+2826	Goblin Fisher	191	5	8	0	10
+2827	Goblin Thug	191	5	8	0	24
+2828	Goblin Tinkerer	191	12	16	0	20
+2829	Goblin Weaver	191	5	8	0	19
+2830	Hoarder Hare	191	6	8	0	12
+2831	Land Crab	191	5	7	0	2
+2832	Rock Lizard	191	5	8	0	27
+2833	Steam Lizard	191	16	20	0	12
+2834	Stone Eater	191	3	5	0	6
+2835	Thread Leech	191	21	23	0	1
+2836	Wadi Crab	191	7	20	0	16
+2837	Wadi Hare	191	11	14	0	26
+2838	Wadi Leech	191	7	14	0	31
+2839	Wadi Leech	191	15	17	0	1
+2840	Witchetty Grub	191	9	12	0	18
+2841	Goblin Gambler	191	21	23	0	10
+2842	Goblin Leecher	191	21	23	0	9
+2843	Goblin Mugger	191	21	23	0	10
+2844	Balloon	192	8	10	0	2
+2845	Battle Bat	192	17	20	0	17
+2846	Battue Bats	192	1	3	0	20
+2847	Blade Bat	192	4	6	0	10
+2848	Boggart	192	22	26	0	12
+2849	Goblin Gambler	192	20	23	0	9
+2850	Goblin Leecher	192	20	23	0	9
+2851	Goblin Mugger	192	20	23	0	9
+2852	Goblin Thug	192	1	6	0	22
+2853	Goblin Weaver	192	3	6	0	14
+2854	Magicked Bones club	192	3	8	0	8
+2855	Magicked Bones dagger	192	3	8	0	1
+2856	Maltha	192	22	23	1	1
+2857	Wendigo blm	192	25	28	0	10
+2858	Wendigo war	192	25	28	0	11
+2859	Will-o-the-Wisp	192	23	25	0	5
+2860	Battue Bats	192	12	15	0	10
+2861	Beady Beetle	192	11	16	0	9
+2862	Goblin Ambusher	192	20	23	0	2
+2863	Goblin Butcher	192	20	23	0	2
+2864	Goblin Tinkerer	192	20	23	0	2
+2865	Air Elemental	193	33	36	0	1
+2866	Air Elemental	193	33	36	1	1
+2867	Ancient Bat	193	26	28	0	8
+2868	Blood Bunny	193	17	19	0	19
+2869	Clipper	193	26	29	0	3
+2870	Dung Beetle	193	23	26	0	14
+2871	Fly Agaric OC	193	21	24	0	10
+2872	Goblin Ambusher	193	17	20	0	7
+2873	Goblin Butcher	193	17	20	0	7
+2874	Goblin Furrier	193	31	34	0	5
+2875	Goblin Gambler	193	22	26	0	13
+2876	Goblin Leecher	193	22	26	0	14
+2877	Goblin Mugger	193	22	26	0	13
+2878	Goblin Pathfinder	193	31	34	0	5
+2879	Goblin Shaman	193	31	34	0	5
+2880	Goblin Smithy	193	31	34	0	4
+2881	Goblin Tinkerer	193	17	20	0	7
+2882	Goliath Beetle	193	29	31	0	8
+2883	Hognosed Bat	193	17	20	0	36
+2884	Jelly MS OC	193	26	28	0	8
+2885	Morbolger	193	42	44	1	1
+2886	Napalm	193	31	33	0	2
+2887	Poison Leech	193	25	27	0	1
+2888	Poison Leech	193	25	27	0	6
+2889	Rancid Ooze	193	34	36	0	1
+2890	Seeker Bats	193	23	26	0	25
+2891	Shrieker OC	193	24	27	0	8
+2892	Slash Pine	193	27	29	0	4
+2893	Snipper OC	193	17	20	0	2
+2894	Stag Crab	193	15	17	0	2
+2895	Stalking Sapling	193	18	21	0	28
+2896	Stink Bats	193	15	18	0	55
+2897	Stroper	193	31	34	0	6
+2898	Stroper Chyme	193	33	35	0	4
+2899	Thread Leech OC	193	18	21	0	15
+2900	Thread Leech	193	21	22	0	1
+2901	Vorpal Bunny	193	23	26	0	16
+2902	Water Elemental	193	33	36	0	1
+2903	Will-o-the-Wisp	193	23	25	0	5
+2904	Balloon OHR	194	8	10	0	6
+2905	Battue Bats	194	2	4	0	7
+2906	Black Slime	194	23	25	0	2
+2907	Blade Bat	194	4	6	0	10
+2908	Bomb King	194	16	18	1	3
+2909	Combat	194	20	23	0	6
+2910	Doppelganger Dio	194	23	25	1	3
+2911	Doppelganger Gog	194	23	25	1	3
+2912	Ghoul blm	194	23	26	0	9
+2913	Ghoul war	194	23	26	0	10
+2914	Goblin Ambusher	194	10	14	0	10
+2915	Goblin Butcher	194	10	14	0	10
+2916	Goblin Thug	194	4	7	0	10
+2917	Goblin Tinkerer	194	10	14	0	8
+2918	Goblin Weaver	194	4	7	0	10
+2919	Stink Bats OHR	194	15	18	0	14
+2920	Thunder Elemental	194	75	75	1	1
+2921	Anemone	195	45	46	0	2
+2922	Azer	195	51	53	0	4
+2923	Blood Soul	195	50	52	0	9
+2924	Dark Stalker blm	195	57	59	0	4
+2925	Dark Stalker rng	195	57	59	0	4
+2926	Dark Stalker thf	195	57	59	0	4
+2927	Dark Stalker	195	57	59	0	4
+2928	Earth Elemental	195	52	55	0	5
+2929	Fallen Knight EN	195	54	56	0	12
+2930	Gazer	195	41	43	0	12
+2931	Haunt EN	195	63	65	0	12
+2932	Hell Hound	195	46	49	0	13
+2933	Ice Elemental	195	52	55	0	5
+2934	Ice Elemental	195	75	75	1	1
+2935	Ka blm	195	52	54	0	6
+2936	Ka rng	195	52	54	0	5
+2937	Ka thf	195	52	54	0	7
+2938	Ka war	195	52	54	0	6
+2939	Lich	195	51	55	0	20
+2940	Lich C Magnus	195	58	58	0	1
+2941	Lost Soul blm EN	195	42	46	0	25
+2942	Lost Soul war EN	195	42	46	0	13
+2943	Marchosias	195	40	43	0	11
+2944	Mummy	195	50	52	0	10
+2945	Puroboros EN GC	195	42	44	0	3
+2946	Revenant NGS EN GC	195	44	47	0	9
+2947	Shade drk	195	46	48	0	3
+2948	Shade thf	195	46	48	0	3
+2949	Shade war	195	46	48	0	6
+2950	Skull of Envy	195	60	60	1	1
+2951	Skull of Gluttony	195	60	60	1	1
+2952	Skull of Greed	195	60	60	1	1
+2953	Skull of Lust	195	60	60	1	1
+2954	Skull of Pride	195	60	60	1	1
+2955	Skull of Sloth	195	60	60	1	1
+2956	Skull of Wrath	195	60	60	1	1
+2957	Spriggan blm	195	64	66	0	6
+2958	Spriggan rng	195	64	66	0	6
+2959	Spriggan thf	195	64	66	0	6
+2960	Spriggan war	195	64	66	0	6
+2961	Tomb Mage	195	60	63	0	14
+2962	Tomb Warrior	195	60	62	0	17
+2963	Tomb Wolf	195	53	55	0	23
+2964	Utukku EN FY	195	55	57	0	15
+2965	Amphisbaena	196	28	30	0	12
+2966	Asphyxiated Amsel	196	36	38	1	1
+2967	Bandersnatch	196	21	24	0	13
+2968	Banshee GM	196	31	34	0	11
+2969	Blind Moby	196	25	26	1	1
+2970	Bogy	196	27	29	0	10
+2971	Burned Bergmann	196	36	38	1	1
+2972	Crushed Krause	196	37	38	1	1
+2973	Earth Elemental	196	33	36	0	2
+2974	Earth Elemental	196	33	36	1	1
+2975	Feu Follet	196	35	38	0	6
+2976	Fly Agaric GM	196	20	23	0	8
+2977	Foul Meat	196	43	45	0	2
+2978	Gallinipper GM	196	32	35	0	16
+2979	Ghast blm GM	196	33	36	0	6
+2980	Ghoul blm GM	196	23	27	0	6
+2981	Ghoul war GM MoS	196	20	24	0	23
+2982	Greater Pugil	196	29	31	0	11
+2983	Greater Pugil	196	25	27	0	1
+2984	Jelly KT GM	196	27	29	0	6
+2985	Mauthe Doog GM	196	28	31	0	15
+2986	Mush	196	35	37	0	1
+2987	Myconid	196	30	32	0	13
+2988	Ooze	196	30	32	0	1
+2989	Ore Eater	196	23	26	0	15
+2990	Pirate Pugil	196	20	22	0	2
+2991	Pulverized Pfeffer	196	36	38	1	1
+2992	Rancid Ooze	196	31	34	0	5
+2993	Sadfly	196	27	30	0	16
+2994	Skeleton Warrior GM	196	15	17	0	8
+2995	Smothered Schmidt	196	36	38	1	1
+2996	Spunkie GM	196	28	30	0	7
+2997	Thunder Elemental	196	33	36	0	2
+2998	Wendigo war	196	26	30	0	20
+2999	Wight blm	196	29	33	0	12
+3000	Wight war GM	196	31	34	0	16
+3001	Wounded Wurfel	196	36	38	1	1
+3002	Awd Goggie	197	68	68	1	1
+3003	Blazer Beetle	197	52	54	0	12
+3004	Caveberry	197	42	44	0	10
+3005	Crawler Hunter	197	60	62	0	7
+3006	Death Jacket CN RFS	197	40	42	0	12
+3007	Demonic Tiphia	197	60	60	1	1
+3008	Doom Scorpion	197	45	47	0	6
+3009	Dragonfly CN	197	55	58	0	6
+3010	Drone Crawler	197	50	50	1	2
+3011	Exoray	197	51	53	0	21
+3012	Fire Elemental	197	52	54	0	8
+3013	Guardian Crawler	197	45	45	1	2
+3014	Helm Beetle	197	59	62	0	7
+3015	Hornfly	197	51	53	0	24
+3016	Killer Mushroom	197	45	47	0	6
+3017	Knight Crawler CN	197	60	63	0	11
+3018	Labyrinth Lizard	197	49	51	0	12
+3019	Matron Crawler	197	64	64	1	1
+3020	Maze Lizard	197	41	43	0	6
+3021	Mushussu CN	197	53	55	0	7
+3022	Nest Beetle	197	45	47	0	7
+3023	Puroboros	197	45	45	0	2
+3024	Queen Crawler	197	64	64	1	1
+3025	Rumble Crawler	197	53	55	0	6
+3026	Soldier Crawler	197	47	49	0	26
+3027	Soul Stinger	197	48	50	0	8
+3028	Water Elemental	197	52	54	0	8
+3029	Water Elemental	197	75	75	1	1
+3030	Wespe CN	197	55	57	0	7
+3031	Witch Hazel	197	50	52	0	12
+3032	Worker Crawler CN	197	40	44	0	28
+3033	Abyss Worm	198	27	30	0	18
+3034	Air Elemental	198	33	36	0	6
+3035	Ancient Bat LDT MoS	198	26	29	0	27
+3036	Argus	198	36	37	1	1
+3037	Carnivorous Crawler	198	22	25	0	31
+3038	Caterchipillar	198	29	31	0	8
+3039	Combat MoS	198	20	23	0	22
+3040	Dark Elemental	198	75	75	1	1
+3041	Earth Elemental	198	33	36	0	6
+3042	Ghoul war GM MoS	198	22	26	0	22
+3043	Goblin Ambusher	198	16	18	0	14
+3044	Goblin Butcher	198	16	18	0	14
+3045	Goblin Furrier	198	31	34	0	6
+3046	Goblin Gambler	198	22	26	0	7
+3047	Goblin Leecher	198	22	26	0	7
+3048	Goblin Mugger	198	22	26	0	7
+3049	Goblin Pathfinder	198	31	34	0	6
+3050	Goblin Shaman	198	31	34	0	6
+3051	Goblin Smithy	198	31	34	0	6
+3052	Goblin Tinkerer	198	16	18	0	14
+3053	Ichorous Ire	198	35	36	1	1
+3054	Jelly MS OC	198	26	28	0	11
+3055	Labyrinth Scorpion	198	30	33	0	12
+3056	Leech King	198	35	36	1	1
+3057	Maze Maker	198	18	21	0	20
+3058	Maze Scorpion	198	25	27	0	10
+3059	Poison Leech	198	24	28	0	38
+3060	Protozoan	198	29	31	0	5
+3061	Seeker Bats	198	23	26	0	21
+3062	Stink Bats	198	15	18	0	25
+3063	Wendigo blm MoS	198	24	28	0	15
+3064	Wight blm	198	32	35	0	15
+3065	Wight war	198	32	35	0	21
+3066	Acid Grease	200	52	54	0	6
+3067	Bhuta	200	47	49	0	4
+3068	Borer Beetle	200	41	44	0	7
+3069	Chamber Beetle	200	56	58	0	19
+3070	Citadel Bats	200	46	48	0	22
+3071	Clockwork Pod GC	200	44	45	0	2
+3072	Droma GC	200	52	54	0	12
+3073	Earth Elemental	200	52	54	0	3
+3074	Explosure	200	52	53	0	13
+3075	Fallen Evacuee blm	200	42	43	0	3
+3076	Fallen Evacuee war	200	42	43	0	3
+3077	Fallen Mage	200	59	62	0	8
+3078	Fallen Major	200	60	62	0	8
+3079	Fallen Officer blm	200	52	55	0	12
+3080	Fallen Officer war	200	52	55	0	12
+3081	Fallen Soldier blm	200	47	49	0	4
+3082	Fallen Soldier war	200	47	49	0	4
+3083	Fetid Flesh	200	54	56	0	2
+3084	Funnel Bats GC	200	51	53	0	27
+3085	Light Elemental	200	75	75	1	1
+3086	Oil Spill	200	43	45	0	2
+3087	Old Two-Wings	200	52	52	1	1
+3088	Puroboros EN GC	200	43	45	0	2
+3089	Revenant NGS EN GC	200	44	46	0	2
+3090	Serket	200	70	70	1	1
+3091	Siege Bat	200	40	43	0	22
+3092	Skewer Sam	200	54	54	1	1
+3093	Tainted Flesh GC	200	63	65	0	4
+3094	Thunder Elemental	200	52	54	0	3
+3095	Wingrats GC	200	40	42	0	10
+3096	Wraith	200	60	62	0	9
+3097	Altedour I Tavnazia	204	65	65	1	1
+3098	Camazotz FY	204	52	54	0	17
+3099	Capricious Cassie	204	70	70	1	1
+3100	Clockwork Pod FY	204	41	43	0	7
+3101	Colossus	204	56	58	0	11
+3102	Dark Elemental	204	56	58	0	1
+3103	Droma FY	204	54	56	0	10
+3104	Drone	204	41	43	0	15
+3105	Eastern Shadow	204	63	63	1	1
+3106	Goliath	204	62	62	1	4
+3107	Ice Elemental	204	56	58	0	1
+3108	Northern Shadow	204	63	63	1	1
+3109	Ore Golem	204	43	45	0	9
+3110	Revenant SoZ ENS FY	204	40	42	0	12
+3111	Shadow blm	204	44	46	0	11
+3112	Shadow rng	204	44	46	0	9
+3113	Shadow thf	204	44	46	0	7
+3114	Shadow war	204	44	46	0	9
+3115	Southern Shadow	204	63	63	1	1
+3116	Specter blm	204	55	58	0	8
+3117	Specter rng	204	55	58	0	8
+3118	Specter thf	204	55	58	0	8
+3119	Specter war	204	55	58	0	8
+3120	Talos	204	53	55	0	10
+3121	Undead Bats	204	38	40	0	21
+3122	Underworld Bats	204	50	52	0	43
+3123	Utukku EN FY	204	55	57	0	13
+3124	Vampire Bat FY	204	40	42	0	24
+3125	Western Shadow	204	63	63	1	1
+3126	Ash Dragon	205	82	82	1	1
+3127	Ash Lizard	205	73	76	0	15
+3128	Bomb Queen	205	79	81	1	1
+3129	Dire Bat	205	60	63	0	12
+3130	Dodomeki	205	63	68	0	7
+3131	Eotyrannus	205	70	73	0	13
+3132	Foreseer Oramix	205	69	72	1	1
+3133	Goblin Alchemist	205	66	69	0	8
+3134	Goblin Bandit	205	66	69	0	7
+3135	Goblin Mercenary	205	66	69	0	7
+3136	Goblin Shepherd	205	66	69	0	7
+3137	Hurricane Wyvern	205	75	78	0	7
+3138	Lindwurm	205	74	76	1	1
+3139	Nightmare Bats	205	68	72	0	14
+3140	Old Opo-opo	205	61	65	0	26
+3141	Sulfur Scorpion	205	70	73	0	9
+3142	Tarasque	205	72	74	1	1
+3143	Tyrannic Tunnok	205	74	76	1	1
+3144	Volcanic Bomb	205	71	78	0	44
+3145	Volcanic Gas	205	62	68	0	60
+3146	Volcano Wasp	205	61	64	0	10
+3147	Vouivre	205	79	81	1	1
+3148	Antican Aedilis	208	62	72	0	25
+3149	Antican Antesignanus	208	62	72	0	28
+3150	Antican Consul	208	75	75	1	1
+3151	Antican Hastatus	208	52	59	0	46
+3152	Antican Legatus	208	72	74	1	1
+3153	Antican Magister	208	65	66	1	1
+3154	Antican Praefectus	208	65	65	1	1
+3155	Antican Praetor	208	72	74	1	2
+3156	Antican Princeps	208	52	59	0	51
+3157	Antican Proconsul	208	65	65	1	1
+3158	Antican Quaestor	208	62	72	0	29
+3159	Antican Signifer	208	52	59	0	47
+3160	Antican Triarius	208	62	72	0	28
+3161	Antican Tribunus	208	65	65	1	1
+3162	Centurio X-I	208	56	58	1	1
+3163	Diamond Daig	208	70	70	1	1
+3164	Girtab	208	62	65	0	19
+3165	Helm Beetle	208	51	58	0	35
+3166	Nussknacker	208	60	61	1	1
+3167	Proconsul XII	208	70	72	1	1
+3168	Sabotender Bailaor	208	52	59	0	25
+3169	Sabotender Bailarin	208	59	61	1	1
+3170	Sabotender Bailarina	208	80	81	1	1
+3171	Sagittarius X-XIII	208	55	57	1	1
+3172	Sand Digger	208	62	65	0	4
+3173	Sand Eater	208	51	59	0	32
+3174	Sand Lizard	208	56	59	0	27
+3175	Sand Spider	208	51	55	0	16
+3176	Sand Tarantula	208	65	69	0	12
+3177	Spelunking Sabotender	208	62	68	0	11
+3178	Triarius X-XV	208	72	74	1	1
+3179	Tribunus VII-I	208	60	62	1	1
+3180	Amikiri	212	80	82	1	1
+3181	Antares GT	212	77	79	0	5
+3182	Baobhan Sith	212	79	81	1	1
+3183	Bune	212	83	83	1	1
+3184	Demonic Pugil	212	73	76	0	27
+3185	Doom Guard	212	75	77	0	31
+3186	Doom Mage	212	65	67	0	4
+3187	Doom Soldier	212	65	67	0	7
+3188	Doom Warlock	212	76	78	0	29
+3189	Earth Elemental	212	75	77	0	3
+3190	Erlik	212	75	78	0	7
+3191	Fire Elemental	212	75	77	0	2
+3192	Goblin Alchemist	212	65	68	0	3
+3193	Goblin Mercenary	212	65	68	0	4
+3194	Goblin Poacher	212	46	49	0	5
+3195	Goblin Reaper	212	46	49	0	4
+3196	Goblin Robber	212	46	49	0	5
+3197	Goblin Shepherd	212	65	68	0	5
+3198	Goblinsavior Heronox	212	51	52	1	1
+3199	Greater Gaylas	212	46	49	0	6
+3200	Hawker	212	45	48	0	11
+3201	Hell Bat	212	44	48	0	4
+3202	Labyrinth Leech	212	45	48	0	8
+3203	Labyrinth Lizard	212	46	49	0	9
+3204	Makara	212	46	49	0	8
+3205	Robber Crab	212	65	68	0	15
+3206	Taxim	212	78	80	1	1
+3207	Typhoon Wyvern	212	78	80	0	10
+3208	Ungur	212	81	83	1	1
+3209	Wyvernpoacher Drachlox	212	70	72	1	1
+3210	Air Elemental	213	60	62	0	8
+3211	Cockatrice	213	50	53	0	24
+3212	Flying Manta	213	55	59	0	16
+3213	Goblin Alchemist	213	66	69	0	3
+3214	Goblin Bandit	213	66	69	0	3
+3215	Goblin Bouncer	213	51	58	0	13
+3216	Goblin Enchanter	213	51	58	0	12
+3217	Goblin Hunter	213	51	58	0	13
+3218	Goblin Mercenary	213	66	69	0	4
+3219	Goblin Miner	213	51	58	0	14
+3220	Goblin Poacher	213	46	49	0	2
+3221	Goblin Reaper	213	46	49	0	2
+3222	Goblin Robber	213	46	49	0	2
+3223	Goblin Shepherd	213	66	69	0	3
+3224	Goblin Trader	213	46	49	0	1
+3225	Hellion	213	66	66	1	1
+3226	Labyrinth Leech	213	45	48	0	5
+3227	Labyrinth Manticore	213	71	74	0	6
+3228	Lord of Onzozo	213	74	77	1	1
+3229	Mushussu LO	213	51	57	0	15
+3230	Mysticmaker Profblix	213	50	52	1	1
+3231	Narasimha	213	75	77	1	1
+3232	Ose	213	74	76	1	1
+3233	Peg Powler	213	61	62	1	1
+3234	Soulstealer Skullnix	213	69	72	1	1
+3235	Tainted Flesh LoO	213	60	63	0	2
+3236	Torama	213	70	73	0	17
+3237	Water Elemental	213	60	62	0	9
+3238	Wyvern	213	72	75	0	1
+3239	Ocean Crab	220	10	14	0	1
+3240	Ocean Pugil	220	15	19	0	1
+3241	Phantom	220	22	25	0	1
+3242	Pirate Pugil	220	20	22	0	1
+3243	Sea Crab	220	10	20	0	2
+3244	Sea Horror	220	60	62	1	1
+3245	Sea Monk	220	21	29	0	1
 3246	Sea Monk	220	21	29	0	1
-3247	Sea Monk	220	21	29	0	1
-3248	Sea Pugil	220	10	20	0	2
-3249	Sea Pugil	220	10	20	0	1
-3250	Thunder Elemental	220	27	29	0	1
-3251	Water Elemental	220	27	29	0	1
-3252	Ocean Crab	221	10	14	0	1
-3253	Ocean Pugil	221	15	19	0	1
-3254	Phantom	221	22	25	0	1
-3255	Pirate Pugil	221	20	22	0	1
-3256	Sea Crab	221	10	20	0	2
-3257	Sea Horror	221	60	62	1	1
+3247	Sea Pugil	220	10	20	0	2
+3248	Sea Pugil	220	10	20	0	1
+3249	Thunder Elemental	220	27	29	0	1
+3250	Water Elemental	220	27	29	0	1
+3251	Ocean Crab	221	10	14	0	1
+3252	Ocean Pugil	221	15	19	0	1
+3253	Phantom	221	22	25	0	1
+3254	Pirate Pugil	221	20	22	0	1
+3255	Sea Crab	221	10	20	0	2
+3256	Sea Horror	221	60	62	1	1
+3257	Sea Monk	221	21	29	0	1
 3258	Sea Monk	221	21	29	0	1
-3259	Sea Monk	221	21	29	0	1
-3260	Sea Pugil	221	10	20	0	2
-3261	Sea Pugil	221	10	20	0	1
-3262	Thunder Elemental	221	27	29	0	1
-3263	Water Elemental	221	27	29	0	1
-3264	Blackbeard	227	67	68	1	1
+3259	Sea Pugil	221	10	20	0	2
+3260	Sea Pugil	221	10	20	0	1
+3261	Thunder Elemental	221	27	29	0	1
+3262	Water Elemental	221	27	29	0	1
+3263	Blackbeard	227	67	68	1	1
+3264	Crossbones	227	28	31	0	2
 3265	Crossbones	227	28	31	0	2
-3266	Crossbones	227	28	31	0	2
-3267	Ocean Crab	227	10	14	0	1
-3268	Ocean Pugil	227	15	19	0	1
-3269	Phantom	227	22	25	0	1
-3270	Pirate Pugil	227	20	22	0	1
-3271	Sea Crab	227	10	20	0	2
+3266	Ocean Crab	227	10	14	0	1
+3267	Ocean Pugil	227	15	19	0	1
+3268	Phantom	227	22	25	0	1
+3269	Pirate Pugil	227	20	22	0	1
+3270	Sea Crab	227	10	20	0	2
+3271	Sea Monk	227	21	29	0	1
 3272	Sea Monk	227	21	29	0	1
-3273	Sea Monk	227	21	29	0	1
-3274	Sea Pugil	227	10	20	0	2
-3275	Sea Pugil	227	10	14	0	1
-3276	Ship Wight	227	35	39	0	1
+3273	Sea Pugil	227	10	20	0	2
+3274	Sea Pugil	227	10	14	0	1
+3275	Ship Wight	227	35	39	0	1
+3276	Crossbones	228	28	31	0	2
 3277	Crossbones	228	28	31	0	2
-3278	Crossbones	228	28	31	0	2
-3279	Ocean Crab	228	10	14	0	1
-3280	Ocean Pugil	228	15	19	0	1
-3281	Phantom	228	22	25	0	1
-3282	Pirate Pugil	228	20	22	0	1
-3283	Sea Crab	228	10	20	0	2
+3278	Ocean Crab	228	10	14	0	1
+3279	Ocean Pugil	228	15	19	0	1
+3280	Phantom	228	22	25	0	1
+3281	Pirate Pugil	228	20	22	0	1
+3282	Sea Crab	228	10	20	0	2
+3283	Sea Monk	228	21	29	0	1
 3284	Sea Monk	228	21	29	0	1
-3285	Sea Monk	228	21	29	0	1
-3286	Sea Pugil	228	10	20	0	2
-3287	Sea Pugil	228	10	20	0	1
-3288	Ship Wight	228	36	39	0	1
-3289	Silverhook	228	68	70	1	1
+3285	Sea Pugil	228	10	20	0	2
+3286	Sea Pugil	228	10	20	0	1
+3287	Ship Wight	228	36	39	0	1
+3288	Silverhook	228	68	70	1	1
