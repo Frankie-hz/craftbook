@@ -93,10 +93,12 @@ Tick Desynthesis and search for the item you want to break down. Rows show the n
 for example `Shell Shield > Giant Femur (HQ 60%: Turtle Shell)`. Show desynth and Show synth on a recipe's page jump
 between making an item and breaking it down.
 
-**Image support**
+**Synthesis support**
 
-Standard (+1) and Advanced (+3) add guild image support to your skill, the same way the server applies it. When you
-really have the buff, it is read from your status and used instead of the buttons.
+The Standard +1 and Advanced +3 buttons beside "Synthesis support" add a guild NPC's image support to your skill, the
+same way the server applies it. Advanced support also makes a break lose each material 40% of the time instead of 50%,
+and the Avg row and Made totals count that. When you really have the buff, it is read from your status and used
+instead of the buttons.
 
 **What-if**
 

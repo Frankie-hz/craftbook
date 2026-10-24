@@ -1315,10 +1315,16 @@ local function draw_skills()
     end
 
     local buff = player.imagery;
-    imgui.BeginDisabled(active_imagery() ~= nil);
-    draw_support_button('Standard +1', 1, 'Standard image support: +1 to the picked craft (each recipe\'s main craft with All crafts).\nRaises HQ tier and success rate. Skill-ups still roll on your raw skill.');
+    imgui.AlignTextToFramePadding();
+    imgui.TextDisabled('Synthesis support');
+    if (imgui.IsItemHovered()) then
+        set_tooltip('The image support a guild NPC gives. Pick the one you have to see your odds with it.\nWhen you really have the buff, craftbook reads it from your status instead.');
+    end
     imgui.SameLine();
-    draw_support_button('Advanced +3', 2, 'Advanced image support: +3 to the picked craft (each recipe\'s main craft with All crafts).\nRaises HQ tier and success rate. Skill-ups still roll on your raw skill.');
+    imgui.BeginDisabled(active_imagery() ~= nil);
+    draw_support_button('Standard +1', 1, 'Standard support (free, 2 minutes): +1 to the picked craft, or each recipe\'s main craft with All crafts.\nRaises HQ tier and success rate. Skill-ups still roll on your raw skill.');
+    imgui.SameLine();
+    draw_support_button('Advanced +3', 2, 'Advanced support (8 minutes): +3 to the picked craft, or each recipe\'s main craft with All crafts.\nRaises HQ tier and success rate, and a break loses each material 40% of the time instead of 50%.\nThe Avg row and Made totals count that. Skill-ups still roll on your raw skill.');
     imgui.EndDisabled();
     if (buff ~= nil) then
         draw_buff_label(buff);
@@ -1945,10 +1951,26 @@ do
     local NO_HQ            = { 0, 0, 0 };
     local GRADES           = 4;
 
-    -- A break loses the crystal and, by the server's default, each material half the time.
-    local BREAK_LOSS    = 0.5;
+    -- A break loses the crystal and, by the server's default, each material half the time. Advanced support takes
+    -- 10 points off (SYNTH_MATERIAL_LOSS of its craft), and the server never lets a loss chance drop below 20%.
+    local BREAK_LOSS     = 0.5;
+    local ADVANCED_CUT   = 0.10;
+    local ADVANCED_BONUS = 3;
     local TIER_SUCCESS  = 0.95;
     local AVERAGE_TIERS = { 0, 1, 2, 3 };
+
+    -- The chance a break loses each material, with Advanced support on the recipe's main craft.
+    local function break_loss(recipe)
+        if (support_for(recipe.main, recipe) >= ADVANCED_BONUS) then
+            return BREAK_LOSS - ADVANCED_CUT;
+        end
+
+        return BREAK_LOSS;
+    end
+
+    local function loss_words(recipe)
+        return ('%d%% of the other materials'):fmt(math.floor(break_loss(recipe) * 100 + 0.5));
+    end
 
     -- The HQ tier the Avg row assumes. nil follows your own skill.
     local average_tier = nil;
@@ -2037,7 +2059,7 @@ do
             my_sale = my_sale + odds[grade] * mine;
         end
 
-        local break_cost   = crystal_cost + BREAK_LOSS * (cost - crystal_cost);
+        local break_cost   = crystal_cost + break_loss(recipe) * (cost - crystal_cost);
         local average_cost = outlook.success * cost + (1 - outlook.success) * break_cost;
 
         imgui.TableNextRow();
@@ -2047,8 +2069,8 @@ do
         imgui.TableNextColumn();
         imgui.TextDisabled(average_label(recipe, outlook));
         if (imgui.IsItemHovered()) then
-            set_tooltip(('How synths end: %s NQ, %s HQ1, %s HQ2, %s HQ3, %s break.\nA break counts as losing the crystal and half of the other materials.\nResults without a "My price" use the NPC sell price.'):fmt(
-                percent(odds[1]), percent(odds[2]), percent(odds[3]), percent(odds[4]), percent(1 - outlook.success)));
+            set_tooltip(('How synths end: %s NQ, %s HQ1, %s HQ2, %s HQ3, %s break.\nA break counts as losing the crystal and %s.\nResults without a "My price" use the NPC sell price.'):fmt(
+                percent(odds[1]), percent(odds[2]), percent(odds[3]), percent(odds[4]), percent(1 - outlook.success), loss_words(recipe)));
         end
 
         imgui.TableNextColumn();
@@ -2143,7 +2165,7 @@ do
             return;
         end
 
-        local break_cost = crystal_cost + BREAK_LOSS * (cost - crystal_cost);
+        local break_cost = crystal_cost + break_loss(recipe) * (cost - crystal_cost);
         local spent      = round((synths - breaks) * cost + breaks * break_cost);
 
         if (breaks > 0) then
@@ -2152,7 +2174,7 @@ do
         -- Spelling the counts back out makes a number typed in the wrong box easy to spot.
         imgui.Text(('%d synths (%s) cost about %s.'):fmt(synths, table.concat(counted, ', '), commas(spent)));
         if (imgui.IsItemHovered()) then
-            set_tooltip('Each synth that worked used every material. Each break counts as losing the crystal and half of the other materials.\nMaterial prices are today\'s, the same ones the table uses.');
+            set_tooltip(('Each synth that worked used every material. Each break counts as losing the crystal and %s.\nMaterial prices are today\'s, the same ones the table uses.'):fmt(loss_words(recipe)));
         end
 
         imgui.TextDisabled(('Sold to NPC %s, profit'):fmt(commas(sale)));
