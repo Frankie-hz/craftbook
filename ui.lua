@@ -135,6 +135,29 @@ end
 -- The addon's shared state table, handed over by ui.set_state.
 local state = nil;
 
+-- The guild rank test an item is, when Settings has test items marked.
+local function guild_test(item_id)
+    if (not state.mark_tests[1]) then
+        return nil;
+    end
+
+    return db.tests[item_id];
+end
+
+-- Draws a name in the test item colour with a tooltip saying which test it is, or plainly when it is not one.
+local function test_text(item_id, text)
+    local test = guild_test(item_id);
+    if (test == nil) then
+        imgui.Text(text);
+        return;
+    end
+
+    imgui.TextColored(state.test_color, text);
+    if (imgui.IsItemHovered()) then
+        set_tooltip(('%s guild test item: hand it to the guild master to reach %s.'):fmt(db.crafts[test.craft].name, db.RANK_NAMES[test.rank]));
+    end
+end
+
 -- The font size before any craftbook scaling, read once.
 local font_base = nil;
 
@@ -730,7 +753,7 @@ local function item_tooltip(id)
 
     local cheapest = db.cheapest[id];
     if (cheapest ~= nil) then
-        imgui.TextDisabled(('Cheapest NPC: %s gil at %s (%s)'):fmt(commas(cheapest.price), cheapest.npc, db.zone_name(cheapest.zone)));
+        imgui.TextDisabled(('Cheapest NPC: %s gil at %s, %s'):fmt(commas(cheapest.price), cheapest.npc, db.place(cheapest.zone, cheapest.x, cheapest.y, cheapest.z)));
     end
 
     local sell = db.items[id];
@@ -887,7 +910,7 @@ local function recipe_table(id, entries, get_recipe, get_tier)
         if (tier > 0) then
             imgui.TextColored(COLORS.hq, ('%s (HQ%d)'):fmt(label, tier));
         else
-            imgui.Text(label);
+            test_text(recipe.result, label);
         end
         draw_outlook(recipe);
 
@@ -999,6 +1022,9 @@ local function filter_recipes(words)
         if (keep and hq_filter_active()) then
             keep = matches_hq_filter(recipe);
         end
+        if (keep and recipe.keyitem ~= 0 and not state.show_keyitems[1]) then
+            keep = false;
+        end
         if (state.mode == MODE_FAVORITES) then
             keep = level ~= nil and state.favorites[recipe.id] == true;
         end
@@ -1075,7 +1101,7 @@ local function refresh_results()
 
     local key = ('%s|%d|%d|%d|%d|%s|%s|%d|%s|%s|%d'):fmt(state.search[1], state.mode, state.craft, state.level_min[1], state.level_max[1], tostring(state.include_sub[1]), tostring(state.desynth[1]),
         state.support, tostring(state.skillup[1]), table.concat(skills, ','), state.favorites_rev)
-        .. ('|%s%s%s|%d'):fmt(tostring(state.hq_filter[1][1]), tostring(state.hq_filter[2][1]), tostring(state.hq_filter[3][1]), prices.revision);
+        .. ('|%s%s%s|%d|%s'):fmt(tostring(state.hq_filter[1][1]), tostring(state.hq_filter[2][1]), tostring(state.hq_filter[3][1]), prices.revision, tostring(state.show_keyitems[1]));
     if (key == state.filter_key) then
         return;
     end
@@ -1162,6 +1188,7 @@ local function reset_filters()
     for grade = 1, 3 do
         state.hq_filter[grade][1] = false;
     end
+    state.show_keyitems[1] = true;
 end
 
 local function toggle_button(label, active)
@@ -1397,6 +1424,11 @@ local function draw_filters()
     imgui.SameLine();
     imgui.BeginDisabled(favorites);
     imgui.Checkbox('Desynthesis', state.desynth);
+    imgui.SameLine();
+    imgui.Checkbox('Key items', state.show_keyitems);
+    if (imgui.IsItemHovered()) then
+        set_tooltip('Show recipes that need a key item, the guild techniques you learn later. Untick to hide them.');
+    end
     for tier = 1, 3 do
         imgui.SameLine();
         imgui.Checkbox(('T%d'):fmt(tier), state.hq_filter[tier]);
@@ -1461,7 +1493,7 @@ local function draw_recipe_list()
         if (#state.results <= LIST_ICONS) then
             item_icon(recipe.result, 14);
         end
-        imgui.Text(recipe_label(recipe));
+        test_text(recipe.result, recipe_label(recipe));
         draw_outlook(recipe);
 
         imgui.TableNextColumn();
@@ -1542,7 +1574,7 @@ local function draw_price_list()
         if (cheapest ~= nil) then
             imgui.TextDisabled(commas(cheapest.price));
             if (imgui.IsItemHovered()) then
-                set_tooltip(('%s at %s (%s)'):fmt(commas(cheapest.price), cheapest.npc, db.zone_name(cheapest.zone)));
+                set_tooltip(('%s at %s, %s'):fmt(commas(cheapest.price), cheapest.npc, db.place(cheapest.zone, cheapest.x, cheapest.y, cheapest.z)));
             end
         else
             imgui.TextDisabled('-');
@@ -1590,7 +1622,15 @@ local function draw_item_list()
             item_icon(id, 14);
         end
         local selected = state.view ~= nil and state.view.id == id;
-        if (imgui.Selectable(('%s##itemlist%d'):fmt(db.item_name(id), index), selected, ImGuiSelectableFlags_SpanAllColumns)) then
+        local test = guild_test(id);
+        if (test ~= nil) then
+            imgui.PushStyleColor(ImGuiCol_Text, state.test_color);
+        end
+        local picked = imgui.Selectable(('%s##itemlist%d'):fmt(db.item_name(id), index), selected, ImGuiSelectableFlags_SpanAllColumns);
+        if (test ~= nil) then
+            imgui.PopStyleColor(1);
+        end
+        if (picked) then
             open_item(id);
         end
 
@@ -1775,7 +1815,7 @@ do
             if (custom) then
                 set_tooltip(('%s each at your price'):fmt(prices.text(each)));
             else
-                set_tooltip(('%s each at %s (%s)'):fmt(commas(each), cheapest.npc, db.zone_name(cheapest.zone)));
+                set_tooltip(('%s each at %s, %s'):fmt(commas(each), cheapest.npc, db.place(cheapest.zone, cheapest.x, cheapest.y, cheapest.z)));
             end
         end
 
@@ -2334,6 +2374,10 @@ do
             imgui.SameLine();
             imgui.TextDisabled(('[%s]'):fmt(recipe.tag));
         end
+        local test = guild_test(recipe.result);
+        if (test ~= nil and not recipe.desynth) then
+            imgui.TextColored(state.test_color, ('%s guild test item for %s rank'):fmt(db.crafts[test.craft].name, db.RANK_NAMES[test.rank]));
+        end
         draw_favorite_button(recipe);
         draw_track_button(recipe);
         draw_desynth_button(recipe);
@@ -2403,7 +2447,8 @@ do
             imgui.Text(row.npc);
             position_tooltip(row);
             imgui.TableNextColumn();
-            imgui.Text(db.zone_name(row.zone));
+            imgui.Text(db.place(row.zone, row.x, row.y, row.z));
+            position_tooltip(row);
             imgui.TableNextColumn();
             imgui.Text(commas(row.price));
             imgui.TableNextColumn();
@@ -2411,7 +2456,11 @@ do
         end
 
         imgui.EndTable();
-        imgui.TextDisabled('Nation vendor prices shift with your fame. Hover an NPC for coordinates.');
+        if (next(db.mapdata) ~= nil) then
+            imgui.TextDisabled('Nation vendor prices shift with your fame. (G-8) is the map square. Hover for coordinates.');
+        else
+            imgui.TextDisabled('Nation vendor prices shift with your fame. Hover an NPC for coordinates.');
+        end
     end
 
     local function draw_guilds(rows)
@@ -2442,7 +2491,8 @@ do
             imgui.Text(row.npc);
             position_tooltip(row);
             imgui.TableNextColumn();
-            imgui.Text(db.zone_name(row.zone));
+            imgui.Text(db.place(row.zone, row.x, row.y, row.z));
+            position_tooltip(row);
             imgui.TableNextColumn();
             imgui.Text(('%s-%s'):fmt(commas(row.price), commas(row.pricemax)));
             if (imgui.IsItemHovered()) then
@@ -2684,6 +2734,10 @@ do
         item_icon(id, 32);
         imgui.TextColored(COLORS.title, db.item_name(id));
         draw_see_craft(db.made_by[id] or {});
+        local test = guild_test(id);
+        if (test ~= nil) then
+            imgui.TextColored(state.test_color, ('%s guild test item for %s rank'):fmt(db.crafts[test.craft].name, db.RANK_NAMES[test.rank]));
+        end
 
         local bag, total = player.count(id);
         local item       = db.items[id];
@@ -3737,6 +3791,8 @@ do
         end
     end
 
+    local test_color_dirty = false;
+
     local LAYOUT = { beside = 1, tab = 2, window = 3, names = { 'Beside the list', 'Tab in the book', 'Own window' } };
 
     local function current_layout()
@@ -3788,6 +3844,17 @@ do
             end
             draw_scale();
             saved_checkbox('Item icons', state.icons, 'Show item icons in the lists and on item and recipe pages.');
+            saved_checkbox('Mark guild test items', state.mark_tests, 'Colour the items guild masters ask for to rank up, in the lists and on their pages.');
+            imgui.SameLine();
+            if (imgui.ColorEdit3('##testcolor', state.test_color, ImGuiColorEditFlags_NoInputs)) then
+                test_color_dirty = true;
+            end
+            tooltip('The colour guild test items are marked with.');
+            -- The picker changes the colour every frame while dragging, so it is saved once the mouse lets go.
+            if (test_color_dirty and not imgui.IsMouseDown(ImGuiMouseButton_Left)) then
+                test_color_dirty = false;
+                state.save_settings();
+            end
             saved_checkbox('Full item names', state.full_names, 'Show "Black Tiger Fang" instead of the game\'s "Blk. Tiger Fang".\nSearch finds items by either name either way.');
 
             section('Layout');

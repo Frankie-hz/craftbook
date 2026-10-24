@@ -24,8 +24,17 @@ local db = {
     zones     = {},
     keyitems  = {},
     cheapest  = {},
+    tests     = {},
+    mapdata   = {},
     names_ready = false,
 };
+
+-- Guild ranks by number. A guild test item for rank N is what the guild master asks for to reach it.
+db.RANK_NAMES = { 'Recruit', 'Initiate', 'Novice', 'Apprentice', 'Journeyman', 'Craftsman', 'Artisan', 'Adept', 'Veteran', 'Expert' };
+
+-- Zone maps are drawn on a 256 unit square split into a 15 by 15 grid, columns A to O and rows 1 to 15.
+local MAP_SPAN  = 256;
+local MAP_CELLS = 15;
 
 -- synth_recipes uses 255 for subcraft levels nobody has verified.
 db.UNKNOWN_SKILL = 200;
@@ -354,6 +363,23 @@ local function load_sources()
     read_tsv('meta.tsv', function (row)
         db.meta[row.key] = row.value;
     end);
+
+    local craft_index = {};
+    for index, craft in ipairs(db.crafts) do
+        craft_index[craft.key] = index;
+    end
+    read_tsv('tests.tsv', function (row)
+        local craft = craft_index[row.craft];
+        if (craft ~= nil) then
+            db.tests[to_int(row.item)] = { craft = craft, rank = to_int(row.rank) };
+        end
+    end);
+
+    -- data/mapdata.lua: per zone, one calibration per map level (s = scale, x and y = origin, optional world bounds).
+    local ok, mapdata = pcall(dofile, data_path('mapdata.lua'));
+    if (ok and type(mapdata) == 'table') then
+        db.mapdata = mapdata;
+    end
 end
 
 local function sort_vendors()
@@ -372,7 +398,7 @@ local function index_cheapest()
         for _, row in ipairs(rows) do
             local best = db.cheapest[item_id];
             if (best == nil or row.price < best.price) then
-                db.cheapest[item_id] = { price = row.price, npc = row.npc, zone = row.zone };
+                db.cheapest[item_id] = { price = row.price, npc = row.npc, zone = row.zone, x = row.x, y = row.y, z = row.z };
             end
         end
     end
@@ -381,7 +407,7 @@ local function index_cheapest()
         for _, row in ipairs(rows) do
             local best = db.cheapest[item_id];
             if (row.stocked and (best == nil or row.price < best.price)) then
-                db.cheapest[item_id] = { price = row.price, npc = row.npc, zone = row.zone, guild = true };
+                db.cheapest[item_id] = { price = row.price, npc = row.npc, zone = row.zone, x = row.x, y = row.y, z = row.z, guild = true };
             end
         end
     end
@@ -408,6 +434,8 @@ function db.load()
     db.zones       = {};
     db.keyitems    = {};
     db.cheapest    = {};
+    db.tests       = {};
+    db.mapdata     = {};
 
     if (not load_recipes()) then
         db.error = 'Missing data\\recipes.tsv. Run tools\\build_data.py to generate the data files.';
@@ -473,6 +501,52 @@ function db.stack_size(id)
     end
 
     return item.stack;
+end
+
+local function within(map, x, y, z)
+    return (map.xlo == nil or x >= map.xlo) and (map.xhi == nil or x <= map.xhi)
+        and (map.ylo == nil or y >= map.ylo) and (map.yhi == nil or y <= map.yhi)
+        and (map.zlo == nil or z >= map.zlo) and (map.zhi == nil or z <= map.zhi);
+end
+
+-- The map grid square of a spot, like "G-8", or "G-8, Map 2" in zones with several maps. nil without calibration.
+-- y is height and z runs north to south, as the server stores positions.
+function db.grid_ref(zone, x, y, z)
+    local maps = db.mapdata[zone];
+    if (maps == nil or #maps == 0 or x == nil or z == nil) then
+        return nil;
+    end
+
+    local map = maps[1];
+    for _, candidate in ipairs(maps) do
+        if (within(candidate, x, y or 0, z)) then
+            map = candidate;
+            break;
+        end
+    end
+    if (map.s == nil or map.s == 0) then
+        return nil;
+    end
+
+    local cell   = MAP_SPAN / MAP_CELLS;
+    local column = math.max(0, math.min(MAP_CELLS - 1, math.floor((map.x + x * map.s) / cell)));
+    local row    = math.max(1, math.min(MAP_CELLS, math.floor((map.y - z * map.s) / cell) + 1));
+    local ref    = ('%s-%d'):fmt(string.char(string.byte('A') + column), row);
+    if (#maps > 1) then
+        ref = ('%s, Map %d'):fmt(ref, (map.lvl or 0) + 1);
+    end
+
+    return ref;
+end
+
+-- "Northern San d'Oria (G-8)", or just the zone when its map has no calibration.
+function db.place(zone, x, y, z)
+    local ref = db.grid_ref(zone, x, y, z);
+    if (ref == nil) then
+        return db.zone_name(zone);
+    end
+
+    return ('%s (%s)'):fmt(db.zone_name(zone), ref);
 end
 
 -- Both of an item's names in lowercase, so a search finds "Blk. Tiger Fang" by "black tiger" too.

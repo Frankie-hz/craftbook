@@ -64,7 +64,8 @@ as two tabs instead, or put the recipe page in its own window.
 **Finding recipes**
 
 - Pick a mode: Results (search by what a recipe makes), Ingredients (by what it uses), Items or My prices.
-- Filter by craft, level range and sub-crafts. Reset clears every filter.
+- Filter by craft, level range and sub-crafts. Untick Key items to hide recipes that need a key item. Reset clears
+  every filter.
 - Skill-ups lists only the recipes 1 to 5 levels above your skill, where skill-ups are most likely.
 - T1, T2 and T3 list the recipes you are at that HQ tier for right now (11 to 30, 31 to 50 and 51 or more levels over).
 - Click a column header to sort. Click again for descending, and a third time for the default order.
@@ -165,6 +166,7 @@ Open with the Settings button or `/cb settings`.
 - Theme, and the window type for Classic.
 - UI scale from 75% to 200%.
 - Item icons on or off.
+- Mark guild test items: colours the items guild masters ask for to rank up, with a colour box to pick the colour.
 - Full item names: "Black Tiger Fang" instead of the game's "Blk. Tiger Fang". Search finds items by either name
   whatever the setting.
 - Recipe page: beside the list, as a tab next to a List tab (good for a narrow book), or in its own window. Pop out
