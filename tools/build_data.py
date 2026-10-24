@@ -1191,6 +1191,51 @@ def long_path(path):
     return pathlib.Path(prefix + str(path.resolve()))
 
 
+# Guilds whose rank tests are synthesis results, by craft column. Phoenix stops rank-ups at Veteran (its
+# guild_master_rank_cap module), so the Expert test is left out.
+GUILD_CRAFTS = {
+    'WOODWORKING': 'wood', 'SMITHING': 'smith', 'GOLDSMITHING': 'gold', 'CLOTHCRAFT': 'cloth',
+    'LEATHERCRAFT': 'leather', 'BONECRAFT': 'bone', 'ALCHEMY': 'alchemy', 'COOKING': 'cook',
+}
+TOP_TEST_RANK = 9
+
+
+def test_item_id(name, resolver, ids_by_name):
+    value = resolver.resolve(name)
+    if is_number(value):
+        return int(value)
+
+    key = name[len('xi.item.'):].lower()
+    for candidate in (key, re.sub(r'_\d+$', '', key)):
+        if candidate in ids_by_name:
+            return ids_by_name[candidate]
+
+    return None
+
+
+# The item each guild master asks for to reach a rank: testItemTable[guild][rank] in guild_master.lua.
+def load_guild_tests(repo, resolver, ids_by_name):
+    text = (repo / 'scripts' / 'globals' / 'hobbies' / 'crafting' / 'guild_master.lua').read_text(encoding='utf-8')
+    start = text.index('local testItemTable')
+    table = text[start:text.index('\n}\n', start)]
+
+    rows = []
+    for guild, body in re.findall(r'\[xi\.guild\.(\w+)\]\s*=\s*\{([^}]*)\}', table):
+        craft = GUILD_CRAFTS.get(guild)
+        if craft is None:
+            continue
+        for rank, name in enumerate(re.findall(r'xi\.item\.\w+', body), start=1):
+            if rank > TOP_TEST_RANK:
+                break
+            item_id = test_item_id(name, resolver, ids_by_name)
+            if item_id is None:
+                warn(f'guild test item not found: {name}')
+                continue
+            rows.append((item_id, craft, rank))
+
+    return sorted(rows)
+
+
 def build(repo, out, label):
     repo = long_path(repo)
     out.mkdir(parents=True, exist_ok=True)
@@ -1348,6 +1393,7 @@ def build(repo, out, label):
 
     mobs, drops = load_mobs(repo, roots, zone_ids, ids_by_name, relevant)
     helm_rows = load_helm(repo, resolver, lua_files, relevant)
+    test_rows = load_guild_tests(repo, resolver, ids_by_name)
 
     item_rows = [(i, base_sell.get(i, 0), db_names.get(i, '')) for i in sorted(relevant)]
 
@@ -1375,6 +1421,7 @@ def build(repo, out, label):
     write_tsv(out / 'mobs.tsv', ['idx', 'name', 'zone', 'lvmin', 'lvmax', 'nm', 'spawns'], mobs)
     write_tsv(out / 'drops.tsv', ['item', 'mob', 'rate', 'kind'], drops)
     write_tsv(out / 'helm.tsv', ['item', 'zone', 'type', 'rate'], helm_rows)
+    write_tsv(out / 'tests.tsv', ['item', 'craft', 'rank'], test_rows)
     write_tsv(out / 'keyitems.tsv', ['id', 'name'], key_item_rows)
     write_tsv(out / 'zones.tsv', ['id', 'name'], zone_rows)
 
@@ -1392,6 +1439,7 @@ def build(repo, out, label):
     print(f'mobs         {len(mobs)}')
     print(f'drop rows    {len(drops)}')
     print(f'helm rows    {len(helm_rows)}')
+    print(f'guild tests  {len(test_rows)}')
     print(f'overrides    {len(enabled_overrides)} enabled of {len(overrides)}')
     unique_warnings = sorted(set(warnings))
     print(f'warnings     {len(unique_warnings)}')
