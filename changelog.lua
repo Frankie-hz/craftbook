@@ -7,6 +7,13 @@ local MAX_VERSION_PARTS = 4;
 -- public build, so they never mention anything it leaves out. A version without a date is not released yet.
 local ENTRIES = {
     {
+        version = '1.3.2',
+        date    = 'October 25, 2026',
+        fixed = {
+            'Material names in trackers no longer get cut off. The column now widens to fit the longest name.',
+        },
+    },
+    {
         version = '1.3.1',
         date    = 'October 24, 2026',
         new = {
