@@ -3332,7 +3332,7 @@ do
     end
 
     -- Green when the bag holds enough, yellow when more sit in the satchel, sack, case or storage, red otherwise.
-    local function draw_tracked_row(row)
+    local function tracked_count(row)
         local bag, total = player.count(row.id);
         local stored     = total - bag;
         local color      = COLORS.good;
@@ -3342,19 +3342,35 @@ do
             color = COLORS.bad;
         end
 
-        local count = ('%d/%d'):fmt(bag, row.count);
+        local text = ('%d/%d'):fmt(bag, row.count);
         if (stored > 0) then
-            count = ('%s +%d'):fmt(count, stored);
+            text = ('%s +%d'):fmt(text, stored);
         end
 
-        imgui.TableNextRow();
-        imgui.TableNextColumn();
-        imgui.TextColored(color, count);
-        local hovered = imgui.IsItemHovered();
-        imgui.TableNextColumn();
-        imgui.TextColored(color, db.item_name(row.id));
-        if (stored > 0 and (hovered or imgui.IsItemHovered())) then
-            set_tooltip(('%d in your bag, %d more in your satchel, sack, case or storage.'):fmt(bag, stored));
+        return { text = text, color = color, bag = bag, stored = stored };
+    end
+
+    -- Drawn straight into the tracker cell, since a table inside it would not widen the column to fit long names.
+    local function draw_tracked_rows(rows)
+        local counts = {};
+        local width  = 0;
+        for index, row in ipairs(rows) do
+            counts[index] = tracked_count(row);
+            local text_width = imgui.CalcTextSize(counts[index].text);
+            width = math.max(width, text_width);
+        end
+
+        local name_x = imgui.GetCursorPosX() + width + imgui.GetStyle().ItemSpacing.x;
+        for index, row in ipairs(rows) do
+            local count = counts[index];
+            imgui.TextColored(count.color, count.text);
+            local hovered = imgui.IsItemHovered();
+            imgui.SameLine(0, 0);
+            imgui.SetCursorPosX(name_x);
+            imgui.TextColored(count.color, db.item_name(row.id));
+            if (count.stored > 0 and (hovered or imgui.IsItemHovered())) then
+                set_tooltip(('%d in your bag, %d more in your satchel, sack, case or storage.'):fmt(count.bag, count.stored));
+            end
         end
     end
 
@@ -3427,13 +3443,7 @@ do
         imgui.TableNextRow();
         imgui.TableNextColumn();
         local untrack = draw_tracked_name(tracker, recipe, index, synths);
-
-        if (begin_table(('##trackedrows%d'):fmt(index), 2, ImGuiTableFlags_SizingFixedFit)) then
-            for _, row in ipairs(rows) do
-                draw_tracked_row(row);
-            end
-            imgui.EndTable();
-        end
+        draw_tracked_rows(rows);
 
         if (tracker.odds[1]) then
             imgui.TableNextColumn();
