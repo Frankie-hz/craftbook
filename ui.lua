@@ -2058,6 +2058,7 @@ do
 
     local TIER_SUCCESS  = 0.95;
     local AVERAGE_TIERS = { 0, 1, 2, 3 };
+    local OUT_OF_REACH_ALPHA = 0.4;
 
     -- The HQ tier the Avg row assumes. nil follows your own skill.
     local average_tier = nil;
@@ -2274,6 +2275,36 @@ do
         end
     end
 
+    local out_of_reach_text;
+    do
+        -- The HQ tier each HQ result first shows up at (synthutils calculateSynthResult), by grade.
+        local FIRST_TIER  = { [2] = 0, [3] = 1, [4] = 2 };
+        local TIER_LEVELS = { [0] = '0 to 10', [1] = '11 to 30', [2] = '31 or more' };
+
+        function out_of_reach_text(tier, outlook)
+            if (not outlook.can_hq) then
+                return 'Your skill is under the recipe level, so it cannot HQ.';
+            end
+
+            local needed = FIRST_TIER[tier.grade];
+            local who    = ('You are T%d.'):fmt(outlook.tier);
+            if (average_tier ~= nil) then
+                who = ('The Avg row is set to T%d.'):fmt(average_tier);
+            end
+
+            return ('%s needs T%d, %s levels over the recipe. %s'):fmt(tier.label, needed, TIER_LEVELS[needed], who);
+        end
+    end
+
+    local function chance_text(tier)
+        local text = ('Chance a synth ends as %s, breaks included.'):fmt(tier.label);
+        if (average_tier ~= nil) then
+            return ('%s\nAt T%d with 95%% success, the tier the Avg row is set to.'):fmt(text, average_tier);
+        end
+
+        return text;
+    end
+
     local function draw_results(recipe, cost, missing, crystal_cost, materials)
         section('Results');
         if (not recipe.desynth) then
@@ -2284,12 +2315,14 @@ do
             return;
         end
 
-        setup_column('Tier', ImGuiTableColumnFlags_WidthFixed, 36);
+        -- ImGui refits a fixed column every frame only when it cannot be dragged, and these change with tier and prices.
+        local REFIT = bit.bor(ImGuiTableColumnFlags_WidthFixed, ImGuiTableColumnFlags_NoResize);
+        setup_column('Tier', REFIT, 36);
         setup_column('Item', ImGuiTableColumnFlags_WidthStretch);
         setup_column('NPC sell', ImGuiTableColumnFlags_WidthFixed, 80);
-        setup_column('Profit', ImGuiTableColumnFlags_WidthFixed, 80);
+        setup_column('Profit', REFIT, 80);
         setup_column('My price', ImGuiTableColumnFlags_WidthFixed, price_input_width());
-        setup_column('My profit', ImGuiTableColumnFlags_WidthFixed, 80);
+        setup_column('My profit', REFIT, 80);
         imgui.TableHeadersRow();
 
         local tiers = { { label = 'NQ', id = recipe.result, qty = recipe.qty, grade = 1 } };
@@ -2302,14 +2335,34 @@ do
 
         local values    = {};
         local my_values = {};
+        local outlook   = average_outlook(recipe);
+        local odds      = nil;
+        if (outlook ~= nil) then
+            odds = grade_odds(outlook);
+        end
 
         for _, tier in ipairs(tiers) do
+            local out_of_reach = tier.hq and odds ~= nil and odds[tier.grade] == 0;
+            if (out_of_reach) then
+                imgui.PushStyleVar(ImGuiStyleVar_Alpha, imgui.GetStyle().Alpha * OUT_OF_REACH_ALPHA);
+            end
+
+            local tier_text = tier.label;
+            if (odds ~= nil and not out_of_reach) then
+                tier_text = ('%s (%s)'):fmt(tier.label, percent(odds[tier.grade]));
+            end
+
             imgui.TableNextRow();
             imgui.TableNextColumn();
             if (tier.hq) then
-                imgui.TextColored(COLORS.hq, tier.label);
+                imgui.TextColored(COLORS.hq, tier_text);
             else
-                imgui.Text(tier.label);
+                imgui.Text(tier_text);
+            end
+            if (out_of_reach and imgui.IsItemHovered()) then
+                set_tooltip(out_of_reach_text(tier, outlook));
+            elseif (odds ~= nil and imgui.IsItemHovered()) then
+                set_tooltip(chance_text(tier));
             end
 
             imgui.TableNextColumn();
@@ -2343,6 +2396,10 @@ do
 
             values[tier.grade]    = value;
             my_values[tier.grade] = my_value;
+
+            if (out_of_reach) then
+                imgui.PopStyleVar(1);
+            end
         end
 
         draw_average_row(recipe, cost, missing, crystal_cost, materials, values, my_values);
