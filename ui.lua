@@ -1864,6 +1864,7 @@ do
         local cost         = 0;
         local crystal_cost = 0;
         local missing      = {};
+        local materials    = {};
 
         if (begin_fit_table('##materials', 6)) then
             setup_column('Qty', ImGuiTableColumnFlags_WidthFixed, 30);
@@ -1891,6 +1892,8 @@ do
                     cost = cost + price;
                     if (CRYSTAL_IDS[row.id]) then
                         crystal_cost = crystal_cost + price;
+                    else
+                        materials[#materials + 1] = { id = row.id, cost = price };
                     end
                 elseif (not CRYSTAL_IDS[row.id]) then
                     missing[#missing + 1] = db.item_name(row.id);
@@ -1914,7 +1917,7 @@ do
             imgui.PopTextWrapPos();
         end
 
-        return cost, #missing, crystal_cost;
+        return cost, #missing, crystal_cost, materials;
     end
 
     local function draw_profit(value, cost, missing)
@@ -1953,26 +1956,108 @@ do
     local NO_HQ            = { 0, 0, 0 };
     local GRADES           = 4;
 
-    -- A break loses the crystal and, by the server's default, each material half the time. Advanced support takes
-    -- 10 points off (SYNTH_MATERIAL_LOSS of its craft), and the server never lets a loss chance drop below 20%.
-    local BREAK_LOSS     = 0.5;
-    local ADVANCED_CUT   = 0.10;
-    local ADVANCED_BONUS = 3;
-    local TIER_SUCCESS  = 0.95;
-    local AVERAGE_TIERS = { 0, 1, 2, 3 };
+    -- A break always loses the crystal, and each material by its own chance (synthutils materialLossRates), half the
+    -- time for any item not listed. Advanced support takes 10 points off when its craft is the one that broke
+    -- (SYNTH_MATERIAL_LOSS of that craft), and the server never lets a loss chance drop below 20%.
+    -- The helpers stay in this block, since Lua allows only 200 locals in one function.
+    local break_cost;
+    local loss_words;
+    do
+        local MATERIAL_LOSS  = { [489] = 0, [722] = 1, [860] = 1, [1288] = 1, [1289] = 1, [1290] = 1, [1291] = 1, [1292] = 1, [1409] = 1, [2169] = 1, [9091] = 0 };
+        local DEFAULT_LOSS   = 0.5;
+        local MIN_LOSS       = 0.2;
+        local ADVANCED_CUT   = 0.10;
+        local ADVANCED_BONUS = 3;
 
-    -- The chance a break loses each material, with Advanced support on the recipe's main craft.
-    local function break_loss(recipe)
-        if (support_for(recipe.main, recipe) >= ADVANCED_BONUS) then
-            return BREAK_LOSS - ADVANCED_CUT;
+        local function loss_rate(base, craft_index, recipe)
+            if (base == 0) then
+                return 0;
+            end
+            if (support_for(craft_index, recipe) >= ADVANCED_BONUS) then
+                return math.max(MIN_LOSS, base - ADVANCED_CUT);
+            end
+
+            return base;
         end
 
-        return BREAK_LOSS;
+        -- A material's chance to be lost on a break, averaged over the craft that broke.
+        local function blended_loss(base, shares, recipe)
+            local rate = 0;
+            for _, entry in ipairs(shares) do
+                rate = rate + entry.share * loss_rate(base, entry.craft, recipe);
+            end
+
+            return rate;
+        end
+
+        -- The share of breaks each craft causes. The server checks the crafts in order and stops at the first break.
+        -- A picked Avg tier stands for a single craft, so it blames the main craft.
+        local function break_shares(recipe, picked)
+            local main_only = { { craft = recipe.main, share = 1 } };
+            if (picked) then
+                return main_only;
+            end
+
+            local shares  = {};
+            local holding = 1;
+            for index = 1, #db.crafts do
+                local level = recipe.skills[index];
+                if (level > 0) then
+                    local skill = effective_skill(index, recipe);
+                    if (skill == nil or level >= db.UNKNOWN_SKILL) then
+                        return main_only;
+                    end
+
+                    local success = synth_success(level - skill);
+                    if (recipe.desynth) then
+                        success = desynth_success(level - skill);
+                    end
+                    shares[#shares + 1] = { craft = index, share = holding * (1 - success) };
+                    holding = holding * success;
+                end
+            end
+
+            for _, entry in ipairs(shares) do
+                entry.share = entry.share / (1 - holding);
+            end
+
+            return shares;
+        end
+
+        -- What one break costs: the crystal, and each material by its chance to be lost.
+        function break_cost(recipe, crystal_cost, materials, picked)
+            local shares = break_shares(recipe, picked);
+            local lost   = 0;
+            for _, material in ipairs(materials) do
+                lost = lost + material.cost * blended_loss(MATERIAL_LOSS[material.id] or DEFAULT_LOSS, shares, recipe);
+            end
+
+            return crystal_cost + lost;
+        end
+
+        function loss_words(recipe, materials, picked)
+            local shares = break_shares(recipe, picked);
+            local function whole(base)
+                return math.floor(blended_loss(base, shares, recipe) * 100 + 0.5);
+            end
+
+            local words = ('%d%% of each other material'):fmt(whole(DEFAULT_LOSS));
+            local own   = {};
+            for _, material in ipairs(materials) do
+                if (MATERIAL_LOSS[material.id] ~= nil) then
+                    own[#own + 1] = ('%s %d%%'):fmt(db.item_name(material.id), whole(MATERIAL_LOSS[material.id]));
+                end
+            end
+            if (#own > 0) then
+                words = ('%s (%s)'):fmt(words, table.concat(own, ', '));
+            end
+
+            return words;
+        end
     end
 
-    local function loss_words(recipe)
-        return ('%d%% of the other materials'):fmt(math.floor(break_loss(recipe) * 100 + 0.5));
-    end
+    local TIER_SUCCESS  = 0.95;
+    local AVERAGE_TIERS = { 0, 1, 2, 3 };
 
     -- The HQ tier the Avg row assumes. nil follows your own skill.
     local average_tier = nil;
@@ -2038,7 +2123,7 @@ do
     end
 
     -- values and my_values hold each grade's sale value (NQ first), with 0 where "My price" is not set.
-    local function draw_average_row(recipe, cost, missing, crystal_cost, values, my_values)
+    local function draw_average_row(recipe, cost, missing, crystal_cost, materials, values, my_values)
         local outlook = average_outlook(recipe);
         if (outlook == nil) then
             return;
@@ -2061,8 +2146,8 @@ do
             my_sale = my_sale + odds[grade] * mine;
         end
 
-        local break_cost   = crystal_cost + break_loss(recipe) * (cost - crystal_cost);
-        local average_cost = outlook.success * cost + (1 - outlook.success) * break_cost;
+        local one_break    = break_cost(recipe, crystal_cost, materials, average_tier ~= nil);
+        local average_cost = outlook.success * cost + (1 - outlook.success) * one_break;
 
         imgui.TableNextRow();
         imgui.TableNextColumn();
@@ -2072,7 +2157,7 @@ do
         imgui.TextDisabled(average_label(recipe, outlook));
         if (imgui.IsItemHovered()) then
             set_tooltip(('How synths end: %s NQ, %s HQ1, %s HQ2, %s HQ3, %s break.\nA break counts as losing the crystal and %s.\nResults without a "My price" use the NPC sell price.'):fmt(
-                percent(odds[1]), percent(odds[2]), percent(odds[3]), percent(odds[4]), percent(1 - outlook.success), loss_words(recipe)));
+                percent(odds[1]), percent(odds[2]), percent(odds[3]), percent(odds[4]), percent(1 - outlook.success), loss_words(recipe, materials, average_tier ~= nil)));
         end
 
         imgui.TableNextColumn();
@@ -2125,7 +2210,7 @@ do
     end
 
     -- Totals for the synths you really did: what each result sells for, against what the synths cost.
-    local function draw_made(recipe, cost, missing, crystal_cost, values, my_values)
+    local function draw_made(recipe, cost, missing, crystal_cost, materials, values, my_values)
         local buffers = made_buffers(recipe);
 
         imgui.AlignTextToFramePadding();
@@ -2167,8 +2252,8 @@ do
             return;
         end
 
-        local break_cost = crystal_cost + break_loss(recipe) * (cost - crystal_cost);
-        local spent      = round((synths - breaks) * cost + breaks * break_cost);
+        local one_break = break_cost(recipe, crystal_cost, materials, false);
+        local spent     = round((synths - breaks) * cost + breaks * one_break);
 
         if (breaks > 0) then
             counted[#counted + 1] = ('%d broke'):fmt(breaks);
@@ -2176,7 +2261,7 @@ do
         -- Spelling the counts back out makes a number typed in the wrong box easy to spot.
         imgui.Text(('%d synths (%s) cost about %s.'):fmt(synths, table.concat(counted, ', '), commas(spent)));
         if (imgui.IsItemHovered()) then
-            set_tooltip(('Each synth that worked used every material. Each break counts as losing the crystal and %s.\nMaterial prices are today\'s, the same ones the table uses.'):fmt(loss_words(recipe)));
+            set_tooltip(('Each synth that worked used every material. Each break counts as losing the crystal and %s.\nMaterial prices are today\'s, the same ones the table uses.'):fmt(loss_words(recipe, materials, false)));
         end
 
         imgui.TextDisabled(('Sold to NPC %s, profit'):fmt(commas(sale)));
@@ -2189,7 +2274,7 @@ do
         end
     end
 
-    local function draw_results(recipe, cost, missing, crystal_cost)
+    local function draw_results(recipe, cost, missing, crystal_cost, materials)
         section('Results');
         if (not recipe.desynth) then
             draw_average_picker();
@@ -2260,10 +2345,10 @@ do
             my_values[tier.grade] = my_value;
         end
 
-        draw_average_row(recipe, cost, missing, crystal_cost, values, my_values);
+        draw_average_row(recipe, cost, missing, crystal_cost, materials, values, my_values);
         imgui.EndTable();
 
-        draw_made(recipe, cost, missing, crystal_cost, values, my_values);
+        draw_made(recipe, cost, missing, crystal_cost, materials, values, my_values);
         imgui.TextDisabled('Materials use your price when you set one, otherwise the cheapest NPC. Crystals without a price count as free.');
     end
 
@@ -2415,8 +2500,8 @@ do
             imgui.TextColored(COLORS.keyitem, ('Requires key item: %s'):fmt(db.keyitem_name(recipe.keyitem)));
         end
 
-        local cost, missing, crystal_cost = draw_materials(recipe);
-        draw_results(recipe, cost, missing, crystal_cost);
+        local cost, missing, crystal_cost, materials = draw_materials(recipe);
+        draw_results(recipe, cost, missing, crystal_cost, materials);
 
         local others = db.made_by[recipe.result];
         if (others ~= nil and #others > 1) then
