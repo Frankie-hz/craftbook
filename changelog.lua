@@ -7,6 +7,20 @@ local MAX_VERSION_PARTS = 4;
 -- public build, so they never mention anything it leaves out. A version without a date is not released yet.
 local ENTRIES = {
     {
+        version = '1.3.3',
+        date    = 'November 27, 2026',
+        new = {
+            'Crafting gear and your Moghancement now count. Aprons, smocks, torques and the rest add to your skill, craft rings add 1% success and block HQ, and gear that cuts material loss lowers the cost of a break.',
+            'Hover your skill, or the Gear and Moghancement label beside the support buttons, to see what each piece adds.',
+            'Each result on a recipe shows its chance next to its name. HQ results you cannot reach yet are dimmed, and hovering one tells you how far over the recipe you need to be.',
+            '/cb mem shows craftbook\'s memory use, for bug reports.',
+        },
+        fixed = {
+            'A break now costs each material by its own loss chance. Some materials are never lost, and Advanced support only lowers the loss when its craft is the one that broke.',
+            'The Tier, Profit and My profit columns resize as their numbers change instead of cutting them off.',
+        },
+    },
+    {
         version = '1.3.2',
         date    = 'October 25, 2026',
         fixed = {
