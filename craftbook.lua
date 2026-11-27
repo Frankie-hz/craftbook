@@ -355,6 +355,11 @@ ashita.events.register('command', 'command_cb', function (e)
         return;
     end
 
+    if (sub == 'mem') then
+        message(('Lua heap %.1f MB. Icons: %d live, %d created, %d released, %d still held after release.'):fmt(collectgarbage('count') / 1024, icons.count, icons.created, icons.released, icons.held));
+        return;
+    end
+
     if (sub == 'history') then
         state.log_visible[1] = not state.log_visible[1];
         return;
@@ -413,6 +418,7 @@ ashita.events.register('command', 'command_cb', function (e)
         message('/craftbook theme <name> - switch theme (no name lists them)');
         message('/craftbook fit - size the game window to exactly the size the game renders at');
         message('/craftbook reload - reload the data files');
+        message('/craftbook mem - show craftbook memory use, for bug reports');
         return;
     end
 

@@ -12,12 +12,19 @@ local icons = {
     full    = false,
     cache   = {},
     count   = 0,
+    created  = 0,
+    released = 0,
+    held     = 0,
 };
 
 function icons.release()
     for _, entry in pairs(icons.cache) do
         if (entry ~= false) then
-            entry.texture:Release();
+            icons.released = icons.released + 1;
+            -- Anything but 0 means something else still holds the texture, so its memory stayed allocated.
+            if (entry.texture:Release() ~= 0) then
+                icons.held = icons.held + 1;
+            end
         end
     end
 
@@ -72,7 +79,8 @@ function icons.get(item_id)
         entry = created;
         icons.cache[item_id] = entry;
         if (entry ~= false) then
-            icons.count = icons.count + 1;
+            icons.count   = icons.count + 1;
+            icons.created = icons.created + 1;
         end
     end
 
