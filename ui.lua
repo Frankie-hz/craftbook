@@ -43,9 +43,7 @@ local SUPPORT_BONUS = { [0] = 0, [1] = 1, [2] = 3 };
 
 -- Base HQ chance by the lowest tier across every craft the recipe uses (synthutils calculateSynthResult).
 local HQ_CHANCE = { [0] = 0.015625, [1] = 0.0625, [2] = 0.25, [3] = 0.50 };
-local HQ_CAP    = 0.80;
 
-local DESYNTH_HQ_CHANCE = 0.60;
 local SKILLUP_GAP       = 5;
 
 -- Must match the server's map.CRAFT_MODERN_SYSTEM (synthutils doSynthSkillUp).
@@ -374,29 +372,48 @@ local function effective_skill(craft_index, recipe)
         return nil;
     end
 
-    return skill + support_for(craft_index, recipe);
+    return skill + support_for(craft_index, recipe) + player.skill_bonus(craft_index);
 end
 
-local function synth_success(difficulty)
-    if (difficulty >= 4) then
-        return math.max(0, 80 - 10 * (difficulty - 3)) / 100;
-    end
-    if (difficulty >= 1) then
-        return (95 - 5 * difficulty) / 100;
+local synth_success;
+local desynth_success;
+do
+    local function success_bonus(craft_index, mod)
+        if (player.blocks_hq(craft_index)) then
+            return player.mod(mod) + 1;
+        end
+
+        return player.mod(mod);
     end
 
-    return 0.95;
+    function synth_success(difficulty, craft_index)
+        local rate = 95;
+        if (difficulty >= 4) then
+            rate = 80 - 10 * (difficulty - 3);
+        elseif (difficulty >= 1) then
+            rate = 95 - 5 * difficulty;
+        end
+
+        rate = rate + success_bonus(craft_index, player.MOD.SUCCESS);
+        return math.max(0, math.min(rate, 99)) / 100;
+    end
+
+    function desynth_success(difficulty, craft_index)
+        local rate = 40;
+        if (difficulty >= 8) then
+            rate = 10 - 10 * (difficulty - 7) / 3;
+        elseif (difficulty >= 1) then
+            rate = 40 - 5 * (difficulty - 1);
+        end
+
+        rate = rate + success_bonus(craft_index, player.MOD.SUCCESS_DESYNTH);
+        return math.max(0, math.min(rate, 100)) / 100;
+    end
 end
 
-local function desynth_success(difficulty)
-    if (difficulty >= 8) then
-        return math.max(0, 10 - 10 * (difficulty - 7) / 3) / 100;
-    end
-    if (difficulty >= 1) then
-        return (40 - 5 * (difficulty - 1)) / 100;
-    end
-
-    return 0.40;
+-- HQ rate mods add 1/512 each before the cap.
+local function hq_chance(base)
+    return math.min(base + player.mod(player.MOD.HQ_RATE) / 512, 0.80); -- synthutils caps HQ at 80%
 end
 
 local function hq_tier(difficulty)
@@ -426,10 +443,14 @@ local function synth_outlook(recipe)
             end
 
             local difficulty = level - skill;
+            if (player.blocks_hq(index)) then
+                outlook.can_hq = false;
+                outlook.ring   = index;
+            end
             if (recipe.desynth) then
-                outlook.success = outlook.success * desynth_success(difficulty);
+                outlook.success = outlook.success * desynth_success(difficulty, index);
             else
-                outlook.success = outlook.success * synth_success(difficulty);
+                outlook.success = outlook.success * synth_success(difficulty, index);
                 outlook.can_hq  = outlook.can_hq and difficulty < 1;
                 outlook.tier    = math.min(outlook.tier, hq_tier(difficulty));
             end
@@ -438,11 +459,11 @@ local function synth_outlook(recipe)
 
     if (recipe.desynth) then
         outlook.tier = nil;
-        outlook.hq   = DESYNTH_HQ_CHANCE;
+        outlook.hq   = hq_chance(0.60); -- desynthesis HQ base chance
         return outlook;
     end
 
-    outlook.hq = math.min(HQ_CHANCE[outlook.tier], HQ_CAP);
+    outlook.hq = hq_chance(HQ_CHANCE[outlook.tier]);
     return outlook;
 end
 
@@ -989,7 +1010,7 @@ local function in_skillup_range(recipe, level)
         return false;
     end
 
-    return level > skill and level <= skill + SKILLUP_GAP + support_for(supported, recipe) and subcrafts_reachable(recipe, supported);
+    return level > skill and level <= skill + SKILLUP_GAP + support_for(supported, recipe) + player.skill_bonus(supported) and subcrafts_reachable(recipe, supported);
 end
 
 local function in_level_range(recipe, level)
@@ -1301,42 +1322,126 @@ local function draw_buff_label(buff)
     end
 end
 
-local function draw_skills()
-    local skill = skill_of(state.craft);
-    if (state.craft > 0 and skill ~= nil) then
-        local text  = ('%s %d'):fmt(db.crafts[state.craft].name, skill);
-        local bonus = support_for(state.craft, nil);
-        if (bonus > 0) then
-            text = ('%s (+%d)'):fmt(text, bonus);
+local draw_skills;
+do
+    local MOD      = player.MOD;
+    local ELEMENTS = { 'Fire', 'Ice', 'Wind', 'Earth', 'Lightning', 'Water', 'Light', 'Dark' };
+
+    local function per_craft(mod, base)
+        if (mod >= base and mod < base + #db.crafts) then
+            return db.crafts[mod - base + 1].name;
         end
 
-        local color = COLORS.title;
-        if (what_if_on()) then
-            text  = ('%s (what-if)'):fmt(text);
-            color = COLORS.warn;
+        return nil;
+    end
+
+    local function describe(mod, value)
+        local craft = per_craft(mod, MOD.SKILL);
+        if (craft ~= nil) then
+            return ('%s %+d'):fmt(craft, value);
+        end
+        craft = per_craft(mod, MOD.ANTI_HQ);
+        if (craft ~= nil) then
+            return ('%s: no HQ, success +1%%'):fmt(craft);
+        end
+        craft = per_craft(mod, MOD.LOSS_CRAFT);
+        if (craft ~= nil) then
+            return ('%s breaks: material loss -%d%%'):fmt(craft, value);
+        end
+        if (mod >= MOD.LOSS_ELEMENT and mod < MOD.LOSS_ELEMENT + #ELEMENTS) then
+            return ('%s crystal breaks: material loss -%d%%'):fmt(ELEMENTS[mod - MOD.LOSS_ELEMENT + 1], value);
+        end
+        if (mod == MOD.LOSS) then
+            return ('Material loss -%d%%'):fmt(value);
+        end
+        if (mod == MOD.SUCCESS) then
+            return ('Success +%d%%'):fmt(value);
+        end
+        if (mod == MOD.SUCCESS_DESYNTH) then
+            return ('Desynthesis success +%d%%'):fmt(value);
+        end
+        if (mod == MOD.HQ_RATE) then
+            return ('HQ chance +%s'):fmt(percent(value / 512));
         end
 
+        return ('Mod %d %+d'):fmt(mod, value);
+    end
+
+    local function source_name(source)
+        if (source.keyitem ~= nil) then
+            return db.keyitem_name(source.keyitem);
+        end
+
+        return db.item_name(source.item);
+    end
+
+    -- Every worn piece of crafting gear and the Moghancement, with what each one adds.
+    local function draw_bonus_tooltip()
+        imgui.BeginTooltip();
+        if (#player.sources == 0) then
+            imgui.Text('No crafting gear worn and no Moghancement.\nBoth count on their own once you have them.');
+        end
+        for _, source in ipairs(player.sources) do
+            imgui.TextColored(COLORS.title, source_name(source));
+            local mods = {};
+            for mod in pairs(source.mods) do
+                mods[#mods + 1] = mod;
+            end
+            table.sort(mods);
+            for _, mod in ipairs(mods) do
+                imgui.Text(('  %s'):fmt(describe(mod, source.mods[mod])));
+            end
+        end
+        imgui.EndTooltip();
+    end
+
+    function draw_skills()
+        local skill = skill_of(state.craft);
+        if (state.craft > 0 and skill ~= nil) then
+            local text  = ('%s %d'):fmt(db.crafts[state.craft].name, skill);
+            local bonus = support_for(state.craft, nil) + player.skill_bonus(state.craft);
+            if (bonus > 0) then
+                text = ('%s (+%d)'):fmt(text, bonus);
+            end
+
+            local color = COLORS.title;
+            if (what_if_on()) then
+                text  = ('%s (what-if)'):fmt(text);
+                color = COLORS.warn;
+            end
+
+            imgui.AlignTextToFramePadding();
+            imgui.TextColored(color, text);
+            if (imgui.IsItemHovered()) then
+                draw_bonus_tooltip();
+            end
+            imgui.SameLine();
+        end
+
+        local buff = player.imagery;
         imgui.AlignTextToFramePadding();
-        imgui.TextColored(color, text);
+        imgui.TextDisabled('Synthesis support');
+        if (imgui.IsItemHovered()) then
+            set_tooltip('The image support a guild NPC gives. Pick the one you have to see your odds with it.\nWhen you really have the buff, craftbook reads it from your status instead.');
+        end
         imgui.SameLine();
+        imgui.BeginDisabled(active_imagery() ~= nil);
+        draw_support_button('Standard +1', 1, 'Standard support (free, 2 minutes): +1 to the picked craft, or each recipe\'s main craft with All crafts.\nRaises HQ tier and success rate. Skill-ups still roll on your raw skill.');
+        imgui.SameLine();
+        draw_support_button('Advanced +3', 2, 'Advanced support (8 minutes): +3 to the picked craft, or each recipe\'s main craft with All crafts.\nRaises HQ tier and success rate, and a break loses each material 40% of the time instead of 50%.\nThe Avg row and Made totals count that. Skill-ups still roll on your raw skill.');
+        imgui.EndDisabled();
+        if (buff ~= nil) then
+            draw_buff_label(buff);
+        end
+        if (#player.sources > 0) then
+            imgui.SameLine();
+            imgui.TextColored(COLORS.support, 'Gear and Moghancement');
+            if (imgui.IsItemHovered()) then
+                draw_bonus_tooltip();
+            end
+        end
+        draw_what_if();
     end
-
-    local buff = player.imagery;
-    imgui.AlignTextToFramePadding();
-    imgui.TextDisabled('Synthesis support');
-    if (imgui.IsItemHovered()) then
-        set_tooltip('The image support a guild NPC gives. Pick the one you have to see your odds with it.\nWhen you really have the buff, craftbook reads it from your status instead.');
-    end
-    imgui.SameLine();
-    imgui.BeginDisabled(active_imagery() ~= nil);
-    draw_support_button('Standard +1', 1, 'Standard support (free, 2 minutes): +1 to the picked craft, or each recipe\'s main craft with All crafts.\nRaises HQ tier and success rate. Skill-ups still roll on your raw skill.');
-    imgui.SameLine();
-    draw_support_button('Advanced +3', 2, 'Advanced support (8 minutes): +3 to the picked craft, or each recipe\'s main craft with All crafts.\nRaises HQ tier and success rate, and a break loses each material 40% of the time instead of 50%.\nThe Avg row and Made totals count that. Skill-ups still roll on your raw skill.');
-    imgui.EndDisabled();
-    if (buff ~= nil) then
-        draw_buff_label(buff);
-    end
-    draw_what_if();
 end
 
 local function draw_filters()
@@ -1721,6 +1826,8 @@ do
             imgui.TextColored(outlook_color(outlook), ('Desynthesis: %s success, %s HQ on success'):fmt(percent(outlook.success), percent(outlook.hq)));
         elseif (outlook.can_hq) then
             imgui.TextColored(outlook_color(outlook), ('HQ tier T%d: %s success, %s HQ on success'):fmt(outlook.tier, percent(outlook.success), percent(outlook.hq)));
+        elseif (outlook.ring ~= nil) then
+            imgui.TextColored(outlook_color(outlook), ('%s ring worn, no HQ: %s success'):fmt(db.crafts[outlook.ring].name, percent(outlook.success)));
         else
             imgui.TextColored(outlook_color(outlook), ('Above your skill, no HQ: %s success'):fmt(percent(outlook.success)));
         end
@@ -1969,15 +2076,29 @@ do
         local ADVANCED_CUT   = 0.10;
         local ADVANCED_BONUS = 3;
 
+        -- Gear and Moghancement cuts by crystal element and by the craft that broke, in points like the server.
+        local function mod_cut(craft_index, recipe)
+            local MOD     = player.MOD;
+            local cut     = player.mod(MOD.LOSS) + player.mod(MOD.LOSS_CRAFT + craft_index - 1);
+            local element = recipe.crystal - 4096; -- Fire Crystal, the first of the eight in element order
+            if (element >= 0 and element < 8) then
+                cut = cut + player.mod(MOD.LOSS_ELEMENT + element);
+            end
+
+            return cut / 100;
+        end
+
         local function loss_rate(base, craft_index, recipe)
             if (base == 0) then
                 return 0;
             end
+
+            local cut = mod_cut(craft_index, recipe);
             if (support_for(craft_index, recipe) >= ADVANCED_BONUS) then
-                return math.max(MIN_LOSS, base - ADVANCED_CUT);
+                cut = cut + ADVANCED_CUT;
             end
 
-            return base;
+            return math.min(1, math.max(MIN_LOSS, base - cut));
         end
 
         -- A material's chance to be lost on a break, averaged over the craft that broke.
@@ -2008,9 +2129,9 @@ do
                         return main_only;
                     end
 
-                    local success = synth_success(level - skill);
+                    local success = synth_success(level - skill, index);
                     if (recipe.desynth) then
-                        success = desynth_success(level - skill);
+                        success = desynth_success(level - skill, index);
                     end
                     shares[#shares + 1] = { craft = index, share = holding * (1 - success) };
                     holding = holding * success;
@@ -2068,7 +2189,7 @@ do
             return synth_outlook(recipe);
         end
 
-        return { success = TIER_SUCCESS, can_hq = true, tier = average_tier, hq = math.min(HQ_CHANCE[average_tier], HQ_CAP) };
+        return { success = TIER_SUCCESS, can_hq = true, tier = average_tier, hq = hq_chance(HQ_CHANCE[average_tier]) };
     end
 
     -- How often one synth ends as NQ (1) or HQ1 to HQ3 (2 to 4). What is left over is the break chance.
@@ -2282,6 +2403,9 @@ do
         local TIER_LEVELS = { [0] = '0 to 10', [1] = '11 to 30', [2] = '31 or more' };
 
         function out_of_reach_text(tier, outlook)
+            if (outlook.ring ~= nil) then
+                return ('The %s ring you wear blocks HQ.'):fmt(db.crafts[outlook.ring].name);
+            end
             if (not outlook.can_hq) then
                 return 'Your skill is under the recipe level, so it cannot HQ.';
             end
@@ -4231,7 +4355,7 @@ function ui.render()
             state.filter_key = nil;
         end
         db.prepare_names();
-        player.refresh(#db.crafts);
+        player.refresh(#db.crafts, db.gear);
     end
 
     skin.forced = state.window_type;
@@ -4280,7 +4404,7 @@ end
 
 -- HQ tier (0-3) the recipe lands at right now, or nil when it cannot HQ.
 function ui.synth_tier(recipe)
-    player.refresh(#db.crafts);
+    player.refresh(#db.crafts, db.gear);
     use_real_skills = true;
     local outlook = synth_outlook(recipe);
     use_real_skills = false;

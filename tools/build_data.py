@@ -38,6 +38,9 @@ DISABLED_ZONE_IDS = {43, 44, 78, 86, 93, 129, 133, 182, 183, 189, 222, 229}
 
 CRAFT_COLUMNS = ['Wood', 'Smith', 'Gold', 'Cloth', 'Leather', 'Bone', 'Alchemy', 'Cook']
 
+# xi.mod ids synthutils reads: craft skill, anti-HQ rings, success, material loss and HQ rate.
+SYNTH_MODS = {*range(128, 136), *range(144, 152), 851, 861, 862, 916, *range(917, 933)}
+
 SHOP_CALLS = {
     ('shop', 'general'): 'general',
     ('shop', 'nation'): 'nation',
@@ -647,6 +650,17 @@ def load_base_sell(repo, sql_files):
         prices[row_id] = assignments['basesell']
 
     return prices, names
+
+
+def load_gear(repo):
+    rows = []
+    text = (repo / 'sql' / 'item_mods.sql').read_text(encoding='utf-8')
+    for match in re.finditer(r'INSERT INTO `item_mods` VALUES \((\d+),(\d+),(-?\d+)\)', text):
+        item_id, mod_id, value = (int(v) for v in match.groups())
+        if mod_id in SYNTH_MODS:
+            rows.append((item_id, mod_id, value))
+
+    return sorted(rows)
 
 
 # ---------------------------------------------------------------------------
@@ -1394,6 +1408,7 @@ def build(repo, out, label):
     mobs, drops = load_mobs(repo, roots, zone_ids, ids_by_name, relevant)
     helm_rows = load_helm(repo, resolver, lua_files, relevant)
     test_rows = load_guild_tests(repo, resolver, ids_by_name)
+    gear_rows = load_gear(repo)
 
     item_rows = [(i, base_sell.get(i, 0), db_names.get(i, '')) for i in sorted(relevant)]
 
@@ -1422,6 +1437,7 @@ def build(repo, out, label):
     write_tsv(out / 'drops.tsv', ['item', 'mob', 'rate', 'kind'], drops)
     write_tsv(out / 'helm.tsv', ['item', 'zone', 'type', 'rate'], helm_rows)
     write_tsv(out / 'tests.tsv', ['item', 'craft', 'rank'], test_rows)
+    write_tsv(out / 'gear.tsv', ['item', 'mod', 'value'], gear_rows)
     write_tsv(out / 'keyitems.tsv', ['id', 'name'], key_item_rows)
     write_tsv(out / 'zones.tsv', ['id', 'name'], zone_rows)
 

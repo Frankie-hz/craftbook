@@ -25,6 +25,7 @@ local db = {
     keyitems  = {},
     cheapest  = {},
     tests     = {},
+    gear      = {},
     mapdata   = {},
     names_ready = false,
 };
@@ -375,6 +376,12 @@ local function load_sources()
         end
     end);
 
+    read_tsv('gear.tsv', function (row)
+        local item = to_int(row.item);
+        db.gear[item] = db.gear[item] or {};
+        db.gear[item][to_int(row.mod)] = to_int(row.value);
+    end);
+
     -- data/mapdata.lua: per zone, one calibration per map level (s = scale, x and y = origin, optional world bounds).
     local ok, mapdata = pcall(dofile, data_path('mapdata.lua'));
     if (ok and type(mapdata) == 'table') then
@@ -435,6 +442,7 @@ function db.load()
     db.keyitems    = {};
     db.cheapest    = {};
     db.tests       = {};
+    db.gear        = {};
     db.mapdata     = {};
 
     if (not load_recipes()) then

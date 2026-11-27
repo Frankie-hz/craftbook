@@ -1,5 +1,7 @@
 require('common');
 
+local bit = require('bit');
+
 local REFRESH_SECONDS = 2;
 local MAX_SLOTS       = 81;
 
@@ -15,6 +17,30 @@ local STATUS_SLOTS      = 32;
 local INFINITE_DURATION = 0x7FFFFFFF;
 local VANA_BASE_STAMP   = 0x3C307D70;
 
+-- xi.mod ids synthutils reads. Per craft and per element mods follow on from these in server order.
+local MOD = {
+    SKILL           = 128,
+    ANTI_HQ         = 144,
+    SUCCESS         = 851,
+    SUCCESS_DESYNTH = 916,
+    LOSS            = 861,
+    LOSS_ELEMENT    = 917,
+    LOSS_CRAFT      = 925,
+    HQ_RATE         = 862,
+};
+
+local EQUIPMENT_SLOTS = 16;
+local CRAFTS          = 8;
+
+-- What each Moghancement key item grants (CCharEntity::changeMoghancement). A player holds one at a time.
+local MOGHANCEMENTS = { [522] = { [MOD.SUCCESS_DESYNTH] = 4 } };
+for offset = 0, CRAFTS - 1 do
+    MOGHANCEMENTS[512 + offset] = { [MOD.LOSS_ELEMENT + offset] = 10 };
+    MOGHANCEMENTS[524 + offset] = { [MOD.SKILL + offset] = 1 };
+    MOGHANCEMENTS[545 + offset] = { [MOD.SKILL + offset] = 1, [MOD.LOSS_CRAFT + offset] = 5 };
+    MOGHANCEMENTS[554 + offset] = { [MOD.SKILL + offset] = 5 };
+end
+
 -- Same signature the statustimers and focustarget addons use to turn status timers into seconds.
 local utcstamp_pointer = ashita.memory.find('FFXiMain.dll', 0, '8B0D????????8B410C8B49108D04808D04808D04808D04C1C3', 2, 0);
 
@@ -24,7 +50,10 @@ local player = {
     skills  = {},
     capped  = {},
     imagery = nil,
+    mods    = {},
+    sources = {},
     updated = -REFRESH_SECONDS,
+    MOD     = MOD,
 };
 
 local function read_skill(memory_player, craft_index)
@@ -107,9 +136,50 @@ local function refresh_imagery(memory_player)
     known.seconds = found.seconds;
 end
 
-local function refresh_skills(craft_count)
-    player.skills = {};
-    player.capped = {};
+local function worn_item(inventory, slot)
+    local equipped = inventory:GetEquippedItem(slot);
+    if (equipped == nil or equipped.Index == 0) then
+        return nil;
+    end
+
+    local container = bit.rshift(bit.band(equipped.Index, 0xFF00), 8);
+    local item      = inventory:GetContainerItem(container, bit.band(equipped.Index, 0xFF));
+    if (item == nil or item.Id == 0 or item.Id == 65535) then
+        return nil;
+    end
+
+    return item.Id;
+end
+
+local function add_source(source)
+    player.sources[#player.sources + 1] = source;
+    for mod, value in pairs(source.mods) do
+        player.mods[mod] = (player.mods[mod] or 0) + value;
+    end
+end
+
+-- Crafting gear and the Moghancement are plain mods on the server, the same as image support.
+local function refresh_bonuses(memory_player, gear)
+    local inventory = AshitaCore:GetMemoryManager():GetInventory();
+    for slot = 0, EQUIPMENT_SLOTS - 1 do
+        local id = worn_item(inventory, slot);
+        if (id ~= nil and gear[id] ~= nil) then
+            add_source({ item = id, mods = gear[id] });
+        end
+    end
+
+    for id, mods in pairs(MOGHANCEMENTS) do
+        if (memory_player:HasKeyItem(id)) then
+            add_source({ keyitem = id, mods = mods });
+        end
+    end
+end
+
+local function refresh_skills(craft_count, gear)
+    player.skills  = {};
+    player.capped  = {};
+    player.mods    = {};
+    player.sources = {};
 
     local memory_player = AshitaCore:GetMemoryManager():GetPlayer();
     if (memory_player == nil or memory_player:GetMainJobLevel() == 0) then
@@ -125,6 +195,8 @@ local function refresh_skills(craft_count)
     if (not ok) then
         player.imagery = nil;
     end
+
+    pcall(refresh_bonuses, memory_player, gear);
 end
 
 local function refresh_items()
@@ -155,14 +227,14 @@ local function refresh_items()
     player.total = total;
 end
 
-function player.refresh(craft_count)
+function player.refresh(craft_count, gear)
     local now = os.clock();
     if (now - player.updated < REFRESH_SECONDS) then
         return;
     end
 
     player.updated = now;
-    refresh_skills(craft_count);
+    refresh_skills(craft_count, gear);
     refresh_items();
 end
 
@@ -177,6 +249,21 @@ end
 -- The client flags a craft once it reaches its rank cap; the server stops skill-ups there.
 function player.is_capped(craft_index)
     return player.capped[craft_index] == true;
+end
+
+-- The total of one xi.mod from worn gear and the Moghancement.
+function player.mod(id)
+    return player.mods[id] or 0;
+end
+
+-- Craft skill from gear and the Moghancement, a skill mod like image support.
+function player.skill_bonus(craft_index)
+    return player.mod(MOD.SKILL + craft_index - 1);
+end
+
+-- A worn craft ring (Carpenter's Ring and the rest) blocks HQ and adds 1% success to its craft.
+function player.blocks_hq(craft_index)
+    return player.mod(MOD.ANTI_HQ + craft_index - 1) ~= 0;
 end
 
 function player.count(item_id)
